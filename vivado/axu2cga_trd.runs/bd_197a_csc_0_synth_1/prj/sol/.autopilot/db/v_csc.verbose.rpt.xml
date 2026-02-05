@@ -1,0 +1,176 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'v_csc'" level="0">
+<item name = "Date">Wed Jan 21 13:02:37 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu2cg-sfvc784-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.443 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="AXIvideo2MultiPixStream_U0">AXIvideo2MultiPixStream, 2630, 1046526, 13.150 us, 5.233 ms, 2630, 1046526, no</column>
+<column name="Block_entry_proc_1_U0">Block_entry_proc_1, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="v_hcresampler_core_U0">v_hcresampler_core, 2, 1073938427, 10.000 ns, 5.370 sec, 2, 1073938427, no</column>
+<column name="v_csc_core_U0">v_csc_core, ?, ?, ?, ?, ?, ?, no</column>
+<column name="v_hcresampler_core_1_U0">v_hcresampler_core_1, 2, 1073938427, 10.000 ns, 5.370 sec, 2, 1073938427, no</column>
+<column name="MultiPixStream2AXIvideo_U0">MultiPixStream2AXIvideo, 2435, 1043283, 12.175 us, 5.216 ms, 2435, 1043283, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 22, -</column>
+<column name="FIFO">-, -, 594, 402, -</column>
+<column name="Instance">0, 18, 3708, 5642, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 36, -</column>
+<column name="Register">-, -, 4, -, -</column>
+<specialColumn name="Available">300, 240, 94464, 47232, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 7, 4, 12, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="AXIvideo2MultiPixStream_U0">AXIvideo2MultiPixStream, 0, 0, 215, 472, 0</column>
+<column name="Block_entry_proc_1_U0">Block_entry_proc_1, 0, 0, 4, 93, 0</column>
+<column name="CTRL_s_axi_U">CTRL_s_axi, 0, 0, 744, 1024, 0</column>
+<column name="MultiPixStream2AXIvideo_U0">MultiPixStream2AXIvideo, 0, 0, 226, 398, 0</column>
+<column name="v_csc_core_U0">v_csc_core, 0, 18, 1640, 2109, 0</column>
+<column name="v_hcresampler_core_U0">v_hcresampler_core, 0, 0, 375, 709, 0</column>
+<column name="v_hcresampler_core_1_U0">v_hcresampler_core_1, 0, 0, 504, 837, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="cond64_loc_channel_U">0, 99, 0, -, 4, 1, 4</column>
+<column name="cond_loc_channel_U">0, 99, 0, -, 2, 1, 2</column>
+<column name="stream_csc_U">0, 99, 0, -, 16, 48, 768</column>
+<column name="stream_in_U">0, 99, 0, -, 16, 48, 768</column>
+<column name="stream_in_hresampled_U">0, 99, 0, -, 16, 48, 768</column>
+<column name="stream_out_hresampled_U">0, 99, 0, -, 16, 48, 768</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="AXIvideo2MultiPixStream_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="Block_entry_proc_1_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="Block_entry_proc_1_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_cond64_loc_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_cond_loc_channel">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_AXIvideo2MultiPixStream_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_Block_entry_proc_1_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_cond64_loc_channel">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_cond_loc_channel">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_AXIvideo2MultiPixStream_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_Block_entry_proc_1_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_cond64_loc_channel">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_cond_loc_channel">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_AXIvideo2MultiPixStream_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_Block_entry_proc_1_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_cond64_loc_channel">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_cond_loc_channel">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CTRL_AWVALID">in, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_AWREADY">out, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_AWADDR">in, 9, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_WVALID">in, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_WREADY">out, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_WDATA">in, 32, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_WSTRB">in, 4, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_ARVALID">in, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_ARREADY">out, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_ARADDR">in, 9, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_RVALID">out, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_RREADY">in, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_RDATA">out, 32, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_RRESP">out, 2, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_BVALID">out, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_BREADY">in, 1, s_axi, CTRL, pointer</column>
+<column name="s_axi_CTRL_BRESP">out, 2, s_axi, CTRL, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, v_csc, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, v_csc, return value</column>
+<column name="interrupt">out, 1, ap_ctrl_hs, v_csc, return value</column>
+<column name="s_axis_video_TDATA">in, 48, axis, s_axis_video_V_data_V, pointer</column>
+<column name="s_axis_video_TKEEP">in, 6, axis, s_axis_video_V_keep_V, pointer</column>
+<column name="s_axis_video_TSTRB">in, 6, axis, s_axis_video_V_strb_V, pointer</column>
+<column name="s_axis_video_TUSER">in, 1, axis, s_axis_video_V_user_V, pointer</column>
+<column name="s_axis_video_TLAST">in, 1, axis, s_axis_video_V_last_V, pointer</column>
+<column name="s_axis_video_TID">in, 1, axis, s_axis_video_V_id_V, pointer</column>
+<column name="s_axis_video_TDEST">in, 1, axis, s_axis_video_V_dest_V, pointer</column>
+<column name="s_axis_video_TVALID">in, 1, axis, s_axis_video_V_dest_V, pointer</column>
+<column name="s_axis_video_TREADY">out, 1, axis, s_axis_video_V_dest_V, pointer</column>
+<column name="m_axis_video_TDATA">out, 48, axis, m_axis_video_V_data_V, pointer</column>
+<column name="m_axis_video_TKEEP">out, 6, axis, m_axis_video_V_keep_V, pointer</column>
+<column name="m_axis_video_TSTRB">out, 6, axis, m_axis_video_V_strb_V, pointer</column>
+<column name="m_axis_video_TUSER">out, 1, axis, m_axis_video_V_user_V, pointer</column>
+<column name="m_axis_video_TLAST">out, 1, axis, m_axis_video_V_last_V, pointer</column>
+<column name="m_axis_video_TID">out, 1, axis, m_axis_video_V_id_V, pointer</column>
+<column name="m_axis_video_TDEST">out, 1, axis, m_axis_video_V_dest_V, pointer</column>
+<column name="m_axis_video_TVALID">out, 1, axis, m_axis_video_V_dest_V, pointer</column>
+<column name="m_axis_video_TREADY">in, 1, axis, m_axis_video_V_dest_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

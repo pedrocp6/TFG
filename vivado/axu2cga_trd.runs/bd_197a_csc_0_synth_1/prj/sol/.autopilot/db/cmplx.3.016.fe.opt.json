@@ -1,0 +1,149 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "6 5 3 8 2 1 4",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "v_csc.cpp",
+    "fileloc": 220,
+    "instructions": 198,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 0,
+    "name": "v_csc",
+    "total_instructions": 1331
+  },
+  "1": {
+    "basicblocks": 14,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 26,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 257,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 6,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft.aft.aft.aft.aft.aft.aft.aft.aft",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 257
+  },
+  "2": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 27,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 317,
+    "loads": {
+      "L": 35
+    },
+    "memory_accesses": 4,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft.aft.aft.aft.aft.aft.aft",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 317
+  },
+  "3": {
+    "basicblocks": 24,
+    "calls": "7 7",
+    "control_depth": 2,
+    "def_use_depth": 15,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 166,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 12,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft.aft.aft",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 174
+  },
+  "4": {
+    "basicblocks": 20,
+    "calls": "7 7",
+    "control_depth": 2,
+    "def_use_depth": 12,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 120,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft.aft.aft.aft.aft.aft.aft.aft.aft.aft.aft",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 128
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 14,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 14
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 3,
+    "memory_accesses": 0,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__",
+    "total_instructions": 3
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 4,
+    "memory_accesses": 1,
+    "name": "reg<unsigned short>",
+    "total_instructions": 4
+  },
+  "8": {
+    "basicblocks": 14,
+    "calls": "",
+    "control_depth": 3,
+    "def_use_depth": 22,
+    "file": "v_csc.cpp",
+    "fileloc": 0,
+    "instructions": 240,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 6,
+    "name": "_Z5v_cscRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERhS7_RtS8_S8_S8_S8_S8_RsS9_S9_S9_S9_S9_S9_S9_S9_R6ap_intILi10EESC_SC_RS2_ILi8EESE_S9_S9_S9_S9_S9_S9_S9_S9_S9_SC_SC_SC_SE_SE_S6__entry.aft.aft.aft.aft.aft",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 240
+  }
+}

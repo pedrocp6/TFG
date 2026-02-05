@@ -1,0 +1,14 @@
+TRACE::2026-01-28.18:15:26::SCWBifWriter::Found the complete platform C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm
+TRACE::2026-01-28.18:15:27::SCWBifWriter::hardware databse : design_1_wrapper_0
+TRACE::2026-01-28.18:15:27::SCWBifWriter::No bitstream found in the design
+TRACE::2026-01-28.18:15:27::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2026-01-28.18:15:27::SCWBifWriter::proc type : 
+TRACE::2026-01-28.18:15:27::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2026-01-28.18:15:27::SCWBifWriter::Device type is : zynqMP
+TRACE::2026-01-28.18:15:27::SCWBifWriter::Writing BIF to file : C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello_system/_ide/bootimage/template_hello_system.bif
+TRACE::2026-01-28.18:15:27::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2026-01-28.18:15:27::SCWBifWriter::System Command Ran  C:/Xilinx/Vitis/2023.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/fsbl.elf
+TRACE::2026-01-28.18:15:27::SCWBifWriter:: Command Ran  C:/Xilinx/Vitis/2023.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/fsbl.elf
+TRACE::2026-01-28.18:15:27::SCWBifWriter::FSBL processor, command ran C:/Xilinx/Vitis/2023.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/fsbl.elf
+TRACE::2026-01-28.18:15:27::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2026-01-28.18:15:27::SCWBifWriter::Boot processor is :a53-0

@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'v_csc'" level="0">
+<item name = "Date">Wed Jan 21 13:02:27 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">prj</item>
+<item name = "Solution">sol (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu2cg-sfvc784-1-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00 ns, 3.443 ns, 1.35 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_AXIvideo2MultiPixStream_fu_272">AXIvideo2MultiPixStream, 2630, 1046526, 13.150 us, 5.233 ms, 2630, 1046526, no</column>
+<column name="call_ret_Block_entry_proc_1_fu_297">Block_entry_proc_1, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_v_hcresampler_core_fu_305">v_hcresampler_core, 2, 1073938427, 10.000 ns, 5.370 sec, 2, 1073938427, no</column>
+<column name="grp_v_csc_core_fu_316">v_csc_core, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_v_hcresampler_core_1_fu_390">v_hcresampler_core_1, 2, 1073938427, 10.000 ns, 5.370 sec, 2, 1073938427, no</column>
+<column name="grp_MultiPixStream2AXIvideo_fu_401">MultiPixStream2AXIvideo, 2435, 1043283, 12.175 us, 5.216 ms, 2435, 1043283, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

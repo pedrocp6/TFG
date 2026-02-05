@@ -1,0 +1,217 @@
+<pragmas>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h" line="226" pragmaType="inline" parentfunction="reg" off="1" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h" line="224" pragmaType="pipeline" parentfunction="reg" off="0" ii="1" style=""/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h" line="225" pragmaType="latency" parentfunction="reg" min="1" max="1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<48>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>::operator<<(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_keep_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_data_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_last_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<48, false>::operator()(int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<6>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<48, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<6, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi48ELb0EEC2EDU48_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::Scalar<6, ap_uint<8> >, 0>::operator>>(hls::Scalar<6, ap_uint<8> >&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi6ELb0EEC2EDU6_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="772" pragmaType="pipeline" parentfunction="v_hcresampler_core" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="771" pragmaType="loop_flatten" parentfunction="v_hcresampler_core" off="1"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="803" pragmaType="array_partition" parentfunction="v_hcresampler_core" dim="0" factor="0" mode="complete" dynamic="0" variable="pixbuf_y"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="816" pragmaType="array_partition" parentfunction="v_hcresampler_core" dim="0" factor="0" mode="complete" dynamic="0" variable="pixbuf_cb"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="817" pragmaType="array_partition" parentfunction="v_hcresampler_core" dim="0" factor="0" mode="complete" dynamic="0" variable="pixbuf_cr"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<48, false>::ap_range_ref(ap_int_base<48, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="197" pragmaType="inline" parentfunction="hls::Scalar<6, ap_uint<8> >::Scalar()" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="198" pragmaType="array_partition" parentfunction="hls::Scalar<6, ap_uint<8> >::Scalar()" dim="1" factor="0" mode="complete" dynamic="0" variable="val2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_strb_ptr" off="0" region="0" recursive="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="139" pragmaType="pipeline" parentfunction="v_csc_core" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="138" pragmaType="loop_flatten" parentfunction="v_csc_core" off="1"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="132" pragmaType="array_partition" parentfunction="v_csc_core" dim="0" factor="0" mode="complete" dynamic="0" variable="srcPix"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="438" pragmaType="dataflow" parentfunction="v_csc" disable_start_propagation="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="238" pragmaType="interface" parentfunction="v_csc" mode="axis" port="s_axis_video" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="239" pragmaType="interface" parentfunction="v_csc" mode="axis" port="m_axis_video" register="1" register_mode="both" name="" depth="-1"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="241" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="InVideoFormat" bundle="CTRL" offset="16" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="242" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="OutVideoFormat" bundle="CTRL" offset="24" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="243" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="width" bundle="CTRL" offset="32" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="244" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="height" bundle="CTRL" offset="40" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="246" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ColStart" bundle="CTRL" offset="48" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="247" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ColEnd" bundle="CTRL" offset="56" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="248" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="RowStart" bundle="CTRL" offset="64" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="249" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="RowEnd" bundle="CTRL" offset="72" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="251" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K11" bundle="CTRL" offset="80" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="252" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K12" bundle="CTRL" offset="88" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="253" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K13" bundle="CTRL" offset="96" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="254" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K21" bundle="CTRL" offset="104" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="255" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K22" bundle="CTRL" offset="112" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="256" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K23" bundle="CTRL" offset="120" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="257" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K31" bundle="CTRL" offset="128" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="258" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K32" bundle="CTRL" offset="136" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="259" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K33" bundle="CTRL" offset="144" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="260" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ROffset" bundle="CTRL" offset="152" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="261" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="GOffset" bundle="CTRL" offset="160" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="262" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="BOffset" bundle="CTRL" offset="168" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="263" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ClampMin" bundle="CTRL" offset="176" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="264" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ClipMax" bundle="CTRL" offset="184" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="266" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K11_2" bundle="CTRL" offset="192" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="267" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K12_2" bundle="CTRL" offset="200" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="268" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K13_2" bundle="CTRL" offset="208" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="269" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K21_2" bundle="CTRL" offset="216" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="270" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K22_2" bundle="CTRL" offset="224" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="271" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K23_2" bundle="CTRL" offset="232" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="272" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K31_2" bundle="CTRL" offset="240" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="273" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K32_2" bundle="CTRL" offset="248" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="274" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="K33_2" bundle="CTRL" offset="256" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="275" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ROffset_2" bundle="CTRL" offset="264" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="276" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="GOffset_2" bundle="CTRL" offset="272" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="277" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="BOffset_2" bundle="CTRL" offset="280" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="278" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ClampMin_2" bundle="CTRL" offset="288" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="279" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="ClipMax_2" bundle="CTRL" offset="296" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="281" pragmaType="interface" parentfunction="v_csc" mode="s_axilite" port="" bundle="CTRL" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="286" pragmaType="stable" parentfunction="v_csc" variable="InVideoFormat"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="288" pragmaType="stable" parentfunction="v_csc" variable="OutVideoFormat"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="290" pragmaType="stable" parentfunction="v_csc" variable="width"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="292" pragmaType="stable" parentfunction="v_csc" variable="height"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="295" pragmaType="stable" parentfunction="v_csc" variable="ColStart"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="297" pragmaType="stable" parentfunction="v_csc" variable="ColEnd"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="299" pragmaType="stable" parentfunction="v_csc" variable="RowStart"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="301" pragmaType="stable" parentfunction="v_csc" variable="RowEnd"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="304" pragmaType="stable" parentfunction="v_csc" variable="K11"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="306" pragmaType="stable" parentfunction="v_csc" variable="K12"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="308" pragmaType="stable" parentfunction="v_csc" variable="K13"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="310" pragmaType="stable" parentfunction="v_csc" variable="K21"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="312" pragmaType="stable" parentfunction="v_csc" variable="K22"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="314" pragmaType="stable" parentfunction="v_csc" variable="K23"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="316" pragmaType="stable" parentfunction="v_csc" variable="K31"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="318" pragmaType="stable" parentfunction="v_csc" variable="K32"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="320" pragmaType="stable" parentfunction="v_csc" variable="K33"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="322" pragmaType="stable" parentfunction="v_csc" variable="ROffset"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="324" pragmaType="stable" parentfunction="v_csc" variable="GOffset"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="326" pragmaType="stable" parentfunction="v_csc" variable="BOffset"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="328" pragmaType="stable" parentfunction="v_csc" variable="ClampMin"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="330" pragmaType="stable" parentfunction="v_csc" variable="ClipMax"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="333" pragmaType="stable" parentfunction="v_csc" variable="K11_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="335" pragmaType="stable" parentfunction="v_csc" variable="K12_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="337" pragmaType="stable" parentfunction="v_csc" variable="K13_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="339" pragmaType="stable" parentfunction="v_csc" variable="K21_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="341" pragmaType="stable" parentfunction="v_csc" variable="K22_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="343" pragmaType="stable" parentfunction="v_csc" variable="K23_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="345" pragmaType="stable" parentfunction="v_csc" variable="K31_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="347" pragmaType="stable" parentfunction="v_csc" variable="K32_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="349" pragmaType="stable" parentfunction="v_csc" variable="K33_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="351" pragmaType="stable" parentfunction="v_csc" variable="ROffset_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="353" pragmaType="stable" parentfunction="v_csc" variable="GOffset_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="355" pragmaType="stable" parentfunction="v_csc" variable="BOffset_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="357" pragmaType="stable" parentfunction="v_csc" variable="ClampMin_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="359" pragmaType="stable" parentfunction="v_csc" variable="ClipMax_2"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="439" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_in"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="440" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_in_vresampled"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="441" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_out_vresampled"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="442" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_in_hresampled"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="443" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_out_hresampled"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="444" pragmaType="stream" parentfunction="v_csc" depth="16" type="fifo" variable="stream_csc"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<4>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi43ELb1EEC2EDB43_" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi41ELb1EEC2EDB41_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<48, false>(ap_range_ref<48, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<41, true>::ap_int_base<40, true>(ap_int_base<40, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint<48, false>(ap_range_ref<48, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<42>::ap_int<42, true>(ap_int_base<42, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<41, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<40, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<41, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::RType<8, false>::mult operator*<32, true, 8, false>(ap_int_base<32, true> const&, ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<40, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<42, true>::RType<32, true>::plus operator+<42, true, 32, true>(ap_int_base<42, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<44>::ap_int<44, true>(ap_int_base<44, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<40, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h" line="61" pragmaType="inline" parentfunction="AXIGetBitFields" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base(long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<44, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<43, true>::RType<32, true>::div operator/<43, true, 32, true>(ap_int_base<43, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<40>::ap_int<40, true>(ap_int_base<40, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<42, true>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi42ELb1EEC2EDB42_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_int" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h" line="84" pragmaType="inline" parentfunction="AXIGetBitFields" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<43>::ap_int<43, true>(ap_int_base<43, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi40ELb1EEC2EDB40_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<42, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>::operator>>(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi44ELb1EEC2EDB44_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<43, true>::ap_int_base<42, true>(ap_int_base<42, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<43, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<41>::ap_int<41, true>(ap_int_base<41, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<43, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<42, true>::ap_int_base<41, true>(ap_int_base<41, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<9, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<48, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi9ELb0EEC2EDU9_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::RType<40, true>::plus operator+<8, false, 40, true>(ap_int_base<8, false> const&, ap_int_base<40, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="197" pragmaType="inline" parentfunction="hls::Scalar<2, ap_uint<8> >::Scalar()" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="198" pragmaType="array_partition" parentfunction="hls::Scalar<2, ap_uint<8> >::Scalar()" dim="1" factor="0" mode="complete" dynamic="0" variable="val2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi33ELb1EEC2EDB33_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<9, false>::RType<($_0)32, true>::plus operator+<9, false>(ap_int_base<9, false> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<34>::ap_int<34, true>(ap_int_base<34, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int<33>::ap_int<33, true>(ap_int_base<33, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<9, false>(ap_int_base<9, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::Scalar<6, ap_uint<8> >, 0>::operator<<(hls::Scalar<6, ap_uint<8> > const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="_ZN8ssdm_intILi34ELb1EEC2EDB34_" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDU1_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<41, true>::RType<8, false>::plus operator+<41, true, 8, false>(ap_int_base<41, true> const&, ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="_ZN8ssdm_intILi4ELb0EEC2EDU4_" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::RType<8, false>::plus operator+<8, false, 8, false>(ap_int_base<8, false> const&, ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<($_0)32, true>::div operator/<33, true>(ap_int_base<33, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<9, false>::RType<32, true>::plus operator+<9, false, 32, true>(ap_int_base<9, false> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<42, true>::RType<($_0)32, true>::plus operator+<42, true>(ap_int_base<42, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<44, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<9>::ap_uint<9, false>(ap_int_base<9, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="530" pragmaType="inline" parentfunction="ssdm_int<8, false>::ssdm_int(unsigned char)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint(long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::RType<32, true>::div operator/<33, true, 32, true>(ap_int_base<33, true> const&, ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::RType<($_0)32, true>::mult operator*<8, false>(int, ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<34, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\etc/ap_common.h" line="522" pragmaType="inline" parentfunction="ssdm_int<32, true>::ssdm_int(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<33, true>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<9, false>::ap_int_base<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<4, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<43, true>::RType<($_0)32, true>::div operator/<43, true>(ap_int_base<43, true> const&, int)" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="197" pragmaType="inline" parentfunction="hls::Scalar<1, ap_uint<8> >::Scalar()" off="0" region="0" recursive="0"/>
+<pragma file="c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h" line="198" pragmaType="array_partition" parentfunction="hls::Scalar<1, ap_uint<8> >::Scalar()" dim="1" factor="0" mode="complete" dynamic="0" variable="val2"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<10, true>::operator long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<8, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<8>::ap_uint<34>(ap_int<34> const&)" off="0" region="0" recursive="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="548" pragmaType="pipeline" parentfunction="AXIvideo2MultiPixStream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="547" pragmaType="loop_flatten" parentfunction="AXIvideo2MultiPixStream" off="1"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="592" pragmaType="pipeline" parentfunction="AXIvideo2MultiPixStream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="593" pragmaType="loop_tripcount" parentfunction="AXIvideo2MultiPixStream" min="0" max="0" avg="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="535" pragmaType="pipeline" parentfunction="AXIvideo2MultiPixStream" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="536" pragmaType="loop_tripcount" parentfunction="AXIvideo2MultiPixStream" min="0" max="0" avg="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="570" pragmaType="array_partition" parentfunction="AXIvideo2MultiPixStream" dim="0" factor="0" mode="complete" dynamic="0" variable="_ZZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_RhE3map"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::Scalar<6, ap_uint<8> >, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowCsim" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<48, false>& ap_range_ref<48, false>::operator=<8, false>(ap_int_base<8, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="667" pragmaType="pipeline" parentfunction="MultiPixStream2AXIvideo" off="0" ii="1" rewind="0" style=""/>
+<pragma file="C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp" line="666" pragmaType="loop_flatten" parentfunction="MultiPixStream2AXIvideo" off="1"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+</pragmas>

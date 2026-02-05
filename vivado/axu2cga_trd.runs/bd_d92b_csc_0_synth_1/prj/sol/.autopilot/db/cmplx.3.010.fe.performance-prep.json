@@ -1,0 +1,101 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 4 6 5 2",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "v_csc.cpp",
+    "fileloc": 220,
+    "instructions": 172,
+    "loads": {
+      "T": 36
+    },
+    "memory_accesses": 0,
+    "name": "v_csc",
+    "total_instructions": 1649
+  },
+  "1": {
+    "basicblocks": 26,
+    "calls": "3 3",
+    "control_depth": 4,
+    "def_use_depth": 11,
+    "file": "v_csc.cpp",
+    "fileloc": 512,
+    "instructions": 251,
+    "loads": {
+      "L": 14
+    },
+    "memory_accesses": 25,
+    "name": "AXIvideo2MultiPixStream",
+    "stores": {
+      "L": 7
+    },
+    "total_instructions": 316
+  },
+  "2": {
+    "basicblocks": 20,
+    "calls": "3 3",
+    "control_depth": 4,
+    "def_use_depth": 6,
+    "file": "v_csc.cpp",
+    "fileloc": 611,
+    "instructions": 160,
+    "loads": {
+      "L": 7
+    },
+    "memory_accesses": 23,
+    "name": "MultiPixStream2AXIvideo",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 226
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "memory_accesses": 0,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "4": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 11,
+    "file": "v_csc.cpp",
+    "fileloc": 722,
+    "instructions": 181,
+    "memory_accesses": 3,
+    "name": "v_hcresampler_core",
+    "total_instructions": 301
+  },
+  "5": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 17,
+    "file": "v_csc.cpp",
+    "fileloc": 722,
+    "instructions": 208,
+    "memory_accesses": 3,
+    "name": "v_hcresampler_core",
+    "total_instructions": 328
+  },
+  "6": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 6,
+    "def_use_depth": 17,
+    "file": "v_csc.cpp",
+    "fileloc": 91,
+    "instructions": 228,
+    "memory_accesses": 2,
+    "name": "v_csc_core",
+    "total_instructions": 306
+  }
+}

@@ -1,0 +1,269 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Jan 21 13:21:45 2026
+| Host         : LAPTOP-N1KB207U running 64-bit major release  (build 9200)
+| Command      : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+| Design       : design_1_wrapper
+| Device       : xczu2cg-sfvc784-1-e
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 46
++----------+----------+---------------------------------+--------+
+| Rule     | Severity | Description                     | Checks |
++----------+----------+---------------------------------+--------+
+| DCIRST-1 | Warning  | DCIRESET is required for design | 6      |
+| DPIP-2   | Warning  | Input pipelining                | 24     |
+| DPOP-3   | Warning  | PREG Output pipelining          | 2      |
+| DPOP-4   | Warning  | MREG Output pipelining          | 14     |
++----------+----------+---------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DCIRST-1#1 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_clk_n is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DCIRST-1#2 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_clk_p is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DCIRST-1#3 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_data_n[0] is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DCIRST-1#4 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_data_n[1] is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DCIRST-1#5 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_data_p[0] is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DCIRST-1#6 Warning
+DCIRESET is required for design  
+IO port mipi_phy_if_1_data_p[1] is using DCI IO standard MIPI_DPHY_DCI but no DCIRESET primitive is used in the design. Please add a DCIRESET in the design to ensure the proper functionality of this IO. For more information, please consult AR#000038677.
+Related violations: <none>
+
+DPIP-2#1 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#4 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#5 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#6 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#7 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#8 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#9 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#10 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#11 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#12 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg input design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#13 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#14 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#15 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#16 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#17 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#18 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#19 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#20 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#21 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#22 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#23 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#24 Warning
+Input pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg input design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP design_1_i/v_frmbuf_wr_0/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product output design_1_i/v_frmbuf_wr_0/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP design_1_i/v_frmbuf_wr_1/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product output design_1_i/v_frmbuf_wr_1/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP design_1_i/v_frmbuf_wr_0/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product multiplier stage design_1_i/v_frmbuf_wr_0/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP design_1_i/v_frmbuf_wr_1/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product multiplier stage design_1_i/v_frmbuf_wr_1/inst/grp_FrmbufWrHlsDataFlow_fu_168/MultiPixStream2Bytes_U0/mul_10ns_12ns_21_1_1_U132/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#3 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#4 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#5 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#6 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#7 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#8 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg multiplier stage design_1_i/v_proc_ss_0/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#9 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_2_reg_1843_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#10 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln192_5_reg_1876_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#11 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_2_reg_1849_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#12 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln194_5_reg_1882_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#13 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_2_reg_1855_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#14 Warning
+MREG Output pipelining  
+DSP design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg multiplier stage design_1_i/v_proc_ss_1/inst/csc/inst/v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/mul_ln196_5_reg_1888_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

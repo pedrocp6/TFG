@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Jan 21 19:52:19 2026
+# Process ID         : 23652
+# Current directory  : C:/TFG_Vivado/demo/course_s1/01_led_project/vivado_led/vivado_led.runs/synth_1
+# Command line       : vivado.exe -log led.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led.tcl
+# Log file           : C:/TFG_Vivado/demo/course_s1/01_led_project/vivado_led/vivado_led.runs/synth_1/led.vds
+# Journal file       : C:/TFG_Vivado/demo/course_s1/01_led_project/vivado_led/vivado_led.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-N1KB207U
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1355U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16770 MB
+# Swap memory        : 34803 MB
+# Total Virtual      : 51574 MB
+# Available Virtual  : 28105 MB
+#-----------------------------------------------------------
+source led.tcl -notrace

@@ -1,0 +1,2389 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EE4readERS4_
+Args:            
+  - Callee:          'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>::read(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>&)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EErsERS4_
+Args:            
+  - Callee:          'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>::operator>>(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>&)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_axi_io.h', 
+                   Line: 85, Column: 5 }
+Function:        _ZN3hls15AXIGetBitFieldsILi48E7ap_uintILi8EEEEvNS_4axisIS1_IXT_EELm1ELm1ELm1ELh56ELb0EEEiiRT0_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void hls::AXIGetBitFields<48, ap_uint<8> >(ap_uint<48>, int, int, ap_uint<8>&)'
+    DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_axi_io.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void hls::AXIGetBitFields<48, ap_uint<8> >(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<8>&)'
+    DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_axi_io.h', 
+                       Line: 83, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 295, Column: 30 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - Callee:          'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 296, Column: 18 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::Scalar<6, ap_uint<8> >::Scalar()'
+    DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                       Line: 196, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 299, Column: 13 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 360, Column: 6 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void hls::AXIGetBitFields<48, ap_uint<8> >(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<8>&)'
+    DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_axi_io.h', 
+                       Line: 83, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 431, Column: 18 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::Scalar<6, ap_uint<8> >::Scalar()'
+    DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                       Line: 196, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'MultiPixStream2Bytes(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 430, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 126, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 139, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'MultiPixStream2Bytes(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 430, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 141, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 257, Column: 2 }
+Function:        _Z11v_frmbuf_wrttttP7ap_uintILi128EES1_S1_RN3hls6streamINS2_4axisIS_ILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEE
+Args:            
+  - Callee:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_frmbuf_wr(unsigned short, unsigned short, unsigned short, unsigned short, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 168, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                   Line: 198, Column: 1 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                   Line: 198, Column: 1 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 119, Column: 1 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            bytePlanes
+  - String:          ''' into disaggregation list because there''s '
+  - String:          stream pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-reg2mem-ssa
+Name:            DisaggrReason
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 115, Column: 1 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            bytePlanes
+  - String:          ''' into disaggregation list because there''s '
+  - String:          stream pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                   Line: 198, Column: 1 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/src/hls/hls_video_core.h', 
+                   Line: 198, Column: 1 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Adding '''
+  - Name:            pix
+  - String:          ''' into disaggregation list because there''s '
+  - String:          array-partition pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 119, Column: 1 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            bytePlanes
+  - String:          ''' into disaggregation list because there''s '
+  - String:          stream pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrReason
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 115, Column: 1 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Adding '''
+  - Name:            bytePlanes
+  - String:          ''' into disaggregation list because there''s '
+  - String:          stream pragma applied on the struct field
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 296, Column: 18 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            pix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 431, Column: 18 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            pix
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-disaggr
+Name:            DisaggrSucc
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 104, Column: 16 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Disaggregating variable '''
+  - Name:            bytePlanes
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 824, Column: 23 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_824_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 828, Column: 24 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_828_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 830, Column: 25 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 866, Column: 23 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_866_6
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 870, Column: 24 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_870_7
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 907, Column: 23 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_907_9
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 911, Column: 25 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1093, Column: 25 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_1093_12
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1097, Column: 26 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1099, Column: 27 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1108, Column: 25 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_1108_15
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 350, Column: 22 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_350_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 352, Column: 23 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_352_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_824_2
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:824:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_828_3
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:828:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_828_3
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:828:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_828_3
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:828:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_828_3
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:828:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_830_4
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:830:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_866_6
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:866:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_870_7
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:870:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_870_7
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:870:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_870_7
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:870:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_870_7
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:870:24'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_907_9
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:907:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_911_10
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:911:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1093_12
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1093:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1097_13
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1097:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1099_14
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1099:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 430, Column: 0 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_1108_15
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1108:25'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          MultiPixStream2Bytes
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 290, Column: 0 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_350_1
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:350:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          AXIvideo2MultiPixStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 290, Column: 0 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_352_2
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:352:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          AXIvideo2MultiPixStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 290, Column: 0 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_352_2
+  - String:          ''' ('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:352:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          AXIvideo2MultiPixStream
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 295, Column: 30 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - Callee:          'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 299, Column: 13 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 126, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 139, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'MultiPixStream2Bytes(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 430, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 141, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - Callee:          'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 257, Column: 2 }
+Function:        _Z11v_frmbuf_wrttttP7ap_uintILi128EES1_S1_RN3hls6streamINS2_4axisIS_ILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEE
+Args:            
+  - Callee:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_frmbuf_wr(unsigned short, unsigned short, unsigned short, unsigned short, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 168, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_v_frmbuf_wr_ir
+Args:            
+  - Callee:          'v_frmbuf_wr(unsigned short, unsigned short, unsigned short, unsigned short, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 168, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_v_frmbuf_wr_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 290, Column: 0 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 98, Column: 0 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       HwReg_frm_buffer
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 98, Column: 0 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_.clone
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       HwReg_frm_buffer2
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 431, Column: 18 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          pix
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 100, Column: 18 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            img
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '48'
+  - String:          '-bits'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 310, Column: 2 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        loop_wait_for_start
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:310:2'
+  - String:          ' '
+  - Function:        'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 407, Column: 3 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        loop_wait_for_eol
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:407:3'
+  - String:          ' '
+  - Function:        'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1599, Column: 28 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       dstImg
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1599_1
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1599:28'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1603, Column: 31 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.store.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1609, Column: 32 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep3seq
+  - ArrayName:       dstImg2
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1609_2
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1609:32'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1615, Column: 37 }
+  - OrigDirection:   write
+  - OrigID:          for.inc70.store.7
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1599, Column: 28 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1599, Column: 28 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       dstImg
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        loop_Bytes2AXIMMvideo_2planes
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1594:5'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1609, Column: 32 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1609, Column: 32 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1609, Column: 32 }
+  - OrigDirection:   write
+  - OrigID:          scevgep3seq
+  - ArrayName:       dstImg2
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        loop_Bytes2AXIMMvideo_2planes
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1594:5'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1609, Column: 32 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1609, Column: 32 }
+  - OrigDirection:   write
+  - OrigID:          scevgep3seq
+  - ArrayName:       dstImg2
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1609_2
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1609:32'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1599, Column: 28 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i128
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1599, Column: 28 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       dstImg
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1599_1
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1599:28'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 407, Column: 3 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        loop_wait_for_eol
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:407:3'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 310, Column: 2 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        loop_wait_for_start
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:310:2'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 827, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then52
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_821_1
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:821:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 827, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then52.1
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_821_1
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:821:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 827, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then52.2
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_821_1
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:821:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 827, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then52.3
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_821_1
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:821:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 869, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then131
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_863_5
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:863:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 869, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then131.1
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_863_5
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:863:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 869, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then131.2
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_863_5
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:863:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 869, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then131.3
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_863_5
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:863:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.1
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.2
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.3
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.4
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.5
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.6
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 910, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then222.7
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_904_8
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:904:22'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.1
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.2
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.3
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.4
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.5
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.6
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Failure
+Pass:            reflow-occurrence-analysis
+Name:            CouldNotAnalyzeBBInfo
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1096, Column: 16 }
+Function:        _ZL20MultiPixStream2BytesRN3hls6streamINS_6ScalarILi6E7ap_uintILi8EEEELi0EEER13STREAM_PLANESRtS9_S9_S9_
+Args:            
+  - String:          'Could not analyze occurrence information for '''
+  - BBName:          if.then373.7
+  - String:          ''' living in '''
+  - LoopName:        VITIS_LOOP_1090_11
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1090:24'
+  - String:          ') .'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1599, Column: 28 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1599_1
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1599:28'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1599, Column: 28 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_1599_1
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1599:28'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mm_video
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1609, Column: 32 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      mm_video
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_1609_2
+  - String:          ' '
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1609:32'
+  - String:          ' '
+  - Function:        'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 1609, Column: 32 }
+Function:        _ZL16Bytes2AXIMMvideoR13STREAM_PLANESRP7ap_uintILi128EES4_S4_RtS5_S5_S5_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_1609_2
+  - String:          '''('
+  - LoopLoc:         'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp:1609:32'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      mm_video
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 299, Column: 13 }
+Function:        _ZL23AXIvideo2MultiPixStreamRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEERNS0_INS_6ScalarILi6ES2_ILi8EEEELi0EEERtSC_Rh
+Args:            
+  - Callee:          'unsigned short reg<unsigned short>(unsigned short)'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\utils/x_hls_utils.h', 
+                       Line: 223, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 126, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_.1
+Args:            
+  - Callee:          'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 290, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 139, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_.1
+Args:            
+  - Callee:          'MultiPixStream2Bytes(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, STREAM_PLANES&, unsigned short&, unsigned short&, unsigned short&, unsigned short&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 430, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 141, Column: 2 }
+Function:        _ZL19FrmbufWrHlsDataFlowRN3hls6streamINS_4axisI7ap_uintILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEER13HW_STRUCT_REGRtRhS9_S9_S9_S9_.1
+Args:            
+  - Callee:          'Bytes2AXIMMvideo(STREAM_PLANES&, ap_uint<128>*&, ap_uint<128>*&, ap_uint<128>*&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 1585, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                   Line: 257, Column: 2 }
+Function:        _Z11v_frmbuf_wrttttP7ap_uintILi128EES1_S1_RN3hls6streamINS2_4axisIS_ILi48EELm1ELm1ELm1ELh56ELb0EEELi0EEE
+Args:            
+  - Callee:          'FrmbufWrHlsDataFlow(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, HW_STRUCT_REG&, unsigned short&, unsigned char&, unsigned short&, unsigned short&, unsigned short&, unsigned short&) (.1)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 98, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'v_frmbuf_wr(unsigned short, unsigned short, unsigned short, unsigned short, ap_uint<128>*, ap_uint<128>*, ap_uint<128>*, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/design_1_v_frmbuf_wr_0_0_synth_1/prj/sol/.autopilot/db/v_frmbuf_wr.cpp', 
+                       Line: 168, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

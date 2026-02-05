@@ -1,0 +1,157 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "3",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "v_frmbuf_wr.cpp",
+    "fileloc": 157,
+    "instructions": 105,
+    "loads": {
+      "G": 2,
+      "L": 12
+    },
+    "memory_accesses": 0,
+    "name": "v_frmbuf_wr",
+    "stores": {
+      "L": 13
+    },
+    "total_instructions": 3521
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "x_hls_utils.h",
+    "fileloc": 222,
+    "instructions": 1,
+    "memory_accesses": 0,
+    "name": "reg<unsigned short>",
+    "total_instructions": 1
+  },
+  "2": {
+    "basicblocks": 44,
+    "calls": "4 1 1 8 8 8",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "v_frmbuf_wr.cpp",
+    "fileloc": 282,
+    "instructions": 183,
+    "loads": {
+      "G": 1,
+      "L": 9
+    },
+    "memory_accesses": 21,
+    "name": "AXIvideo2MultiPixStream",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 1283
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "5 2 7 6",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "v_frmbuf_wr.cpp",
+    "fileloc": 89,
+    "instructions": 27,
+    "memory_accesses": 0,
+    "name": "FrmbufWrHlsDataFlow",
+    "total_instructions": 3416
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "hls_video_core.h",
+    "fileloc": 196,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "Scalar",
+    "total_instructions": 5
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "v_frmbuf_wr.h",
+    "fileloc": 255,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "STREAM_PLANES",
+    "total_instructions": 7
+  },
+  "6": {
+    "basicblocks": 42,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 3,
+    "file": "v_frmbuf_wr.cpp",
+    "fileloc": 1573,
+    "instructions": 151,
+    "loads": {
+      "L": 26
+    },
+    "memory_accesses": 8,
+    "name": "Bytes2AXIMMvideo",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 163
+  },
+  "7": {
+    "basicblocks": 231,
+    "calls": "4",
+    "control_depth": 3,
+    "def_use_depth": 5,
+    "file": "v_frmbuf_wr.cpp",
+    "fileloc": 428,
+    "instructions": 802,
+    "loads": {
+      "L": 51
+    },
+    "memory_accesses": 21,
+    "name": "MultiPixStream2Bytes",
+    "total_instructions": 1935
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "9",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hls_axi_io.h",
+    "fileloc": 83,
+    "instructions": 6,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "AXIGetBitFields<48, ap_uint<8> >",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 76
+  },
+  "9": {
+    "basicblocks": 3,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "hls_axi_io.h",
+    "fileloc": 60,
+    "instructions": 25,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "AXIGetBitFields<48, ap_uint<8> >",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 70
+  }
+}

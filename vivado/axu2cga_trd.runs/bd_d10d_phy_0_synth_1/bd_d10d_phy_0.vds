@@ -1,0 +1,751 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Jan 21 12:53:47 2026
+# Process ID         : 26900
+# Current directory  : C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1
+# Command line       : vivado.exe -log bd_d10d_phy_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_d10d_phy_0.tcl
+# Log file           : C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/bd_d10d_phy_0.vds
+# Journal file       : C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1\vivado.jou
+# Running On         : LAPTOP-N1KB207U
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1355U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16770 MB
+# Swap memory        : 22781 MB
+# Total Virtual      : 39551 MB
+# Available Virtual  : 15985 MB
+#-----------------------------------------------------------
+source bd_d10d_phy_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 532.129 ; gain = 219.727
+Command: synth_design -top bd_d10d_phy_0 -part xczu2cg-sfvc784-1-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18528
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1791.387 ; gain = 206.559
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'multi_intf_lock_sync', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:482]
+INFO: [Synth 8-11241] undeclared symbol 'locked', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:522]
+INFO: [Synth 8-11241] undeclared symbol 'dl0_rxskewcalhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:782]
+INFO: [Synth 8-11241] undeclared symbol 'dl1_rxskewcalhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:819]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:854]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:855]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:857]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:860]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:862]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:864]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:865]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:866]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:869]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:871]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:872]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:873]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:874]
+INFO: [Synth 8-11241] undeclared symbol 'dl2_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:875]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:890]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:891]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:893]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:896]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:898]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:900]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:901]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:902]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:905]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:907]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:908]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:909]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:910]
+INFO: [Synth 8-11241] undeclared symbol 'dl3_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:911]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:934]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:935]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:937]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:942]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:944]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:948]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:949]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:950]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:953]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:957]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:958]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:959]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:960]
+INFO: [Synth 8-11241] undeclared symbol 'dl4_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:961]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:984]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:985]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:987]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:992]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:994]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:998]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:999]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1000]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1003]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1007]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1008]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1009]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1010]
+INFO: [Synth 8-11241] undeclared symbol 'dl5_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1011]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1033]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1034]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1036]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1041]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1043]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1047]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1048]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1049]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1052]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1056]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1057]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1058]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1059]
+INFO: [Synth 8-11241] undeclared symbol 'dl6_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1060]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxvalidhs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1082]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxactivehs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1083]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1085]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_stopstate', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1090]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_ulpsactivenot', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1092]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxclkesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1096]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxlpdtesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1097]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxulpsesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1098]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_rxvalidesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1101]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_errsoths', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1105]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_errsotsynchs', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1106]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_erresc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1107]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_errsyncesc', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1108]
+INFO: [Synth 8-11241] undeclared symbol 'dl7_errcontrol', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1109]
+INFO: [Synth 8-11241] undeclared symbol 's_axi_awready', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1134]
+INFO: [Synth 8-11241] undeclared symbol 's_axi_arready', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1137]
+INFO: [Synth 8-11241] undeclared symbol 's_axi_wready', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1141]
+INFO: [Synth 8-11241] undeclared symbol 's_axi_rvalid', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1146]
+INFO: [Synth 8-11241] undeclared symbol 's_axi_bvalid', assumed default net type 'wire' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1149]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0.v:90]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_core' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_core.v:92]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_c1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_c1.v:98]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_support' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:101]
+INFO: [Synth 8-7071] port 'lane0_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane1_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane2_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane3_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane4_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane5_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane6_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'lane7_tap' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'tap_val_dyn_out' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'alt_skew_calb' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'init_periodic_skew_calb' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_valid_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_rd_data_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_addr_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_wr_data_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_wr_en_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_nibble_sel_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'calib_status_l2' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_valid_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_rd_data_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_addr_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_wr_data_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_wr_en_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'riu_nibble_sel_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7071] port 'calib_status_l3' of module 'mipi_dphy_v4_3_17_rx_fab_top' is unconnected for instance 'dphy_rx_fab_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-7023] instance 'dphy_rx_fab_top' of module 'mipi_dphy_v4_3_17_rx_fab_top' has 320 connections declared, but only 295 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:712]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_hssio_rx' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/synth/bd_d10d_phy_0_hssio_rx.v:53]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:50]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_hssio_rx_hssio_wiz_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_hssio_wiz_top.v:48]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/hdl/bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx.v:48]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_DPHY' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82998]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_DPHY' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:82998]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/hdl/bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx.v:48]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_bs_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:17096]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_tx_bs' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:14495]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_tx_bs' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:14495]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_tx_bs_tri' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:10022]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_tx_bs_tri' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:10022]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_rx_bs' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:10429]
+INFO: [Synth 8-6157] synthesizing module 'RX_BITSLICE' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162474]
+INFO: [Synth 8-6155] done synthesizing module 'RX_BITSLICE' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162474]
+INFO: [Synth 8-6157] synthesizing module 'RX_BITSLICE__parameterized0' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162474]
+INFO: [Synth 8-6155] done synthesizing module 'RX_BITSLICE__parameterized0' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162474]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_rx_bs' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:10429]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_rxtx_bs' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:5396]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_rxtx_bs' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:5396]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_bs_top' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:17096]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_bs_ctrl_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1649]
+INFO: [Synth 8-6157] synthesizing module 'BITSLICE_CONTROL' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2335]
+INFO: [Synth 8-6155] done synthesizing module 'BITSLICE_CONTROL' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2335]
+INFO: [Synth 8-6157] synthesizing module 'RIU_OR' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162274]
+INFO: [Synth 8-6155] done synthesizing module 'RIU_OR' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:162274]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_bs_ctrl_top' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1649]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_clk_rst_top' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1434]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_clk_scheme' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1000]
+INFO: [Synth 8-6157] synthesizing module 'PLLE4_ADV' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:134275]
+INFO: [Synth 8-6155] done synthesizing module 'PLLE4_ADV' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:134275]
+INFO: [Synth 8-6157] synthesizing module 'BUFGCE' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGCE' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2688]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_clk_scheme' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1000]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_rst_scheme' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:357]
+INFO: [Synth 8-6157] synthesizing module 'high_speed_selectio_wiz_v3_6_11_sync_cell' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_sync_cell' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_rst_scheme' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:357]
+INFO: [Synth 8-6155] done synthesizing module 'high_speed_selectio_wiz_v3_6_11_clk_rst_top' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1434]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_hssio_rx_hssio_wiz_top' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_hssio_wiz_top.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_hssio_rx' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/synth/bd_d10d_phy_0_hssio_rx.v:53]
+INFO: [Synth 8-7071] port 'pll0_clkout0' of module 'bd_d10d_phy_0_hssio_rx' is unconnected for instance 'bd_d10d_phy_0_rx_hssio_i' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1178]
+INFO: [Synth 8-7023] instance 'bd_d10d_phy_0_rx_hssio_i' of module 'bd_d10d_phy_0_hssio_rx' has 46 connections declared, but only 45 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:1178]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'bd_d10d_phy_0_clock_module' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_clock_module.v:87]
+	Parameter C_DPHY_LANES bound to: 2 - type: integer 
+	Parameter MTBF_SYNC_STAGES bound to: 3 - type: integer 
+	Parameter C_HS_LINE_RATE bound to: 1000 - type: integer 
+	Parameter C_STABLE_CLK_PERIOD bound to: 5.000000e+00 - type: double 
+	Parameter C_TXPLL_CLKIN_PERIOD bound to: 8.000000e+00 - type: double 
+	Parameter EN_DPHY_IO bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_clock_module' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_clock_module.v:87]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_support' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0/support/bd_d10d_phy_0_support.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_c1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_c1.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0_core' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_core.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'bd_d10d_phy_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0.v:90]
+WARNING: [Synth 8-3848] Net data_to_bs_n_out in module/entity bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/hdl/bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx.v:78]
+WARNING: [Synth 8-3848] Net data_to_pins in module/entity bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/hdl/bd_d10d_phy_0_hssio_rx_mipi_iobuf_rx.v:79]
+WARNING: [Synth 8-3848] Net w_rxtx_rx_fifo_wrclk_out in module/entity high_speed_selectio_wiz_v3_6_11_rxtx_bs does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:8877]
+WARNING: [Synth 8-3848] Net pll1_clkout0_out in module/entity high_speed_selectio_wiz_v3_6_11_clk_scheme does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:1041]
+WARNING: [Synth 8-6014] Unused sequential element wait_bsc_dly_rdy_timeout_reg was removed.  [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:584]
+WARNING: [Synth 8-6014] Unused sequential element wait_bsc_vtc_rdy_timeout_reg was removed.  [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/06cd/hdl/high_speed_selectio_wiz_v3_6_rfs.v:585]
+WARNING: [Synth 8-3848] Net intf_rdy in module/entity bd_d10d_phy_0_hssio_rx_hssio_wiz_top does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_hssio_wiz_top.v:505]
+INFO: [Synth 8-3848] Net pll0_clkout1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:495]
+INFO: [Synth 8-3848] Net pll1_clkout0 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:496]
+INFO: [Synth 8-3848] Net pll1_locked in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:497]
+INFO: [Synth 8-3848] Net clk_from_ibuf in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:510]
+INFO: [Synth 8-3848] Net dly_rdy_bsc1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:526]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:527]
+INFO: [Synth 8-3848] Net dly_rdy_bsc2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:530]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:531]
+INFO: [Synth 8-3848] Net dly_rdy_bsc3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:534]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:535]
+INFO: [Synth 8-3848] Net dly_rdy_bsc4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:538]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:539]
+INFO: [Synth 8-3848] Net dly_rdy_bsc5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:542]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:543]
+INFO: [Synth 8-3848] Net dly_rdy_bsc6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:546]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:547]
+INFO: [Synth 8-3848] Net dly_rdy_bsc7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:550]
+INFO: [Synth 8-3848] Net vtc_rdy_bsc7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:551]
+INFO: [Synth 8-3848] Net riu_rd_data_bg0_bs1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:570]
+INFO: [Synth 8-3848] Net riu_valid_bg0_bs1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:571]
+INFO: [Synth 8-3848] Net riu_rd_data_bg1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:576]
+INFO: [Synth 8-3848] Net riu_valid_bg1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:577]
+INFO: [Synth 8-3848] Net riu_rd_data_bg1_bs2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:582]
+INFO: [Synth 8-3848] Net riu_valid_bg1_bs2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:583]
+INFO: [Synth 8-3848] Net riu_rd_data_bg1_bs3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:588]
+INFO: [Synth 8-3848] Net riu_valid_bg1_bs3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:589]
+INFO: [Synth 8-3848] Net riu_rd_data_bg2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:594]
+INFO: [Synth 8-3848] Net riu_valid_bg2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:595]
+INFO: [Synth 8-3848] Net riu_rd_data_bg2_bs4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:600]
+INFO: [Synth 8-3848] Net riu_valid_bg2_bs4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:601]
+INFO: [Synth 8-3848] Net riu_rd_data_bg2_bs5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:606]
+INFO: [Synth 8-3848] Net riu_valid_bg2_bs5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:607]
+INFO: [Synth 8-3848] Net riu_rd_data_bg3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:612]
+INFO: [Synth 8-3848] Net riu_valid_bg3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:613]
+INFO: [Synth 8-3848] Net riu_rd_data_bg3_bs6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:618]
+INFO: [Synth 8-3848] Net riu_valid_bg3_bs6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:619]
+INFO: [Synth 8-3848] Net riu_rd_data_bg3_bs7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:624]
+INFO: [Synth 8-3848] Net riu_valid_bg3_bs7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:625]
+INFO: [Synth 8-3848] Net tx_cntvalueout_0 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:649]
+INFO: [Synth 8-3848] Net rx_cntvalueout_0 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:654]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_0 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:660]
+INFO: [Synth 8-3848] Net bitslip_error_0 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:669]
+INFO: [Synth 8-3848] Net tx_cntvalueout_1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:676]
+INFO: [Synth 8-3848] Net rx_cntvalueout_1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:681]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:687]
+INFO: [Synth 8-3848] Net bitslip_error_1 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:696]
+INFO: [Synth 8-3848] Net tx_cntvalueout_2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:703]
+INFO: [Synth 8-3848] Net rx_cntvalueout_2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:708]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:714]
+INFO: [Synth 8-3848] Net bitslip_error_2 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:723]
+INFO: [Synth 8-3848] Net tx_cntvalueout_3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:730]
+INFO: [Synth 8-3848] Net rx_cntvalueout_3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:735]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:741]
+INFO: [Synth 8-3848] Net bitslip_error_3 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:750]
+INFO: [Synth 8-3848] Net tx_cntvalueout_4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:757]
+INFO: [Synth 8-3848] Net rx_cntvalueout_4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:762]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:768]
+INFO: [Synth 8-3848] Net bitslip_error_4 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:777]
+INFO: [Synth 8-3848] Net tx_cntvalueout_5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:784]
+INFO: [Synth 8-3848] Net rx_cntvalueout_5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:789]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:795]
+INFO: [Synth 8-3848] Net bitslip_error_5 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:804]
+INFO: [Synth 8-3848] Net tx_cntvalueout_6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:808]
+INFO: [Synth 8-3848] Net rx_cntvalueout_6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:813]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:819]
+INFO: [Synth 8-3848] Net fifo_empty_6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:825]
+INFO: [Synth 8-3848] Net bitslip_error_6 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:828]
+INFO: [Synth 8-3848] Net tx_cntvalueout_7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:832]
+INFO: [Synth 8-3848] Net rx_cntvalueout_7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:837]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:843]
+INFO: [Synth 8-3848] Net fifo_empty_7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:849]
+INFO: [Synth 8-3848] Net bitslip_error_7 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:852]
+INFO: [Synth 8-3848] Net tx_cntvalueout_8 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:856]
+INFO: [Synth 8-3848] Net rx_cntvalueout_8 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:861]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_8 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:867]
+INFO: [Synth 8-3848] Net fifo_empty_8 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:873]
+INFO: [Synth 8-3848] Net bitslip_error_8 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:876]
+INFO: [Synth 8-3848] Net tx_cntvalueout_9 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:880]
+INFO: [Synth 8-3848] Net rx_cntvalueout_9 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:885]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_9 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:891]
+INFO: [Synth 8-3848] Net fifo_empty_9 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:897]
+INFO: [Synth 8-3848] Net bitslip_error_9 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:900]
+INFO: [Synth 8-3848] Net tx_cntvalueout_10 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:904]
+INFO: [Synth 8-3848] Net rx_cntvalueout_10 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:909]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_10 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:915]
+INFO: [Synth 8-3848] Net fifo_empty_10 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:921]
+INFO: [Synth 8-3848] Net bitslip_error_10 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:924]
+INFO: [Synth 8-3848] Net tx_cntvalueout_11 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:928]
+INFO: [Synth 8-3848] Net rx_cntvalueout_11 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:933]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_11 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:939]
+INFO: [Synth 8-3848] Net fifo_empty_11 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:945]
+INFO: [Synth 8-3848] Net bitslip_error_11 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:948]
+INFO: [Synth 8-3848] Net tx_cntvalueout_12 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:952]
+INFO: [Synth 8-3848] Net rx_cntvalueout_12 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:957]
+INFO: [Synth 8-3848] Net rx_cntvalueout_ext_12 in module/entity bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11 does not have driver. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx_high_speed_selectio_wiz_v3_6_11.v:963]
+INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-7129] Port clkoutphy_out in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll_locked in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port mmcm_clk_in in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port cl_rxclkactivehs in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll_clk_in in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll_reset in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port mmcm_reset in module bd_d10d_phy_0_clock_module is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll0_clkout1 in module high_speed_selectio_wiz_v3_6_11_rst_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port fab_clk_pll1_in in module high_speed_selectio_wiz_v3_6_11_rst_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll1_locked_in in module high_speed_selectio_wiz_v3_6_11_rst_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll1_clkout0_out in module high_speed_selectio_wiz_v3_6_11_clk_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll1_rst_in in module high_speed_selectio_wiz_v3_6_11_clk_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port pll1_clkoutphy_en_in in module high_speed_selectio_wiz_v3_6_11_clk_scheme is either unconnected or has no load
+INFO: [Synth 8-7129] Port shared_pll0_clkout0_in in module high_speed_selectio_wiz_v3_6_11_clk_rst_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port shared_pll1_clkout0_in in module high_speed_selectio_wiz_v3_6_11_clk_rst_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port shared_pll0_locked_in in module high_speed_selectio_wiz_v3_6_11_clk_rst_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port shared_pll1_locked_in in module high_speed_selectio_wiz_v3_6_11_clk_rst_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_addr_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_nibble_sel_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[15] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[14] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[13] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[12] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[11] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[10] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[9] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[8] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[7] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[6] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_data_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n0_riu_wr_en_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_addr_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_nibble_sel_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[15] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[14] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[13] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[12] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[11] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[10] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[9] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[8] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[7] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[6] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_data_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n1_riu_wr_en_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_addr_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_nibble_sel_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[15] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[14] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[13] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[12] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[11] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[10] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[9] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[8] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[7] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[6] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_data_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n2_riu_wr_en_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[5] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[4] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[3] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[2] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[1] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_addr_in[0] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_nibble_sel_in in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_wr_data_in[15] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_wr_data_in[14] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_wr_data_in[13] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Synth 8-7129] Port n3_riu_wr_data_in[12] in module high_speed_selectio_wiz_v3_6_11_bs_ctrl_top is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:26 ; elapsed = 00:00:55 . Memory (MB): peak = 2009.352 ; gain = 424.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:56 . Memory (MB): peak = 2009.352 ; gain = 424.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:56 . Memory (MB): peak = 2009.352 ; gain = 424.523
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.406 . Memory (MB): peak = 2009.352 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2107.035 ; gain = 0.168
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx.xdc] for cell 'inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx.xdc] for cell 'inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/ip_0/bd_d10d_phy_0_hssio_rx.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_d10d_phy_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_d10d_phy_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_d10d_phy_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_d10d_phy_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_d10d_phy_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_d10d_phy_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/bd_0/ip/ip_0/bd_d10d_phy_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/bd_d10d_phy_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/bd_d10d_phy_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2107.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.376 . Memory (MB): peak = 2107.039 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:58 ; elapsed = 00:01:53 . Memory (MB): peak = 2107.039 ; gain = 522.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:58 ; elapsed = 00:01:53 . Memory (MB): peak = 2107.039 ; gain = 522.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:53 . Memory (MB): peak = 2107.039 ; gain = 522.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_17_rx_rst_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'dl_rx_state_reg' in module 'mipi_dphy_v4_3_17_csi_rx_data_lane_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_hs_high_rates_spec_v1_1.dl_state_reg' in module 'mipi_dphy_v4_3_17_rx_data_lane'
+INFO: [Synth 8-802] inferred FSM for state register 'rst_blk_state_reg' in module 'mipi_dphy_v4_3_17_rx_support_rst_logic'
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_RIU_NOT_FROM_PLL.hssio_state_reg' in module 'high_speed_selectio_wiz_v3_6_11_rst_scheme'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               RST_BEGIN |                              000 |                              000
+       ASSERT_ALL_RESETS |                              001 |                              001
+      RELEASE_MMCM_RESET |                              010 |                              010
+          RESET_FSM_DONE |                              011 |                              101
+         WAIT_FOR_ENABLE |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_17_rx_rst_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             DL_RX_BEGIN |                             0000 |                             0000
+        DL_WO_INIT_LP_11 |                             0001 |                             0001
+         DL_RX_INIT_DONE |                             0010 |                             0010
+              DL_RX_STOP |                             0011 |                             0011
+           DL_RX_HS_RQST |                             0100 |                             0100
+           DL_RX_HS_TERM |                             0101 |                             0101
+           DL_RX_HS_SYNC |                             0110 |                             0110
+            DL_RX_HS_RUN |                             0111 |                             0111
+          DL_RX_HS_ABORT |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dl_rx_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_17_csi_rx_data_lane_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                DL_START |                               00 |                               00
+                 DL_STOP |                               01 |                               01
+               DL_ACTIVE |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_hs_high_rates_spec_v1_1.dl_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_17_rx_data_lane'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               RST_BEGIN |                              000 |                              000
+       ASSERT_ALL_RESETS |                              001 |                              001
+       RELEASE_PHY_RESET |                              010 |                              010
+          RESET_FSM_DONE |                              011 |                              100
+              CHECK_SRST |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rst_blk_state_reg' using encoding 'sequential' in module 'mipi_dphy_v4_3_17_rx_support_rst_logic'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+       ASSERT_ALL_RESETS |                        000000001 |                        000000001
+      DEASSERT_PLL_RESET |                        000000010 |                        000000010
+       WAIT_FOR_PLL_LOCK |                        000000100 |                        000000100
+      DEASSERT_BS_RESETS |                        000001000 |                        000001000
+  ASSERT_PLL_CLKOUTPHYEN |                        000010000 |                        000010000
+    WAIT_FOR_BSC_DLY_RDY |                        000100000 |                        000100000
+       ASSERT_BSC_EN_VTC |                        001000000 |                        001000000
+    WAIT_FOR_BSC_VTC_RDY |                        010000000 |                        010000000
+          RESET_SEQ_DONE |                        100000000 |                        100000000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_RIU_NOT_FROM_PLL.hssio_state_reg' using encoding 'one-hot' in module 'high_speed_selectio_wiz_v3_6_11_rst_scheme'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:02 ; elapsed = 00:02:01 . Memory (MB): peak = 2107.039 ; gain = 522.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               52 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 11    
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 434   
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 11    
+	   2 Input    5 Bit        Muxes := 5     
+	  18 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	  12 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 145   
+	   5 Input    1 Bit        Muxes := 20    
+	   9 Input    1 Bit        Muxes := 34    
+	   8 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 11    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:02:24 . Memory (MB): peak = 2107.039 ; gain = 522.211
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:03:17 . Memory (MB): peak = 2693.102 ; gain = 1108.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:03:22 . Memory (MB): peak = 2741.680 ; gain = 1156.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:41 ; elapsed = 00:03:25 . Memory (MB): peak = 2744.520 ; gain = 1159.691
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:03:45 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:03:45 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:53 ; elapsed = 00:03:45 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:53 ; elapsed = 00:03:46 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:03:46 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:03:46 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |BITSLICE_CONTROL |     1|
+|2     |BUFG             |     1|
+|3     |BUFGCE           |     2|
+|4     |CARRY8           |    14|
+|5     |LUT1             |   395|
+|6     |LUT2             |    57|
+|7     |LUT3             |    69|
+|8     |LUT4             |    51|
+|9     |LUT5             |   117|
+|10    |LUT6             |   247|
+|11    |PLLE4_ADV        |     1|
+|12    |RX_BITSLICE      |     3|
+|14    |FDCE             |    39|
+|15    |FDPE             |    11|
+|16    |FDRE             |   688|
+|17    |FDSE             |    57|
+|18    |IBUFDS_DPHY      |     3|
++------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:03:46 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:03:38 . Memory (MB): peak = 2964.227 ; gain = 1281.711
+Synthesis Optimization Complete : Time (s): cpu = 00:01:55 ; elapsed = 00:04:05 . Memory (MB): peak = 2964.227 ; gain = 1379.398
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.174 . Memory (MB): peak = 2964.227 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+WARNING: [Constraints 18-5254] DIFF_TERM is not supported in UltraScale devices.  Automatically translating DIFF_TERM of TRUE to DIFF_TERM_ADV=TERM_100.  Refer to UG571: UltraScale Architecture SelectIO User Guide for more detail.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/inst/bd_d10d_phy_0_rx_support_i/slave_rx.bd_d10d_phy_0_rx_hssio_i/inst/top_inst/clk_rst_top_inst/clk_scheme_inst/GEN_PLL_IN_IP_USP.plle4_adv_pll0_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2964.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUFDS_DPHY => IBUFDS_DPHY (DPHY_DIFFINBUF, IBUFCTRL): 3 instances
+
+Synth Design complete | Checksum: f313b7f2
+INFO: [Common 17-83] Releasing license: Synthesis
+406 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:11 ; elapsed = 00:04:44 . Memory (MB): peak = 2964.227 ; gain = 2372.449
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2964.227 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/bd_d10d_phy_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_d10d_phy_0, cache-ID = b3281d3b843cb6ff
+INFO: [Coretcl 2-1174] Renamed 46 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2964.227 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d10d_phy_0_synth_1/bd_d10d_phy_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_d10d_phy_0_utilization_synth.rpt -pb bd_d10d_phy_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 12:59:23 2026...

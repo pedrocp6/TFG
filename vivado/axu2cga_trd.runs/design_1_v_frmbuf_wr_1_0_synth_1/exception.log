@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\TFG_Vivado\vivado\axu2cga_trd.runs\design_1_v_frmbuf_wr_1_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permiso denegado

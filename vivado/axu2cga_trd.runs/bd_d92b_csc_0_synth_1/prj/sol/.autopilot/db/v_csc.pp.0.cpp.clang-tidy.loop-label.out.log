@@ -1,0 +1,1790 @@
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3291:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3291:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3305:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3305:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3319:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:3319:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:6810:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:6810:7: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52437:5: remark: Added loop label VITIS_LOOP_61_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^
+    VITIS_LOOP_61_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52437:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52483:5: remark: Added loop label VITIS_LOOP_117_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^
+    VITIS_LOOP_117_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52483:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52646:9: remark: Added loop label VITIS_LOOP_289_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^
+        VITIS_LOOP_289_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52646:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52798:9: remark: Added loop label VITIS_LOOP_449_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^
+        VITIS_LOOP_449_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52798:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52978:5: remark: Added loop label VITIS_LOOP_629_1:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^
+    VITIS_LOOP_629_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52978:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52982:5: remark: Added loop label VITIS_LOOP_633_2:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^
+    VITIS_LOOP_633_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:52982:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53092:5: remark: Added loop label VITIS_LOOP_743_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^
+    VITIS_LOOP_743_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53092:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53182:7: remark: Added loop label VITIS_LOOP_840_1:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^
+      VITIS_LOOP_840_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53182:7: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53201:7: remark: Added loop label VITIS_LOOP_859_2:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^
+      VITIS_LOOP_859_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53201:7: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53494:5: remark: Added loop label VITIS_LOOP_1176_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^
+    VITIS_LOOP_1176_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53494:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53577:5: remark: Added loop label VITIS_LOOP_1259_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^
+    VITIS_LOOP_1259_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53577:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53983:13: remark: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+            for (int j = 3; j >= I_+1; j--) {
+            ^
+            VITIS_LOOP_68_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53983:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53989:17: remark: Added loop label VITIS_LOOP_74_2:   [xilinx-label-all-loops]
+                for (int j = 3; j >= I_+1; j--){
+                ^
+                VITIS_LOOP_74_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53989:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53993:17: remark: Added loop label VITIS_LOOP_78_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--){
+                ^
+                VITIS_LOOP_78_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:53993:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54040:13: remark: Added loop label VITIS_LOOP_145_4:   [xilinx-label-all-loops]
+            for (int j = 9; j >= I_+4; j--) {
+            ^
+            VITIS_LOOP_145_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54040:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54046:17: remark: Added loop label VITIS_LOOP_151_5:   [xilinx-label-all-loops]
+                for (int j = 9; j >= I_+4; j--){
+                ^
+                VITIS_LOOP_151_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54046:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54050:17: remark: Added loop label VITIS_LOOP_155_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--){
+                ^
+                VITIS_LOOP_155_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54050:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54065:9: remark: Added loop label VITIS_LOOP_170_7:   [xilinx-label-all-loops]
+        for (int j = 14; j < 22; j++){
+        ^
+        VITIS_LOOP_170_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54065:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54073:17: remark: Added loop label VITIS_LOOP_178_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++){
+                ^
+                VITIS_LOOP_178_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54073:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54138:13: remark: Added loop label VITIS_LOOP_243_9:   [xilinx-label-all-loops]
+            for (int j = 21; j >= I_+10; j--) {
+            ^
+            VITIS_LOOP_243_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54138:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54144:17: remark: Added loop label VITIS_LOOP_249_10:   [xilinx-label-all-loops]
+                for (int j = 21; j >= I_+10; j--) {
+                ^
+                VITIS_LOOP_249_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54144:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54148:17: remark: Added loop label VITIS_LOOP_253_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^
+                VITIS_LOOP_253_11: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54148:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54163:9: remark: Added loop label VITIS_LOOP_268_12:   [xilinx-label-all-loops]
+        for (int j = 27; j < 46; j++){
+        ^
+        VITIS_LOOP_268_12: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54163:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54171:17: remark: Added loop label VITIS_LOOP_276_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^
+                VITIS_LOOP_276_13: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54171:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54400:13: remark: Added loop label VITIS_LOOP_505_14:   [xilinx-label-all-loops]
+            for (int j = 45; j >= I_+22; j--) {
+            ^
+            VITIS_LOOP_505_14: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54400:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54406:17: remark: Added loop label VITIS_LOOP_511_15:   [xilinx-label-all-loops]
+                for (int j = 45; j >= I_+22; j--){
+                ^
+                VITIS_LOOP_511_15: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54406:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54410:17: remark: Added loop label VITIS_LOOP_515_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^
+                VITIS_LOOP_515_16: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54410:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54420:9: remark: Added loop label VITIS_LOOP_525_17:   [xilinx-label-all-loops]
+        for (int j = 32-F_; j < 32+I_; j++){
+        ^
+        VITIS_LOOP_525_17: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54420:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54424:9: remark: Added loop label VITIS_LOOP_529_18:   [xilinx-label-all-loops]
+        for (int j = 32+I_; j <= 64; j++){
+        ^
+        VITIS_LOOP_529_18: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54424:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54434:9: remark: Added loop label VITIS_LOOP_539_19:   [xilinx-label-all-loops]
+        for (int j = 37; j < 64; j++) {
+        ^
+        VITIS_LOOP_539_19: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54434:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54442:17: remark: Added loop label VITIS_LOOP_547_20:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++){
+                ^
+                VITIS_LOOP_547_20: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54442:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54803:13: remark: Added loop label VITIS_LOOP_908_21:   [xilinx-label-all-loops]
+            for (int j = 63; j >= I_+31; j--) {
+            ^
+            VITIS_LOOP_908_21: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54803:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54809:17: remark: Added loop label VITIS_LOOP_914_22:   [xilinx-label-all-loops]
+                for (int j = 63; j >= I_+31; j--) {
+                ^
+                VITIS_LOOP_914_22: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54809:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54813:17: remark: Added loop label VITIS_LOOP_918_23:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^
+                VITIS_LOOP_918_23: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54813:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54929:13: remark: Added loop label VITIS_LOOP_1034_1:   [xilinx-label-all-loops]
+            for (int j = 4; j >= I_+1; j--) {
+            ^
+            VITIS_LOOP_1034_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54929:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54935:17: remark: Added loop label VITIS_LOOP_1040_2:   [xilinx-label-all-loops]
+                for (int j = 4; j >= I_+1; j--) {
+                ^
+                VITIS_LOOP_1040_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54935:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54939:17: remark: Added loop label VITIS_LOOP_1044_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--) {
+                ^
+                VITIS_LOOP_1044_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:54939:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55026:13: remark: Added loop label VITIS_LOOP_1131_4:   [xilinx-label-all-loops]
+            for (int j = 10; j >= I_+4; j--) {
+            ^
+            VITIS_LOOP_1131_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55026:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55032:17: remark: Added loop label VITIS_LOOP_1137_5:   [xilinx-label-all-loops]
+                for (int j = 10; j >= I_+4; j--) {
+                ^
+                VITIS_LOOP_1137_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55032:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55036:17: remark: Added loop label VITIS_LOOP_1141_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--) {
+                ^
+                VITIS_LOOP_1141_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55036:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55055:9: remark: Added loop label VITIS_LOOP_1160_7:   [xilinx-label-all-loops]
+        for (int j = wf+3; j < w-1; j++) {
+        ^
+        VITIS_LOOP_1160_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55055:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55062:17: remark: Added loop label VITIS_LOOP_1167_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++) {
+                ^
+                VITIS_LOOP_1167_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55062:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55178:13: remark: Added loop label VITIS_LOOP_1283_9:   [xilinx-label-all-loops]
+            for (int j = 22; j >= I_+10; j--) {
+            ^
+            VITIS_LOOP_1283_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55178:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55184:17: remark: Added loop label VITIS_LOOP_1289_10:   [xilinx-label-all-loops]
+                for (int j = 22; j >= I_+10; j--){
+                ^
+                VITIS_LOOP_1289_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55184:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55188:17: remark: Added loop label VITIS_LOOP_1293_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^
+                VITIS_LOOP_1293_11: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55188:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55208:9: remark: Added loop label VITIS_LOOP_1313_12:   [xilinx-label-all-loops]
+        for (int j = wf+4; j < w-1; j++){
+        ^
+        VITIS_LOOP_1313_12: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55208:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55215:17: remark: Added loop label VITIS_LOOP_1320_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^
+                VITIS_LOOP_1320_13: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55215:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55477:13: remark: Added loop label VITIS_LOOP_1582_14:   [xilinx-label-all-loops]
+            for (int j = 46; j >= I_+22; j--) {
+            ^
+            VITIS_LOOP_1582_14: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55477:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55483:17: remark: Added loop label VITIS_LOOP_1588_15:   [xilinx-label-all-loops]
+                for (int j = 46; j >= I_+22; j--) {
+                ^
+                VITIS_LOOP_1588_15: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55483:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55487:17: remark: Added loop label VITIS_LOOP_1592_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^
+                VITIS_LOOP_1592_16: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55487:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55511:9: remark: Added loop label VITIS_LOOP_1616_17:   [xilinx-label-all-loops]
+        for (int j = wf+5; j < w-1; j++){
+        ^
+        VITIS_LOOP_1616_17: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55511:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55518:17: remark: Added loop label VITIS_LOOP_1623_18:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^
+                VITIS_LOOP_1623_18: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55518:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55948:13: remark: Added loop label VITIS_LOOP_2053_19:   [xilinx-label-all-loops]
+            for (int j = 64; j >= I_+31; j--) {
+            ^
+            VITIS_LOOP_2053_19: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55948:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55954:17: remark: Added loop label VITIS_LOOP_2059_20:   [xilinx-label-all-loops]
+                for (int j = 64; j >= I_+31; j--) {
+                ^
+                VITIS_LOOP_2059_20: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55954:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55958:17: remark: Added loop label VITIS_LOOP_2063_21:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^
+                VITIS_LOOP_2063_21: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:55958:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56087:13: remark: Added loop label VITIS_LOOP_2192_1:   [xilinx-label-all-loops]
+            for(int j=3; j>=I+1; j--) {
+            ^
+            VITIS_LOOP_2192_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56087:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56094:17: remark: Added loop label VITIS_LOOP_2199_2:   [xilinx-label-all-loops]
+                for(int j=3; j>=I+1; j--) {
+                ^
+                VITIS_LOOP_2199_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56094:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56098:17: remark: Added loop label VITIS_LOOP_2203_3:   [xilinx-label-all-loops]
+                for(int j=I; j>=0; j--) {
+                ^
+                VITIS_LOOP_2203_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56098:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56145:13: remark: Added loop label VITIS_LOOP_2250_4:   [xilinx-label-all-loops]
+            for(int j=7; j>=3+I; j--) {
+            ^
+            VITIS_LOOP_2250_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56145:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56152:17: remark: Added loop label VITIS_LOOP_2257_5:   [xilinx-label-all-loops]
+                for(int j=7; j>=3+I; j--) {
+                ^
+                VITIS_LOOP_2257_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56152:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56156:17: remark: Added loop label VITIS_LOOP_2261_6:   [xilinx-label-all-loops]
+                for(int j=I+2; j>=0; j--) {
+                ^
+                VITIS_LOOP_2261_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56156:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56174:9: remark: Added loop label VITIS_LOOP_2279_7:   [xilinx-label-all-loops]
+        for(int j=11; j<16; j++) {
+        ^
+        VITIS_LOOP_2279_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56174:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56229:13: remark: Added loop label VITIS_LOOP_2334_8:   [xilinx-label-all-loops]
+            for(int j=15; j>=7+I; j--) {
+            ^
+            VITIS_LOOP_2334_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56229:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56236:17: remark: Added loop label VITIS_LOOP_2341_9:   [xilinx-label-all-loops]
+                for(int j=15; j>=7+I; j--) {
+                ^
+                VITIS_LOOP_2341_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56236:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56240:17: remark: Added loop label VITIS_LOOP_2345_10:   [xilinx-label-all-loops]
+                for(int j=6+I; j>=0; j--) {
+                ^
+                VITIS_LOOP_2345_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56240:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56258:9: remark: Added loop label VITIS_LOOP_2363_11:   [xilinx-label-all-loops]
+        for(int j=20; j<32; j++) {
+        ^
+        VITIS_LOOP_2363_11: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56258:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56347:13: remark: Added loop label VITIS_LOOP_2452_12:   [xilinx-label-all-loops]
+            for(int j=31; j>=I+15; j--) {
+            ^
+            VITIS_LOOP_2452_12: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56347:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56354:17: remark: Added loop label VITIS_LOOP_2459_13:   [xilinx-label-all-loops]
+                for(int j=31; j>=I+15; j--) {
+                ^
+                VITIS_LOOP_2459_13: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56354:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56358:17: remark: Added loop label VITIS_LOOP_2463_14:   [xilinx-label-all-loops]
+                for(int j=I+14; j>=0; j--) {
+                ^
+                VITIS_LOOP_2463_14: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56358:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56368:9: remark: Added loop label VITIS_LOOP_2473_15:   [xilinx-label-all-loops]
+        for(int j=32-F; j<32+I; j++) {
+        ^
+        VITIS_LOOP_2473_15: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56368:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56372:9: remark: Added loop label VITIS_LOOP_2477_16:   [xilinx-label-all-loops]
+        for(int j=32+I; j<=64; j++) {
+        ^
+        VITIS_LOOP_2477_16: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56372:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56383:9: remark: Added loop label VITIS_LOOP_2488_17:   [xilinx-label-all-loops]
+        for(int j=37; j<64; j++) {
+        ^
+        VITIS_LOOP_2488_17: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56383:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56391:17: remark: Added loop label VITIS_LOOP_2496_18:   [xilinx-label-all-loops]
+                for(int j=0; j<64; j++) {
+                ^
+                VITIS_LOOP_2496_18: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56391:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56716:13: remark: Added loop label VITIS_LOOP_2821_19:   [xilinx-label-all-loops]
+            for(int j=63; j>=I+31; j--) {
+            ^
+            VITIS_LOOP_2821_19: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56716:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56723:17: remark: Added loop label VITIS_LOOP_2828_20:   [xilinx-label-all-loops]
+                for(int j=63; j>=I+31; j--) {
+                ^
+                VITIS_LOOP_2828_20: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56723:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56727:17: remark: Added loop label VITIS_LOOP_2832_21:   [xilinx-label-all-loops]
+                for(int j=I+30; j>=0; j--) {
+                ^
+                VITIS_LOOP_2832_21: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56727:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56815:4: remark: Added loop label VITIS_LOOP_2920_1:   [xilinx-label-all-loops]
+   for(int j = 5; j>=I_+2; j--) {
+   ^
+   VITIS_LOOP_2920_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56815:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56822:5: remark: Added loop label VITIS_LOOP_2927_2:   [xilinx-label-all-loops]
+    for(int j = 5; j>=I_+2; j--) {
+    ^
+    VITIS_LOOP_2927_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56822:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56826:5: remark: Added loop label VITIS_LOOP_2931_3:   [xilinx-label-all-loops]
+    for(int j = I_+1; j>=0; j--) {
+    ^
+    VITIS_LOOP_2931_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56826:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56841:3: remark: Added loop label VITIS_LOOP_2946_4:   [xilinx-label-all-loops]
+  for(int j = 11; j >=7; j--) {
+  ^
+  VITIS_LOOP_2946_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56841:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56873:4: remark: Added loop label VITIS_LOOP_2978_5:   [xilinx-label-all-loops]
+   for(int j = 11; j >= I_+5; j--) {
+   ^
+   VITIS_LOOP_2978_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56873:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56880:5: remark: Added loop label VITIS_LOOP_2985_6:   [xilinx-label-all-loops]
+    for(int j = 11; j>= I_+5; j--) {
+    ^
+    VITIS_LOOP_2985_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56880:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56884:5: remark: Added loop label VITIS_LOOP_2989_7:   [xilinx-label-all-loops]
+    for(int j = I_+4; j>=0; j--) {
+    ^
+    VITIS_LOOP_2989_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56884:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56899:3: remark: Added loop label VITIS_LOOP_3004_8:   [xilinx-label-all-loops]
+  for(int j = 25; j>=15; j--) {
+  ^
+  VITIS_LOOP_3004_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56899:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56949:4: remark: Added loop label VITIS_LOOP_3054_9:   [xilinx-label-all-loops]
+   for(int j = 25; j>= I_+12; j--) {
+   ^
+   VITIS_LOOP_3054_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56949:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56956:5: remark: Added loop label VITIS_LOOP_3061_10:   [xilinx-label-all-loops]
+    for(int j = 25; j>=I_+12; j--) {
+    ^
+    VITIS_LOOP_3061_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56956:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56960:5: remark: Added loop label VITIS_LOOP_3065_11:   [xilinx-label-all-loops]
+    for(int j = I_+11; j>=0; j--) {
+    ^
+    VITIS_LOOP_3065_11: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56960:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56975:3: remark: Added loop label VITIS_LOOP_3080_12:   [xilinx-label-all-loops]
+  for(int j = 51; j >= 29; j--) {
+  ^
+  VITIS_LOOP_3080_12: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:56975:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57112:4: remark: Added loop label VITIS_LOOP_3217_13:   [xilinx-label-all-loops]
+   for(int j = 51; j >= 25 + I_; j--) {
+   ^
+   VITIS_LOOP_3217_13: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57112:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57119:5: remark: Added loop label VITIS_LOOP_3224_14:   [xilinx-label-all-loops]
+    for(int j = 51; j>=25 + I_; j--) {
+    ^
+    VITIS_LOOP_3224_14: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57119:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57123:5: remark: Added loop label VITIS_LOOP_3228_15:   [xilinx-label-all-loops]
+    for(int j = 24 + I_; j >= 0; j--) {
+    ^
+    VITIS_LOOP_3228_15: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57123:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57138:3: remark: Added loop label VITIS_LOOP_3243_16:   [xilinx-label-all-loops]
+  for(int j = 63; j >= 36; j--) {
+  ^
+  VITIS_LOOP_3243_16: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57138:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57298:4: remark: Added loop label VITIS_LOOP_3403_17:   [xilinx-label-all-loops]
+   for(int j = 63; j >= 31 + I_; j--) {
+   ^
+   VITIS_LOOP_3403_17: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57298:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57305:5: remark: Added loop label VITIS_LOOP_3410_18:   [xilinx-label-all-loops]
+    for(int j = 63; j >= 31 + I_; j--) {
+    ^
+    VITIS_LOOP_3410_18: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57305:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57309:5: remark: Added loop label VITIS_LOOP_3414_19:   [xilinx-label-all-loops]
+    for(int j = 30 + I_; j >= 0; j--) {
+    ^
+    VITIS_LOOP_3414_19: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:57309:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58024:13: remark: Added loop label VITIS_LOOP_703_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^
+            VITIS_LOOP_703_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58024:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58242:13: remark: Added loop label VITIS_LOOP_921_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^
+            VITIS_LOOP_921_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58242:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58659:13: remark: Added loop label VITIS_LOOP_1345_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^
+            VITIS_LOOP_1345_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58659:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58982:9: remark: Added loop label VITIS_LOOP_243_1:   [xilinx-label-all-loops]
+        for ( int pos = msbr-1; pos >= 0; pos-- ) {
+        ^
+        VITIS_LOOP_243_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:58982:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59010:9: remark: Added loop label VITIS_LOOP_271_2:   [xilinx-label-all-loops]
+        for ( int pos = -1; pos >= -F_-1; pos-- ) {
+        ^
+        VITIS_LOOP_271_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59010:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59714:13: remark: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
+            for (int j = 0; j < W_-1; j++){
+            ^
+            VITIS_LOOP_48_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59714:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59767:5: remark: Added loop label VITIS_LOOP_109_2:   [xilinx-label-all-loops]
+    for (int j = F_l+F_+I_m-1; j < F_l+W_+5; j++){
+    ^
+    VITIS_LOOP_109_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59767:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59781:13: remark: Added loop label VITIS_LOOP_123_3:   [xilinx-label-all-loops]
+            for (int j = WO_m-1; j >= W_-1; j--) {
+            ^
+            VITIS_LOOP_123_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59781:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59811:13: remark: Added loop label VITIS_LOOP_153_4:   [xilinx-label-all-loops]
+            for (int j = W_-2; j >= 0; j--){
+            ^
+            VITIS_LOOP_153_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59811:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59896:12: remark: Added loop label VITIS_LOOP_281_1:   [xilinx-label-all-loops]
+           for(int i = wf_log+we_log-2; i > WI_e - 2; --i) {
+           ^
+           VITIS_LOOP_281_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59896:12: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59916:16: remark: Added loop label VITIS_LOOP_301_2:   [xilinx-label-all-loops]
+               for (int j = WO_e-1; j >= W_-1; j--) {
+               ^
+               VITIS_LOOP_301_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59916:16: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59930:20: remark: Added loop label VITIS_LOOP_315_3:   [xilinx-label-all-loops]
+                   for(int i = 0; i < W_-1; ++i) {
+                   ^
+                   VITIS_LOOP_315_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:59930:20: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60023:12: remark: Added loop label VITIS_LOOP_433_1:   [xilinx-label-all-loops]
+           for (int j =WO_d-1; j >= W_-1; j--) {
+           ^
+           VITIS_LOOP_433_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60023:12: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60037:15: remark: Added loop label VITIS_LOOP_447_2:   [xilinx-label-all-loops]
+              for(int i = 0; i < W_-1; ++i) {
+              ^
+              VITIS_LOOP_447_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60037:15: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60157:13: remark: Added loop label VITIS_LOOP_33_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^
+            VITIS_LOOP_33_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60157:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60281:13: remark: Added loop label VITIS_LOOP_183_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^
+            VITIS_LOOP_183_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60281:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60336:13: remark: Added loop label VITIS_LOOP_248_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^
+            VITIS_LOOP_248_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60336:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60603:5: remark: Added loop label VITIS_LOOP_44_1:   [xilinx-label-all-loops]
+    for(int l = loop_nm; l > 0; --l){
+    ^
+    VITIS_LOOP_44_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60603:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60854:5: remark: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+    for (int i=0; i<W_;i++)
+    ^
+    VITIS_LOOP_16_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60854:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60865:5: remark: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+    for (int i=0; i<W_;i++)
+    ^
+    VITIS_LOOP_27_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60865:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60876:5: remark: Added loop label VITIS_LOOP_38_1:   [xilinx-label-all-loops]
+    for (int i=0; i<I_;i++)
+    ^
+    VITIS_LOOP_38_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60876:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60887:5: remark: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+    for (int i=0; i<I_;i++)
+    ^
+    VITIS_LOOP_49_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60887:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60898:5: remark: Added loop label VITIS_LOOP_60_1:   [xilinx-label-all-loops]
+    for (int i=0; i<W_;i++)
+    ^
+    VITIS_LOOP_60_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60898:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60909:5: remark: Added loop label VITIS_LOOP_71_1:   [xilinx-label-all-loops]
+    for (int i=0; i<W_;i++)
+    ^
+    VITIS_LOOP_71_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60909:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60920:5: remark: Added loop label VITIS_LOOP_82_1:   [xilinx-label-all-loops]
+    for (int i=0; i<I_;i++)
+    ^
+    VITIS_LOOP_82_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60920:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60931:5: remark: Added loop label VITIS_LOOP_93_1:   [xilinx-label-all-loops]
+    for (int i=0; i<I_;i++)
+    ^
+    VITIS_LOOP_93_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:60931:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63290:12: remark: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+           for(int i = 0; i < W_-1; ++i) {
+           ^
+           VITIS_LOOP_26_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63290:12: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63354:7: remark: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+      for(int pos = msbr - 1 ; pos >= -F-1; pos--) {
+      ^
+      VITIS_LOOP_40_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63354:7: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63471:9: remark: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+        for(int pos = msbr - 1; pos >= 0; pos--) {
+        ^
+        VITIS_LOOP_49_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63471:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63496:5: remark: Added loop label VITIS_LOOP_81_2:   [xilinx-label-all-loops]
+    for(int pos = -1; pos >= -F-1; pos--) {
+    ^
+    VITIS_LOOP_81_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63496:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63566:8: remark: Added loop label VITIS_LOOP_169_3:   [xilinx-label-all-loops]
+       for(int i = 0; i < W - 1; ++i) {
+       ^
+       VITIS_LOOP_169_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:63566:8: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66231:5: remark: Added loop label VITIS_LOOP_137_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS; i++) {
+    ^
+    VITIS_LOOP_137_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66231:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66233:9: remark: Added loop label VITIS_LOOP_139_2:   [xilinx-label-all-loops]
+        for(j = 0; j < COLS-1; j++) {
+        ^
+        VITIS_LOOP_139_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66233:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66255:5: remark: Added loop label VITIS_LOOP_175_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS; i++) {
+    ^
+    VITIS_LOOP_175_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66255:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66257:9: remark: Added loop label VITIS_LOOP_177_2:   [xilinx-label-all-loops]
+        for(j = COLS-1; j > 0; j--) {
+        ^
+        VITIS_LOOP_177_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66257:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66279:5: remark: Added loop label VITIS_LOOP_213_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS-1; i++) {
+    ^
+    VITIS_LOOP_213_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66279:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66281:9: remark: Added loop label VITIS_LOOP_215_2:   [xilinx-label-all-loops]
+        for(j = 0; j < COLS; j++) {
+        ^
+        VITIS_LOOP_215_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66281:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66303:5: remark: Added loop label VITIS_LOOP_251_1:   [xilinx-label-all-loops]
+    for(i = ROWS-1; i > 0; i--) {
+    ^
+    VITIS_LOOP_251_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66303:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66305:9: remark: Added loop label VITIS_LOOP_253_2:   [xilinx-label-all-loops]
+        for(j = 0; j < COLS; j++) {
+        ^
+        VITIS_LOOP_253_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66305:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66343:5: remark: Added loop label VITIS_LOOP_320_1:   [xilinx-label-all-loops]
+    for(j = 0; j < COLS; j++) {
+    ^
+    VITIS_LOOP_320_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66343:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66395:5: remark: Added loop label VITIS_LOOP_417_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS; i++) {
+    ^
+    VITIS_LOOP_417_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66395:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66585:5: remark: Added loop label VITIS_LOOP_702_1:   [xilinx-label-all-loops]
+    for(i = ROWS-1; i > 0; i--) {
+    ^
+    VITIS_LOOP_702_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66585:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66607:5: remark: Added loop label VITIS_LOOP_742_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS-1; i++) {
+    ^
+    VITIS_LOOP_742_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66607:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66655:5: remark: Added loop label VITIS_LOOP_838_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS; i++) {
+    ^
+    VITIS_LOOP_838_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66655:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66762:5: remark: Added loop label VITIS_LOOP_990_1:   [xilinx-label-all-loops]
+    for(i = ROWS-1; i > 0; i--) {
+    ^
+    VITIS_LOOP_990_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66762:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66784:5: remark: Added loop label VITIS_LOOP_1030_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS-1; i++) {
+    ^
+    VITIS_LOOP_1030_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66784:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66832:5: remark: Added loop label VITIS_LOOP_1126_1:   [xilinx-label-all-loops]
+    for(i = 0; i < ROWS; i++) {
+    ^
+    VITIS_LOOP_1126_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:66832:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67033:9: remark: Added loop label VITIS_LOOP_232_1:   [xilinx-label-all-loops]
+        for (int k = 0; k < N; k++) {
+        ^
+        VITIS_LOOP_232_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67033:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67054:5: remark: Added loop label VITIS_LOOP_253_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_253_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67054:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67064:5: remark: Added loop label VITIS_LOOP_263_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_263_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67064:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67075:5: remark: Added loop label VITIS_LOOP_274_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_274_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67075:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67086:5: remark: Added loop label VITIS_LOOP_285_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_285_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67086:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67097:5: remark: Added loop label VITIS_LOOP_296_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_296_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67097:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67109:5: remark: Added loop label VITIS_LOOP_308_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_308_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67109:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67120:5: remark: Added loop label VITIS_LOOP_319_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_319_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67120:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67132:5: remark: Added loop label VITIS_LOOP_331_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_331_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67132:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67143:5: remark: Added loop label VITIS_LOOP_342_1:   [xilinx-label-all-loops]
+    for (int k = 0; k < N; k++) {
+    ^
+    VITIS_LOOP_342_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67143:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67420:13: remark: Added loop label VITIS_LOOP_619_1:   [xilinx-label-all-loops]
+            for (i = 0; i < ((((T) & ((512 - 1) << 11)) >> 11) + 1); i++) {
+            ^
+            VITIS_LOOP_619_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67420:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67497:9: remark: Added loop label VITIS_LOOP_696_1:   [xilinx-label-all-loops]
+        for (i = 0; i < ((((T) & ((512 - 1) << 11)) >> 11) + 1); i++) {
+        ^
+        VITIS_LOOP_696_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67497:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67521:9: remark: Added loop label VITIS_LOOP_720_1:   [xilinx-label-all-loops]
+        for (i = 0; i < ((((T) & ((512 - 1) << 11)) >> 11) + 1); i++) {
+        ^
+        VITIS_LOOP_720_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67521:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67544:5: remark: Added loop label VITIS_LOOP_743_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T i = 0; i < ((((T) & ((512 - 1) << 11)) >> 11) + 1); i++) {
+    ^
+    VITIS_LOOP_743_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67544:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67674:25: remark: Added loop label VITIS_LOOP_210_1:   [xilinx-label-all-loops]
+                        for(int k=0;k<num;k++)
+                        ^
+                        VITIS_LOOP_210_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67674:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67810:9: remark: Added loop label VITIS_LOOP_189_1:   [xilinx-label-all-loops]
+        for (HLS_SIZE_T col = 0; col < cols; col++) {
+        ^
+        VITIS_LOOP_189_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67810:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67876:9: remark: Added loop label VITIS_LOOP_255_1:   [xilinx-label-all-loops]
+        for (HLS_SIZE_T col = 0; col < cols; col++) {
+        ^
+        VITIS_LOOP_255_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:67876:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68780:5: remark: Added loop label VITIS_LOOP_1027_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1027_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68780:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68839:13: remark: Added loop label VITIS_LOOP_1107_1:   [xilinx-label-all-loops]
+            for (HLS_CHANNEL_T k = 0; k < ((((DST_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+            ^
+            VITIS_LOOP_1107_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68839:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68855:5: remark: Added loop label VITIS_LOOP_1123_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1123_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68855:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68871:5: remark: Added loop label VITIS_LOOP_1139_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1139_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68871:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68889:5: remark: Added loop label VITIS_LOOP_1157_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1157_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68889:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68927:5: remark: Added loop label VITIS_LOOP_1195_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1195_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68927:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68947:5: remark: Added loop label VITIS_LOOP_1215_1:   [xilinx-label-all-loops]
+    for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+    ^
+    VITIS_LOOP_1215_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:68947:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69235:13: remark: Added loop label VITIS_LOOP_1510_1:   [xilinx-label-all-loops]
+            for (HLS_CHANNEL_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+            ^
+            VITIS_LOOP_1510_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69235:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69784:21: remark: Added loop label VITIS_LOOP_471_1:   [xilinx-label-all-loops]
+                    for(int buf_row=0; buf_row<K_HEIGHT; buf_row++) {
+                    ^
+                    VITIS_LOOP_471_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69784:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69797:29: remark: Added loop label VITIS_LOOP_484_2:   [xilinx-label-all-loops]
+                            for(int buf_row=2*K_HEIGHT-1; buf_row>=0; buf_row--) {
+                            ^
+                            VITIS_LOOP_484_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69797:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69806:29: remark: Added loop label VITIS_LOOP_493_3:   [xilinx-label-all-loops]
+                            for(int buf_row=0; buf_row<K_HEIGHT; buf_row++) {
+                            ^
+                            VITIS_LOOP_493_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69806:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69807:33: remark: Added loop label VITIS_LOOP_494_4:   [xilinx-label-all-loops]
+                                for(int buf_col=K_WIDTH-1; buf_col>0; buf_col--) {
+                                ^
+                                VITIS_LOOP_494_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69807:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69815:29: remark: Added loop label VITIS_LOOP_502_5:   [xilinx-label-all-loops]
+                            for(int buf_row=2*K_HEIGHT-1; buf_row>0; buf_row--) {
+                            ^
+                            VITIS_LOOP_502_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69815:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69829:21: remark: Added loop label VITIS_LOOP_516_6:   [xilinx-label-all-loops]
+                    for(int buf_row=0; buf_row<K_HEIGHT; buf_row++){
+                    ^
+                    VITIS_LOOP_516_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69829:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69965:25: remark: Added loop label VITIS_LOOP_652_1:   [xilinx-label-all-loops]
+                        for(int buf_row=K_HEIGHT-1; buf_row>0; buf_row--) {
+                        ^
+                        VITIS_LOOP_652_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69965:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69969:25: remark: Added loop label VITIS_LOOP_656_2:   [xilinx-label-all-loops]
+                        for(int buf_row=K_HEIGHT-1; buf_row>=0; buf_row--) {
+                        ^
+                        VITIS_LOOP_656_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69969:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69976:29: remark: Added loop label VITIS_LOOP_663_3:   [xilinx-label-all-loops]
+                            for(int buf_row=K_HEIGHT-1; buf_row>0; buf_row--) {
+                            ^
+                            VITIS_LOOP_663_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69976:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69993:25: remark: Added loop label VITIS_LOOP_680_4:   [xilinx-label-all-loops]
+                        for(int buf_row=K_HEIGHT-1; buf_row>=0; buf_row--) {
+                        ^
+                        VITIS_LOOP_680_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69993:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69994:29: remark: Added loop label VITIS_LOOP_681_5:   [xilinx-label-all-loops]
+                            for(int buf_col=K_WIDTH-1; buf_col>0; buf_col--) {
+                            ^
+                            VITIS_LOOP_681_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:69994:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70096:17: remark: Added loop label VITIS_LOOP_783_1:   [xilinx-label-all-loops]
+                for(int buf_row=0; buf_row<K_HEIGHT; buf_row++) {
+                ^
+                VITIS_LOOP_783_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70096:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70106:21: remark: Added loop label VITIS_LOOP_793_2:   [xilinx-label-all-loops]
+                    for(int buf_row=2*K_HEIGHT-1; buf_row>=0; buf_row--) {
+                    ^
+                    VITIS_LOOP_793_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70106:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70113:21: remark: Added loop label VITIS_LOOP_800_3:   [xilinx-label-all-loops]
+                    for(int buf_row=2*K_HEIGHT-1; buf_row>0; buf_row--) {
+                    ^
+                    VITIS_LOOP_800_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70113:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70123:17: remark: Added loop label VITIS_LOOP_810_4:   [xilinx-label-all-loops]
+                for(int buf_row=0; buf_row<K_HEIGHT; buf_row++){
+                ^
+                VITIS_LOOP_810_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70123:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70249:17: remark: Added loop label VITIS_LOOP_936_1:   [xilinx-label-all-loops]
+                for (int buf_col=K_WIDTH-1; buf_col>0; buf_col--) {
+                ^
+                VITIS_LOOP_936_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70249:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70271:17: remark: Added loop label VITIS_LOOP_958_2:   [xilinx-label-all-loops]
+                for (int buf_col=0; buf_col<2*K_WIDTH; buf_col++) {
+                ^
+                VITIS_LOOP_958_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70271:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70277:17: remark: Added loop label VITIS_LOOP_964_3:   [xilinx-label-all-loops]
+                for (int buf_col=0; buf_col<K_WIDTH; buf_col++) {
+                ^
+                VITIS_LOOP_964_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70277:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70397:17: remark: Added loop label VITIS_LOOP_1084_1:   [xilinx-label-all-loops]
+                for(int buf_col=K_WIDTH-1; buf_col>=1; buf_col--) {
+                ^
+                VITIS_LOOP_1084_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70397:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70402:21: remark: Added loop label VITIS_LOOP_1089_2:   [xilinx-label-all-loops]
+                    for(int buf_row= K_HEIGHT-1;buf_row >= 1;buf_row--) {
+                    ^
+                    VITIS_LOOP_1089_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70402:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70430:17: remark: Added loop label VITIS_LOOP_1117_3:   [xilinx-label-all-loops]
+                for (int buf_col=0; buf_col<K_WIDTH; buf_col++) {
+                ^
+                VITIS_LOOP_1117_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70430:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70838:2: remark: Added loop label VITIS_LOOP_1525_1:   [xilinx-label-all-loops]
+ for(int i=0; i<CN1; i++) {
+ ^
+ VITIS_LOOP_1525_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70838:2: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70847:2: remark: Added loop label VITIS_LOOP_1534_1:   [xilinx-label-all-loops]
+ for(int i=0; i<CN1; i++) {
+ ^
+ VITIS_LOOP_1534_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:70847:2: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71408:5: remark: Added loop label VITIS_LOOP_2095_1:   [xilinx-label-all-loops]
+    for (i=0; i<NPHASES; i++) {
+    ^
+    VITIS_LOOP_2095_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71408:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71415:5: remark: Added loop label VITIS_LOOP_2102_2:   [xilinx-label-all-loops]
+    for (i = 0; i < NPHASES; i++) {
+    ^
+    VITIS_LOOP_2102_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71415:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71416:9: remark: Added loop label VITIS_LOOP_2103_3:   [xilinx-label-all-loops]
+        for (j = 0; j < NTAPS; j++) {
+        ^
+        VITIS_LOOP_2103_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71416:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71559:27: remark: Added loop label VITIS_LOOP_2246_1:   [xilinx-label-all-loops]
+                          for (int m = 0; m < ((((T) & ((512 - 1) << 11)) >> 11) + 1); m++)
+                          ^
+                          VITIS_LOOP_2246_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71559:27: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71566:15: remark: Added loop label VITIS_LOOP_2253_2:   [xilinx-label-all-loops]
+              for (int i = 0; i < NTAPS; i++) {
+              ^
+              VITIS_LOOP_2253_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71566:15: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71572:23: remark: Added loop label VITIS_LOOP_2259_3:   [xilinx-label-all-loops]
+                      for (int i = NTAPS - 1; i > 0; i--) {
+                      ^
+                      VITIS_LOOP_2259_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71572:23: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71586:23: remark: Added loop label VITIS_LOOP_2273_4:   [xilinx-label-all-loops]
+                      for (int i = NTAPS - 1; i >= 0; i--) {
+                      ^
+                      VITIS_LOOP_2273_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71586:23: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71597:15: remark: Added loop label VITIS_LOOP_2284_5:   [xilinx-label-all-loops]
+              for (int i = 0; i < NTAPS; i++) {
+              ^
+              VITIS_LOOP_2284_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71597:15: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71642:5: remark: Added loop label VITIS_LOOP_2329_1:   [xilinx-label-all-loops]
+    for(short i= 0;i<rows;i++) {
+    ^
+    VITIS_LOOP_2329_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71642:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71643:9: remark: Added loop label VITIS_LOOP_2330_2:   [xilinx-label-all-loops]
+        for(short j= 0;j<cols;j++) {
+        ^
+        VITIS_LOOP_2330_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71643:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71723:17: remark: Added loop label VITIS_LOOP_2410_3:   [xilinx-label-all-loops]
+                for(int r= 0;r<2;r++)
+                ^
+                VITIS_LOOP_2410_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71723:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71747:21: remark: Added loop label VITIS_LOOP_2434_4:   [xilinx-label-all-loops]
+                    for(int r= 0;r<2;r++)
+                    ^
+                    VITIS_LOOP_2434_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71747:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71757:17: remark: Added loop label VITIS_LOOP_2444_5:   [xilinx-label-all-loops]
+                for(int k=0;k<((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1);k++)
+                ^
+                VITIS_LOOP_2444_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71757:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71875:5: remark: Added loop label VITIS_LOOP_2562_1:   [xilinx-label-all-loops]
+    for(int k=0; k<2; k++)
+    ^
+    VITIS_LOOP_2562_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71875:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71892:13: remark: Added loop label VITIS_LOOP_2579_2:   [xilinx-label-all-loops]
+            for(int i=0; i<SIZE; i++)
+            ^
+            VITIS_LOOP_2579_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71892:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71895:13: remark: Added loop label VITIS_LOOP_2582_3:   [xilinx-label-all-loops]
+            for(int i=0; i<SIZE-order-1; i++)
+            ^
+            VITIS_LOOP_2582_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71895:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71898:17: remark: Added loop label VITIS_LOOP_2585_4:   [xilinx-label-all-loops]
+                for(int j = 1; j <= SIZE; j++ )
+                ^
+                VITIS_LOOP_2585_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71898:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71906:13: remark: Added loop label VITIS_LOOP_2593_5:   [xilinx-label-all-loops]
+            for(int i = 0; i < order; i++ )
+            ^
+            VITIS_LOOP_2593_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71906:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71909:17: remark: Added loop label VITIS_LOOP_2596_6:   [xilinx-label-all-loops]
+                for(int j = 1; j <= SIZE; j++ )
+                ^
+                VITIS_LOOP_2596_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71909:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71918:9: remark: Added loop label VITIS_LOOP_2605_7:   [xilinx-label-all-loops]
+        for(int i=0; i<SIZE; i++) {
+        ^
+        VITIS_LOOP_2605_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71918:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71926:5: remark: Added loop label VITIS_LOOP_2613_8:   [xilinx-label-all-loops]
+    for(int i=0; i<SIZE; i++) {
+    ^
+    VITIS_LOOP_2613_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71926:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71927:9: remark: Added loop label VITIS_LOOP_2614_9:   [xilinx-label-all-loops]
+        for(int j=0; j<SIZE; j++) {
+        ^
+        VITIS_LOOP_2614_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71927:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71977:6: remark: Added loop label VITIS_LOOP_2664_1:   [xilinx-label-all-loops]
+     for (int i = 0; i < KH; i++) {
+     ^
+     VITIS_LOOP_2664_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71977:6: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71978:13: remark: Added loop label VITIS_LOOP_2665_2:   [xilinx-label-all-loops]
+            for (int j = 0; j < KW; j++) {
+            ^
+            VITIS_LOOP_2665_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71978:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71986:6: remark: Added loop label VITIS_LOOP_2673_3:   [xilinx-label-all-loops]
+     for (int i = 0; i < KH; i++) {
+     ^
+     VITIS_LOOP_2673_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71986:6: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71987:10: remark: Added loop label VITIS_LOOP_2674_4:   [xilinx-label-all-loops]
+         for (int j = 0; j < KW; j++) {
+         ^
+         VITIS_LOOP_2674_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:71987:10: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72029:5: remark: Added loop label VITIS_LOOP_2716_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < KW; i++) {
+    ^
+    VITIS_LOOP_2716_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72029:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72033:5: remark: Added loop label VITIS_LOOP_2720_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < KH; i++) {
+    ^
+    VITIS_LOOP_2720_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72033:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72087:5: remark: Added loop label VITIS_LOOP_2774_1:   [xilinx-label-all-loops]
+    for(int i=0; i<5; i++)
+    ^
+    VITIS_LOOP_2774_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72087:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72088:9: remark: Added loop label VITIS_LOOP_2775_2:   [xilinx-label-all-loops]
+        for(int j=0; j<5; j++)
+        ^
+        VITIS_LOOP_2775_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72088:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72147:25: remark: Added loop label VITIS_LOOP_2834_1:   [xilinx-label-all-loops]
+                        for(int row= 0;row<K_HEIGHT;row++)
+                        ^
+                        VITIS_LOOP_2834_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72147:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72148:29: remark: Added loop label VITIS_LOOP_2835_2:   [xilinx-label-all-loops]
+                            for(int col= K_WIDTH-1;col>=1;col--)
+                            ^
+                            VITIS_LOOP_2835_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72148:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72151:25: remark: Added loop label VITIS_LOOP_2838_3:   [xilinx-label-all-loops]
+                        for(int buf_row = 0; buf_row < K_HEIGHT; buf_row++)
+                        ^
+                        VITIS_LOOP_2838_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72151:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72163:33: remark: Added loop label VITIS_LOOP_2850_4:   [xilinx-label-all-loops]
+                                for(int buf_row= K_HEIGHT-1;buf_row >= 1;buf_row--)
+                                ^
+                                VITIS_LOOP_2850_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72163:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72174:37: remark: Added loop label VITIS_LOOP_2861_5:   [xilinx-label-all-loops]
+                                    for(int buf_row= K_HEIGHT-1;buf_row >= 1;buf_row--)
+                                    ^
+                                    VITIS_LOOP_2861_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72174:37: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72190:33: remark: Added loop label VITIS_LOOP_2877_6:   [xilinx-label-all-loops]
+                                for(int buf_row = 0;buf_row < K_HEIGHT; buf_row++)
+                                ^
+                                VITIS_LOOP_2877_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72190:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72196:33: remark: Added loop label VITIS_LOOP_2883_7:   [xilinx-label-all-loops]
+                                for(int buf_row= 0;buf_row < K_HEIGHT; buf_row++)
+                                ^
+                                VITIS_LOOP_2883_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72196:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72202:36: remark: Added loop label VITIS_LOOP_2889_8:   [xilinx-label-all-loops]
+                                   for(int buf_row= K_HEIGHT-1;buf_row>0;buf_row--)
+                                   ^
+                                   VITIS_LOOP_2889_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72202:36: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72214:29: remark: Added loop label VITIS_LOOP_2901_9:   [xilinx-label-all-loops]
+                            for(int buf_row= 0;buf_row<K_HEIGHT;buf_row++)
+                            ^
+                            VITIS_LOOP_2901_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72214:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72228:33: remark: Added loop label VITIS_LOOP_2915_10:   [xilinx-label-all-loops]
+                                for(int buf_row= K_HEIGHT-1;buf_row>0;buf_row--)
+                                ^
+                                VITIS_LOOP_2915_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72228:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72242:33: remark: Added loop label VITIS_LOOP_2929_11:   [xilinx-label-all-loops]
+                                for(int m=0; m<K_HEIGHT; m++)
+                                ^
+                                VITIS_LOOP_2929_11: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72242:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72243:37: remark: Added loop label VITIS_LOOP_2930_12:   [xilinx-label-all-loops]
+                                    for(int n=0; n<K_WIDTH; n++)
+                                    ^
+                                    VITIS_LOOP_2930_12: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72243:37: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72248:33: remark: Added loop label VITIS_LOOP_2935_13:   [xilinx-label-all-loops]
+                                for(int m=0; m<K_HEIGHT; m++)
+                                ^
+                                VITIS_LOOP_2935_13: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72248:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72249:37: remark: Added loop label VITIS_LOOP_2936_14:   [xilinx-label-all-loops]
+                                    for(int n=1; n<K_WIDTH; n++)
+                                    ^
+                                    VITIS_LOOP_2936_14: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72249:37: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72256:33: remark: Added loop label VITIS_LOOP_2943_15:   [xilinx-label-all-loops]
+                                for(int m=0; m<K_HEIGHT-1; m++)
+                                ^
+                                VITIS_LOOP_2943_15: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72256:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72257:37: remark: Added loop label VITIS_LOOP_2944_16:   [xilinx-label-all-loops]
+                                    for(int n=0; n<K_WIDTH; n++)
+                                    ^
+                                    VITIS_LOOP_2944_16: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72257:37: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72263:33: remark: Added loop label VITIS_LOOP_2950_17:   [xilinx-label-all-loops]
+                                for(int m=0; m<K_HEIGHT-1; m++)
+                                ^
+                                VITIS_LOOP_2950_17: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72263:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72264:37: remark: Added loop label VITIS_LOOP_2951_18:   [xilinx-label-all-loops]
+                                    for(int n=1; n<K_WIDTH; n++)
+                                    ^
+                                    VITIS_LOOP_2951_18: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72264:37: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72347:21: remark: Added loop label VITIS_LOOP_3034_1:   [xilinx-label-all-loops]
+                    for(int row= 0;row<K_HEIGHT;row++)
+                    ^
+                    VITIS_LOOP_3034_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72347:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72348:25: remark: Added loop label VITIS_LOOP_3035_2:   [xilinx-label-all-loops]
+                        for(int col= K_WIDTH-1;col>=1;col--)
+                        ^
+                        VITIS_LOOP_3035_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72348:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72351:21: remark: Added loop label VITIS_LOOP_3038_3:   [xilinx-label-all-loops]
+                    for(int buf_row = 0; buf_row < K_HEIGHT; buf_row++)
+                    ^
+                    VITIS_LOOP_3038_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72351:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72368:29: remark: Added loop label VITIS_LOOP_3055_4:   [xilinx-label-all-loops]
+                            for(int buf_row= K_HEIGHT-1;buf_row >= 1;buf_row--)
+                            ^
+                            VITIS_LOOP_3055_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72368:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72384:29: remark: Added loop label VITIS_LOOP_3071_5:   [xilinx-label-all-loops]
+                            for(int buf_row = 0;buf_row < K_HEIGHT; buf_row++)
+                            ^
+                            VITIS_LOOP_3071_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72384:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72391:29: remark: Added loop label VITIS_LOOP_3078_6:   [xilinx-label-all-loops]
+                            for(int buf_row= 0;buf_row < K_HEIGHT; buf_row++)
+                            ^
+                            VITIS_LOOP_3078_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72391:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72403:25: remark: Added loop label VITIS_LOOP_3090_7:   [xilinx-label-all-loops]
+                        for(int buf_row= 0;buf_row<K_HEIGHT;buf_row++)
+                        ^
+                        VITIS_LOOP_3090_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72403:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72422:29: remark: Added loop label VITIS_LOOP_3109_8:   [xilinx-label-all-loops]
+                            for(int m=0; m<K_HEIGHT; m++)
+                            ^
+                            VITIS_LOOP_3109_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72422:29: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72423:33: remark: Added loop label VITIS_LOOP_3110_9:   [xilinx-label-all-loops]
+                                for(int n=0; n<K_WIDTH; n++)
+                                ^
+                                VITIS_LOOP_3110_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72423:33: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72471:5: remark: Added loop label VITIS_LOOP_79_1:   [xilinx-label-all-loops]
+    for(int i=0;i<NUM_STATES;i++) {
+    ^
+    VITIS_LOOP_79_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72471:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72477:5: remark: Added loop label VITIS_LOOP_85_2:   [xilinx-label-all-loops]
+    for(int i=0;i<N;i++)
+    ^
+    VITIS_LOOP_85_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72477:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72498:13: remark: Added loop label VITIS_LOOP_106_3:   [xilinx-label-all-loops]
+            for (int m=0; m<NUM_STATES; m++) {
+            ^
+            VITIS_LOOP_106_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72498:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72510:13: remark: Added loop label VITIS_LOOP_118_4:   [xilinx-label-all-loops]
+            for (int m=NUM_STATES-1; m>0; m--) {
+            ^
+            VITIS_LOOP_118_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72510:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72550:5: remark: Added loop label VITIS_LOOP_158_5:   [xilinx-label-all-loops]
+    for (int m=0; m<NUM_STATES/2; m++) {
+    ^
+    VITIS_LOOP_158_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72550:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72609:5: remark: Added loop label VITIS_LOOP_71_1:   [xilinx-label-all-loops]
+    for(int index=0;index<K;index++) {
+    ^
+    VITIS_LOOP_71_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72609:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72658:9: remark: Added loop label VITIS_LOOP_120_1:   [xilinx-label-all-loops]
+        for(int i=0;i<NUM-1;i++) {
+        ^
+        VITIS_LOOP_120_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72658:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72662:9: remark: Added loop label VITIS_LOOP_124_2:   [xilinx-label-all-loops]
+        for(int i=0;i<NUM-3;i++) {
+        ^
+        VITIS_LOOP_124_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72662:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72667:9: remark: Added loop label VITIS_LOOP_129_3:   [xilinx-label-all-loops]
+        for(int i=0;i<NUM-7;i++) {
+        ^
+        VITIS_LOOP_129_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72667:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72678:5: remark: Added loop label VITIS_LOOP_140_4:   [xilinx-label-all-loops]
+    for(int i=0;i<PSize;i+=2) {
+    ^
+    VITIS_LOOP_140_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72678:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72683:13: remark: Added loop label VITIS_LOOP_145_5:   [xilinx-label-all-loops]
+            for(int j=1;j<PSize/2+1;j++) {
+            ^
+            VITIS_LOOP_145_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72683:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72691:5: remark: Added loop label VITIS_LOOP_153_6:   [xilinx-label-all-loops]
+    for(int i=0;i<PSize;i+=2) {
+    ^
+    VITIS_LOOP_153_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72691:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72696:13: remark: Added loop label VITIS_LOOP_158_7:   [xilinx-label-all-loops]
+            for(int j=1;j<PSize/2+1;j++) {
+            ^
+            VITIS_LOOP_158_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72696:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72722:5: remark: Added loop label VITIS_LOOP_184_1:   [xilinx-label-all-loops]
+    for(int c=1;c<PSize+PSize/2+1;c++)
+    ^
+    VITIS_LOOP_184_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72722:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72749:5: remark: Added loop label VITIS_LOOP_211_1:   [xilinx-label-all-loops]
+    for(int k=0;k<3;k++) {
+    ^
+    VITIS_LOOP_211_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72749:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72755:5: remark: Added loop label VITIS_LOOP_217_2:   [xilinx-label-all-loops]
+    for(int k=0;k<3;k++) {
+    ^
+    VITIS_LOOP_217_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72755:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72804:17: remark: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+                for(int r= 0;r<KERNEL_SIZE;r++) {
+                ^
+                VITIS_LOOP_266_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72804:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72805:21: remark: Added loop label VITIS_LOOP_267_2:   [xilinx-label-all-loops]
+                    for(int c=0;c<KERNEL_SIZE-1;c++) {
+                    ^
+                    VITIS_LOOP_267_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72805:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72810:17: remark: Added loop label VITIS_LOOP_272_3:   [xilinx-label-all-loops]
+                for(int buf_row= 1;buf_row< KERNEL_SIZE-1;buf_row++) {
+                ^
+                VITIS_LOOP_272_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72810:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72820:13: remark: Added loop label VITIS_LOOP_282_4:   [xilinx-label-all-loops]
+            for(int r= 0;r<3;r++)
+            ^
+            VITIS_LOOP_282_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72820:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72822:17: remark: Added loop label VITIS_LOOP_284_5:   [xilinx-label-all-loops]
+                for(int c=0;c<3-1;c++)
+                ^
+                VITIS_LOOP_284_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72822:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72828:13: remark: Added loop label VITIS_LOOP_290_6:   [xilinx-label-all-loops]
+            for(int buf_row= 1;buf_row< 3-1;buf_row++)
+            ^
+            VITIS_LOOP_290_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72828:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72920:17: remark: Added loop label VITIS_LOOP_382_1:   [xilinx-label-all-loops]
+                for(int r= 0;r<KERNEL_SIZE;r++) {
+                ^
+                VITIS_LOOP_382_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72920:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72921:21: remark: Added loop label VITIS_LOOP_383_2:   [xilinx-label-all-loops]
+                    for(int c=0;c<KERNEL_SIZE-1;c++) {
+                    ^
+                    VITIS_LOOP_383_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72921:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72926:17: remark: Added loop label VITIS_LOOP_388_3:   [xilinx-label-all-loops]
+                for(int buf_row= 1;buf_row< KERNEL_SIZE-1;buf_row++) {
+                ^
+                VITIS_LOOP_388_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72926:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72936:13: remark: Added loop label VITIS_LOOP_398_4:   [xilinx-label-all-loops]
+            for(int r= 0;r<3;r++)
+            ^
+            VITIS_LOOP_398_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72936:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72938:17: remark: Added loop label VITIS_LOOP_400_5:   [xilinx-label-all-loops]
+                for(int c=0;c<3-1;c++)
+                ^
+                VITIS_LOOP_400_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72938:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72944:13: remark: Added loop label VITIS_LOOP_406_6:   [xilinx-label-all-loops]
+            for(int buf_row= 1;buf_row< 3-1;buf_row++)
+            ^
+            VITIS_LOOP_406_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:72944:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73055:5: remark: Added loop label VITIS_LOOP_104_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < N; i++)
+    ^
+    VITIS_LOOP_104_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73055:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73059:5: remark: Added loop label VITIS_LOOP_108_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < N; i++) {
+    ^
+    VITIS_LOOP_108_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73059:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73061:9: remark: Added loop label VITIS_LOOP_110_3:   [xilinx-label-all-loops]
+        for (int j = 0; j < N; j++) {
+        ^
+        VITIS_LOOP_110_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73061:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73067:5: remark: Added loop label VITIS_LOOP_116_4:   [xilinx-label-all-loops]
+    for (int j = 0; j < N; j++) {
+    ^
+    VITIS_LOOP_116_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73067:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73068:9: remark: Added loop label VITIS_LOOP_117_5:   [xilinx-label-all-loops]
+        for (int i = 0; i < j; i++) {
+        ^
+        VITIS_LOOP_117_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73068:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73070:13: remark: Added loop label VITIS_LOOP_119_6:   [xilinx-label-all-loops]
+            for (int k = 0; k < i; k++) sum -= A[i][k] * A[k][j];
+            ^
+            VITIS_LOOP_119_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73070:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73074:9: remark: Added loop label VITIS_LOOP_123_7:   [xilinx-label-all-loops]
+        for (int i = j; i < N; i++) {
+        ^
+        VITIS_LOOP_123_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73074:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73076:13: remark: Added loop label VITIS_LOOP_125_8:   [xilinx-label-all-loops]
+            for (int k = 0; k < j; k++) sum -= A[i][k] * A[k][j];
+            ^
+            VITIS_LOOP_125_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73076:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73085:13: remark: Added loop label VITIS_LOOP_134_9:   [xilinx-label-all-loops]
+            for (int i = 0; i < N; i++) {
+            ^
+            VITIS_LOOP_134_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73085:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73097:13: remark: Added loop label VITIS_LOOP_146_10:   [xilinx-label-all-loops]
+            for (int i = j + 1; i < N; i++) A[i][j] *= dum;
+            ^
+            VITIS_LOOP_146_10: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73097:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73105:5: remark: Added loop label VITIS_LOOP_154_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < N; i++) {
+    ^
+    VITIS_LOOP_154_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73105:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73114:13: remark: Added loop label VITIS_LOOP_163_2:   [xilinx-label-all-loops]
+            for (int j = ii - 1; j < i; j++) sum -= A[i][j] * b[j];
+            ^
+            VITIS_LOOP_163_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73114:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73119:5: remark: Added loop label VITIS_LOOP_168_3:   [xilinx-label-all-loops]
+    for (int i = N - 1; i >= 0; i--) {
+    ^
+    VITIS_LOOP_168_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73119:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73121:9: remark: Added loop label VITIS_LOOP_170_4:   [xilinx-label-all-loops]
+        for (int j = i + 1; j < N; j++) sum -= A[i][j]*b[j];
+        ^
+        VITIS_LOOP_170_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73121:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73132:5: remark: Added loop label VITIS_LOOP_181_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < N; i++) {
+    ^
+    VITIS_LOOP_181_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73132:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73137:5: remark: Added loop label VITIS_LOOP_186_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < N; i++) {
+    ^
+    VITIS_LOOP_186_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73137:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73138:9: remark: Added loop label VITIS_LOOP_187_3:   [xilinx-label-all-loops]
+        for (int j = 0; j < N; j++) b[j] = 0;
+        ^
+        VITIS_LOOP_187_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73138:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73141:9: remark: Added loop label VITIS_LOOP_190_4:   [xilinx-label-all-loops]
+        for (int j = 0; j < N; j++) Ar[j][i] = b[j];
+        ^
+        VITIS_LOOP_190_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73141:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73217:21: remark: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+                    for(int k=0;k<((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1);k++) {
+                    ^
+                    VITIS_LOOP_266_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73217:21: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73337:17: remark: Added loop label VITIS_LOOP_398_1:   [xilinx-label-all-loops]
+                for(int k = 0; k < ((((DST_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+                ^
+                VITIS_LOOP_398_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73337:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73755:13: remark: Added loop label VITIS_LOOP_217_1:   [xilinx-label-all-loops]
+            for(int row=2;row>=0;row--)
+            ^
+            VITIS_LOOP_217_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73755:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73757:17: remark: Added loop label VITIS_LOOP_219_2:   [xilinx-label-all-loops]
+                for(int col=2;col>=1;col--)
+                ^
+                VITIS_LOOP_219_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73757:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73890:5: remark: Added loop label VITIS_LOOP_106_1:   [xilinx-label-all-loops]
+    for(int i=0;i<KH;i++) {
+    ^
+    VITIS_LOOP_106_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73890:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73891:9: remark: Added loop label VITIS_LOOP_107_2:   [xilinx-label-all-loops]
+        for(int j=0;j<KW;j++) {
+        ^
+        VITIS_LOOP_107_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73891:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73913:5: remark: Added loop label VITIS_LOOP_129_1:   [xilinx-label-all-loops]
+    for(HLS_SIZE_T i=0;i<rows+ioffset;i++)
+    ^
+    VITIS_LOOP_129_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73913:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73916:9: remark: Added loop label VITIS_LOOP_132_2:   [xilinx-label-all-loops]
+        for(HLS_SIZE_T j=0;j<cols+joffset;j++)
+        ^
+        VITIS_LOOP_132_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73916:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73923:13: remark: Added loop label VITIS_LOOP_139_3:   [xilinx-label-all-loops]
+            for(int r= 0;r<KH;r++)
+            ^
+            VITIS_LOOP_139_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73923:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73925:17: remark: Added loop label VITIS_LOOP_141_4:   [xilinx-label-all-loops]
+                for(int c=0;c<KW-1;c++)
+                ^
+                VITIS_LOOP_141_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73925:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73933:17: remark: Added loop label VITIS_LOOP_149_5:   [xilinx-label-all-loops]
+                for(int buf_row= 1;buf_row< KH-1;buf_row++)
+                ^
+                VITIS_LOOP_149_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73933:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73946:17: remark: Added loop label VITIS_LOOP_162_6:   [xilinx-label-all-loops]
+                for(int i= 1;i< KW;i++)
+                ^
+                VITIS_LOOP_162_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73946:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73982:5: remark: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+    for(HLS_SIZE_T i=0;i<rows;i++)
+    ^
+    VITIS_LOOP_198_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73982:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73985:9: remark: Added loop label VITIS_LOOP_201_2:   [xilinx-label-all-loops]
+        for(HLS_SIZE_T j=0;j<cols;j++)
+        ^
+        VITIS_LOOP_201_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:73985:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74214:9: remark: Added loop label VITIS_LOOP_148_1:   [xilinx-label-all-loops]
+        for(int i=0;i<STAGE;i++)
+        ^
+        VITIS_LOOP_148_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74214:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74222:9: remark: Added loop label VITIS_LOOP_156_2:   [xilinx-label-all-loops]
+        for(int i=0;i<CLASSIFIER_ALL;i++)
+        ^
+        VITIS_LOOP_156_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74222:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74225:16: remark: Added loop label VITIS_LOOP_159_3:   [xilinx-label-all-loops]
+               for(int j=0;j<FEATURE_MAX;j++)
+               ^
+               VITIS_LOOP_159_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74225:16: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74233:23: remark: Added loop label VITIS_LOOP_167_4:   [xilinx-label-all-loops]
+                      for(int n=0;n<3;n++)
+                      ^
+                      VITIS_LOOP_167_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74233:23: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74256:5: remark: Added loop label VITIS_LOOP_190_1:   [xilinx-label-all-loops]
+    for(int j=0;j<COLS;j++)
+    ^
+    VITIS_LOOP_190_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74256:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74259:9: remark: Added loop label VITIS_LOOP_193_2:   [xilinx-label-all-loops]
+        for(int i=0;i<ROWS;i++)
+        ^
+        VITIS_LOOP_193_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74259:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74276:5: remark: Added loop label VITIS_LOOP_210_1:   [xilinx-label-all-loops]
+    for(m=0;m<FEATURE_MAX;m++)
+    ^
+    VITIS_LOOP_210_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74276:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74283:13: remark: Added loop label VITIS_LOOP_217_2:   [xilinx-label-all-loops]
+            for(int j=1;j<3;j++)
+            ^
+            VITIS_LOOP_217_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74283:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74312:5: remark: Added loop label VITIS_LOOP_246_1:   [xilinx-label-all-loops]
+    for (int i=0;i<CLASSIFIER_ALL;i++)
+    ^
+    VITIS_LOOP_246_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74312:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74360:5: remark: Added loop label VITIS_LOOP_294_1:   [xilinx-label-all-loops]
+    for(int i=0;i<rows;i++)
+    ^
+    VITIS_LOOP_294_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74360:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74362:9: remark: Added loop label VITIS_LOOP_296_2:   [xilinx-label-all-loops]
+        for(int j=0;j<cols;j++)
+        ^
+        VITIS_LOOP_296_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74362:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74375:13: remark: Added loop label VITIS_LOOP_309_3:   [xilinx-label-all-loops]
+            for(int buf_row= 1;buf_row<K_H;buf_row++)
+            ^
+            VITIS_LOOP_309_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74375:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74475:9: remark: Added loop label VITIS_LOOP_430_1:   [xilinx-label-all-loops]
+        for(int i=0;i<m;i++)
+        ^
+        VITIS_LOOP_430_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74475:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74477:17: remark: Added loop label VITIS_LOOP_432_2:   [xilinx-label-all-loops]
+                for(int j=0;j<num;j++)
+                ^
+                VITIS_LOOP_432_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74477:17: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74485:9: remark: Added loop label VITIS_LOOP_440_3:   [xilinx-label-all-loops]
+        for(int i=0;i<num;i++)
+        ^
+        VITIS_LOOP_440_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74485:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74514:5: remark: Added loop label VITIS_LOOP_469_1:   [xilinx-label-all-loops]
+    for(int i=0;i<rows;i++)
+    ^
+    VITIS_LOOP_469_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74514:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74519:9: remark: Added loop label VITIS_LOOP_474_2:   [xilinx-label-all-loops]
+        for(int j=0;j<cols;j++)
+        ^
+        VITIS_LOOP_474_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74519:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74681:13: remark: Added loop label VITIS_LOOP_192_1:   [xilinx-label-all-loops]
+            for (int i = 0; i< PWSIZE; i++) {
+            ^
+            VITIS_LOOP_192_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74681:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74687:13: remark: Added loop label VITIS_LOOP_198_2:   [xilinx-label-all-loops]
+            for (int i = 0; i < PWSIZE; i++) {
+            ^
+            VITIS_LOOP_198_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74687:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74691:13: remark: Added loop label VITIS_LOOP_202_3:   [xilinx-label-all-loops]
+            for (int j = PWSIZE-1; j > 0; j--) {
+            ^
+            VITIS_LOOP_202_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74691:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74722:5: remark: Added loop label VITIS_LOOP_233_1:   [xilinx-label-all-loops]
+    for (HLS_SIZE_T i = 0; i < rows; i++) {
+    ^
+    VITIS_LOOP_233_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74722:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74723:9: remark: Added loop label VITIS_LOOP_234_2:   [xilinx-label-all-loops]
+        for (HLS_SIZE_T j = 0; j < cols; j++) {
+        ^
+        VITIS_LOOP_234_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74723:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74726:13: remark: Added loop label VITIS_LOOP_237_3:   [xilinx-label-all-loops]
+            for (HLS_SIZE_T k = 0; k < ((((SRC_T) & ((512 - 1) << 11)) >> 11) + 1); k++) {
+            ^
+            VITIS_LOOP_237_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74726:13: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74762:5: remark: Added loop label VITIS_LOOP_273_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < WSIZE; i++) {
+    ^
+    VITIS_LOOP_273_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74762:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74780:5: remark: Added loop label VITIS_LOOP_291_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < WSIZE; i++) {
+    ^
+    VITIS_LOOP_291_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74780:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74788:5: remark: Added loop label VITIS_LOOP_299_2:   [xilinx-label-all-loops]
+    for (int j = WSIZE-1; j > 0; j--) {
+    ^
+    VITIS_LOOP_299_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74788:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74806:9: remark: Added loop label VITIS_LOOP_317_1:   [xilinx-label-all-loops]
+        for(int i = 0; i < SIZE/2; i++) {
+        ^
+        VITIS_LOOP_317_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74806:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74809:9: remark: Added loop label VITIS_LOOP_320_2:   [xilinx-label-all-loops]
+        for(int i = 0; i < SIZE-SIZE/2; i++) {
+        ^
+        VITIS_LOOP_320_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74809:9: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74913:25: remark: Added loop label VITIS_LOOP_424_1:   [xilinx-label-all-loops]
+                        for (int i = 0; i < WSIZE; i++) {
+                        ^
+                        VITIS_LOOP_424_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:74913:25: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75264:2: remark: Added loop label VITIS_LOOP_134_1:   [xilinx-label-all-loops]
+ for (y = 1; y <= height; ++y)
+ ^
+ VITIS_LOOP_134_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75264:2: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75266:3: remark: Added loop label VITIS_LOOP_136_2:   [xilinx-label-all-loops]
+  for (x = 1; x <= loopWidth; ++x)
+  ^
+  VITIS_LOOP_136_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75266:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75272:4: remark: Added loop label VITIS_LOOP_142_3:   [xilinx-label-all-loops]
+   for (k = 0; k < 2; ++k)
+   ^
+   VITIS_LOOP_142_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75272:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75655:4: remark: Added loop label VITIS_LOOP_563_1:   [xilinx-label-all-loops]
+   for (int l = 0; l < 2; l++)
+   ^
+   VITIS_LOOP_563_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75655:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75657:5: remark: Added loop label VITIS_LOOP_565_2:   [xilinx-label-all-loops]
+    for (int k = 0; k < 3; k++)
+    ^
+    VITIS_LOOP_565_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75657:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75722:2: remark: Added loop label VITIS_LOOP_662_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < rows; i++)
+ ^
+ VITIS_LOOP_662_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75722:2: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75724:3: remark: Added loop label VITIS_LOOP_664_2:   [xilinx-label-all-loops]
+  for (int j = 0; j < cols / 2; j++)
+  ^
+  VITIS_LOOP_664_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75724:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75748:4: remark: Added loop label VITIS_LOOP_688_3:   [xilinx-label-all-loops]
+   for (int l = 0; l < 2; l++)
+   ^
+   VITIS_LOOP_688_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75748:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75750:5: remark: Added loop label VITIS_LOOP_690_4:   [xilinx-label-all-loops]
+    for (int k = 0; k < 3; k++)
+    ^
+    VITIS_LOOP_690_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75750:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75827:2: remark: Added loop label VITIS_LOOP_767_1:   [xilinx-label-all-loops]
+ for (y = 0; y < loopHeight; ++y)
+ ^
+ VITIS_LOOP_767_1: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75827:2: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75829:3: remark: Added loop label VITIS_LOOP_769_2:   [xilinx-label-all-loops]
+  for (x = 0; x < loopWidth; ++x)
+  ^
+  VITIS_LOOP_769_2: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75829:3: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75841:5: remark: Added loop label VITIS_LOOP_781_3:   [xilinx-label-all-loops]
+    for (I16 s = 0; s < 2; ++s)
+    ^
+    VITIS_LOOP_781_3: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75841:5: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75865:4: remark: Added loop label VITIS_LOOP_805_4:   [xilinx-label-all-loops]
+   for (I16 i = 0; i < (PIXBUF_Y_DEPTH - 2); i++)
+   ^
+   VITIS_LOOP_805_4: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75865:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75870:4: remark: Added loop label VITIS_LOOP_810_5:   [xilinx-label-all-loops]
+   for (k = 0; k < 2; k++)
+   ^
+   VITIS_LOOP_810_5: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75870:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75886:4: remark: Added loop label VITIS_LOOP_826_6:   [xilinx-label-all-loops]
+   for (k = 0; k < 2; k++)
+   ^
+   VITIS_LOOP_826_6: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75886:4: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75900:6: remark: Added loop label VITIS_LOOP_840_7:   [xilinx-label-all-loops]
+     for (I16 i = 0; i < (PIXBUF_C_DEPTH - 1); i++)
+     ^
+     VITIS_LOOP_840_7: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75900:6: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75921:6: remark: Added loop label VITIS_LOOP_861_8:   [xilinx-label-all-loops]
+     for (I16 i = (PIXBUF_C_DEPTH - 2); i >= 0; --i)
+     ^
+     VITIS_LOOP_861_8: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75921:6: note: FIX-IT applied suggested code changes
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75929:4: remark: Added loop label VITIS_LOOP_869_9:   [xilinx-label-all-loops]
+   for (k = 0; k < 2; ++k)
+   ^
+   VITIS_LOOP_869_9: 
+C:\TFG_Vivado\vivado\axu2cga_trd.runs\bd_d92b_csc_0_synth_1\prj\sol\.autopilot\db\v_csc.pp.0.cpp:75929:4: note: FIX-IT applied suggested code changes

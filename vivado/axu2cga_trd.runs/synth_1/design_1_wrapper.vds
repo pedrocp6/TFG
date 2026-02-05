@@ -1,0 +1,574 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Jan 21 13:15:05 2026
+# Process ID         : 12888
+# Current directory  : C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1
+# Command line       : vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file           : C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/design_1_wrapper.vds
+# Journal file       : C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-N1KB207U
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1355U
+# CPU Frequency      : 2611 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 16770 MB
+# Swap memory        : 34803 MB
+# Total Virtual      : 51574 MB
+# Available Virtual  : 33772 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+WARNING: [IP_Flow 19-12246] XCI file 'c:/TFG_Vivado/vivado/axu2cga_trd.srcs/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0.xci' contents have changed since it was last written.
+WARNING: [IP_Flow 19-12246] XCI file 'c:/TFG_Vivado/vivado/axu2cga_trd.srcs/sources_1/bd/design_1/ip/design_1_axis_subset_converter_1_0/design_1_axis_subset_converter_1_0.xci' contents have changed since it was last written.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design C:/TFG_Vivado/vivado/axu2cga_trd.srcs/sources_1/bd/design_1/design_1.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ design_1_csc_rst_gpio_0
+design_1_csc_rst_gpio_1_0
+design_1_frmbuf_wr_rst_gpio_0
+design_1_frmbuf_wr_rst_gpio_1_0
+design_1_xlconcat_0_0
+design_1_xlconstant_2_0
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 615.488 ; gain = 84.395
+Command: read_checkpoint -auto_incremental -incremental C:/TFG_Vivado/vivado/axu2cga_trd.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/TFG_Vivado/vivado/axu2cga_trd.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top design_1_wrapper -part xczu2cg-sfvc784-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24364
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1832.312 ; gain = 206.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/AMDDesignTools/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_iic_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_0_0' is unconnected for instance 'axi_iic_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:556]
+WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' has 27 connections declared, but only 26 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:556]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_iic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axi_iic_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'gpo' of module 'design_1_axi_iic_1_0' is unconnected for instance 'axi_iic_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:583]
+WARNING: [Synth 8-7023] instance 'axi_iic_1' of module 'design_1_axi_iic_1_0' has 27 connections declared, but only 26 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:583]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1490]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:5280]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:5280]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_1_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1780]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HS4N6K' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:5069]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HS4N6K' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:5069]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_1_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1780]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axis_subset_converter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axis_subset_converter_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_subset_converter_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_axis_subset_converter_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_clk_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'locked' of module 'design_1_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:790]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' has 3 connections declared, but only 2 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:790]
+INFO: [Synth 8-6157] synthesizing module 'design_1_csc_rst_gpio_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_csc_rst_gpio_0/synth/design_1_csc_rst_gpio_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_csc_rst_gpio_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_csc_rst_gpio_0/synth/design_1_csc_rst_gpio_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_csc_rst_gpio_1_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_csc_rst_gpio_1_0/synth/design_1_csc_rst_gpio_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_csc_rst_gpio_1_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_csc_rst_gpio_1_0/synth/design_1_csc_rst_gpio_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_fan_gpio_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_fan_gpio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_fan_gpio_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_fan_gpio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_frmbuf_wr_rst_gpio_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_frmbuf_wr_rst_gpio_0/synth/design_1_frmbuf_wr_rst_gpio_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice__parameterized1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice__parameterized1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_frmbuf_wr_rst_gpio_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_frmbuf_wr_rst_gpio_0/synth/design_1_frmbuf_wr_rst_gpio_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_frmbuf_wr_rst_gpio_1_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_frmbuf_wr_rst_gpio_1_0/synth/design_1_frmbuf_wr_rst_gpio_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice__parameterized2' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice__parameterized2' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_frmbuf_wr_rst_gpio_1_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_frmbuf_wr_rst_gpio_1_0/synth/design_1_frmbuf_wr_rst_gpio_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_mipi_csi2_rx_subsyst_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:826]
+WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:826]
+WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:826]
+WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_0_0' is unconnected for instance 'mipi_csi2_rx_subsyst_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:826]
+WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_0' of module 'design_1_mipi_csi2_rx_subsyst_0_0' has 37 connections declared, but only 33 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:826]
+INFO: [Synth 8-6157] synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mipi_csi2_rx_subsyst_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_mipi_csi2_rx_subsyst_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rxbyteclkhs' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:860]
+WARNING: [Synth 8-7071] port 'clkoutphy_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:860]
+WARNING: [Synth 8-7071] port 'pll_lock_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:860]
+WARNING: [Synth 8-7071] port 'system_rst_out' of module 'design_1_mipi_csi2_rx_subsyst_1_0' is unconnected for instance 'mipi_csi2_rx_subsyst_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:860]
+WARNING: [Synth 8-7023] instance 'mipi_csi2_rx_subsyst_1' of module 'design_1_mipi_csi2_rx_subsyst_1_0' has 37 connections declared, but only 33 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:860]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_200M_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_proc_sys_reset_200M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_200M_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_proc_sys_reset_200M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_200M_0' is unconnected for instance 'proc_sys_reset_200M' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:894]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_200M_0' is unconnected for instance 'proc_sys_reset_200M' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:894]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_200M_0' is unconnected for instance 'proc_sys_reset_200M' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:894]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_200M' of module 'design_1_proc_sys_reset_200M_0' has 10 connections declared, but only 7 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:894]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:2070]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3560]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3560]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3675]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3675]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_P3UMW5' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3790]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_P3UMW5' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3790]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1E9R4HW' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3905]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1E9R4HW' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3905]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_NB1YAO' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4020]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_NB1YAO' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4020]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1FZ4A9T' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4135]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1FZ4A9T' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4135]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_MPDFMR' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4250]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_MPDFMR' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4250]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1GV49DU' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4365]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1GV49DU' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4365]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_K8X5UY' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4480]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_K8X5UY' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4480]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1AITGY3' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4595]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1AITGY3' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4595]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_11TD8LA' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4710]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_11TD8LA' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4710]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4825]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_auto_pc_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_ps8_0_axi_periph_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:4825]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_imp_xbar_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_ps8_0_axi_periph_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_imp_xbar_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_ps8_0_axi_periph_imp_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_ps8_0_axi_periph_imp_xbar_0' is unconnected for instance 'xbar' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3519]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_ps8_0_axi_periph_imp_xbar_0' is unconnected for instance 'xbar' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3519]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_ps8_0_axi_periph_imp_xbar_0' has 40 connections declared, but only 38 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:3519]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:2070]
+INFO: [Synth 8-6157] synthesizing module 'design_1_util_ds_buf_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_util_ds_buf_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_util_ds_buf_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frmbuf_wr_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_frmbuf_wr_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frmbuf_wr_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_frmbuf_wr_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frmbuf_wr_0_0' is unconnected for instance 'v_frmbuf_wr_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1156]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frmbuf_wr_0_0' is unconnected for instance 'v_frmbuf_wr_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1156]
+WARNING: [Synth 8-7023] instance 'v_frmbuf_wr_0' of module 'design_1_v_frmbuf_wr_0_0' has 64 connections declared, but only 62 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1156]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_frmbuf_wr_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_frmbuf_wr_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_frmbuf_wr_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_frmbuf_wr_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_AWREGION' of module 'design_1_v_frmbuf_wr_1_0' is unconnected for instance 'v_frmbuf_wr_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1219]
+WARNING: [Synth 8-7071] port 'm_axi_mm_video_ARREGION' of module 'design_1_v_frmbuf_wr_1_0' is unconnected for instance 'v_frmbuf_wr_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1219]
+WARNING: [Synth 8-7023] instance 'v_frmbuf_wr_1' of module 'design_1_v_frmbuf_wr_1_0' has 64 connections declared, but only 62 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1219]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_proc_ss_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_proc_ss_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_proc_ss_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_proc_ss_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_proc_ss_1_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_proc_ss_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_proc_ss_1_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_v_proc_ss_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_2_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_2_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/.Xil/Vivado-12888-LAPTOP-N1KB207U/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'saxigp3_bid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'saxigp3_rid' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'emio_gpio_t' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7071] port 'pl_clk0' of module 'design_1_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 126 connections declared, but only 118 given [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:1369]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [C:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In105[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In106[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1975.715 ; gain = 350.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1975.715 ; gain = 350.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1975.715 ; gain = 350.043
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1975.715 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'design_1_i/axi_gpio_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/axi_gpio_1'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_1'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0/design_1_axis_subset_converter_0_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_1_0/design_1_axis_subset_converter_1_0/design_1_axis_subset_converter_1_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_axis_subset_converter_1_0/design_1_axis_subset_converter_1_0/design_1_axis_subset_converter_1_0_in_context.xdc] for cell 'design_1_i/axis_subset_converter_1'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'design_1_i/clk_wiz_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_fan_gpio_0/design_1_fan_gpio_0/design_1_fan_gpio_0_in_context.xdc] for cell 'design_1_i/fan_gpio'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_fan_gpio_0/design_1_fan_gpio_0/design_1_fan_gpio_0_in_context.xdc] for cell 'design_1_i/fan_gpio'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/design_1_mipi_csi2_rx_subsyst_0_0/design_1_mipi_csi2_rx_subsyst_0_0_in_context.xdc] for cell 'design_1_i/mipi_csi2_rx_subsyst_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_0_0/design_1_mipi_csi2_rx_subsyst_0_0/design_1_mipi_csi2_rx_subsyst_0_0_in_context.xdc] for cell 'design_1_i/mipi_csi2_rx_subsyst_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0_in_context.xdc] for cell 'design_1_i/mipi_csi2_rx_subsyst_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0/design_1_mipi_csi2_rx_subsyst_1_0_in_context.xdc] for cell 'design_1_i/mipi_csi2_rx_subsyst_1'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_200M_0/design_1_proc_sys_reset_200M_0/design_1_proc_sys_reset_200M_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_200M'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_200M_0/design_1_proc_sys_reset_200M_0/design_1_proc_sys_reset_200M_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_200M'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_xbar_0/design_1_ps8_0_axi_periph_imp_xbar_0/design_1_ps8_0_axi_periph_imp_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_xbar_0/design_1_ps8_0_axi_periph_imp_xbar_0/design_1_ps8_0_axi_periph_imp_xbar_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0/design_1_ps8_0_axi_periph_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_in_context.xdc] for cell 'design_1_i/util_ds_buf_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0_in_context.xdc] for cell 'design_1_i/v_frmbuf_wr_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0/design_1_v_frmbuf_wr_0_0_in_context.xdc] for cell 'design_1_i/v_frmbuf_wr_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_1_0/design_1_v_frmbuf_wr_1_0/design_1_v_frmbuf_wr_1_0_in_context.xdc] for cell 'design_1_i/v_frmbuf_wr_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_frmbuf_wr_1_0/design_1_v_frmbuf_wr_1_0/design_1_v_frmbuf_wr_1_0_in_context.xdc] for cell 'design_1_i/v_frmbuf_wr_1'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/design_1_v_proc_ss_0_0/design_1_v_proc_ss_0_0_in_context.xdc] for cell 'design_1_i/v_proc_ss_0'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/design_1_v_proc_ss_0_0/design_1_v_proc_ss_0_0_in_context.xdc] for cell 'design_1_i/v_proc_ss_0'
+Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_1_0/design_1_v_proc_ss_1_0/design_1_v_proc_ss_1_0_in_context.xdc] for cell 'design_1_i/v_proc_ss_1'
+Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_1_0/design_1_v_proc_ss_1_0/design_1_v_proc_ss_1_0_in_context.xdc] for cell 'design_1_i/v_proc_ss_1'
+Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/gpio.xdc]
+Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/gpio.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/gpio.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/mipi.xdc]
+Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/mipi.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/mipi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/TFG_Vivado/vivado/axu2cga_trd.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2025.371 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2025.371 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/fan_gpio' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/mipi_csi2_rx_subsyst_0' at clock pin 'lite_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/mipi_csi2_rx_subsyst_1' at clock pin 'lite_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2025.371 ; gain = 399.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2025.371 ; gain = 399.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2025.371 ; gain = 399.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2025.371 ; gain = 399.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2025.371 ; gain = 399.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2678.184 ; gain = 1052.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2681.531 ; gain = 1055.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2692.898 ; gain = 1067.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------------+----------+
+|      |BlackBox name                           |Instances |
++------+----------------------------------------+----------+
+|1     |design_1_axi_gpio_0_0                   |         1|
+|2     |design_1_axi_gpio_1_0                   |         1|
+|3     |design_1_axi_iic_0_0                    |         1|
+|4     |design_1_axi_iic_1_0                    |         1|
+|5     |design_1_axis_subset_converter_0_0      |         1|
+|6     |design_1_axis_subset_converter_1_0      |         1|
+|7     |design_1_clk_wiz_0_0                    |         1|
+|8     |design_1_fan_gpio_0                     |         1|
+|9     |design_1_mipi_csi2_rx_subsyst_0_0       |         1|
+|10    |design_1_mipi_csi2_rx_subsyst_1_0       |         1|
+|11    |design_1_proc_sys_reset_200M_0          |         1|
+|12    |design_1_ps8_0_axi_periph_imp_xbar_0    |         1|
+|13    |design_1_ps8_0_axi_periph_imp_auto_pc_0 |         1|
+|14    |design_1_util_ds_buf_0_0                |         1|
+|15    |design_1_v_frmbuf_wr_0_0                |         1|
+|16    |design_1_v_frmbuf_wr_1_0                |         1|
+|17    |design_1_v_proc_ss_0_0                  |         1|
+|18    |design_1_v_proc_ss_1_0                  |         1|
+|19    |design_1_zynq_ultra_ps_e_0_0            |         1|
++------+----------------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------+------+
+|      |Cell                                  |Count |
++------+--------------------------------------+------+
+|1     |design_1_axi_gpio_0                   |     1|
+|2     |design_1_axi_gpio_1                   |     1|
+|3     |design_1_axi_iic_0                    |     1|
+|4     |design_1_axi_iic_1                    |     1|
+|5     |design_1_axis_subset_converter_0      |     1|
+|6     |design_1_axis_subset_converter_1      |     1|
+|7     |design_1_clk_wiz_0                    |     1|
+|8     |design_1_fan_gpio                     |     1|
+|9     |design_1_mipi_csi2_rx_subsyst_0       |     1|
+|10    |design_1_mipi_csi2_rx_subsyst_1       |     1|
+|11    |design_1_proc_sys_reset_200M          |     1|
+|12    |design_1_ps8_0_axi_periph_imp_auto_pc |     1|
+|13    |design_1_ps8_0_axi_periph_imp_xbar    |     1|
+|14    |design_1_util_ds_buf_0                |     1|
+|15    |design_1_v_frmbuf_wr_0                |     1|
+|16    |design_1_v_frmbuf_wr_1                |     1|
+|17    |design_1_v_proc_ss_0                  |     1|
+|18    |design_1_v_proc_ss_1                  |     1|
+|19    |design_1_zynq_ultra_ps_e_0            |     1|
+|20    |IBUF                                  |     5|
+|21    |IOBUF                                 |     4|
+|22    |OBUF                                  |     7|
++------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 410 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 2940.312 ; gain = 1264.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2940.312 ; gain = 1314.641
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2940.312 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2940.312 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 5 instances
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 4 instances
+
+Synth Design complete | Checksum: 54630f0
+INFO: [Common 17-83] Releasing license: Synthesis
+133 Infos, 145 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 2940.312 ; gain = 2321.016
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2940.312 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 13:16:01 2026...

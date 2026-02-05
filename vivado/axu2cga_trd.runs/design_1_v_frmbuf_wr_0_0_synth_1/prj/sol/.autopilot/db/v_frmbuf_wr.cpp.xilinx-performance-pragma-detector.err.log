@@ -1,0 +1,70 @@
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:25: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                        ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:26: warning: null character ignored [-Wnull-character]
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                            ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:27: warning: null character ignored [-Wnull-character]
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                    ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:28: warning: null character ignored [-Wnull-character]
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                            ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:1: error: unknown type name 'XlxVV0EB0000000000000098'
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:29: error: expected unqualified-id
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                    ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:32: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                       ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:33: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                           ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:34: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                               ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:38: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                      ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:39: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                          ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:41: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                               ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:43: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                    ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:44: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                        ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:45: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                            ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:46: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                                ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:47: error: source file is not valid UTF-8
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                                    ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:1:51: warning: missing terminating ' character [-Winvalid-pp-token]
+XlxVV0EB0000000000000098<80><U+0000><U+0000><U+0000>%0v<89><AC><87>?v~<E0><E9><<80>m<8D><82><D1><C8><C3>r<U+001E>>'<U+0013>8<C9><EB>f<].<C6><DE><EF>L<EC>;<DB>Hs<U+0018><AF><U+0008><FD>>I4<A3><81>V<U+0002><F6><CB>       <A9><D8><U+038B><A6><85>5|=u<FA>U
+                                                                                                                  ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:2:3: error: source file is not valid UTF-8
+<G<9D><A9><U+000B>(<U+0014>G><CE>ʹib<FF>\CE)<U+0010>}<BE><95>><F6><BC>bOXA<D6>L6|<BC>V<A5><99><D3>z<U+0003><D9>݅;<CF>l<9C><A3><F9><E1><F0>
+  ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:2:4: error: source file is not valid UTF-8
+<G<9D><A9><U+000B>(<U+0014>G><CE>ʹib<FF>\CE)<U+0010>}<BE><95>><F6><BC>bOXA<D6>L6|<BC>V<A5><99><D3>z<U+0003><D9>݅;<CF>l<9C><A3><F9><E1><F0>
+      ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:2:10: error: source file is not valid UTF-8
+<G<9D><A9><U+000B>(<U+0014>G><CE>ʹib<FF>\CE)<U+0010>}<BE><95>><F6><BC>bOXA<D6>L6|<BC>V<A5><99><D3>z<U+0003><D9>݅;<CF>l<9C><A3><F9><E1><F0>
+                             ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:2:15: error: source file is not valid UTF-8
+<G<9D><A9><U+000B>(<U+0014>G><CE>ʹib<FF>\CE)<U+0010>}<BE><95>><F6><BC>bOXA<D6>L6|<BC>V<A5><99><D3>z<U+0003><D9>݅;<CF>l<9C><A3><F9><E1><F0>
+                                    ^
+C:\TFG_Vivado\vivado\axu2cga_trd.gen\sources_1\bd\design_1\ip\design_1_v_frmbuf_wr_0_0\src\v_frmbuf_wr.cpp:2:21: error: extraneous closing brace ('}')
+<G<9D><A9><U+000B>(<U+0014>G><CE>ʹib<FF>\CE)<U+0010>}<BE><95>><F6><BC>bOXA<D6>L6|<BC>V<A5><99><D3>z<U+0003><D9>݅;<CF>l<9C><A3><F9><E1><F0>
+                                                    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
