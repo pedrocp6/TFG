@@ -57,28 +57,19 @@ typedef union {
 void outbyte(char c);
 
 int main() {
-    init_platform();
+	init_platform();
 
-    FloatConverter converter;
-    converter.valor_float = 15.0;
+	FloatConverter converter;
+	converter.valor_float = 25.00; // Tu valor de torque simulado
 
-    while(1) {
-        // Hacemos una rampa suave para verla bien en la gráfica
-        converter.valor_float += 0.5;
-        if(converter.valor_float > 100.0) converter.valor_float = 0.0;
+	for(int i = 0; i < 50; i++) {
+		converter.valor_float = converter.valor_float + i;
+		for(int k=0; k<4; k++){
+			outbyte(converter.bytes[k]);
+		}
+		usleep(10000); // 10ms = 100 Hz
 
-        // --- PROTOCOLO DE SINCRONIZACIÓN ---
-        // 1. Enviamos la CABECERA (Header) [171, 205 en decimal]
-        outbyte(0xAB);
-        outbyte(0xCD);
-
-        // 2. Enviamos el DATO (4 bytes del float)
-        for(int k=0; k<4; k++){
-            outbyte(converter.bytes[k]);
-        }
-
-        usleep(10000); // 10ms (100 Hz)
-    }
+	}
 
     cleanup_platform();
     return 0;

@@ -1,12 +1,12 @@
-20:06:18 **** Incremental Build of configuration Debug for project prueba1 ****
+20:37:46 **** Incremental Build of configuration Debug for project prueba1 ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v8 gcc compiler'
 aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:60:13: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-   60 |             usleep(10000); // 10ms = 100 Hz
-      |             ^~~~~~
+../src/helloworld.c:80:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+   80 |         usleep(10000); // 10ms (100 Hz)
+      |         ^~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: prueba1.elf'
@@ -17,9 +17,9 @@ aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/TFG_Vivado/mis_pruebas/hi
 'Invoking: ARM v8 Print Size'
 aarch64-none-elf-size prueba1.elf  |tee "prueba1.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  30604	   2176	  20692	  53472	   d0e0	prueba1.elf
+  30668	   2176	  20692	  53536	   d120	prueba1.elf
 'Finished building: prueba1.elf.size'
 ' '
 
-20:06:19 Build Finished (took 555ms)
+20:37:46 Build Finished (took 682ms)
 
