@@ -23773,3 +23773,858 @@ java.lang.Error
 	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
 	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
 	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-05 18:00:19.905
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-05 19:07:00.608
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-05 19:42:10.170
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:06.794
+!MESSAGE XSCT Command: [disconnect tcfchan#10], Thread: Thread-1001
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:06.810
+!MESSAGE XSCT command with result: [disconnect tcfchan#10], Result: [null, ]. Thread: Thread-1001
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.802
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.832
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#11]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.832
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.843
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.843
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.862
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.862
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.880
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.880
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.893
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.893
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:07.907
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.052
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.064
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.064
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.080
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.080
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.092
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.092
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.102
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.112
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.112
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.112
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.133
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.133
+!MESSAGE XSCT Command: [version -server], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.144
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.144
+!MESSAGE XSCT Command: [version], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.152
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.152
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.160
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.160
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.176
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.176
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.192
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.192
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.212
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.212
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.212
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.212
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.231
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.239
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.670
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:08.670
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.681
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.681
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.696
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.696
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.735
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_2]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.735
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.740
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.743
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.751
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.755
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.777
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.777
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.794
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.794
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.807
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.817
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.826
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.826
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.953
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:11.953
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:13.337
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:13.339
+!MESSAGE XSCT Command: [set bp_49_13_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:13.437
+!MESSAGE XSCT command with result: [set bp_49_13_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 10]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:13.437
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.486
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.494
+!MESSAGE XSCT Command: [bpremove $bp_49_13_fsbl_bp], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.512
+!MESSAGE XSCT command with result: [bpremove $bp_49_13_fsbl_bp], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.526
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.538
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.538
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.605
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:14.605
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.033
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.033
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.049
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.271
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.287
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.287
+!MESSAGE XSCT Command: [con], Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:49:15.329
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-56: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-05 19:49:15.334
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '10'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.891
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.906
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.906
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.916
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-05 19:50:32.922
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\demo\course_s2_Vitis\01_ps_hello\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.922
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:32.922
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-64: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:40.124
+!MESSAGE XSCT Command: [disconnect tcfchan#11], Thread: Thread-1078
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:40.161
+!MESSAGE XSCT command with result: [disconnect tcfchan#11], Result: [null, ]. Thread: Thread-1078
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.162
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.172
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.172
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.187
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.187
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.194
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.194
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.213
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.216
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.222
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.222
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.243
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.440
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.450
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.450
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.481
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.481
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.493
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.496
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.514
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.514
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.523
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.523
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.543
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.543
+!MESSAGE XSCT Command: [version -server], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.552
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.552
+!MESSAGE XSCT Command: [version], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.552
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.552
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.561
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.561
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.587
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.587
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.606
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.638
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.638
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.859
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:41.859
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.881
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.882
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.908
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.910
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.925
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_2]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.926
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.926
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.926
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.934
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.934
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.958
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.958
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.973
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.974
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.979
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:44.997
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:45.005
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:45.005
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:45.136
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:45.136
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:46.096
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:46.096
+!MESSAGE XSCT Command: [set bp_50_46_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:46.143
+!MESSAGE XSCT command with result: [set bp_50_46_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 11]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:46.143
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.206
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.207
+!MESSAGE XSCT Command: [bpremove $bp_50_46_fsbl_bp], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.224
+!MESSAGE XSCT command with result: [bpremove $bp_50_46_fsbl_bp], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.224
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.224
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.224
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.287
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.287
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.638
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.638
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.638
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.734
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.755
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.757
+!MESSAGE XSCT Command: [con], Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:50:47.810
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-63: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-05 19:50:47.813
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '11'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:10.916
+!MESSAGE XSCT Command: [disconnect tcfchan#13], Thread: Thread-1135
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:10.941
+!MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-1135
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.926
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.934
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#14]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.934
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.942
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.942
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.954
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.954
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.974
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.974
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.974
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:11.974
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.006
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.117
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.127
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.127
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.135
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.135
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.148
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.152
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.166
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.166
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.171
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.176
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT Command: [version -server], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT Command: [version], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.199
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.206
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.212
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.228
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.228
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.244
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.260
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.260
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.737
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:12.737
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.762
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.762
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.762
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.762
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.779
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_2]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.792
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.798
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.798
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.808
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.808
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.824
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.832
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.840
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.845
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.845
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.845
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.864
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.864
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.989
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:15.989
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:17.306
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:17.306
+!MESSAGE XSCT Command: [set bp_51_17_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:17.414
+!MESSAGE XSCT command with result: [set bp_51_17_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 12]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:17.414
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.474
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.478
+!MESSAGE XSCT Command: [bpremove $bp_51_17_fsbl_bp], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.511
+!MESSAGE XSCT command with result: [bpremove $bp_51_17_fsbl_bp], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.511
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.535
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.535
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.635
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:18.638
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.135
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/hello/Debug/hello.elf], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.135
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.145
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.304
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.321
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.321
+!MESSAGE XSCT Command: [con], Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:51:19.367
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-35: Launching Debugger_hello-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-05 19:51:19.367
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '12'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:52:55.408
+!MESSAGE XSCT Command: [disconnect tcfchan#14], Thread: Thread-1193
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-05 19:52:55.415
+!MESSAGE XSCT command with result: [disconnect tcfchan#14], Result: [null, ]. Thread: Thread-1193

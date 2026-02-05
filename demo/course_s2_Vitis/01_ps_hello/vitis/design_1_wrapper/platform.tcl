@@ -25,3 +25,4 @@ platform generate -domains zynqmp_fsbl
 platform active {design_1_wrapper}
 bsp reload
 platform generate -domains 
+platform generate -domains zynqmp_fsbl 

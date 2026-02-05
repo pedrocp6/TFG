@@ -6738,3 +6738,962 @@ C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsb
 C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
 
 TRACE::2026-02-05.11:20:24::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+LOG::2026-02-05.19:50:02::SCWPlatform::Started generating the artifacts platform design_1_wrapper
+TRACE::2026-02-05.19:50:02::SCWPlatform::Sanity checking of platform is completed
+LOG::2026-02-05.19:50:03::SCWPlatform::Started generating the artifacts for system configuration design_1_wrapper
+LOG::2026-02-05.19:50:03::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2026-02-05.19:50:03::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2026-02-05.19:50:03::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-02-05.19:50:03::SCWDomain::Building the domain :  zynqmp_fsbl
+TRACE::2026-02-05.19:50:03::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:03::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:03::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:03::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:03::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:03::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:03::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:03::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2026-02-05.19:50:03::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:03::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2026-02-05.19:50:03::SCWBDomain::Completed writing the mss file at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp
+TRACE::2026-02-05.19:50:03::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-02-05.19:50:03::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-02-05.19:50:03::SCWBDomain::System Command Ran  C:&  cd  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl& make -C  zynqmp_fsbl_bsp & make 
+TRACE::2026-02-05.19:50:03::SCWBDomain::make: Entering directory 'C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp'
+
+TRACE::2026-02-05.19:50:03::SCWBDomain::make --no-print-directory seq_libs
+
+TRACE::2026-02-05.19:50:03::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
+
+TRACE::2026-02-05.19:50:03::SCWBDomain::make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:03::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:03::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:04::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:04::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_4/src"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:04::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:04::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
+TRACE::2026-02-05.19:50:04::SCWBDomain::h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dis
+TRACE::2026-02-05.19:50:04::SCWBDomain::tribute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:04::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2026-02-05.19:50:05::SCWBDomain::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+TRACE::2026-02-05.19:50:05::SCWBDomain::ibute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_13/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:05::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:05::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:05::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:05::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:05::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:05::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:05::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:05::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/emacps_v3_18/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:05::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:05::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:05::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:05::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_17/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:05::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:05::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
+
+TRACE::2026-02-05.19:50:05::SCWBDomain::make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:05::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:05::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:06::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:06::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2026-02-05.19:50:06::SCWBDomain::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2026-02-05.19:50:06::SCWBDomain::-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_5/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:06::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:06::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:06::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:06::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_1/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:06::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:06::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/sdps_v4_1/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:06::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:06::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/standalone_v8_1/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2026-02-05.19:50:06::SCWBDomain::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2026-02-05.19:50:06::SCWBDomain::te-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
+
+TRACE::2026-02-05.19:50:06::SCWBDomain::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2026-02-05.19:50:06::SCWBDomain::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2026-02-05.19:50:06::SCWBDomain::e-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:07::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:07::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_12/src"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:07::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:07::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:07::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:07::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_13/src"
+
+TRACE::2026-02-05.19:50:07::SCWBDomain::make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2026-02-05.19:50:07::SCWBDomain::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+TRACE::2026-02-05.19:50:07::SCWBDomain::ibute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:08::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:08::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:08::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:08::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::"Include files for this library have already been copied."
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2026-02-05.19:50:08::SCWBDomain::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2026-02-05.19:50:08::SCWBDomain::e-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_16/src"
+
+TRACE::2026-02-05.19:50:08::SCWBDomain::make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:08::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:08::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:09::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
+
+TRACE::2026-02-05.19:50:09::SCWBDomain::make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2026-02-05.19:50:09::SCWBDomain::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
+TRACE::2026-02-05.19:50:09::SCWBDomain::rns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:09::SCWBDomain::"Compiling avbuf"
+
+TRACE::2026-02-05.19:50:13::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
+
+TRACE::2026-02-05.19:50:13::SCWBDomain::make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2026-02-05.19:50:13::SCWBDomain::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
+TRACE::2026-02-05.19:50:13::SCWBDomain::rns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:13::SCWBDomain::"Compiling dpdma"
+
+TRACE::2026-02-05.19:50:14::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
+
+TRACE::2026-02-05.19:50:14::SCWBDomain::make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2026-02-05.19:50:14::SCWBDomain::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
+TRACE::2026-02-05.19:50:14::SCWBDomain::rns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:14::SCWBDomain::"Compiling dppsu"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2026-02-05.19:50:16::SCWBDomain::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
+TRACE::2026-02-05.19:50:16::SCWBDomain::rns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::"Compiling xilpm library"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:16::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:16::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:16::SCWBDomain::"Compiling XilSecure Library"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::'Finished building libraries sequentially.'
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -j 10 --no-print-directory par_libs
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:17::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:17::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_4/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_13/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
+TRACE::2026-02-05.19:50:17::SCWBDomain::h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dis
+TRACE::2026-02-05.19:50:17::SCWBDomain::tribute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2026-02-05.19:50:17::SCWBDomain::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+TRACE::2026-02-05.19:50:17::SCWBDomain::ibute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:17::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:17::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:17::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:17::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/emacps_v3_18/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_17/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:17::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:17::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2026-02-05.19:50:17::SCWBDomain::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
+TRACE::2026-02-05.19:50:17::SCWBDomain::-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_1/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_5/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:17::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:17::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/sdps_v4_1/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:17::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:17::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/standalone_v8_1/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2026-02-05.19:50:17::SCWBDomain::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2026-02-05.19:50:17::SCWBDomain::te-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2026-02-05.19:50:17::SCWBDomain::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2026-02-05.19:50:17::SCWBDomain::e-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:17::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:17::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_12/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:17::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:17::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_13/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2026-02-05.19:50:17::SCWBDomain::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
+TRACE::2026-02-05.19:50:17::SCWBDomain::ibute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:17::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:17::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:17::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:17::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:17::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2026-02-05.19:50:18::SCWBDomain::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
+TRACE::2026-02-05.19:50:18::SCWBDomain::e-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_16/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:18::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:18::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Include files for this library have already been copied."
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_4/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+TRACE::2026-02-05.19:50:18::SCWBDomain::-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distri
+TRACE::2026-02-05.19:50:18::SCWBDomain::bute-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2026-02-05.19:50:18::SCWBDomain::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2026-02-05.19:50:18::SCWBDomain::te-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_13/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_18/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_17/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2026-02-05.19:50:18::SCWBDomain::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
+TRACE::2026-02-05.19:50:18::SCWBDomain::erns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2026-02-05.19:50:18::SCWBDomain::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
+TRACE::2026-02-05.19:50:18::SCWBDomain::tterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_5/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/scugic_v5_1/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/sdps_v4_1/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2026-02-05.19:50:18::SCWBDomain::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
+TRACE::2026-02-05.19:50:18::SCWBDomain::erns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
+TRACE::2026-02-05.19:50:18::SCWBDomain::s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patter
+TRACE::2026-02-05.19:50:18::SCWBDomain::ns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/standalone_v8_1/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2026-02-05.19:50:18::SCWBDomain::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
+TRACE::2026-02-05.19:50:18::SCWBDomain::patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2026-02-05.19:50:18::SCWBDomain::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
+TRACE::2026-02-05.19:50:18::SCWBDomain::atterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2026-02-05.19:50:18::SCWBDomain::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
+TRACE::2026-02-05.19:50:18::SCWBDomain::erns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_12/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2026-02-05.19:50:18::SCWBDomain::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
+TRACE::2026-02-05.19:50:18::SCWBDomain::terns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_13/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2026-02-05.19:50:18::SCWBDomain::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
+TRACE::2026-02-05.19:50:18::SCWBDomain::te-patterns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2026-02-05.19:50:18::SCWBDomain::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
+TRACE::2026-02-05.19:50:18::SCWBDomain::erns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_16/src"
+
+TRACE::2026-02-05.19:50:18::SCWBDomain::make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2026-02-05.19:50:18::SCWBDomain::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
+TRACE::2026-02-05.19:50:18::SCWBDomain::rns -Os -flto -ffat-lto-objects"
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::'Finished building libraries parallelly.'
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::make --no-print-directory archive
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::aarch64-none-elf-ar -r  psu_cortexa53_0/lib/libxil.a psu_cortexa53_0/lib/_exit.o psu_cortexa53_0/lib/_open.o psu_cortexa53_0/li
+TRACE::2026-02-05.19:50:19::SCWBDomain::b/_sbrk.o psu_cortexa53_0/lib/abort.o psu_cortexa53_0/lib/asm_vectors.o psu_cortexa53_0/lib/boot.o psu_cortexa53_0/lib/close.o 
+TRACE::2026-02-05.19:50:19::SCWBDomain::psu_cortexa53_0/lib/cpputest_time.o psu_cortexa53_0/lib/errno.o psu_cortexa53_0/lib/fcntl.o psu_cortexa53_0/lib/fstat.o psu_cor
+TRACE::2026-02-05.19:50:19::SCWBDomain::texa53_0/lib/getentropy.o psu_cortexa53_0/lib/getpid.o psu_cortexa53_0/lib/inbyte.o psu_cortexa53_0/lib/initialise_monitor_hand
+TRACE::2026-02-05.19:50:19::SCWBDomain::les.o psu_cortexa53_0/lib/isatty.o psu_cortexa53_0/lib/kill.o psu_cortexa53_0/lib/lseek.o psu_cortexa53_0/lib/open.o psu_cortex
+TRACE::2026-02-05.19:50:19::SCWBDomain::a53_0/lib/outbyte.o psu_cortexa53_0/lib/print.o psu_cortexa53_0/lib/putnum.o psu_cortexa53_0/lib/read.o psu_cortexa53_0/lib/sbr
+TRACE::2026-02-05.19:50:19::SCWBDomain::k.o psu_cortexa53_0/lib/sleep.o psu_cortexa53_0/lib/time.o psu_cortexa53_0/lib/translation_table.o psu_cortexa53_0/lib/unlink.o
+TRACE::2026-02-05.19:50:19::SCWBDomain:: psu_cortexa53_0/lib/vectors.o psu_cortexa53_0/lib/write.o psu_cortexa53_0/lib/xaxipmon.o psu_cortexa53_0/lib/xaxipmon_g.o psu_
+TRACE::2026-02-05.19:50:19::SCWBDomain::cortexa53_0/lib/xaxipmon_selftest.o psu_cortexa53_0/lib/xaxipmon_sinit.o psu_cortexa53_0/lib/xclockps.o psu_cortexa53_0/lib/xcl
+TRACE::2026-02-05.19:50:19::SCWBDomain::ockps_divider.o psu_cortexa53_0/lib/xclockps_fixedfactor.o psu_cortexa53_0/lib/xclockps_g.o psu_cortexa53_0/lib/xclockps_gate.o
+TRACE::2026-02-05.19:50:19::SCWBDomain:: psu_cortexa53_0/lib/xclockps_mux.o psu_cortexa53_0/lib/xclockps_pll.o psu_cortexa53_0/lib/xclockps_sinit.o psu_cortexa53_0/lib
+TRACE::2026-02-05.19:50:19::SCWBDomain::/xcoresightpsdcc.o psu_cortexa53_0/lib/xcsudma.o psu_cortexa53_0/lib/xcsudma_g.o psu_cortexa53_0/lib/xcsudma_intr.o psu_cortexa
+TRACE::2026-02-05.19:50:19::SCWBDomain::53_0/lib/xcsudma_selftest.o psu_cortexa53_0/lib/xcsudma_sinit.o psu_cortexa53_0/lib/xemacps.o psu_cortexa53_0/lib/xemacps_bdrin
+TRACE::2026-02-05.19:50:19::SCWBDomain::g.o psu_cortexa53_0/lib/xemacps_control.o psu_cortexa53_0/lib/xemacps_g.o psu_cortexa53_0/lib/xemacps_hw.o psu_cortexa53_0/lib/
+TRACE::2026-02-05.19:50:19::SCWBDomain::xemacps_intr.o psu_cortexa53_0/lib/xemacps_sinit.o psu_cortexa53_0/lib/xgpiops.o psu_cortexa53_0/lib/xgpiops_g.o psu_cortexa53_
+TRACE::2026-02-05.19:50:19::SCWBDomain::0/lib/xgpiops_hw.o psu_cortexa53_0/lib/xgpiops_intr.o psu_cortexa53_0/lib/xgpiops_selftest.o psu_cortexa53_0/lib/xgpiops_sinit.
+TRACE::2026-02-05.19:50:19::SCWBDomain::o psu_cortexa53_0/lib/xiicps.o psu_cortexa53_0/lib/xiicps_g.o psu_cortexa53_0/lib/xiicps_hw.o psu_cortexa53_0/lib/xiicps_intr.o
+TRACE::2026-02-05.19:50:19::SCWBDomain:: psu_cortexa53_0/lib/xiicps_master.o psu_cortexa53_0/lib/xiicps_options.o psu_cortexa53_0/lib/xiicps_selftest.o psu_cortexa53_0
+TRACE::2026-02-05.19:50:19::SCWBDomain::/lib/xiicps_sinit.o psu_cortexa53_0/lib/xiicps_slave.o psu_cortexa53_0/lib/xiicps_xfer.o psu_cortexa53_0/lib/xil-crt0.o psu_cor
+TRACE::2026-02-05.19:50:19::SCWBDomain::texa53_0/lib/xil_assert.o psu_cortexa53_0/lib/xil_cache.o psu_cortexa53_0/lib/xil_clocking.o psu_cortexa53_0/lib/xil_exception.
+TRACE::2026-02-05.19:50:19::SCWBDomain::o psu_cortexa53_0/lib/xil_mem.o psu_cortexa53_0/lib/xil_mmu.o psu_cortexa53_0/lib/xil_printf.o psu_cortexa53_0/lib/xil_sleepcom
+TRACE::2026-02-05.19:50:19::SCWBDomain::mon.o psu_cortexa53_0/lib/xil_sleeptimer.o psu_cortexa53_0/lib/xil_smc.o psu_cortexa53_0/lib/xil_spinlock.o psu_cortexa53_0/lib
+TRACE::2026-02-05.19:50:19::SCWBDomain::/xil_testcache.o psu_cortexa53_0/lib/xil_testio.o psu_cortexa53_0/lib/xil_testmem.o psu_cortexa53_0/lib/xil_util.o psu_cortexa5
+TRACE::2026-02-05.19:50:19::SCWBDomain::3_0/lib/xinterrupt_wrap.o psu_cortexa53_0/lib/xipipsu.o psu_cortexa53_0/lib/xipipsu_buf.o psu_cortexa53_0/lib/xipipsu_g.o psu_c
+TRACE::2026-02-05.19:50:19::SCWBDomain::ortexa53_0/lib/xipipsu_sinit.o psu_cortexa53_0/lib/xpciepsu.o psu_cortexa53_0/lib/xpciepsu_caps.o psu_cortexa53_0/lib/xpciepsu_
+TRACE::2026-02-05.19:50:19::SCWBDomain::ep.o psu_cortexa53_0/lib/xpciepsu_g.o psu_cortexa53_0/lib/xpciepsu_sinit.o psu_cortexa53_0/lib/xplatform_info.o psu_cortexa53_0
+TRACE::2026-02-05.19:50:19::SCWBDomain::/lib/xpm_counter.o psu_cortexa53_0/lib/xqspipsu.o psu_cortexa53_0/lib/xqspipsu_control.o psu_cortexa53_0/lib/xqspipsu_g.o psu_c
+TRACE::2026-02-05.19:50:19::SCWBDomain::ortexa53_0/lib/xqspipsu_hw.o psu_cortexa53_0/lib/xqspipsu_options.o psu_cortexa53_0/lib/xqspipsu_sinit.o psu_cortexa53_0/lib/xr
+TRACE::2026-02-05.19:50:19::SCWBDomain::esetps.o psu_cortexa53_0/lib/xresetps_g.o psu_cortexa53_0/lib/xresetps_sinit.o psu_cortexa53_0/lib/xrtcpsu.o psu_cortexa53_0/li
+TRACE::2026-02-05.19:50:19::SCWBDomain::b/xrtcpsu_g.o psu_cortexa53_0/lib/xrtcpsu_intr.o psu_cortexa53_0/lib/xrtcpsu_selftest.o psu_cortexa53_0/lib/xrtcpsu_sinit.o psu
+TRACE::2026-02-05.19:50:19::SCWBDomain::_cortexa53_0/lib/xscugic.o psu_cortexa53_0/lib/xscugic_g.o psu_cortexa53_0/lib/xscugic_hw.o psu_cortexa53_0/lib/xscugic_intr.o 
+TRACE::2026-02-05.19:50:19::SCWBDomain::psu_cortexa53_0/lib/xscugic_selftest.o psu_cortexa53_0/lib/xscugic_sinit.o psu_cortexa53_0/lib/xsdps.o psu_cortexa53_0/lib/xsdp
+TRACE::2026-02-05.19:50:19::SCWBDomain::s_card.o psu_cortexa53_0/lib/xsdps_g.o psu_cortexa53_0/lib/xsdps_host.o psu_cortexa53_0/lib/xsdps_options.o psu_cortexa53_0/lib
+TRACE::2026-02-05.19:50:19::SCWBDomain::/xsdps_sinit.o psu_cortexa53_0/lib/xsysmonpsu.o psu_cortexa53_0/lib/xsysmonpsu_g.o psu_cortexa53_0/lib/xsysmonpsu_intr.o psu_co
+TRACE::2026-02-05.19:50:19::SCWBDomain::rtexa53_0/lib/xsysmonpsu_selftest.o psu_cortexa53_0/lib/xsysmonpsu_sinit.o psu_cortexa53_0/lib/xtime_l.o psu_cortexa53_0/lib/xt
+TRACE::2026-02-05.19:50:19::SCWBDomain::tcps.o psu_cortexa53_0/lib/xttcps_g.o psu_cortexa53_0/lib/xttcps_options.o psu_cortexa53_0/lib/xttcps_selftest.o psu_cortexa53_
+TRACE::2026-02-05.19:50:19::SCWBDomain::0/lib/xttcps_sinit.o psu_cortexa53_0/lib/xuartps.o psu_cortexa53_0/lib/xuartps_g.o psu_cortexa53_0/lib/xuartps_hw.o psu_cortexa
+TRACE::2026-02-05.19:50:19::SCWBDomain::53_0/lib/xuartps_intr.o psu_cortexa53_0/lib/xuartps_options.o psu_cortexa53_0/lib/xuartps_selftest.o psu_cortexa53_0/lib/xuartp
+TRACE::2026-02-05.19:50:19::SCWBDomain::s_sinit.o psu_cortexa53_0/lib/xusbpsu.o psu_cortexa53_0/lib/xusbpsu_command.o psu_cortexa53_0/lib/xusbpsu_controltransfers.o ps
+TRACE::2026-02-05.19:50:19::SCWBDomain::u_cortexa53_0/lib/xusbpsu_device.o psu_cortexa53_0/lib/xusbpsu_endpoint.o psu_cortexa53_0/lib/xusbpsu_ep0handler.o psu_cortexa5
+TRACE::2026-02-05.19:50:19::SCWBDomain::3_0/lib/xusbpsu_ephandler.o psu_cortexa53_0/lib/xusbpsu_event.o psu_cortexa53_0/lib/xusbpsu_g.o psu_cortexa53_0/lib/xusbpsu_hib
+TRACE::2026-02-05.19:50:19::SCWBDomain::ernation.o psu_cortexa53_0/lib/xusbpsu_intr.o psu_cortexa53_0/lib/xusbpsu_sinit.o psu_cortexa53_0/lib/xvidc.o psu_cortexa53_0/l
+TRACE::2026-02-05.19:50:19::SCWBDomain::ib/xvidc_edid.o psu_cortexa53_0/lib/xvidc_edid_ext.o psu_cortexa53_0/lib/xvidc_parse_edid.o psu_cortexa53_0/lib/xvidc_timings_t
+TRACE::2026-02-05.19:50:19::SCWBDomain::able.o psu_cortexa53_0/lib/xzdma.o psu_cortexa53_0/lib/xzdma_g.o psu_cortexa53_0/lib/xzdma_intr.o psu_cortexa53_0/lib/xzdma_sel
+TRACE::2026-02-05.19:50:19::SCWBDomain::ftest.o psu_cortexa53_0/lib/xzdma_sinit.o
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::'Finished building libraries'
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::make: Leaving directory 'C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp'
+
+TRACE::2026-02-05.19:50:19::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_partition_lo
+TRACE::2026-02-05.19:50:19::SCWBDomain::ad.c -o xfsbl_partition_load.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:20::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_qspi.c -o xf
+TRACE::2026-02-05.19:50:20::SCWBDomain::sbl_qspi.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:20::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_csu_dma.c -o
+TRACE::2026-02-05.19:50:20::SCWBDomain:: xfsbl_csu_dma.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:20::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_nand.c -o xf
+TRACE::2026-02-05.19:50:20::SCWBDomain::sbl_nand.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:20::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_image_header
+TRACE::2026-02-05.19:50:20::SCWBDomain::.c -o xfsbl_image_header.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:20::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_hooks.c -o x
+TRACE::2026-02-05.19:50:20::SCWBDomain::fsbl_hooks.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_main.c -o xf
+TRACE::2026-02-05.19:50:21::SCWBDomain::sbl_main.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_dfu_util.c -
+TRACE::2026-02-05.19:50:21::SCWBDomain::o xfsbl_dfu_util.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_tpm.c -o xfs
+TRACE::2026-02-05.19:50:21::SCWBDomain::bl_tpm.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_initializati
+TRACE::2026-02-05.19:50:21::SCWBDomain::on.c -o xfsbl_initialization.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_ddr_init.c -
+TRACE::2026-02-05.19:50:21::SCWBDomain::o xfsbl_ddr_init.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_handoff.c -o
+TRACE::2026-02-05.19:50:21::SCWBDomain:: xfsbl_handoff.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:21::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_sd.c -o xfsb
+TRACE::2026-02-05.19:50:21::SCWBDomain::l_sd.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_board.c -o x
+TRACE::2026-02-05.19:50:22::SCWBDomain::fsbl_board.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_misc_drivers
+TRACE::2026-02-05.19:50:22::SCWBDomain::.c -o xfsbl_misc_drivers.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_bs.c -o xfsb
+TRACE::2026-02-05.19:50:22::SCWBDomain::l_bs.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_tpm_util.c -
+TRACE::2026-02-05.19:50:22::SCWBDomain::o xfsbl_tpm_util.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_rsa_sha.c -o
+TRACE::2026-02-05.19:50:22::SCWBDomain:: xfsbl_rsa_sha.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_plpartition_
+TRACE::2026-02-05.19:50:22::SCWBDomain::valid.c -o xfsbl_plpartition_valid.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:22::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_misc.c -o xf
+TRACE::2026-02-05.19:50:22::SCWBDomain::sbl_misc.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:23::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_authenticati
+TRACE::2026-02-05.19:50:23::SCWBDomain::on.c -o xfsbl_authentication.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:23::SCWBDomain::aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_usb.c -o xfs
+TRACE::2026-02-05.19:50:23::SCWBDomain::bl_usb.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+TRACE::2026-02-05.19:50:23::SCWBDomain::aarch64-none-elf-gcc -o fsbl_a53.elf psu_init.o xfsbl_authentication.o xfsbl_board.o xfsbl_bs.o xfsbl_csu_dma.o xfsbl_ddr_init.
+TRACE::2026-02-05.19:50:23::SCWBDomain::o xfsbl_dfu_util.o xfsbl_exit.o xfsbl_handoff.o xfsbl_hooks.o xfsbl_image_header.o xfsbl_initialization.o xfsbl_main.o xfsbl_mi
+TRACE::2026-02-05.19:50:23::SCWBDomain::sc.o xfsbl_misc_drivers.o xfsbl_nand.o xfsbl_partition_load.o xfsbl_plpartition_valid.o xfsbl_qspi.o xfsbl_rsa_sha.o xfsbl_sd.o
+TRACE::2026-02-05.19:50:23::SCWBDomain:: xfsbl_tpm.o xfsbl_tpm_util.o xfsbl_translation_table.o xfsbl_usb.o -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flt
+TRACE::2026-02-05.19:50:23::SCWBDomain::o -ffat-lto-objects    -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl
+TRACE::2026-02-05.19:50:23::SCWBDomain::,--start-group,-lxilsecure,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group                   
+TRACE::2026-02-05.19:50:23::SCWBDomain::                                                                                      -n  -Wl,--gc-sections -Lzynqmp_fsbl_bsp/p
+TRACE::2026-02-05.19:50:23::SCWBDomain::su_cortexa53_0/lib -Tlscript.ld
+
+LOG::2026-02-05.19:50:31::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2026-02-05.19:50:31::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2026-02-05.19:50:31::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2026-02-05.19:50:31::SCWDomain::Skipping the build for domain :  zynqmp_pmufw
+LOG::2026-02-05.19:50:31::SCWSystem::Checking the domain standalone_psu_cortexa53_0
+LOG::2026-02-05.19:50:31::SCWSystem::Not a boot domain 
+LOG::2026-02-05.19:50:31::SCWSystem::Started Processing the domain standalone_psu_cortexa53_0
+TRACE::2026-02-05.19:50:31::SCWDomain::Generating domain artifcats
+TRACE::2026-02-05.19:50:31::SCWMssOS::Generating standalone artifcats
+TRACE::2026-02-05.19:50:31::SCWMssOS::Copying the qemu file from  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu_args.txt To C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2026-02-05.19:50:31::SCWMssOS::Copying the qemu file from  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu_args.txt To C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/qemu/
+TRACE::2026-02-05.19:50:31::SCWMssOS::Copying the qemu file from  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu_args.txt To C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/qemu/
+TRACE::2026-02-05.19:50:31::SCWMssOS::Copying the qemu file from  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu_args.txt To C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/qemu/
+TRACE::2026-02-05.19:50:31::SCWMssOS:: Copying the user libraries. 
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:31::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:31::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::Completed writing the mss file at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp
+TRACE::2026-02-05.19:50:31::SCWMssOS::Mss edits present, copying mssfile into export location C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2026-02-05.19:50:31::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2026-02-05.19:50:31::SCWDomain::Skipping the build for domain :  standalone_psu_cortexa53_0
+TRACE::2026-02-05.19:50:31::SCWMssOS::skipping the bsp build ... 
+TRACE::2026-02-05.19:50:31::SCWMssOS::Copying to export directory.
+TRACE::2026-02-05.19:50:31::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2026-02-05.19:50:31::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2026-02-05.19:50:31::SCWSystem::Completed Processing the domain standalone_psu_cortexa53_0
+LOG::2026-02-05.19:50:31::SCWSystem::Completed Processing the sysconfig design_1_wrapper
+LOG::2026-02-05.19:50:31::SCWPlatform::Completed generating the artifacts for system configuration design_1_wrapper
+TRACE::2026-02-05.19:50:31::SCWPlatform::Started preparing the platform 
+TRACE::2026-02-05.19:50:31::SCWSystem::Writing the bif file for system config design_1_wrapper
+TRACE::2026-02-05.19:50:31::SCWSystem::dir created 
+TRACE::2026-02-05.19:50:31::SCWSystem::Writing the bif 
+TRACE::2026-02-05.19:50:31::SCWPlatform::Started writing the spfm file 
+TRACE::2026-02-05.19:50:31::SCWPlatform::Started writing the xpfm file 
+TRACE::2026-02-05.19:50:31::SCWPlatform::Completed generating the platform
+TRACE::2026-02-05.19:50:31::SCWMssOS::Saving the mss changes C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Commit changes completed.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Saving the mss changes C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Commit changes completed.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Saving the mss changes C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Completed writemss as part of save.
+TRACE::2026-02-05.19:50:31::SCWMssOS::Commit changes completed.
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:31::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:31::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:31::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:31::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:31::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:31::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:31::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:31::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:31::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:31::SCWWriter::formatted JSON is {
+	"platformName":	"design_1_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"design_1_wrapper",
+	"platHandOff":	"<platformDir>.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"psu_cortexa53_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"design_1_wrapper",
+	"systems":	[{
+			"systemName":	"design_1_wrapper",
+			"systemDesc":	"design_1_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"design_1_wrapper",
+			"sysActiveDom":	"standalone_psu_cortexa53_0",
+			"sysDefaultDom":	"standalone_psu_cortexa53_0",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"50ffef4a883d3ea676765d60b786a6e4",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.0", "xilsecure:5.1", "xilpm:5.0"],
+					"libOptions":	{
+						"standalone":	{
+							"zynqmp_fsbl_bsp":	"true",
+							"libOptionNames":	["zynqmp_fsbl_bsp"]
+						},
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"xilsecure":	{
+							"tpm_support":	"true",
+							"libOptionNames":	["tpm_support"]
+						},
+						"libsContainingOptions":	["standalone", "xilffs", "xilsecure"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"f53f944c509d63eeaedc429f0d902726",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:6.4", "xilsecure:5.1", "xilskey:7.4"],
+					"libOptions":	{
+						"psu_pmu_0":	{
+							"extra_compiler_flags":	"-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns  -Os -flto -ffat-lto-objects",
+							"libOptionNames":	["extra_compiler_flags"]
+						},
+						"libsContainingOptions":	["psu_pmu_0"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_psu_cortexa53_0",
+					"domainDispName":	"standalone_psu_cortexa53_0",
+					"domainDesc":	"standalone_psu_cortexa53_0",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"<platformDir>/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/design_1_wrapper/standalone_psu_cortexa53_0/qemu",
+					"pmuQemuArgs":	"<platformDir>/resources/design_1_wrapper/standalone_psu_cortexa53_0/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.1",
+					"mssFile":	"",
+					"md5Digest":	"7824a2544f94f615c7699fb2e7b9fe4e",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2026-02-05.19:50:31::SCWPlatform::updated the xpfm file.
+TRACE::2026-02-05.19:50:32::SCWPlatform::Trying to open the hw design at C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:32::SCWPlatform::DSA given C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:32::SCWPlatform::DSA absoulate path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:32::SCWPlatform::DSA directory C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw
+TRACE::2026-02-05.19:50:32::SCWPlatform:: Platform Path C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/hw/design_1_wrapper.xsa
+TRACE::2026-02-05.19:50:32::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2026-02-05.19:50:32::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2026-02-05.19:50:32::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2026-02-05.19:50:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2026-02-05.19:50:32::SCWMssOS::Checking the sw design at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss
+TRACE::2026-02-05.19:50:32::SCWMssOS::DEBUG:  swdes dump  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss|system_1||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2026-02-05.19:50:32::SCWMssOS::Sw design exists and opened at  C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/system.mss

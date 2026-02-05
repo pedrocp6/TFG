@@ -56,7 +56,7 @@ int main()
     init_platform();
 
     for(i=0; i<50; i++){
-    	xil_printf("%d\n", i);
+    	xil_printf("%d\n\r", i);
     	usleep(100000);
     };
 

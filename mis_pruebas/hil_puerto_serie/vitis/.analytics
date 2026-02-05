@@ -1,0 +1,10 @@
+timestamp=[2026-02-05 19:58:00], mode=WORKBENCH_START, duration=0:01:39.322, duration_ms=99322, data={}
+timestamp=[2026-02-05 19:58:01], mode=WORKBENCH_UI_INIT, duration=0:00:00.034, duration_ms=34, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2026-02-05 19:58:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.624, duration_ms=624, data={}
+timestamp=[2026-02-05 20:00:18], mode=APP_CREATION, duration=0:00:32.392, duration_ms=32392, data={name=prueba1, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=design_1_wrapper, application_type=application}
+timestamp=[2026-02-05 20:02:44], mode=PLATFORM_GENERATION, duration=0:01:37.273, duration_ms=97273, data={name=design_1_wrapper}
+timestamp=[2026-02-05 20:02:45], mode=BUILD, duration=0:00:00.825, duration_ms=825, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-05 20:02:46], mode=BUILD, duration=0:00:00.136, duration_ms=136, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-05 20:02:46], mode=BUILD, duration=0:00:00.138, duration_ms=138, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-05 20:04:42], mode=BUILD, duration=0:00:00.555, duration_ms=555, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-05 20:06:19], mode=BUILD, duration=0:00:00.555, duration_ms=555, data={name=prueba1, configuration=Debug, clean_build=false}

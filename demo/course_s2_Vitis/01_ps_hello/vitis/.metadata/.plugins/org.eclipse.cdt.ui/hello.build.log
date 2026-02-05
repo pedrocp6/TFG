@@ -1,4 +1,4 @@
-12:40:55 **** Incremental Build of configuration Debug for project hello ****
+19:50:32 **** Incremental Build of configuration Debug for project hello ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v8 gcc compiler'
@@ -21,5 +21,5 @@ aarch64-none-elf-size hello.elf  |tee "hello.elf.size"
 'Finished building: hello.elf.size'
 ' '
 
-12:40:55 Build Finished (took 678ms)
+19:50:34 Build Finished (took 1s.115ms)
 

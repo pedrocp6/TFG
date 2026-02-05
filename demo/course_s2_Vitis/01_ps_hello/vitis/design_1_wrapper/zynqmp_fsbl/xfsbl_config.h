@@ -73,7 +73,7 @@ extern "C" {
  *       all data exchanged.
  */
 #ifndef FSBL_PRINT_VAL
-#define FSBL_PRINT_VAL              (1U)
+#define FSBL_PRINT_VAL              (0U)
 #endif
 
 #ifndef FSBL_DEBUG_VAL
