@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:C:/TFG_Vivado/demo/course_s1/06_key_project/vivado_key/vivado_key.srcs/constrs_1/new/key.xdc rfile:../vivado_key/vivado_key.srcs/constrs_1/new/key.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN AE5 [get_ports sys_clk_p]
-set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN AE12 [get_ports led]
-set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN AF12 [get_ports key]

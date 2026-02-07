@@ -1,1457 +1,0 @@
-
-*** Running vivado
-    with args -log bd_d92b_csc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_d92b_csc_0.tcl
-
-
-
-****** Vivado v2025.2 (64-bit)
-  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
-  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Jan 21 12:50:33 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source bd_d92b_csc_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 530.758 ; gain = 220.258
-!! WARNING !!
-"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
-Please ignore this, if you have already made changes to your system registry to accept more than
-default limit of 519 characters.
-!! WARNING !!
-
-****** vitis-run v2025.2 (64-bit)
-  **** SW Build 6295257 on 2025-11-13-08:29:27
-  **** Start of session at: Wed Jan 21 12:50:46 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-ECHO est  desactivado.
-"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
-Please ignore this, if you have already made changes to your system registry to accept more than
-default limit of 519 characters.
-ECHO est  desactivado.
-  **** HLS Build v2025.2 6295257
-Sourcing Tcl script 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/runhls.tcl'
-INFO: [HLS 200-1510] Running: open_project -reset prj 
-WARNING: [HLS 200-2182] The 'prj' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
-Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
-INFO: [HLS 200-10] Creating and opening solution 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj'.
-INFO: [HLS 200-1510] Running: set_top v_csc 
-INFO: [HLS 200-1510] Running: open_solution sol 
-INFO: [HLS 200-10] Creating and opening solution 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol'.
-INFO: [HLS 200-1505] Using default flow_target 'vivado'
-Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
-INFO: [HLS 200-1510] Running: set_part xczu2cg-sfvc784-1-e 
-INFO: [HLS 200-1611] Setting target device to 'xczu2cg-sfvc784-1-e'
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc_config.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc_config.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.cpp 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.cpp' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls_video.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls_video.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls_opencv.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls_opencv.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_arithm.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_arithm.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_fast.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_fast.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_haar.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_haar.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_harris.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_harris.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_histogram.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_histogram.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_hough.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_hough.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_imgbase.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_imgbase.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_imgproc.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_imgproc.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_io.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_io.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_mem.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_mem.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_stereobm.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_stereobm.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_types.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_types.h' to the project
-INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls -I c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src  c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_undistort.h 
-INFO: [HLS 200-10] Adding design file 'c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_undistort.h' to the project
-INFO: [HLS 200-1510] Running: create_clock -period 5 -name ap_clk 
-INFO: [SYN 201-201] Setting up clock 'ap_clk' with a period of 5ns.
-INFO: [HLS 200-1510] Running: config_rtl -module_prefix bd_d92b_csc_0_ 
-INFO: [HLS 200-1510] Running: config_export -vendor xilinx.com -library ip -version 1.1 
-INFO: [HLS 200-1510] Running: csynth_design 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.385 seconds; current allocated memory: 137.590 MB.
-INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
-INFO: [HLS 200-10] Analyzing design file 'C:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.cpp' ... 
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:438:9)
-Resolution: For help on HLS 214-114 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-114.html
-WARNING: [HLS 214-169] There are a total of 30 such instances of non-canonical statements in the dataflow region (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:438:9)
-Resolution: For help on HLS 214-169 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-169.html
-WARNING: [HLS 200-471] Dataflow form checks found 2 issue(s) in file C:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/v_csc.cpp
-Resolution: For help on HLS 200-471 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-471.html
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 7 seconds. CPU system time: 1 seconds. Elapsed time: 83.389 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-INFO: [HLS 200-1995] There were 7,680 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 2,786 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,883 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,836 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,712 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,219 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,201 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,215 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,603 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,772 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,649 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,561 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,483 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,481 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,408 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 200-1995] There were 1,331 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/report/csynth_design_size.rpt:2)
-INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<48, ap_uint<8> >(ap_uint<48>, int, int, ap_uint<8>&)' into 'void hls::AXIGetBitFields<48, ap_uint<8> >(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<8>&)' (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h:85:5)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<6, ap_uint<8> >::Scalar()' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:517:18)
-INFO: [HLS 214-131] Inlining function 'void hls::AXIGetBitFields<48, ap_uint<8> >(hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, int, int, ap_uint<8>&)' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:573:6)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<6, ap_uint<8> >::Scalar()' into 'v_hcresampler_core(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char const&, bool, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:735:18)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<1, ap_uint<8> >::Scalar()' into 'v_hcresampler_core(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char const&, bool, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:746:37)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<2, ap_uint<8> >::Scalar()' into 'v_hcresampler_core(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char const&, bool, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:25)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<6, ap_uint<8> >::Scalar()' into 'v_csc_core(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, unsigned short&, short&, short&, short&, short&, short&, short&, short&, short&, short&, ap_int<10>&, ap_int<10>&, ap_int<10>&, ap_uint<8>&, ap_uint<8>&, short&, short&, short&, short&, short&, short&, short&, short&, short&, ap_int<10>&, ap_int<10>&, ap_int<10>&, ap_uint<8>&, ap_uint<8>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:127:18)
-INFO: [HLS 214-131] Inlining function 'hls::Scalar<6, ap_uint<8> >::Scalar()' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&, unsigned char&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:615:18)
-INFO: [HLS 214-377] Adding 'pix' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'dstPix' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'srcPix' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'outpix' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'mpix_y' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'mpix_cb' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'mpix_cr' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'pixbuf_y' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'pixbuf_cb' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'pixbuf_cr' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-377] Adding 'inpix' into disaggregation list because there's array-partition pragma applied on the struct field (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_video_core.h:198:1)
-INFO: [HLS 214-210] Disaggregating variable 'pix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:517:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'pixbuf_cr' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:746:37)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'pixbuf_cb' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:746:10)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'pixbuf_y' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:745:10)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'mpix_cr' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:25)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'mpix_cb' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'mpix_y' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:737:16)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'outpix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:736:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'inpix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:735:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'dstPix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:128:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'srcPix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:127:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-210] Disaggregating variable 'pix' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:615:18)
-Resolution: For help on HLS 214-210 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=214-210.html
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_688_3' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:688:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_690_4' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:690:23)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_142_3' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:142:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_781_3' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:781:23)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_805_4' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:805:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_810_5' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:810:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_826_6' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:826:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_840_7' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:840:24)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_861_8' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:861:24)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_869_9' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:869:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_563_1' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:563:22)
-INFO: [HLS 214-291] Loop 'VITIS_LOOP_565_2' is marked as complete unroll implied by the pipeline pragma (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:565:23)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_688_3' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:688:22) in function 'MultiPixStream2AXIvideo' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:613:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_690_4' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:690:23) in function 'MultiPixStream2AXIvideo' completely with a factor of 3 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:613:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_142_3' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:142:22) in function 'v_csc_core' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:104:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_781_3' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:781:23) in function 'v_hcresampler_core' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_805_4' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:805:22) in function 'v_hcresampler_core' completely with a factor of 6 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_810_5' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:810:22) in function 'v_hcresampler_core' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_826_6' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:826:22) in function 'v_hcresampler_core' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_861_8' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:861:24) in function 'v_hcresampler_core' completely with a factor of 4 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_840_7' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:840:24) in function 'v_hcresampler_core' completely with a factor of 4 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_869_9' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:869:22) in function 'v_hcresampler_core' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:724:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_563_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:563:22) in function 'AXIvideo2MultiPixStream' completely with a factor of 2 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:514:0)
-INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_565_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:565:23) in function 'AXIvideo2MultiPixStream' completely with a factor of 3 (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:514:0)
-INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()' into 'AXIvideo2MultiPixStream(hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, unsigned short&, unsigned short&, unsigned char&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:514:0)
-INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>::axis()' into 'MultiPixStream2AXIvideo(hls::stream<hls::Scalar<6, ap_uint<8> >, 0>&, hls::stream<hls::axis<ap_uint<48>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, unsigned short&, unsigned short&, unsigned char&)' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:613:0)
-INFO: [HLS 214-248] Applying array_partition to 'mpix_cb': Complete partitioning on dimension 1. (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16)
-INFO: [HLS 214-248] Applying array_partition to 'mpix_cr': Complete partitioning on dimension 1. (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:25)
-INFO: [HLS 214-248] Applying array_partition to 'pixbuf_y': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:745:10)
-WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:884:35)
-INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'stream_csc' with compact=bit mode in 48-bits (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:434:24)
-INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'stream_in_hresampled' with compact=bit mode in 48-bits (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:433:24)
-INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'stream_out_hresampled' with compact=bit mode in 48-bits (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:433:46)
-INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'stream_in' with compact=bit mode in 48-bits (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:431:24)
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.251 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.019 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.647 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.469 seconds; current allocated memory: 139.383 MB.
-WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 32767 for loop 'VITIS_LOOP_767_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16) in function 'v_hcresampler_core.1'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 32767 for loop 'VITIS_LOOP_767_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16) in function 'v_hcresampler_core'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 32767 to 960 for loop 'VITIS_LOOP_664_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 32 for loop 'VITIS_LOOP_664_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 960) < AVE (= 16383)) for loop 'VITIS_LOOP_664_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'VITIS_LOOP_662_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'VITIS_LOOP_662_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'VITIS_LOOP_662_1' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:661:7) in function 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 32767 to 960 for loop 'loop_width' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 32 for loop 'loop_width' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 960) < AVE (= 16383)) for loop 'loop_width' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 65535 to 1080 for loop 'loop_height' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 64 for loop 'loop_height' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-WARNING: [XFORM 203-561] Ignored invalid trip count directive (MAX (= 1080) < AVE (= 32767)) for loop 'loop_height' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:531:7) in function 'AXIvideo2MultiPixStream'.
-INFO: [XFORM 203-712] Applying dataflow to function 'v_csc' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:220:1), detected/extracted 6 process function(s): 
-	 'Block_entry_proc.1'
-	 'AXIvideo2MultiPixStream'
-	 'v_hcresampler_core'
-	 'v_csc_core'
-	 'v_hcresampler_core.1'
-	 'MultiPixStream2AXIvideo'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 32770 to 32767 for loop 'VITIS_LOOP_769_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16) in function 'v_hcresampler_core.1'.
-WARNING: [XFORM 203-561] Updating loop upper bound from 32770 to 32767 for loop 'VITIS_LOOP_769_2' (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:738:16) in function 'v_hcresampler_core'.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:139:1) to (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:136:21) in function 'v_csc_core'... converting 7 basic blocks.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/src/hls/hls_axi_io.h:83:39) to (C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/.autopilot/db/v_csc.cpp:545:3) in function 'AXIvideo2MultiPixStream'... converting 7 basic blocks.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.953 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.177 seconds; current allocated memory: 139.383 MB.
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'v_csc' ...
-WARNING: [SYN 201-103] Legalizing function name 'Block_entry_proc.1' to 'Block_entry_proc_1'.
-WARNING: [SYN 201-103] Legalizing function name 'reg<unsigned short>' to 'reg_unsigned_short_s'.
-WARNING: [SYN 201-103] Legalizing function name 'v_hcresampler_core.1_Pipeline_VITIS_LOOP_769_2' to 'v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2'.
-WARNING: [SYN 201-103] Legalizing function name 'v_hcresampler_core.1' to 'v_hcresampler_core_1'.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'Block_entry_proc_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.534 seconds; current allocated memory: 139.383 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.103 seconds; current allocated memory: 140.488 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'reg_unsigned_short_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'reg<unsigned short>'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.13 seconds; current allocated memory: 141.383 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 141.395 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_start'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 141.812 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.069 seconds; current allocated memory: 141.926 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'loop_width'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'loop_width'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.147 seconds; current allocated memory: 142.633 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.072 seconds; current allocated memory: 142.844 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'loop_wait_for_eol'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.393 seconds; current allocated memory: 143.047 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.052 seconds; current allocated memory: 143.219 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'AXIvideo2MultiPixStream' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 143.488 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 143.734 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_hcresampler_core_Pipeline_VITIS_LOOP_769_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_769_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_769_2'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 144.754 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 145.086 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_hcresampler_core' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.214 seconds; current allocated memory: 145.719 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 145.719 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_csc_core_Pipeline_VITIS_LOOP_136_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln196_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln196_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln194_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln194_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln192_6) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln192_4) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln196_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln196) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln194_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln194) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln192_2) to 3 in order to utilize available DSP registers.
-INFO: [HLS 200-486] Changing DSP latency (root=add_ln192) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_136_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6, loop 'VITIS_LOOP_136_2'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.479 seconds; current allocated memory: 148.840 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.192 seconds; current allocated memory: 149.047 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_csc_core' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.321 seconds; current allocated memory: 149.238 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.088 seconds; current allocated memory: 149.523 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_769_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_769_2'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.313 seconds; current allocated memory: 150.492 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 150.551 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_hcresampler_core_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.259 seconds; current allocated memory: 150.973 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 151.172 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_664_2'.
-INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_664_2'
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.178 seconds; current allocated memory: 151.922 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.135 seconds; current allocated memory: 152.309 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'MultiPixStream2AXIvideo' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 152.430 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 152.430 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'v_csc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-11] Finished scheduling.
-WARNING: [HLS 200-1020] Increasing the depth of FIFO cond64_loc_channel (from Block_entry_proc_1_U0 to v_hcresampler_core_1_U0) to 4 to improve performance and/or avoid deadlocks.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 153.230 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 153.723 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'Block_entry_proc_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_entry_proc_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.251 seconds; current allocated memory: 155.023 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'reg_unsigned_short_s' pipeline 'reg<unsigned short>' pipeline type 'function pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.198 seconds; current allocated memory: 156.500 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.166 seconds; current allocated memory: 156.949 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_width' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiPixStream_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'sparsemux_5_8_8_1_1': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_width'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.278 seconds; current allocated memory: 158.312 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 159.777 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.258 seconds; current allocated memory: 159.777 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_hcresampler_core_Pipeline_VITIS_LOOP_769_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'v_hcresampler_core_Pipeline_VITIS_LOOP_769_2' pipeline 'VITIS_LOOP_769_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_hcresampler_core_Pipeline_VITIS_LOOP_769_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.374 seconds; current allocated memory: 160.461 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_hcresampler_core' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_hcresampler_core'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.409 seconds; current allocated memory: 162.461 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_csc_core_Pipeline_VITIS_LOOP_136_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'v_csc_core_Pipeline_VITIS_LOOP_136_2' pipeline 'VITIS_LOOP_136_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_12ns_24_4_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_8ns_22s_25_4_1': 6 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_16s_8ns_24_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'mul_8ns_16s_24_1_1': 3 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_csc_core_Pipeline_VITIS_LOOP_136_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 165.977 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_csc_core' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_csc_core'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.531 seconds; current allocated memory: 172.523 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2' pipeline 'VITIS_LOOP_769_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.442 seconds; current allocated memory: 174.352 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_hcresampler_core_1' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_hcresampler_core_1'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.322 seconds; current allocated memory: 178.293 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2' pipeline 'VITIS_LOOP_664_2' pipeline type 'loop pipeline'
-INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.294 seconds; current allocated memory: 178.293 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.395 seconds; current allocated memory: 179.484 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'v_csc' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_keep_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_strb_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_user_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_id_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/s_axis_video_V_dest_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/InVideoFormat' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/OutVideoFormat' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/width' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/height' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ColStart' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ColEnd' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/RowStart' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/RowEnd' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K11' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K12' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K13' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K21' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K22' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K23' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K31' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K32' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K33' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ROffset' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/GOffset' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/BOffset' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ClampMin' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ClipMax' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K11_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K12_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K13_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K21_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K22_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K23_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K31_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K32_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/K33_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ROffset_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/GOffset_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/BOffset_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ClampMin_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/ClipMax_2' to 's_axilite & ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_data_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_keep_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_strb_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_user_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_last_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_id_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on port 'v_csc/m_axis_video_V_dest_V' to 'axis' (register, both mode).
-INFO: [RTGEN 206-500] Setting interface mode on function 'v_csc' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'InVideoFormat', 'OutVideoFormat', 'width', 'height', 'ColStart', 'ColEnd', 'RowStart', 'RowEnd', 'K11', 'K12', 'K13', 'K21', 'K22', 'K23', 'K31', 'K32', 'K33', 'ROffset', 'GOffset', 'BOffset', 'ClampMin', 'ClipMax', 'K11_2', 'K12_2', 'K13_2', 'K21_2', 'K22_2', 'K23_2', 'K31_2', 'K32_2', 'K33_2', 'ROffset_2', 'GOffset_2', 'BOffset_2', 'ClampMin_2', 'ClipMax_2' to AXI-Lite port CTRL.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'v_csc'.
-INFO: [RTMG 210-285] Implementing FIFO 'cond_loc_channel_U(bd_d92b_csc_0_fifo_w1_d2_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'cond64_loc_channel_U(bd_d92b_csc_0_fifo_w1_d4_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'stream_in_U(bd_d92b_csc_0_fifo_w48_d16_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'stream_in_hresampled_U(bd_d92b_csc_0_fifo_w48_d16_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'stream_csc_U(bd_d92b_csc_0_fifo_w48_d16_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'stream_out_hresampled_U(bd_d92b_csc_0_fifo_w48_d16_S)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_v_csc_core_U0_U(bd_d92b_csc_0_start_for_v_csc_core_U0)' using Shift Registers.
-INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2AXIvideo_U0_U(bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.665 seconds; current allocated memory: 179.570 MB.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.882 seconds; current allocated memory: 203.016 MB.
-INFO: [HLS 200-2225] Wrote inferred directives to file C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/syn/inferred_directives.ini
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 8 seconds. CPU system time: 5 seconds. Elapsed time: 14.861 seconds; current allocated memory: 204.695 MB.
-INFO: [VHDL 208-304] Generating VHDL RTL for v_csc with prefix bd_d92b_csc_0_.
-INFO: [VLOG 209-307] Generating Verilog RTL for v_csc with prefix bd_d92b_csc_0_.
-INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 290.45 MHz
-INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:02:18; Allocated memory: 67.621 MB.
-INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-!! WARNING !!
-"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
-Please ignore this, if you have already made changes to your system registry to accept more than
-default limit of 519 characters.
-!! WARNING !!
-
-****** Vivado v2025.2 (64-bit)
-  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
-  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Jan 21 12:53:25 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-INFO: calling package_hls_ip ip_types=vitis sysgen json_file=C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/sol_data.json outdir=C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip srcdir=C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol ippack_options_dict=subcore_use_xci_files false ippack_options_dict=subcore_use_xci_files false
-INFO: Copied 1 ipmisc file(s) to C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/misc
-INFO: Copied 34 verilog file(s) to C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/hdl/verilog
-INFO: Copied 28 vhdl file(s) to C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/hdl/vhdl
-INFO: Copied 10 swdriver file(s) to C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/drivers
-ipx::create_core: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 537.414 ; gain = 212.742
-INFO: Import ports from HDL: C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/hdl/vhdl/bd_d92b_csc_0_v_csc.vhd (bd_d92b_csc_0_v_csc)
-INFO: Add axi4lite interface s_axi_CTRL
-INFO: Add clock interface ap_clk
-INFO: Add reset interface ap_rst_n
-INFO: Add interrupt interface interrupt
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
-INFO: Add axi4stream interface s_axis_video
-INFO: Add axi4stream interface m_axis_video
-INFO: Calling post_process_vitis to specialize IP
-INFO: Calling post_process_sysgen to specialize IP
-Generating sysgen info xml from json file
-INFO: Created IP C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/component.xml
-INFO: Created IP archive C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/prj/sol/impl/ip/xilinx_com_ip_v_csc_1_1.zip
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 12:53:43 2026...
-INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
-INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:26; Allocated memory: 7.750 MB.
-INFO: [HLS 200-112] Total CPU user time: 32 seconds. Total CPU system time: 10 seconds. Total elapsed time: 173.127 seconds; peak allocated memory: 212.758 MB.
-INFO: [vitis-run 60-791] Total elapsed time: 0h 2m 58s
-INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.
-compile_c: Time (s): cpu = 00:00:00 ; elapsed = 00:03:00 . Memory (MB): peak = 588.863 ; gain = 0.000
-Command: synth_design -top bd_d92b_csc_0 -part xczu2cg-sfvc784-1-e -incremental_mode off -mode out_of_context
-Starting synth_design
-Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
-INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
-INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30868
----------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:24 . Memory (MB): peak = 1756.156 ; gain = 205.961
----------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/synth/bd_d92b_csc_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_csc' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_CTRL_s_axi' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_CTRL_s_axi.v:9]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_CTRL_s_axi.v:485]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_CTRL_s_axi' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_CTRL_s_axi.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_Block_entry_proc_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_Block_entry_proc_1.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_Block_entry_proc_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_Block_entry_proc_1.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_flow_control_loop_pipe_sequential_init' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_flow_control_loop_pipe_sequential_init' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_flow_control_loop_pipe_sequential_init.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_width' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_width.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_sparsemux_5_8_8_1_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_sparsemux_5_8_8_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_sparsemux_5_8_8_1_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_sparsemux_5_8_8_1_1.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_width' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_width.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_reg_unsigned_short_s' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_reg_unsigned_short_s.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_reg_unsigned_short_s' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_reg_unsigned_short_s.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_regslice_both' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_regslice_both' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_regslice_both__parameterized0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_regslice_both__parameterized0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_regslice_both__parameterized1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_regslice_both__parameterized1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_regslice_both.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_AXIvideo2MultiPixStream' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_AXIvideo2MultiPixStream.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_hcresampler_core' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_Pipeline_VITIS_LOOP_769_2' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_Pipeline_VITIS_LOOP_769_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_Pipeline_VITIS_LOOP_769_2' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_Pipeline_VITIS_LOOP_769_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_hcresampler_core' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_csc_core' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc_core.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mul_16s_8ns_24_1_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mul_16s_8ns_24_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mul_16s_8ns_24_1_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mul_16s_8ns_24_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mul_8ns_16s_24_1_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mul_8ns_16s_24_1_1.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mul_8ns_16s_24_1_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mul_8ns_16s_24_1_1.v:5]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:45]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_csc_core' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc_core.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_1' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_1.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_hcresampler_core_1' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_hcresampler_core_1.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_MultiPixStream2AXIvideo' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_MultiPixStream2AXIvideo.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_MultiPixStream2AXIvideo' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_MultiPixStream2AXIvideo.v:9]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w1_d2_S' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d2_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w1_d2_S_ShiftReg' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d2_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w1_d2_S_ShiftReg' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d2_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w1_d2_S' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d2_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w1_d4_S' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d4_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w1_d4_S_ShiftReg' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d4_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w1_d4_S_ShiftReg' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d4_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w1_d4_S' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w1_d4_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w48_d16_S' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w48_d16_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_fifo_w48_d16_S_ShiftReg' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w48_d16_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w48_d16_S_ShiftReg' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w48_d16_S.v:128]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_fifo_w48_d16_S' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_fifo_w48_d16_S.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_start_for_v_csc_core_U0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_v_csc_core_U0.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_start_for_v_csc_core_U0_ShiftReg' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_v_csc_core_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_start_for_v_csc_core_U0_ShiftReg' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_v_csc_core_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_start_for_v_csc_core_U0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_v_csc_core_U0.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0_ShiftReg' [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0_ShiftReg' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0.v:124]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_start_for_MultiPixStream2AXIvideo_U0.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0_v_csc' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_v_csc.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'bd_d92b_csc_0' (0#1) [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/synth/bd_d92b_csc_0.v:53]
-INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_CTRL_s_axi.v:686]
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-7129] Port addr[1] in module bd_d92b_csc_0_fifo_w1_d2_S_ShiftReg is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[4] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[3] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[2] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[1] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[0] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[4] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[3] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[2] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[1] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[0] in module bd_d92b_csc_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_664_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port height[15] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port height[14] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port height[13] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port height[12] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port height[11] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port width[15] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port width[14] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port width[13] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port width[12] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port width[11] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[4] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[3] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[2] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[1] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[0] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[4] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[3] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[2] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[1] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[0] in module bd_d92b_csc_0_MultiPixStream2AXIvideo is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_num_data_valid[4] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_num_data_valid[3] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_num_data_valid[2] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_num_data_valid[1] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_num_data_valid[0] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_fifo_cap[4] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_fifo_cap[3] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_fifo_cap[2] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_fifo_cap[1] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_csc_fifo_cap[0] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[31] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[30] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[29] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[28] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[27] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[26] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[25] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[24] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[23] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[22] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[21] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[20] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[19] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[18] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[17] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[16] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[15] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[14] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[13] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[12] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[11] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[10] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[9] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[8] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[7] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[6] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[5] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[4] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[3] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[2] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[1] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_num_data_valid[0] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[31] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[30] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[29] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[28] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[27] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[26] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[25] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[24] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[23] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[22] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[21] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[20] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[19] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[18] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[17] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[16] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[15] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[14] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[13] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[12] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[11] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[10] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[9] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[8] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[7] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[6] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Synth 8-7129] Port stream_out_hresampled_fifo_cap[5] in module bd_d92b_csc_0_v_hcresampler_core_1_Pipeline_VITIS_LOOP_769_2 is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:46 . Memory (MB): peak = 1922.277 ; gain = 372.082
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:46 . Memory (MB): peak = 1922.277 ; gain = 372.082
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:46 . Memory (MB): peak = 1922.277 ; gain = 372.082
----------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.850 . Memory (MB): peak = 1922.277 ; gain = 0.000
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/bd_d92b_csc_0_ooc.xdc] for cell 'inst'
-create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 2017.199 ; gain = 0.691
-Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/bd_d92b_csc_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/dont_touch.xdc]
-Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/bd_d92b_csc_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/bd_d92b_csc_0.xdc] for cell 'inst'
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2017.199 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 2017.199 ; gain = 0.000
-INFO: [Designutils 20-5008] Incremental synthesis strategy off
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:01:51 . Memory (MB): peak = 2017.199 ; gain = 467.004
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Loading Part and Timing Information
----------------------------------------------------------------------------------
-Loading part: xczu2cg-sfvc784-1-e
-INFO: [Synth 8-6742] Reading net delay rules and data
----------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:01:51 . Memory (MB): peak = 2017.199 ; gain = 467.004
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:52 . Memory (MB): peak = 2017.199 ; gain = 467.004
----------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'bd_d92b_csc_0_CTRL_s_axi'
-INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'bd_d92b_csc_0_CTRL_s_axi'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bd_d92b_csc_0_regslice_both'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bd_d92b_csc_0_regslice_both__parameterized0'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bd_d92b_csc_0_regslice_both__parameterized1'
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
-INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                             0001 |                               11
-*
-                  WRIDLE |                             0010 |                               00
-                  WRDATA |                             0100 |                               01
-                  WRRESP |                             1000 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'bd_d92b_csc_0_CTRL_s_axi'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                              001 |                               10
-*
-                  RDIDLE |                              010 |                               00
-                  RDDATA |                              100 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'bd_d92b_csc_0_CTRL_s_axi'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                               00 |                               00
-*
-                    ZERO |                               01 |                               10
-                     ONE |                               11 |                               11
-                     TWO |                               10 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bd_d92b_csc_0_regslice_both'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                               00 |                               00
-*
-                    ZERO |                               01 |                               10
-                     ONE |                               11 |                               11
-                     TWO |                               10 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bd_d92b_csc_0_regslice_both__parameterized0'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  iSTATE |                               00 |                               00
-*
-                    ZERO |                               01 |                               10
-                     ONE |                               11 |                               11
-                     TWO |                               10 |                               01
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bd_d92b_csc_0_regslice_both__parameterized1'
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:58 . Memory (MB): peak = 2017.199 ; gain = 467.004
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Component Statistics 
----------------------------------------------------------------------------------
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input   26 Bit       Adders := 6     
-	   2 Input   25 Bit       Adders := 6     
-	   2 Input   20 Bit       Adders := 12    
-	   2 Input   17 Bit       Adders := 2     
-	   3 Input   16 Bit       Adders := 2     
-	   2 Input   16 Bit       Adders := 4     
-	   2 Input   15 Bit       Adders := 5     
-	   2 Input   11 Bit       Adders := 2     
-	   2 Input   10 Bit       Adders := 3     
-	   4 Input   10 Bit       Adders := 2     
-	   3 Input    9 Bit       Adders := 2     
-	   2 Input    5 Bit       Adders := 4     
-	   2 Input    4 Bit       Adders := 4     
-	   2 Input    3 Bit       Adders := 2     
-	   2 Input    2 Bit       Adders := 6     
-	   2 Input    1 Bit       Adders := 2     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 14    
-+---Registers : 
-	               48 Bit    Registers := 8     
-	               32 Bit    Registers := 1     
-	               24 Bit    Registers := 6     
-	               22 Bit    Registers := 6     
-	               20 Bit    Registers := 12    
-	               18 Bit    Registers := 12    
-	               16 Bit    Registers := 71    
-	               15 Bit    Registers := 7     
-	               14 Bit    Registers := 6     
-	               12 Bit    Registers := 1     
-	               11 Bit    Registers := 8     
-	               10 Bit    Registers := 17    
-	                9 Bit    Registers := 1     
-	                8 Bit    Registers := 103   
-	                6 Bit    Registers := 12    
-	                5 Bit    Registers := 5     
-	                4 Bit    Registers := 4     
-	                3 Bit    Registers := 3     
-	                2 Bit    Registers := 19    
-	                1 Bit    Registers := 208   
-+---Muxes : 
-	   2 Input   48 Bit        Muxes := 11    
-	   2 Input   22 Bit        Muxes := 6     
-	   2 Input   16 Bit        Muxes := 18    
-	   2 Input   15 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 93    
-	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 11    
-	   2 Input    5 Bit        Muxes := 2     
-	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 7     
-	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 3     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 162   
-	   4 Input    2 Bit        Muxes := 56    
-	   2 Input    1 Bit        Muxes := 162   
----------------------------------------------------------------------------------
-Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Part Resource Summary
----------------------------------------------------------------------------------
-Part Resources:
-DSPs: 240 (col length:72)
-BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
----------------------------------------------------------------------------------
-Finished Part Resource Summary
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Cross Boundary and Area Optimization
----------------------------------------------------------------------------------
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '46' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:37]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '45' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:31]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '24' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '27' to '25' bits. [c:/TFG_Vivado/vivado/axu2cga_trd.gen/sources_1/bd/design_1/ip/design_1_v_proc_ss_0_0/bd_0/ip/ip_0/hdl/verilog/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1.v:30]
-DSP Debug: swapped A/B pins for adder 000001BFE16B5330
-DSP Debug: swapped A/B pins for adder 000001BFE16B4D90
-DSP Debug: swapped A/B pins for adder 000001BFE16B5C90
-DSP Debug: swapped A/B pins for adder 000001BFE16B6110
-DSP Debug: swapped A/B pins for adder 000001BFE16B7730
-DSP Debug: swapped A/B pins for adder 000001BFE16B8870
-DSP Debug: swapped A/B pins for adder 000001BFE16BAD90
-DSP Debug: swapped A/B pins for adder 000001BFE16B97D0
-DSP Debug: swapped A/B pins for adder 000001BFE16BBC90
-DSP Debug: swapped A/B pins for adder 000001BFE16BAC10
-DSP Debug: swapped A/B pins for adder 000001BFE16BDEB0
-DSP Debug: swapped A/B pins for adder 000001BFE16BCB30
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln192_2_reg_1843_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln192_2_reg_1843_reg is absorbed into DSP mul_ln192_2_reg_1843_reg.
-DSP Report: register mul_ln192_2_reg_1843_reg is absorbed into DSP mul_ln192_2_reg_1843_reg.
-DSP Report: register mul_ln192_2_reg_1843_reg is absorbed into DSP mul_ln192_2_reg_1843_reg.
-DSP Report: operator mul_16s_8ns_24_1_1_U97/tmp_product is absorbed into DSP mul_ln192_2_reg_1843_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln194_2_reg_1849_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln194_2_reg_1849_reg is absorbed into DSP mul_ln194_2_reg_1849_reg.
-DSP Report: register mul_ln194_2_reg_1849_reg is absorbed into DSP mul_ln194_2_reg_1849_reg.
-DSP Report: register mul_ln194_2_reg_1849_reg is absorbed into DSP mul_ln194_2_reg_1849_reg.
-DSP Report: operator mul_16s_8ns_24_1_1_U98/tmp_product is absorbed into DSP mul_ln194_2_reg_1849_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln196_2_reg_1855_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln196_2_reg_1855_reg is absorbed into DSP mul_ln196_2_reg_1855_reg.
-DSP Report: register mul_ln196_2_reg_1855_reg is absorbed into DSP mul_ln196_2_reg_1855_reg.
-DSP Report: register mul_ln196_2_reg_1855_reg is absorbed into DSP mul_ln196_2_reg_1855_reg.
-DSP Report: operator mul_16s_8ns_24_1_1_U99/tmp_product is absorbed into DSP mul_ln196_2_reg_1855_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln192_5_reg_1876_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln192_5_reg_1876_reg is absorbed into DSP mul_ln192_5_reg_1876_reg.
-DSP Report: register mul_ln192_5_reg_1876_reg is absorbed into DSP mul_ln192_5_reg_1876_reg.
-DSP Report: register mul_ln192_5_reg_1876_reg is absorbed into DSP mul_ln192_5_reg_1876_reg.
-DSP Report: operator mul_8ns_16s_24_1_1_U100/tmp_product is absorbed into DSP mul_ln192_5_reg_1876_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln194_5_reg_1882_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln194_5_reg_1882_reg is absorbed into DSP mul_ln194_5_reg_1882_reg.
-DSP Report: register mul_ln194_5_reg_1882_reg is absorbed into DSP mul_ln194_5_reg_1882_reg.
-DSP Report: register mul_ln194_5_reg_1882_reg is absorbed into DSP mul_ln194_5_reg_1882_reg.
-DSP Report: operator mul_8ns_16s_24_1_1_U101/tmp_product is absorbed into DSP mul_ln194_5_reg_1882_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C:0x800)+(A2*B2)'.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: Generating DSP mul_ln196_5_reg_1888_reg, operation Mode is: (A*B'')'.
-DSP Report: register mul_ln196_5_reg_1888_reg is absorbed into DSP mul_ln196_5_reg_1888_reg.
-DSP Report: register mul_ln196_5_reg_1888_reg is absorbed into DSP mul_ln196_5_reg_1888_reg.
-DSP Report: register mul_ln196_5_reg_1888_reg is absorbed into DSP mul_ln196_5_reg_1888_reg.
-DSP Report: operator mul_8ns_16s_24_1_1_U102/tmp_product is absorbed into DSP mul_ln196_5_reg_1888_reg.
-DSP Report: Generating DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg, operation Mode is: (C+(A2*B2)')'.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/b_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: register mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-DSP Report: operator mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module bd_d92b_csc_0_CTRL_s_axi.
-INFO: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module bd_d92b_csc_0_CTRL_s_axi.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_keep_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_keep_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_strb_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_strb_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
-INFO: [Synth 8-3332] Sequential element (regslice_both_s_axis_video_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_AXIvideo2MultiPixStream.
----------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:02:48 . Memory (MB): peak = 2024.031 ; gain = 473.836
----------------------------------------------------------------------------------
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U103/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_13 : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U105/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_10 : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U107/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_c : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U109/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_9 : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U111/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_6 : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_22s_25_4_1_U113/bd_d92b_csc_0_mac_muladd_16s_8ns_22s_25_4_1_DSP48_0_U/p_reg_reg_0 : 0 0 : 2530 2530 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U110/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_b : 0 0 : 2521 2521 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U112/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_8 : 0 0 : 2521 2521 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U114/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_4 : 0 0 : 2521 2521 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U104/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_15 : 0 0 : 1332 1332 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U106/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_12 : 0 0 : 1332 1332 : Used 1 time 0
- Sort Area is  mac_muladd_16s_8ns_12ns_24_4_1_U108/bd_d92b_csc_0_mac_muladd_16s_8ns_12ns_24_4_1_DSP48_0_U/p_reg_reg_e : 0 0 : 1332 1332 : Used 1 time 0
- Sort Area is  mul_ln192_2_reg_1843_reg_14 : 0 0 : 996 996 : Used 1 time 0
- Sort Area is  mul_ln192_5_reg_1876_reg_a : 0 0 : 996 996 : Used 1 time 0
- Sort Area is  mul_ln194_2_reg_1849_reg_11 : 0 0 : 996 996 : Used 1 time 0
- Sort Area is  mul_ln194_5_reg_1882_reg_7 : 0 0 : 996 996 : Used 1 time 0
- Sort Area is  mul_ln196_2_reg_1855_reg_d : 0 0 : 996 996 : Used 1 time 0
- Sort Area is  mul_ln196_5_reg_1888_reg_2 : 0 0 : 996 996 : Used 1 time 0
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+---------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                                        | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+---------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 17     | 9      | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 17     | 9      | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 17     | 9      | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 18     | 17     | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 18     | 17     | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C:0x800)+(A2*B2)' | 18     | 17     | 13     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'           | 16     | 9      | -      | -      | 25     | 0    | 2    | -    | -    | -     | 1    | 0    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A2*B2)')'      | 18     | 17     | 22     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-+---------------------------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:03:31 . Memory (MB): peak = 2673.867 ; gain = 1123.672
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:54 ; elapsed = 00:03:46 . Memory (MB): peak = 2725.641 ; gain = 1175.445
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
-INFO: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_id_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_v_csc.
-INFO: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_id_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_v_csc.
-INFO: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_dest_V_U/FSM_sequential_state_reg[1]) is unused and will be removed from module bd_d92b_csc_0_v_csc.
-INFO: [Synth 8-3332] Sequential element (MultiPixStream2AXIvideo_U0/regslice_both_m_axis_video_V_dest_V_U/FSM_sequential_state_reg[0]) is unused and will be removed from module bd_d92b_csc_0_v_csc.
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:59 ; elapsed = 00:04:03 . Memory (MB): peak = 2743.691 ; gain = 1193.496
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Flattening Before IO Insertion
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Final Netlist Cleanup
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:11 ; elapsed = 00:04:27 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Instances
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:11 ; elapsed = 00:04:27 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Rebuilding User Hierarchy
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:14 ; elapsed = 00:04:30 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Ports
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:14 ; elapsed = 00:04:30 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:14 ; elapsed = 00:04:31 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Renaming Generated Nets
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:14 ; elapsed = 00:04:31 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Static Shift Register Report:
-+--------------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name         | RTL Name                                                                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+--------------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|bd_d92b_csc_0_v_csc | v_csc_core_U0/grp_v_csc_core_Pipeline_VITIS_LOOP_136_2_fu_326/ap_loop_exit_ready_pp0_iter4_reg_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+--------------------+----------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-
-
-Dynamic Shift Register Report:
-+------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
-|Module Name | RTL Name        | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
-+------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
-|dsrl        | SRL_SIG_reg[3]  | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
-|dsrl__1     | SRL_SIG_reg[15] | 48     | 48         | 48     | 0       | 0      | 0      | 0      | 
-+------------+-----------------+--------+------------+--------+---------+--------+--------+--------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Writing Synthesis Report
----------------------------------------------------------------------------------
-
-DSP Final Report (the ' indicates corresponding REG is set)
-+---------------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                                        | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+---------------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (A*B'')'      | 30     | 8      | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 30     | 8      | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 30     | 8      | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 30     | 8      | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 12     | -      | 24     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-|bd_d92b_csc_0_v_csc_core_Pipeline_VITIS_LOOP_136_2 | (C+(A'*B')')' | 8      | 18     | 48     | -      | 25     | 1    | 1    | 0    | -    | -     | 1    | 1    | 
-+---------------------------------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-
-Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
-
-Report Cell Usage: 
-+------+----------------+------+
-|      |Cell            |Count |
-+------+----------------+------+
-|1     |CARRY8          |   128|
-|2     |DSP_ALU         |    18|
-|4     |DSP_A_B_DATA    |    18|
-|6     |DSP_C_DATA      |    18|
-|7     |DSP_MULTIPLIER  |    18|
-|8     |DSP_M_DATA      |    18|
-|10    |DSP_OUTPUT      |    18|
-|11    |DSP_PREADD      |    18|
-|12    |DSP_PREADD_DATA |    18|
-|13    |LUT1            |    35|
-|14    |LUT2            |   695|
-|15    |LUT3            |  1184|
-|16    |LUT4            |   636|
-|17    |LUT5            |   401|
-|18    |LUT6            |   597|
-|19    |MUXF7           |    36|
-|20    |MUXF8           |    13|
-|21    |SRL16E          |   194|
-|22    |FDRE            |  3230|
-|23    |FDSE            |    26|
-+------+----------------+------+
----------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:15 ; elapsed = 00:04:31 . Memory (MB): peak = 2957.105 ; gain = 1406.910
----------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:44 ; elapsed = 00:04:13 . Memory (MB): peak = 2957.105 ; gain = 1311.988
-Synthesis Optimization Complete : Time (s): cpu = 00:02:16 ; elapsed = 00:04:51 . Memory (MB): peak = 2957.105 ; gain = 1406.910
-INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 2957.105 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 195 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2957.105 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 18 instances were transformed.
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 18 instances
-
-Synth Design complete | Checksum: 51cc07dd
-INFO: [Common 17-83] Releasing license: Synthesis
-271 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:35 ; elapsed = 00:05:35 . Memory (MB): peak = 2957.105 ; gain = 2368.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2957.105 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/bd_d92b_csc_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_d92b_csc_0, cache-ID = 1718776de3a46817
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 2957.105 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/TFG_Vivado/vivado/axu2cga_trd.runs/bd_d92b_csc_0_synth_1/bd_d92b_csc_0.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_d92b_csc_0_utilization_synth.rpt -pb bd_d92b_csc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 12:59:31 2026...
-
-*** Running vivado
-    with args -log bd_d92b_csc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_d92b_csc_0.tcl
-
-
-
-****** Vivado v2025.2 (64-bit)
-  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
-  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
-  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Wed Jan 21 13:03:56 2026
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
-
-source bd_d92b_csc_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 531.020 ; gain = 221.473
-Converted RTL already exists. Skipping compile_c
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP bd_d92b_csc_0, cache-ID = 1718776de3a46817.
-INFO: [Common 17-206] Exiting Vivado at Wed Jan 21 13:04:11 2026...

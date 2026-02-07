@@ -1,682 +1,0 @@
-2026-02-05T19:50:00.789132400255-19:50:00 **** Incremental Build of project design_1_wrapper ****
-000-buildplatform.bat 55223 design_1_wrapper zynqmp_fsbl 
-000-XSDB Server Channel: tcfchan#12
-000-Building the zynqmp_fsbl application.
-000-make: Entering directory 'C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp'
-000-
-000-make --no-print-directory seq_libs
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
-000-h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dis
-000-tribute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
-000-4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
-000-ibute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/emacps_v3_18/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
-000-e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
-000--patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/sdps_v4_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/standalone_v8_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
-000-one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
-000-te-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
-000-ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
-000-e-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
-000-4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
-000-ibute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Include files for this library have already been copied."
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
-000-ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
-000-e-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_16/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
-000-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
-000-rns -Os -flto -ffat-lto-objects"
-000-
-000-"Compiling avbuf"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
-000-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
-000-rns -Os -flto -ffat-lto-objects"
-000-
-000-"Compiling dpdma"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
-000-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
-000-rns -Os -flto -ffat-lto-objects"
-000-
-000-"Compiling dppsu"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
-000-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
-000-rns -Os -flto -ffat-lto-objects"
-000-
-000-"Compiling xilpm library"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Compiling XilSecure Library"
-000-
-000-'Finished building libraries sequentially.'
-000-
-000-make -j 10 --no-print-directory par_libs
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/avbuf_v2_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_4/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_13/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
-000-h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-dis
-000-tribute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
-000-4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
-000-ibute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dpdma_v1_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/dppsu_v1_6/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/dppsu_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/emacps_v3_18/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
-000-e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute
-000--patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/scugic_v5_1/src"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/sdps_v4_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/standalone_v8_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
-000-one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
-000-te-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
-000-ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
-000-e-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
-000-4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distr
-000-ibute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilpm_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilpm_v5_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/xilsecure_v5_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilsecure_v5_1/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
-000-ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribut
-000-e-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_16/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Include files for this library have already been copied."
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_9/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/axipmon_v6_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_4/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/clockps_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
-000--none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distri
-000-bute-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v2_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
-000-one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
-000-te-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/csudma_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_18/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/emacps_v3_18/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_11/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/gpiops_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/iicps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
-000--as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
-000-erns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ipipsu_v2_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/pciepsu_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/pciepsu_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/qspipsu_v1_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
-000-lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pa
-000-tterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_5/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/resetps_v1_5/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/rtcpsu_v1_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/scugic_v5_1/src"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/sdps_v4_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/scugic_v5_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
-000--as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
-000-erns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/sdps_v4_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
-000-s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patter
-000-ns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/standalone_v8_1/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/standalone_v8_1/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
-000--elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-
-000-patterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
-000-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-p
-000-atterns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_17/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/ttcps_v3_17/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
-000--as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
-000-erns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_12/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/uartps_v3_12/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_13/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/usbpsu_v1_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
-000-f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-pat
-000-terns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_13/src"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/xilffs_v5_0/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/video_common_v4_13/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
-000-one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribu
-000-te-patterns -Os -flto -ffat-lto-objects"
-000-
-000-make -C psu_cortexa53_0/libsrc/xilffs_v5_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
-000--as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patt
-000-erns -Os -flto -ffat-lto-objects"
-000-
-000-"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_16/src"
-000-
-000-make -C psu_cortexa53_0/libsrc/zdma_v1_16/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
-000-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -fno-tree-loop-distribute-patte
-000-rns -Os -flto -ffat-lto-objects"
-000-
-000-'Finished building libraries parallelly.'
-000-
-000-make --no-print-directory archive
-000-
-000-aarch64-none-elf-ar -r  psu_cortexa53_0/lib/libxil.a psu_cortexa53_0/lib/_exit.o psu_cortexa53_0/lib/_open.o psu_cortexa53_0/li
-000-b/_sbrk.o psu_cortexa53_0/lib/abort.o psu_cortexa53_0/lib/asm_vectors.o psu_cortexa53_0/lib/boot.o psu_cortexa53_0/lib/close.o 
-000-psu_cortexa53_0/lib/cpputest_time.o psu_cortexa53_0/lib/errno.o psu_cortexa53_0/lib/fcntl.o psu_cortexa53_0/lib/fstat.o psu_cor
-000-texa53_0/lib/getentropy.o psu_cortexa53_0/lib/getpid.o psu_cortexa53_0/lib/inbyte.o psu_cortexa53_0/lib/initialise_monitor_hand
-000-les.o psu_cortexa53_0/lib/isatty.o psu_cortexa53_0/lib/kill.o psu_cortexa53_0/lib/lseek.o psu_cortexa53_0/lib/open.o psu_cortex
-000-a53_0/lib/outbyte.o psu_cortexa53_0/lib/print.o psu_cortexa53_0/lib/putnum.o psu_cortexa53_0/lib/read.o psu_cortexa53_0/lib/sbr
-000-k.o psu_cortexa53_0/lib/sleep.o psu_cortexa53_0/lib/time.o psu_cortexa53_0/lib/translation_table.o psu_cortexa53_0/lib/unlink.o
-000- psu_cortexa53_0/lib/vectors.o psu_cortexa53_0/lib/write.o psu_cortexa53_0/lib/xaxipmon.o psu_cortexa53_0/lib/xaxipmon_g.o psu_
-000-cortexa53_0/lib/xaxipmon_selftest.o psu_cortexa53_0/lib/xaxipmon_sinit.o psu_cortexa53_0/lib/xclockps.o psu_cortexa53_0/lib/xcl
-000-ockps_divider.o psu_cortexa53_0/lib/xclockps_fixedfactor.o psu_cortexa53_0/lib/xclockps_g.o psu_cortexa53_0/lib/xclockps_gate.o
-000- psu_cortexa53_0/lib/xclockps_mux.o psu_cortexa53_0/lib/xclockps_pll.o psu_cortexa53_0/lib/xclockps_sinit.o psu_cortexa53_0/lib
-000-/xcoresightpsdcc.o psu_cortexa53_0/lib/xcsudma.o psu_cortexa53_0/lib/xcsudma_g.o psu_cortexa53_0/lib/xcsudma_intr.o psu_cortexa
-000-53_0/lib/xcsudma_selftest.o psu_cortexa53_0/lib/xcsudma_sinit.o psu_cortexa53_0/lib/xemacps.o psu_cortexa53_0/lib/xemacps_bdrin
-000-g.o psu_cortexa53_0/lib/xemacps_control.o psu_cortexa53_0/lib/xemacps_g.o psu_cortexa53_0/lib/xemacps_hw.o psu_cortexa53_0/lib/
-000-xemacps_intr.o psu_cortexa53_0/lib/xemacps_sinit.o psu_cortexa53_0/lib/xgpiops.o psu_cortexa53_0/lib/xgpiops_g.o psu_cortexa53_
-000-0/lib/xgpiops_hw.o psu_cortexa53_0/lib/xgpiops_intr.o psu_cortexa53_0/lib/xgpiops_selftest.o psu_cortexa53_0/lib/xgpiops_sinit.
-000-o psu_cortexa53_0/lib/xiicps.o psu_cortexa53_0/lib/xiicps_g.o psu_cortexa53_0/lib/xiicps_hw.o psu_cortexa53_0/lib/xiicps_intr.o
-000- psu_cortexa53_0/lib/xiicps_master.o psu_cortexa53_0/lib/xiicps_options.o psu_cortexa53_0/lib/xiicps_selftest.o psu_cortexa53_0
-000-/lib/xiicps_sinit.o psu_cortexa53_0/lib/xiicps_slave.o psu_cortexa53_0/lib/xiicps_xfer.o psu_cortexa53_0/lib/xil-crt0.o psu_cor
-000-texa53_0/lib/xil_assert.o psu_cortexa53_0/lib/xil_cache.o psu_cortexa53_0/lib/xil_clocking.o psu_cortexa53_0/lib/xil_exception.
-000-o psu_cortexa53_0/lib/xil_mem.o psu_cortexa53_0/lib/xil_mmu.o psu_cortexa53_0/lib/xil_printf.o psu_cortexa53_0/lib/xil_sleepcom
-000-mon.o psu_cortexa53_0/lib/xil_sleeptimer.o psu_cortexa53_0/lib/xil_smc.o psu_cortexa53_0/lib/xil_spinlock.o psu_cortexa53_0/lib
-000-/xil_testcache.o psu_cortexa53_0/lib/xil_testio.o psu_cortexa53_0/lib/xil_testmem.o psu_cortexa53_0/lib/xil_util.o psu_cortexa5
-000-3_0/lib/xinterrupt_wrap.o psu_cortexa53_0/lib/xipipsu.o psu_cortexa53_0/lib/xipipsu_buf.o psu_cortexa53_0/lib/xipipsu_g.o psu_c
-000-ortexa53_0/lib/xipipsu_sinit.o psu_cortexa53_0/lib/xpciepsu.o psu_cortexa53_0/lib/xpciepsu_caps.o psu_cortexa53_0/lib/xpciepsu_
-000-ep.o psu_cortexa53_0/lib/xpciepsu_g.o psu_cortexa53_0/lib/xpciepsu_sinit.o psu_cortexa53_0/lib/xplatform_info.o psu_cortexa53_0
-000-/lib/xpm_counter.o psu_cortexa53_0/lib/xqspipsu.o psu_cortexa53_0/lib/xqspipsu_control.o psu_cortexa53_0/lib/xqspipsu_g.o psu_c
-000-ortexa53_0/lib/xqspipsu_hw.o psu_cortexa53_0/lib/xqspipsu_options.o psu_cortexa53_0/lib/xqspipsu_sinit.o psu_cortexa53_0/lib/xr
-000-esetps.o psu_cortexa53_0/lib/xresetps_g.o psu_cortexa53_0/lib/xresetps_sinit.o psu_cortexa53_0/lib/xrtcpsu.o psu_cortexa53_0/li
-000-b/xrtcpsu_g.o psu_cortexa53_0/lib/xrtcpsu_intr.o psu_cortexa53_0/lib/xrtcpsu_selftest.o psu_cortexa53_0/lib/xrtcpsu_sinit.o psu
-000-_cortexa53_0/lib/xscugic.o psu_cortexa53_0/lib/xscugic_g.o psu_cortexa53_0/lib/xscugic_hw.o psu_cortexa53_0/lib/xscugic_intr.o 
-000-psu_cortexa53_0/lib/xscugic_selftest.o psu_cortexa53_0/lib/xscugic_sinit.o psu_cortexa53_0/lib/xsdps.o psu_cortexa53_0/lib/xsdp
-000-s_card.o psu_cortexa53_0/lib/xsdps_g.o psu_cortexa53_0/lib/xsdps_host.o psu_cortexa53_0/lib/xsdps_options.o psu_cortexa53_0/lib
-000-/xsdps_sinit.o psu_cortexa53_0/lib/xsysmonpsu.o psu_cortexa53_0/lib/xsysmonpsu_g.o psu_cortexa53_0/lib/xsysmonpsu_intr.o psu_co
-000-rtexa53_0/lib/xsysmonpsu_selftest.o psu_cortexa53_0/lib/xsysmonpsu_sinit.o psu_cortexa53_0/lib/xtime_l.o psu_cortexa53_0/lib/xt
-000-tcps.o psu_cortexa53_0/lib/xttcps_g.o psu_cortexa53_0/lib/xttcps_options.o psu_cortexa53_0/lib/xttcps_selftest.o psu_cortexa53_
-000-0/lib/xttcps_sinit.o psu_cortexa53_0/lib/xuartps.o psu_cortexa53_0/lib/xuartps_g.o psu_cortexa53_0/lib/xuartps_hw.o psu_cortexa
-000-53_0/lib/xuartps_intr.o psu_cortexa53_0/lib/xuartps_options.o psu_cortexa53_0/lib/xuartps_selftest.o psu_cortexa53_0/lib/xuartp
-000-s_sinit.o psu_cortexa53_0/lib/xusbpsu.o psu_cortexa53_0/lib/xusbpsu_command.o psu_cortexa53_0/lib/xusbpsu_controltransfers.o ps
-000-u_cortexa53_0/lib/xusbpsu_device.o psu_cortexa53_0/lib/xusbpsu_endpoint.o psu_cortexa53_0/lib/xusbpsu_ep0handler.o psu_cortexa5
-000-3_0/lib/xusbpsu_ephandler.o psu_cortexa53_0/lib/xusbpsu_event.o psu_cortexa53_0/lib/xusbpsu_g.o psu_cortexa53_0/lib/xusbpsu_hib
-000-ernation.o psu_cortexa53_0/lib/xusbpsu_intr.o psu_cortexa53_0/lib/xusbpsu_sinit.o psu_cortexa53_0/lib/xvidc.o psu_cortexa53_0/l
-000-ib/xvidc_edid.o psu_cortexa53_0/lib/xvidc_edid_ext.o psu_cortexa53_0/lib/xvidc_parse_edid.o psu_cortexa53_0/lib/xvidc_timings_t
-000-able.o psu_cortexa53_0/lib/xzdma.o psu_cortexa53_0/lib/xzdma_g.o psu_cortexa53_0/lib/xzdma_intr.o psu_cortexa53_0/lib/xzdma_sel
-000-ftest.o psu_cortexa53_0/lib/xzdma_sinit.o
-000-
-000-'Finished building libraries'
-000-
-000-make: Leaving directory 'C:/TFG_Vivado/demo/course_s2_Vitis/01_ps_hello/vitis/design_1_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp'
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_partition_lo
-000-ad.c -o xfsbl_partition_load.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_qspi.c -o xf
-000-sbl_qspi.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_csu_dma.c -o
-000- xfsbl_csu_dma.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_nand.c -o xf
-000-sbl_nand.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_image_header
-000-.c -o xfsbl_image_header.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_hooks.c -o x
-000-fsbl_hooks.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_main.c -o xf
-000-sbl_main.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_dfu_util.c -
-000-o xfsbl_dfu_util.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_tpm.c -o xfs
-000-bl_tpm.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_initializati
-000-on.c -o xfsbl_initialization.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_ddr_init.c -
-000-o xfsbl_ddr_init.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_handoff.c -o
-000- xfsbl_handoff.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_sd.c -o xfsb
-000-l_sd.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_board.c -o x
-000-fsbl_board.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_misc_drivers
-000-.c -o xfsbl_misc_drivers.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_bs.c -o xfsb
-000-l_bs.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_tpm_util.c -
-000-o xfsbl_tpm_util.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_rsa_sha.c -o
-000- xfsbl_rsa_sha.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_plpartition_
-000-valid.c -o xfsbl_plpartition_valid.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_misc.c -o xf
-000-sbl_misc.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_authenticati
-000-on.c -o xfsbl_authentication.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc  -c -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects   -c xfsbl_usb.c -o xfs
-000-bl_usb.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
-000-
-000-aarch64-none-elf-gcc -o fsbl_a53.elf psu_init.o xfsbl_authentication.o xfsbl_board.o xfsbl_bs.o xfsbl_csu_dma.o xfsbl_ddr_init.
-000-o xfsbl_dfu_util.o xfsbl_exit.o xfsbl_handoff.o xfsbl_hooks.o xfsbl_image_header.o xfsbl_initialization.o xfsbl_main.o xfsbl_mi
-000-sc.o xfsbl_misc_drivers.o xfsbl_nand.o xfsbl_partition_load.o xfsbl_plpartition_valid.o xfsbl_qspi.o xfsbl_rsa_sha.o xfsbl_sd.o
-000- xfsbl_tpm.o xfsbl_tpm_util.o xfsbl_translation_table.o xfsbl_usb.o -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flt
-000-o -ffat-lto-objects    -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl
-000-,--start-group,-lxilsecure,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group                   
-000-                                                                                      -n  -Wl,--gc-sections -Lzynqmp_fsbl_bsp/p
-000-su_cortexa53_0/lib -Tlscript.ld
-000-
-000-lto-wrapper.exe: warning: using serial compilation of 2 LTRANS jobs
-000-lto-wrapper.exe: note: see the '-flto' option documentation for more information
-00255-
-19:50:32 Build Finished (took 31s.719ms)
-
