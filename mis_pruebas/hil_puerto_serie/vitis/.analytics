@@ -10,3 +10,15 @@ timestamp=[2026-02-05 20:04:42], mode=BUILD, duration=0:00:00.555, duration_ms=5
 timestamp=[2026-02-05 20:06:19], mode=BUILD, duration=0:00:00.555, duration_ms=555, data={name=prueba1, configuration=Debug, clean_build=false}
 timestamp=[2026-02-05 20:17:00], mode=BUILD, duration=0:00:00.729, duration_ms=729, data={name=prueba1, configuration=Debug, clean_build=false}
 timestamp=[2026-02-05 20:37:46], mode=BUILD, duration=0:00:00.701, duration_ms=701, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:06:20], mode=BUILD, duration=0:00:07.257, duration_ms=7257, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:07:15], mode=BUILD, duration=0:00:00.547, duration_ms=547, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:07:29], mode=BUILD, duration=0:00:00.342, duration_ms=342, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:08:03], mode=BUILD, duration=0:00:04.995, duration_ms=4995, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:11:51], mode=BUILD, duration=0:00:00.346, duration_ms=346, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:13:37], mode=BUILD, duration=0:00:01.104, duration_ms=1104, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 12:48:23], mode=BUILD, duration=0:00:01.174, duration_ms=1174, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-06 18:50:50], mode=BUILD, duration=0:00:00.128, duration_ms=128, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-07 10:33:13], mode=BUILD, duration=0:00:02.780, duration_ms=2780, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-07 10:35:16], mode=BUILD, duration=0:00:01.057, duration_ms=1057, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-07 10:38:46], mode=BUILD, duration=0:00:01.990, duration_ms=1990, data={name=prueba1, configuration=Debug, clean_build=false}
+timestamp=[2026-02-07 10:49:39], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=prueba1, configuration=Debug, clean_build=false}

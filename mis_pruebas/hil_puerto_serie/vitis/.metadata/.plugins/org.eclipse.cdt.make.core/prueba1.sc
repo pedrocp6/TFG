@@ -4,6 +4,9 @@
     <instance id="xilinx.gnu.arm.a53.exe.debug.583631568;xilinx.gnu.arm.a53.exe.debug.583631568.">
                 
         <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+            <includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_SHA512" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_CRC32" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_QRDMX" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE" removed="true"/>
@@ -15,18 +18,31 @@
             <includePath path="#undef __ARM_FEATURE_SVE2_BITPERM" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE2_SHA3" removed="true"/>
             <includePath path="c:\xilinx\vitis\2023.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\bin\aarch64-xilinx-elf\../../lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/12.2.0/include"/>
+            <includePath path="#undef _ILP32" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_SMALL__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_DOTPROD" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_BITS" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_FP16_FML" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE2_SM4" removed="true"/>
             <includePath path="c:\xilinx\vitis\2023.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\bin\aarch64-xilinx-elf\../../lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/12.2.0/include-fixed"/>
+            <includePath path="#undef __ILP32__" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_LARGE__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_COMPLEX" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_VECTOR_OPERATORS" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_FRINT" removed="true"/>
             <includePath path="C:\Xilinx\Vitis\2023.1\gnu\aarch64\nt\aarch64-none\bin\\..\aarch64-xilinx-elf/usr/include"/>
             <includePath path="#undef __ARM_FEATURE_JCVT" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_TINY__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_MATMUL_INT8" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_TME" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_RNG" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_MEMORY_TAGGING" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_PAC_DEFAULT" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_MATMUL_INT8" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_BF16_VECTOR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_BF16_SCALAR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_LS64" removed="true"/>
+            <includePath path="#undef __FLT_EVAL_METHOD__" removed="true"/>
             <definedSymbol symbol="__STDC__=1"/>
             <definedSymbol symbol="__STDC_VERSION__=201710L"/>
             <definedSymbol symbol="__STDC_UTF_16__=1"/>
@@ -1119,6 +1135,12 @@
     <instance id="xilinx.gnu.arm.a53.exe.debug.583631568;xilinx.gnu.arm.a53.exe.debug.583631568.;xilinx.gnu.arm.a53.c.toolchain.compiler.debug.323033932;xilinx.gnu.arm.a53.c.compiler.input.1941924091">
                 
         <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+            <includePath path="#undef __ARM_FEATURE_CRC32" removed="true"/>
+            <includePath path="#undef __AARCH64EB__" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_DOTPROD" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_COMPLEX" removed="true"/>
+            <includePath path="#undef __ARM_BIG_ENDIAN" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_QRDMX" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE2_BITPERM" removed="true"/>
@@ -1128,16 +1150,27 @@
             <includePath path="#undef __ARM_FEATURE_SVE_VECTOR_OPERATORS" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_MATMUL_INT8" removed="true"/>
             <includePath path="c:\xilinx\vitis\2023.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\bin\aarch64-xilinx-elf\../../lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/12.2.0/include"/>
+            <includePath path="#undef __ARM_FEATURE_TME" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_FP16_VECTOR_ARITHMETIC" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_JCVT" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_TINY__" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_SMALL__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_BITS" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE2_SM4" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SHA3" removed="true"/>
             <includePath path="c:\xilinx\vitis\2023.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\bin\aarch64-xilinx-elf\../../lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/12.2.0/include-fixed"/>
+            <includePath path="#undef __ARM_FEATURE_RNG" removed="true"/>
+            <includePath path="#undef __AARCH64_CMODEL_LARGE__" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_ATOMICS" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SM4" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SHA512" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_MATMUL_FP32" removed="true"/>
             <includePath path="C:\Xilinx\Vitis\2023.1\gnu\aarch64\nt\aarch64-none\bin\\..\aarch64-xilinx-elf/usr/include"/>
+            <includePath path="#undef __ARM_FEATURE_MEMORY_TAGGING" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_SVE2" removed="true"/>
+            <includePath path="#undef _ILP32" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_FP16_FML" removed="true"/>
+            <includePath path="#undef __ARM_FEATURE_FRINT" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SM3" removed="true"/>
             <includePath path="#undef __ARM_FEATURE_SVE_MATMUL_FP64" removed="true"/>
             <definedSymbol symbol="__STDC__=1"/>

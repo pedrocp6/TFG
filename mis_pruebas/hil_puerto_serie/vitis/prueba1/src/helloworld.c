@@ -48,36 +48,115 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xuartps_hw.h" // ¡IMPORTANTE! Para acceder al hardware directo
+#include "xparameters.h"
+#include "sleep.h"
+
+// Definimos la dirección base de la UART (Suele ser UART0 o UART1)
+// En Zynq Ultrascale+ suele ser STDIN_BASEADDRESS si usas la del USB
+#define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
 
 typedef union {
     float valor_float;
     unsigned char bytes[4];
 } FloatConverter;
 
+typedef struct {
+    float dato1;
+    float dato2;
+    float dato3;
+} CocheData;
+
+typedef union {
+    CocheData datos;
+    unsigned char bytes[12]; // 3 floats * 4 bytes = 12 bytes
+} ReceiverUnion;
+
+ReceiverUnion rx_buffer;
+
 void outbyte(char c);
 
+
+// --- FUNCIÓN DE LECTURA NO BLOQUEANTE ---
+// Intenta leer un paquete completo. Devuelve 1 si recibió datos nuevos, 0 si no.
+int leer_datos_coche() {
+    static int estado = 0; // 0: Buscando Header 1, 1: Buscando Header 2, 2: Leyendo Datos
+    static int indice_bytes = 0;
+
+    // Mientras haya bytes esperando en el puerto serie...
+    while (XUartPs_IsReceiveData(UART_BASEADDR)) {
+        // Leemos un byte del hardware
+        u8 byte_leido = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+
+        switch (estado) {
+            case 0: // Buscando primera cabecera (0xCA = 202)
+                if (byte_leido == 0xCA) estado = 1;
+                break;
+
+            case 1: // Buscando segunda cabecera (0xFE = 254)
+                if (byte_leido == 0xFE) {
+                    estado = 2;
+                    indice_bytes = 0; // Preparamos para leer el payload
+                } else {
+                    estado = 0; // Falsa alarma, volvemos a empezar
+                }
+                break;
+
+            case 2: // Leyendo el cuerpo del mensaje
+                rx_buffer.bytes[indice_bytes] = byte_leido;
+                indice_bytes++;
+
+                // Si ya hemos leído los 12 bytes (3 floats)
+                if (indice_bytes >= 12) {
+                    estado = 0; // Reiniciamos para el próximo paquete
+                    return 1;   // ¡ÉXITO! Tenemos datos nuevos
+                }
+                break;
+        }
+    }
+    return 0; // No se completó ningún paquete en esta vuelta
+}
+
 int main() {
+	int cont = 0;
     init_platform();
 
     FloatConverter converter;
-    converter.valor_float = 15.0;
+    converter.valor_float = 0.0;
+
+    rx_buffer.datos.dato1 = 0.0;
+    rx_buffer.datos.dato2 = 0.0;
+    rx_buffer.datos.dato3 = 0.0;
 
     while(1) {
-        // Hacemos una rampa suave para verla bien en la gráfica
-        converter.valor_float += 0.5;
-        if(converter.valor_float > 100.0) converter.valor_float = 0.0;
 
-        // --- PROTOCOLO DE SINCRONIZACIÓN ---
-        // 1. Enviamos la CABECERA (Header) [171, 205 en decimal]
-        outbyte(0xAB);
-        outbyte(0xCD);
+    	if (leer_datos_coche()) {
+    		// Si entra aquí, es que rx_buffer.datos se ha actualizado
+    		// Aquí puedes ejecutar tu lógica de control con los datos nuevos
 
-        // 2. Enviamos el DATO (4 bytes del float)
-        for(int k=0; k<4; k++){
-            outbyte(converter.bytes[k]);
-        }
+    		/*cont++;
+    		if (cont > 3) cont = 1;
 
-        usleep(10000); // 10ms (100 Hz)
+    		if(cont == 1) converter.valor_float += rx_buffer.datos.dato1;
+    		if(cont == 2) converter.valor_float += rx_buffer.datos.dato2;
+    		if(cont == 3) converter.valor_float += rx_buffer.datos.dato3;*/
+
+    		converter.valor_float += rx_buffer.datos.dato1;
+
+    		// if(converter.valor_float > 100.0) converter.valor_float = 0.0;
+
+    		// Enviar la cabecera
+    		outbyte(0xAB);
+    		outbyte(0xCD);
+
+    		// Enviar todos los bytes del dato
+    		for(int k=0; k<4; k++){
+    			outbyte(converter.bytes[k]);
+    		}
+
+    		usleep(10000); // 10ms (100 Hz)
+    	}
+
     }
 
     cleanup_platform();

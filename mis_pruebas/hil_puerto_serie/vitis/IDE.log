@@ -386,3 +386,457 @@ con
 ----------------End of Script----------------
 
 20:38:24 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+12:06:12 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:07:15 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:07:29 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:07:57 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:09:21 INFO  : Disconnected from the channel tcfchan#6.
+12:09:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:09:23 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:09:23 INFO  : 'jtag frequency' command is executed.
+12:09:23 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+12:09:23 INFO  : Context for 'APU' is selected.
+12:09:23 INFO  : System reset is completed.
+12:09:26 INFO  : 'after 3000' command is executed.
+12:09:26 INFO  : Context for 'APU' is selected.
+12:09:26 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:09:26 INFO  : 'configparams force-mem-access 1' command is executed.
+12:09:26 INFO  : Context for 'APU' is selected.
+12:09:26 INFO  : Boot mode is read from the target.
+12:09:26 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:09:26 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+12:09:27 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+12:09:27 INFO  : 'set bp_9_27_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+12:09:28 INFO  : 'con -block -timeout 60' command is executed.
+12:09:28 INFO  : 'bpremove $bp_9_27_fsbl_bp' command is executed.
+12:09:28 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:09:28 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+12:09:29 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+12:09:29 INFO  : 'configparams force-mem-access 0' command is executed.
+12:09:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_9_27_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_9_27_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:09:29 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:09:29 INFO  : 'con' command is executed.
+12:09:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+12:09:29 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+12:11:51 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:13:36 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:48:21 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+12:48:44 INFO  : Disconnected from the channel tcfchan#7.
+12:48:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:48:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+12:48:54 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+12:48:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:48:57 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:48:57 INFO  : 'jtag frequency' command is executed.
+12:48:57 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+12:48:57 INFO  : Context for 'APU' is selected.
+12:48:57 INFO  : System reset is completed.
+12:49:00 INFO  : 'after 3000' command is executed.
+12:49:00 INFO  : Context for 'APU' is selected.
+12:49:00 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+12:49:00 INFO  : 'configparams force-mem-access 1' command is executed.
+12:49:00 INFO  : Context for 'APU' is selected.
+12:49:00 INFO  : Boot mode is read from the target.
+12:49:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:49:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+12:49:02 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+12:49:02 INFO  : 'set bp_49_2_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+12:49:03 INFO  : 'con -block -timeout 60' command is executed.
+12:49:03 INFO  : 'bpremove $bp_49_2_fsbl_bp' command is executed.
+12:49:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:49:03 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+12:49:03 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+12:49:03 INFO  : 'configparams force-mem-access 0' command is executed.
+12:49:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_49_2_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_49_2_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:49:03 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+12:49:03 INFO  : 'con' command is executed.
+12:49:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+12:49:03 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+18:50:50 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+10:29:02 INFO  : Disconnected from the channel tcfchan#8.
+10:29:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:29:04 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:29:04 INFO  : 'jtag frequency' command is executed.
+10:29:04 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:29:04 INFO  : Context for 'APU' is selected.
+10:29:04 INFO  : System reset is completed.
+10:29:07 INFO  : 'after 3000' command is executed.
+10:29:07 INFO  : Context for 'APU' is selected.
+10:29:07 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:29:07 INFO  : 'configparams force-mem-access 1' command is executed.
+10:29:07 INFO  : Context for 'APU' is selected.
+10:29:07 INFO  : Boot mode is read from the target.
+10:29:07 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:29:08 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:29:09 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:29:09 INFO  : 'set bp_29_9_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:29:10 INFO  : 'con -block -timeout 60' command is executed.
+10:29:11 INFO  : 'bpremove $bp_29_9_fsbl_bp' command is executed.
+10:29:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:29:11 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:29:11 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:29:11 INFO  : 'configparams force-mem-access 0' command is executed.
+10:29:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_29_9_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_29_9_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:29:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:29:11 INFO  : 'con' command is executed.
+10:29:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:29:11 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+10:33:10 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+10:33:24 INFO  : Disconnected from the channel tcfchan#9.
+10:33:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:26 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:33:26 INFO  : 'jtag frequency' command is executed.
+10:33:26 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:33:26 INFO  : Context for 'APU' is selected.
+10:33:26 INFO  : System reset is completed.
+10:33:29 INFO  : 'after 3000' command is executed.
+10:33:29 INFO  : Context for 'APU' is selected.
+10:33:29 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:33:29 INFO  : 'configparams force-mem-access 1' command is executed.
+10:33:29 INFO  : Context for 'APU' is selected.
+10:33:29 INFO  : Boot mode is read from the target.
+10:33:29 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:33:29 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:33:31 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:33:31 INFO  : 'set bp_33_31_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:33:32 INFO  : 'con -block -timeout 60' command is executed.
+10:33:32 INFO  : 'bpremove $bp_33_31_fsbl_bp' command is executed.
+10:33:32 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:33:32 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:33:32 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:33:32 INFO  : 'configparams force-mem-access 0' command is executed.
+10:33:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_33_31_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_33_31_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:33:32 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:33:32 INFO  : 'con' command is executed.
+10:33:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:33:32 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+10:35:15 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+10:35:19 INFO  : Disconnected from the channel tcfchan#10.
+10:35:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:35:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:35:30 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:35:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:35:34 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:35:34 INFO  : 'jtag frequency' command is executed.
+10:35:34 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:35:34 INFO  : Context for 'APU' is selected.
+10:35:34 INFO  : System reset is completed.
+10:35:37 INFO  : 'after 3000' command is executed.
+10:35:37 INFO  : Context for 'APU' is selected.
+10:35:37 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:35:37 INFO  : 'configparams force-mem-access 1' command is executed.
+10:35:37 INFO  : Context for 'APU' is selected.
+10:35:37 INFO  : Boot mode is read from the target.
+10:35:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:35:37 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:35:38 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:35:38 INFO  : 'set bp_35_38_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:35:39 INFO  : 'con -block -timeout 60' command is executed.
+10:35:39 INFO  : 'bpremove $bp_35_38_fsbl_bp' command is executed.
+10:35:39 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:35:39 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:35:40 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:35:40 INFO  : 'configparams force-mem-access 0' command is executed.
+10:35:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_35_38_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_35_38_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:35:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:35:40 INFO  : 'con' command is executed.
+10:35:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:35:40 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+10:38:44 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+10:39:30 INFO  : Disconnected from the channel tcfchan#11.
+10:39:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:39:40 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:39:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:39:43 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:39:43 INFO  : 'jtag frequency' command is executed.
+10:39:43 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:39:43 INFO  : Context for 'APU' is selected.
+10:39:44 INFO  : System reset is completed.
+10:39:47 INFO  : 'after 3000' command is executed.
+10:39:47 INFO  : Context for 'APU' is selected.
+10:39:47 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:39:47 INFO  : 'configparams force-mem-access 1' command is executed.
+10:39:47 INFO  : Context for 'APU' is selected.
+10:39:47 INFO  : Boot mode is read from the target.
+10:39:47 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:39:47 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:39:48 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:39:48 INFO  : 'set bp_39_48_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:39:49 INFO  : 'con -block -timeout 60' command is executed.
+10:39:49 INFO  : 'bpremove $bp_39_48_fsbl_bp' command is executed.
+10:39:49 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:39:49 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:39:49 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:39:49 INFO  : 'configparams force-mem-access 0' command is executed.
+10:39:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_39_48_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_39_48_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:39:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:39:50 INFO  : 'con' command is executed.
+10:39:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:39:50 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+10:49:38 INFO  : Checking for BSP changes to sync application flags for project 'prueba1'...
+10:49:48 INFO  : Disconnected from the channel tcfchan#12.
+10:49:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:49:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:49:58 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:50:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:50:01 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+10:50:01 INFO  : 'jtag frequency' command is executed.
+10:50:01 INFO  : Sourcing of 'C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:50:01 INFO  : Context for 'APU' is selected.
+10:50:02 INFO  : System reset is completed.
+10:50:05 INFO  : 'after 3000' command is executed.
+10:50:05 INFO  : Context for 'APU' is selected.
+10:50:05 INFO  : Hardware design and registers information is loaded from 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:50:05 INFO  : 'configparams force-mem-access 1' command is executed.
+10:50:05 INFO  : Context for 'APU' is selected.
+10:50:05 INFO  : Boot mode is read from the target.
+10:50:05 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:50:05 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:50:06 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:50:06 INFO  : 'set bp_50_6_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:50:07 INFO  : 'con -block -timeout 60' command is executed.
+10:50:07 INFO  : 'bpremove $bp_50_6_fsbl_bp' command is executed.
+10:50:07 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:50:07 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:50:08 INFO  : The application 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:50:08 INFO  : 'configparams force-mem-access 0' command is executed.
+10:50:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
+set bp_50_6_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_50_6_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:50:08 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:50:08 INFO  : 'con' command is executed.
+10:50:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:50:08 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'

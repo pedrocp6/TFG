@@ -11741,3 +11741,2416 @@ Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: 
 
 !ENTRY com.xilinx.sdk.utils 1 0 2026-02-05 20:38:24.377
 !MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '5'
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-05 21:08:58.147
+!MESSAGE Cannot send datagram packet to /192.168.1.22
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send0(Native Method)
+	at java.base/java.net.AbstractPlainDatagramSocketImpl.send(AbstractPlainDatagramSocketImpl.java:155)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendPeersRequest(LocatorService.java:1048)
+	at org.eclipse.tcf.internal.services.local.LocatorService$7.run(LocatorService.java:744)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 10:36:00.797
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 10:43:34.736
+!MESSAGE Cannot send datagram packet to /192.168.1.255
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send0(Native Method)
+	at java.base/java.net.AbstractPlainDatagramSocketImpl.send(AbstractPlainDatagramSocketImpl.java:155)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendEmptyPacket(LocatorService.java:1102)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendAll(LocatorService.java:1119)
+	at org.eclipse.tcf.internal.services.local.LocatorService.refresh_timer(LocatorService.java:715)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1$1.run(LocatorService.java:233)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:243)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 11:17:48.822
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:12.957
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:13.126
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:13.126
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:13.159
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:06:13.161
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:13.166
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:06:13.170
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-34: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2026-02-06 12:06:20.439
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.419
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.435
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.435
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.451
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:07:15.451
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.451
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:15.451
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2026-02-06 12:07:15.998
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.044
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.052
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.052
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.063
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:07:29.063
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.068
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:29.068
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2026-02-06 12:07:29.423
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:57.999
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:58.016
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:58.016
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:58.025
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:07:58.025
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:58.030
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:07:58.032
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-36: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:21.218
+!MESSAGE XSCT Command: [disconnect tcfchan#6], Thread: Thread-687
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:21.232
+!MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-687
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.338
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.346
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#7]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.346
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.555
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.559
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.569
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.570
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.593
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.601
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.610
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.612
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.637
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.962
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.962
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.962
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.994
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:22.994
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.017
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.017
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.042
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.042
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.057
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.057
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.073
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.073
+!MESSAGE XSCT Command: [version -server], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.073
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.073
+!MESSAGE XSCT Command: [version], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.089
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.089
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.089
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.089
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.121
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.121
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.153
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.169
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.169
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.424
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:23.424
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.447
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.448
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.463
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.465
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.485
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.485
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.487
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.489
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.495
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.495
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.516
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.518
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.528
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.530
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.536
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.536
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.550
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.550
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.673
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:26.673
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:27.623
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:27.623
+!MESSAGE XSCT Command: [set bp_9_27_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:27.703
+!MESSAGE XSCT command with result: [set bp_9_27_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 5]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:27.713
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.779
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.780
+!MESSAGE XSCT Command: [bpremove $bp_9_27_fsbl_bp], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.797
+!MESSAGE XSCT command with result: [bpremove $bp_9_27_fsbl_bp], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.797
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.813
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.813
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.900
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:28.901
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.287
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.289
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.297
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.393
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.411
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.411
+!MESSAGE XSCT Command: [con], Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:09:29.452
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-31: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:09:29.456
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '6'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.470
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.487
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.487
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.494
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:11:51.494
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.494
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:11:51.502
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-22: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2026-02-06 12:11:51.853
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.345
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.361
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.361
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.364
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:13:36.364
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.370
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:13:36.370
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-37: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.788
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.810
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.812
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.817
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:48:21.819
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.821
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:21.826
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:44.509
+!MESSAGE XSCT Command: [disconnect tcfchan#7], Thread: Thread-772
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:44.527
+!MESSAGE XSCT command with result: [disconnect tcfchan#7], Result: [null, ]. Thread: Thread-772
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.542
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.563
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#8]. Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.569
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.585
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.587
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.599
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:45.599
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:48.628
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:51.637
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:54.658
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-22: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.931
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.936
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#8]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.938
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.948
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.948
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.957
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.957
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.978
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.982
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.982
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:56.982
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.010
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.063
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.074
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.074
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.092
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.092
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.101
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.101
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.106
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.122
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.122
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.122
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.141
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.141
+!MESSAGE XSCT Command: [version -server], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.153
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.155
+!MESSAGE XSCT Command: [version], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.155
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.155
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.171
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.172
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.188
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.188
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.201
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.201
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.201
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.217
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.221
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.223
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.243
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.245
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.727
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:48:57.731
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.754
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.756
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.774
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.776
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.801
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.801
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.801
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.801
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.817
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.817
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.839
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.839
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.849
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.849
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.865
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.865
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.887
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:00.887
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:01.009
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:01.013
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:02.012
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:02.012
+!MESSAGE XSCT Command: [set bp_49_2_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:02.079
+!MESSAGE XSCT command with result: [set bp_49_2_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 6]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:02.080
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.134
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.137
+!MESSAGE XSCT Command: [bpremove $bp_49_2_fsbl_bp], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.155
+!MESSAGE XSCT command with result: [bpremove $bp_49_2_fsbl_bp], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.155
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.171
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.171
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.239
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.239
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.630
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.630
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.648
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.758
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.773
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.773
+!MESSAGE XSCT Command: [con], Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 12:49:03.823
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-44: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 12:49:03.825
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '7'
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 13:00:01.262
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 14:57:44.601
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 16:20:27.187
+!MESSAGE Cannot send datagram packet to /10.100.73.34
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send0(Native Method)
+	at java.base/java.net.AbstractPlainDatagramSocketImpl.send(AbstractPlainDatagramSocketImpl.java:155)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendPeersRequest(LocatorService.java:1048)
+	at org.eclipse.tcf.internal.services.local.LocatorService$7.run(LocatorService.java:744)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 16:20:29.003
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 16:44:16.749
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 17:53:48.009
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.081
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-58: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.186
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-58: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.186
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-58: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.202
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-58: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-06 18:50:50.202
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.202
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-58: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-06 18:50:50.202
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-58: Build Project
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-06 20:02:50.329
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2026-02-07 10:25:28.561
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:02.544
+!MESSAGE XSCT Command: [disconnect tcfchan#8], Thread: Thread-839
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:02.578
+!MESSAGE XSCT command with result: [disconnect tcfchan#8], Result: [null, ]. Thread: Thread-839
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.585
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.601
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#9]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.601
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.610
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.610
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.626
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.626
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.647
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.647
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.661
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.661
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:03.673
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.118
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.118
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.134
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.137
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.150
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.150
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.150
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.166
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.166
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.182
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.182
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT Command: [version -server], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT Command: [version], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.197
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.213
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.213
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.234
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.234
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.246
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.246
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.246
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.246
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.260
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.260
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.280
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.280
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.740
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:04.742
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.769
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.770
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.781
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.781
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.809
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.809
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.825
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.825
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.825
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.825
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.847
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.857
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.866
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.866
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.873
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.873
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.883
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:07.883
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:08.036
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:08.036
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:09.286
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:09.298
+!MESSAGE XSCT Command: [set bp_29_9_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:09.886
+!MESSAGE XSCT command with result: [set bp_29_9_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 7]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:09.886
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:10.949
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:10.957
+!MESSAGE XSCT Command: [bpremove $bp_29_9_fsbl_bp], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.004
+!MESSAGE XSCT command with result: [bpremove $bp_29_9_fsbl_bp], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.004
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.004
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.004
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.084
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.084
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.531
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.531
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.542
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.638
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.669
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.669
+!MESSAGE XSCT Command: [con], Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:29:11.701
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-71: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:29:11.711
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '8'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.567
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.615
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.615
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.630
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:33:10.630
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.630
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:10.645
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-71: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:24.961
+!MESSAGE XSCT Command: [disconnect tcfchan#9], Thread: Thread-930
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:24.983
+!MESSAGE XSCT command with result: [disconnect tcfchan#9], Result: [null, ]. Thread: Thread-930
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:25.990
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.007
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#10]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.008
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.016
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.016
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.025
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.031
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.031
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.050
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.050
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.050
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.072
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.250
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.259
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.262
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.270
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.270
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.287
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.287
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.301
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.301
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.316
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.316
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT Command: [version -server], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT Command: [version], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.335
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.350
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.350
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.368
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.368
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.380
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.380
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.380
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.380
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.389
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.389
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.405
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.405
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.644
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:26.644
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.661
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.661
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.677
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.677
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.693
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.693
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.693
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.693
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.693
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.708
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.724
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.724
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.728
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.728
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.744
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.744
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.763
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.763
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.891
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:29.891
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:31.004
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:31.004
+!MESSAGE XSCT Command: [set bp_33_31_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:31.051
+!MESSAGE XSCT command with result: [set bp_33_31_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 8]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:31.051
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.131
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.134
+!MESSAGE XSCT Command: [bpremove $bp_33_31_fsbl_bp], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.182
+!MESSAGE XSCT command with result: [bpremove $bp_33_31_fsbl_bp], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.182
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.197
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.197
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.325
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.341
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.850
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.850
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.850
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.928
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.945
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.945
+!MESSAGE XSCT Command: [con], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:33:32.983
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:33:32.983
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '9'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.799
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.806
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.816
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.821
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:35:15.821
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.827
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:15.830
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-74: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:19.953
+!MESSAGE XSCT Command: [disconnect tcfchan#10], Thread: Thread-1001
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:19.962
+!MESSAGE XSCT command with result: [disconnect tcfchan#10], Result: [null, ]. Thread: Thread-1001
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.961
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.970
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#11]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.977
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.988
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.988
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.994
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:20.994
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:24.014
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:27.017
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:30.036
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.743
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.745
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#11]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.745
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.756
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.756
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.765
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.765
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.786
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.788
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.799
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.799
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.819
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.868
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.879
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.879
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.901
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.901
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.909
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.909
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.931
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.931
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.943
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.943
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.963
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.963
+!MESSAGE XSCT Command: [version -server], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.968
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.968
+!MESSAGE XSCT Command: [version], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.968
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.968
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.981
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:33.981
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.004
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.007
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.030
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.032
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.035
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.036
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.037
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.037
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.055
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.055
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.538
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:34.538
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.559
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.561
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.571
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.574
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.591
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.591
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.596
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.597
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.602
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.602
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.630
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.630
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.643
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.645
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.651
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.651
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.669
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.671
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.791
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:37.793
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:38.610
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:38.610
+!MESSAGE XSCT Command: [set bp_35_38_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:38.666
+!MESSAGE XSCT command with result: [set bp_35_38_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 9]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:38.666
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.718
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.720
+!MESSAGE XSCT Command: [bpremove $bp_35_38_fsbl_bp], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.737
+!MESSAGE XSCT command with result: [bpremove $bp_35_38_fsbl_bp], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.737
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.752
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.753
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.809
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:39.809
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.166
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.166
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.166
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.278
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.308
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.309
+!MESSAGE XSCT Command: [con], Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:35:40.358
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-38: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:35:40.361
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '10'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.426
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.443
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.443
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.443
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:38:44.443
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.458
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:38:44.461
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-77: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:30.771
+!MESSAGE XSCT Command: [disconnect tcfchan#11], Thread: Thread-1082
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:30.817
+!MESSAGE XSCT command with result: [disconnect tcfchan#11], Result: [null, ]. Thread: Thread-1082
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.831
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.842
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#12]. Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.842
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.870
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.870
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.881
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:31.881
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:34.898
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:37.898
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:40.933
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-41: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.624
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.626
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#12]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.628
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.638
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.638
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.640
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.649
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.666
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.666
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.683
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.683
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.708
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.782
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.786
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.793
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.811
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.811
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.817
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.817
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.845
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.845
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.859
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.860
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.886
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.888
+!MESSAGE XSCT Command: [version -server], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.897
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.897
+!MESSAGE XSCT Command: [version], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.897
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.897
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.907
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.907
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.935
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.935
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.955
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.964
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.968
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.969
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.973
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.973
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.987
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:43.987
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:44.204
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:44.204
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.225
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.225
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.231
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.231
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.246
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.246
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.246
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.246
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.258
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.262
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.283
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.283
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.296
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.296
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.304
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.304
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.318
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.320
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.434
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:47.434
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:48.274
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:48.274
+!MESSAGE XSCT Command: [set bp_39_48_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:48.416
+!MESSAGE XSCT command with result: [set bp_39_48_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 10]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:48.426
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.479
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.479
+!MESSAGE XSCT Command: [bpremove $bp_39_48_fsbl_bp], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.501
+!MESSAGE XSCT command with result: [bpremove $bp_39_48_fsbl_bp], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.503
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.515
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.515
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.586
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.586
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.942
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.947
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:49.951
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:50.041
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:50.062
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:50.063
+!MESSAGE XSCT Command: [con], Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:39:50.109
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-78: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:39:50.109
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '11'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:38.986
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:38.986
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:38.986
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:39.001
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "8.1",
+}]. Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:49:39.001
+!MESSAGE Generating MD5 hash for file: C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\design_1_wrapper\export\design_1_wrapper\sw\design_1_wrapper\standalone_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:39.007
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:39.007
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-73: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:48.774
+!MESSAGE XSCT Command: [disconnect tcfchan#12], Thread: Thread-1150
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:48.795
+!MESSAGE XSCT command with result: [disconnect tcfchan#12], Result: [null, ]. Thread: Thread-1150
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.803
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.819
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.821
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.835
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.835
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.842
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081 (closed)]. Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:49.842
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:52.858
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:55.861
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:49:58.882
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081 (closed)" && level==1}], Result: [null, ]. Thread: Worker-83: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.444
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.448
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.450
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.459
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.461
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.470
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.470
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.484
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.496
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.504
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.504
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.512
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.571
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.584
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.584
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.607
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.607
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.607
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.607
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.638
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.638
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.638
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.638
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.654
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.654
+!MESSAGE XSCT Command: [version -server], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.670
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2023.1]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.671
+!MESSAGE XSCT Command: [version], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.671
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2023.1.0
+SW Build 0 on 2023-05-03-16:48:11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.671
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.686
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.686
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.714
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.717
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.734
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent JTAG-HS1 210512180081" && level == 0}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.734
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.752
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 10000000]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.752
+!MESSAGE XSCT Command: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.759
+!MESSAGE XSCT command with result: [source C:/Xilinx/Vitis/2023.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.761
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.765
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:01.765
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:02.272
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:02.272
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.286
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.288
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.303
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.310
+!MESSAGE XSCT Command: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.339
+!MESSAGE XSCT command with result: [loadhw -hw C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, design_1_wrapper_1]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.339
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.341
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.343
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.360
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent JTAG-HS1 210512180081]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.362
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.379
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
+     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.379
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.383
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.383
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.394
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.394
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.410
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.411
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.539
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:05.543
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:06.458
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:06.460
+!MESSAGE XSCT Command: [set bp_50_6_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:06.542
+!MESSAGE XSCT command with result: [set bp_50_6_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 11]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:06.545
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.610
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.612
+!MESSAGE XSCT Command: [bpremove $bp_50_6_fsbl_bp], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.652
+!MESSAGE XSCT command with result: [bpremove $bp_50_6_fsbl_bp], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.658
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.668
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.668
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.762
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:07.762
+!MESSAGE XSCT Command: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.134
+!MESSAGE XSCT command with result: [dow C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/prueba1/Debug/prueba1.elf], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.134
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.141
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.254
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.271
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.275
+!MESSAGE XSCT Command: [con], Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:50:08.318
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-43: Launching Debugger_prueba1-Default
+
+!ENTRY com.xilinx.sdk.utils 1 0 2026-02-07 10:50:08.319
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '12'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:54:24.592
+!MESSAGE XSCT Command: [disconnect tcfchan#13], Thread: Thread-1213
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-02-07 10:54:24.603
+!MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-1213
