@@ -1,0 +1,38 @@
+# Vivado
+*.gen/
+*.runs/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.cache/
+.Xil/
+*.jou
+*.log
+*.str
+
+# Vitis IDE (generado automáticamente)
+.metadata/
+.analytics
+RemoteSystemsTempFiles/
+IDE.log
+
+# Build outputs
+*/Debug/
+*/Release/
+*.o
+*.obj
+*.ko
+
+# Matlab
+slprj/
+*.slxc
+
+# VS Code y IDE
+.vscode/
+.iis/
+*.swp
+*.swo
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db

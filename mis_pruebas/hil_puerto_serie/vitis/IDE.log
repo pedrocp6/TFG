@@ -840,3 +840,13 @@ con
 ----------------End of Script----------------
 
 10:50:08 INFO  : Launch script is exported to file 'C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\prueba1_system\_ide\scripts\debugger_prueba1-default.tcl'
+10:54:24 INFO  : Disconnected from the channel tcfchan#13.
+11:21:23 DEBUG : Logs will be stored at 'C:/TFG_Vivado/mis_pruebas/hil_puerto_serie/vitis/IDE.log'.
+11:21:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\TFG_Vivado\mis_pruebas\hil_puerto_serie\vitis\temp_xsdb_launch_script.tcl
+11:21:37 INFO  : Registering command handlers for Vitis TCF services
+11:21:38 INFO  : Platform repository initialization has completed.
+11:21:47 INFO  : XSCT server has started successfully.
+11:21:47 INFO  : plnx-install-location is set to ''
+11:21:47 INFO  : Successfully done setting XSCT server connection channel  
+11:21:47 INFO  : Successfully done query RDI_DATADIR 
+11:21:47 INFO  : Successfully done setting workspace for the tool. 
