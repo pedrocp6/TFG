@@ -51,10 +51,15 @@
 #include "xuartps_hw.h" // ¡IMPORTANTE! Para acceder al hardware directo
 #include "xparameters.h"
 #include "sleep.h"
+#include "xtime_l.h"
+#include "xparameters.h"
 
 // Definimos la dirección base de la UART (Suele ser UART0 o UART1)
 // En Zynq Ultrascale+ suele ser STDIN_BASEADDRESS si usas la del USB
 #define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
+
+#define FRECUENCIA_HZ 100
+#define CUENTAS_POR_LOOP (COUNTS_PER_SECOND / FRECUENCIA_HZ)
 
 typedef struct {
     float torque_FL;
@@ -136,6 +141,17 @@ int main() {
 	rx_buffer.torque.torque_RL = 0.0;
 	rx_buffer.torque.torque_RR = 0.0;
 
+	XTime t_proximo_disparo;
+	XTime t_actual;
+
+	// Inicialización del hardware...
+
+	// Tomamos el tiempo actual como referencia inicial
+	XTime_GetTime(&t_proximo_disparo);
+
+	// Programamos el primer disparo para dentro de 1 periodo
+	t_proximo_disparo += CUENTAS_POR_LOOP;
+
     while(1) {
 
     	if (leer_datos_coche()) {
@@ -154,8 +170,18 @@ int main() {
     			outbyte(cmd.bytes[k]);
     		}
 
-    		usleep(10000); // 10ms (100 Hz)
+    		// usleep(10000); // 10ms (100 Hz)
+
     	}
+    	do {
+    		XTime_GetTime(&t_actual);
+    	} while (t_actual < t_proximo_disparo);
+
+    	// 3. ACTUALIZAR PARA EL SIGUIENTE CICLO
+    	// Sumamos el periodo fijo.
+    	// IMPORTANTE: Sumamos a la variable 'meta', no al tiempo actual.
+    	// Esto evita que los pequeños retrasos se acumulen.
+    	t_proximo_disparo += CUENTAS_POR_LOOP;
 
     }
 

@@ -15,6 +15,20 @@
 .analytics
 RemoteSystemsTempFiles/
 IDE.log
+# Ignorar las carpetas de drivers y bsp generadas
+**/psu_cortexa53_0/
+**/zynqmp_fsbl/
+**/zynqmp_pmufw/
+**/zynqmp_fsbl_bsp/
+**/zynqmp_pmufw_bsp/
+**/libsrc/
+**/export/
+# Archivos de inicialización de hardware generados
+psu_init.c
+psu_init.h
+psu_init.tcl
+psu_init_gpl.c
+psu_init_gpl.h
 
 # Build outputs
 */Debug/
@@ -26,6 +40,7 @@ IDE.log
 # Matlab
 slprj/
 *.slxc
+*.mldatx
 
 # VS Code y IDE
 .vscode/
