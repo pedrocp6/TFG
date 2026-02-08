@@ -22,9 +22,9 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil_vehiculo_simple/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
-set bp_39_41_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_14_33_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_39_41_fsbl_bp
+bpremove $bp_14_33_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil_vehiculo_simple/vitis/prueba1/Debug/prueba1.elf
