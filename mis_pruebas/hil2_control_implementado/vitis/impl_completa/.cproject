@@ -79,7 +79,7 @@
                                     								
                                 </option>
                                 								
-                                <option id="xilinx.gnu.compiler.symbols.defined.1213707750" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" useByScannerDiscovery="false" valueType="definedSymbols"/>
+                                <option id="xilinx.gnu.compiler.symbols.defined.1213707750" name="Defined symbols (-D)" superClass="xilinx.gnu.compiler.symbols.defined" useByScannerDiscovery="false"/>
                                 								
                                 <option id="xilinx.gnu.compiler.misc.other.471193362" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" useByScannerDiscovery="false" value="-c -fmessage-length=0 -MT&quot;$@&quot;" valueType="string"/>
                                 								

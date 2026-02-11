@@ -81,7 +81,7 @@ int resend = 1;
 double hz = 0.0;
 
 // Structures
-Parameters parameters_;
+Parameters parameters;
 SensorData sensors;
 Dv dv;
 Pid pid_tv;

@@ -27,47 +27,28 @@ enum class MessageType : uint8_t {
 // ESTRUCTURAS DE DATOS (Recuerda alinear con Simulink)
 // ============================================================================
 
-//// --- ESTRUCTURAS INTERNAS ---
-//struct IMU_Data { float r; float ax; float ay; IMU_Data() : r(0), ax(0), ay(0) {} };
-//struct Encoder_Data { float wFL; float wFR; float wRL; float wRR; Encoder_Data() : wFL(0), wFR(0), wRL(0), wRR(0) {} };
-//struct Ext_Data { float steering; Ext_Data() : steering(0) {} };
-//struct GSS_Data { float vx; float vy; GSS_Data() : vx(0), vy(0) {} };
-//
-//// --- ESTRUCTURA PRINCIPAL DE RECEPCIÓN (Simulink -> FPGA) ---
-//struct SensorStruct {
-//	// IMU_Data imu;
-//    // Encoder_Data encoder;
-//    // Ext_Data ext;
-//    // GSS_Data gss;
-//	float load_cell;  // Freno
-//    float apps;       // Acelerador
-//
-//    SensorStruct() : load_cell(0.0f), apps(0.0f){}
-//};
-
 // --- ESTRUCTURA PRINCIPAL DE ENVÍO (FPGA -> Simulink) ---
 struct FxRequestData {
     float fx_request;
     FxRequestData() : fx_request(0.0f) {}
 };
 
-struct ParameterStruct {
-    bool mode_2wd;
-    float torque_min;
-    float torque_max;
-    float gear_ratio;
-    float rdyn;
-
-    ParameterStruct() :
-        mode_2wd(false), torque_min(-21.0f), torque_max(21.0f),
-        gear_ratio(12.48f), rdyn(0.225f) {}
-};
+//struct ParameterStruct {
+//    bool mode_2wd;
+//    float torque_min;
+//    float torque_max;
+//    float gear_ratio;
+//    float rdyn;
+//
+//    ParameterStruct() :
+//        mode_2wd(false), torque_min(-21.0f), torque_max(21.0f),
+//        gear_ratio(12.48f), rdyn(0.225f) {}
+//};
 
 // ============================================================================
 // VARIABLES GLOBALES PARA TAMAÑOS DE MENSAJE
 // ============================================================================
-// Modifica esto si Simulink manda padding extra o si cambias las estructuras
-uint16_t SIZE_RX_SENSORS = sizeof(SensorData) - sizeof(double)*8;
+uint16_t SIZE_RX_SENSORS = sizeof(SensorData) - sizeof(double)*8;	// Se eliminan 8 doubles de las variables que no se emplean
 uint16_t SIZE_TX_FX      = sizeof(FxRequestData);
 
 // ============================================================================
@@ -224,7 +205,7 @@ public:
 // ============================================================================
 // FUNCIÓN DRIVER_REQUEST (Adaptada a Simulink, no es la real)
 // ============================================================================
-float driver_request(const SensorData& sensors, const ParameterStruct& parameters) {
+float driver_request(const SensorData& sensors, const Parameters& parameters) {
 	float driver_wheels = parameters.mode_2wd ? 2.0f : 4.0f;
 	float fx_req_pos = sensors.apps * driver_wheels * parameters.torque_max *
 			parameters.gear_ratio / parameters.rdyn;
@@ -245,8 +226,13 @@ int main() {
     UARTComm uart(UART_BASEADDR);
     Timer timer(CUENTAS_POR_LOOP);
 
-    ParameterStruct parameters;
+    // ParameterStruct parameters;
+    parameters_init(&parameters);
     float fx_request_value = 0.0f;
+//    estimation.estimation_init(&parameters);
+//    torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
+//    traction_control.traction_control_init();
+//    power_limitation.power_limitation_init();
 
     while (true) {
         timer.waitNextTrigger();
@@ -254,6 +240,9 @@ int main() {
         if (uart.readSensorData(sensors)) {
             // Procesamiento
             fx_request_value = driver_request(sensors, parameters);
+            // torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
+            // traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd);
+            // power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
 
             // Envío
             uart.sendFxRequest(fx_request_value);

@@ -122,6 +122,6 @@ struct Parameters {
 };
 
 /* Initialize from YAML */
-bool parameters_init(Parameters *params, const std::string& yaml_path);
+bool parameters_init(Parameters *params);
 
 #endif

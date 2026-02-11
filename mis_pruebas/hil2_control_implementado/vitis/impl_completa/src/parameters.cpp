@@ -10,7 +10,9 @@
 
 
 // Parameters functions
-bool parameters_init(Parameters *params, const std::string& yaml_path) {
+// Se ha borrado el yaml para facilitar la implementación. Si se quiere modificar algún
+// parámetro se puede hacer sobre este archivo
+bool parameters_init(Parameters *params) {
     // try {
         // YAML::Node cfg = YAML::LoadFile(yaml_path);
 
@@ -18,14 +20,14 @@ bool parameters_init(Parameters *params, const std::string& yaml_path) {
         params->est_active = false; //cfg["vdc_activation"]["est_active"].as<bool>();
         params->tv_active  = false; //cfg["vdc_activation"]["tv_active"].as<bool>();
         params->tc_active  = false; //cfg["vdc_activation"]["tc_active"].as<bool>();
-        params->pl_active  = true; //cfg["vdc_activation"]["pl_active"].as<bool>();
+        params->pl_active  = false; //cfg["vdc_activation"]["pl_active"].as<bool>();
 
         /* -------------------- Mode -------------------- */
         params->mode_2wd = false; //cfg["mode"]["2wd"].as<bool>();
 
         /* -------------------- Torque -------------------- */
-        params->torque_min = -21; // cfg["torque"]["torque_min"].as<double>();
-        params->torque_max = 21; // cfg["torque"]["torque_max"].as<double>();
+        params->torque_min = -21.0; // cfg["torque"]["torque_min"].as<double>();
+        params->torque_max = 21.0; // cfg["torque"]["torque_max"].as<double>();
 
         /* -------------------- Battery -------------------- */
         params->power_min   = -40000; //cfg["battery"]["min_power"].as<double>();

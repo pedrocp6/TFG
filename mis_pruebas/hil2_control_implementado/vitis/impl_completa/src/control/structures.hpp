@@ -11,28 +11,6 @@ typedef struct {
 } Tire;
 
 typedef struct {
-//    double acceleration_x;
-//    double acceleration_y;
-//    double acceleration_z;
-//
-//    double angular_x;
-//    double angular_y;
-//    double angular_z;
-//
-//    double speed_x;
-//    double speed_y;
-//
-//    double steering_angle;
-//    double apps;
-//    double load_cell;
-//
-//    double motor_speed[4];
-//    double current;
-//    double vehicle_side_voltage;
-//    double battery_voltage;
-//
-//    double power;
-//    double v_soc;
 
 	float load_cell;
 	float apps;
