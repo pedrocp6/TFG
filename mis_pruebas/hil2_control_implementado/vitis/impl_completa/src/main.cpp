@@ -5,7 +5,7 @@
 #include "xuartps_hw.h"
 #include "xparameters.h"
 #include "xtime_l.h"
-#include "control/main.hpp" // Asegúrate de que este archivo existe o coméntalo si no
+#include "control/main.hpp"
 
 // Dirección base de la UART
 #define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
@@ -27,23 +27,23 @@ enum class MessageType : uint8_t {
 // ESTRUCTURAS DE DATOS (Recuerda alinear con Simulink)
 // ============================================================================
 
-// --- ESTRUCTURAS INTERNAS ---
-struct IMU_Data { float r; float ax; float ay; IMU_Data() : r(0), ax(0), ay(0) {} };
-struct Encoder_Data { float wFL; float wFR; float wRL; float wRR; Encoder_Data() : wFL(0), wFR(0), wRL(0), wRR(0) {} };
-struct Ext_Data { float steering; Ext_Data() : steering(0) {} };
-struct GSS_Data { float vx; float vy; GSS_Data() : vx(0), vy(0) {} };
-
-// --- ESTRUCTURA PRINCIPAL DE RECEPCIÓN (Simulink -> FPGA) ---
-struct SensorStruct {
-	// IMU_Data imu;
-    // Encoder_Data encoder;
-    // Ext_Data ext;
-    // GSS_Data gss;
-	float load_cell;  // Freno
-    float apps;       // Acelerador
-
-    SensorStruct() : apps(0.0f), load_cell(0.0f) {}
-};
+//// --- ESTRUCTURAS INTERNAS ---
+//struct IMU_Data { float r; float ax; float ay; IMU_Data() : r(0), ax(0), ay(0) {} };
+//struct Encoder_Data { float wFL; float wFR; float wRL; float wRR; Encoder_Data() : wFL(0), wFR(0), wRL(0), wRR(0) {} };
+//struct Ext_Data { float steering; Ext_Data() : steering(0) {} };
+//struct GSS_Data { float vx; float vy; GSS_Data() : vx(0), vy(0) {} };
+//
+//// --- ESTRUCTURA PRINCIPAL DE RECEPCIÓN (Simulink -> FPGA) ---
+//struct SensorStruct {
+//	// IMU_Data imu;
+//    // Encoder_Data encoder;
+//    // Ext_Data ext;
+//    // GSS_Data gss;
+//	float load_cell;  // Freno
+//    float apps;       // Acelerador
+//
+//    SensorStruct() : load_cell(0.0f), apps(0.0f){}
+//};
 
 // --- ESTRUCTURA PRINCIPAL DE ENVÍO (FPGA -> Simulink) ---
 struct FxRequestData {
@@ -67,7 +67,7 @@ struct ParameterStruct {
 // VARIABLES GLOBALES PARA TAMAÑOS DE MENSAJE
 // ============================================================================
 // Modifica esto si Simulink manda padding extra o si cambias las estructuras
-uint16_t SIZE_RX_SENSORS = sizeof(SensorStruct);
+uint16_t SIZE_RX_SENSORS = sizeof(SensorData) - sizeof(double)*8;
 uint16_t SIZE_TX_FX      = sizeof(FxRequestData);
 
 // ============================================================================
@@ -108,7 +108,6 @@ public:
         XUartPs_WriteReg(base_address, XUARTPS_FIFO_OFFSET, byte);
     }
 
-    // --- MODIFICADO: Ya no envía el tamaño ---
     template<typename T>
     void sendPacket(MessageType msg_type, const T& packet) {
         // Usamos la variable global para el tamaño si coincide con el tipo,
@@ -138,7 +137,6 @@ public:
         sendPacket(MessageType::FX_REQUEST, packet);
     }
 
-    // --- MODIFICADO: Máquina de estados sin lectura de tamaño ---
     int readPacket(void* output_buffer, uint16_t max_size) {
         while (XUartPs_IsReceiveData(base_address)) {
             uint8_t byte_leido = XUartPs_ReadReg(base_address, XUARTPS_FIFO_OFFSET);
@@ -156,15 +154,11 @@ public:
                 case RxState::WAITING_TYPE:
                     current_msg_type = static_cast<MessageType>(byte_leido);
 
-                    // AQUI ESTÁ EL CAMBIO IMPORTANTE:
                     // Asignamos el tamaño esperado basándonos en el tipo recibido
                     // usando las variables globales.
                     switch (current_msg_type) {
                         case MessageType::SENSOR_DATA:
                             expected_size = SIZE_RX_SENSORS;
-                            break;
-                        case MessageType::FX_REQUEST: // (Raro recibir esto, pero por si acaso)
-                            expected_size = SIZE_TX_FX;
                             break;
                         default:
                             // Tipo desconocido, reseteamos para evitar desincronización
@@ -180,8 +174,6 @@ public:
                         rx_state = RxState::READING_DATA; // Pasamos directo a leer datos
                     }
                     break;
-
-                // ELIMINADO: case RxState::WAITING_SIZE
 
                 case RxState::READING_DATA:
                     rx_buffer[byte_index++] = byte_leido;
@@ -201,15 +193,15 @@ public:
         return -1;
     }
 
-    bool readSensorData(SensorStruct& sensors) {
+    bool readSensorData(SensorData& sensors) {
         // Pasamos el tamaño máximo permitido
-        int msg_type = readPacket(&sensors, sizeof(SensorStruct));
+        int msg_type = readPacket(&sensors, SIZE_RX_SENSORS);
         return (msg_type == static_cast<int>(MessageType::SENSOR_DATA));
     }
 };
 
 // ============================================================================
-// CLASE TEMPORIZADOR (Sin cambios)
+// CLASE TEMPORIZADOR
 // ============================================================================
 class Timer {
 private:
@@ -232,7 +224,7 @@ public:
 // ============================================================================
 // FUNCIÓN DRIVER_REQUEST (Adaptada a Simulink, no es la real)
 // ============================================================================
-float driver_request(const SensorStruct& sensors, const ParameterStruct& parameters) {
+float driver_request(const SensorData& sensors, const ParameterStruct& parameters) {
 	float driver_wheels = parameters.mode_2wd ? 2.0f : 4.0f;
 	float fx_req_pos = sensors.apps * driver_wheels * parameters.torque_max *
 			parameters.gear_ratio / parameters.rdyn;
@@ -253,7 +245,6 @@ int main() {
     UARTComm uart(UART_BASEADDR);
     Timer timer(CUENTAS_POR_LOOP);
 
-    SensorStruct sensors;
     ParameterStruct parameters;
     float fx_request_value = 0.0f;
 

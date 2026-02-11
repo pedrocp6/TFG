@@ -11,28 +11,53 @@ typedef struct {
 } Tire;
 
 typedef struct {
-    double acceleration_x;
-    double acceleration_y;
-    double acceleration_z;
+//    double acceleration_x;
+//    double acceleration_y;
+//    double acceleration_z;
+//
+//    double angular_x;
+//    double angular_y;
+//    double angular_z;
+//
+//    double speed_x;
+//    double speed_y;
+//
+//    double steering_angle;
+//    double apps;
+//    double load_cell;
+//
+//    double motor_speed[4];
+//    double current;
+//    double vehicle_side_voltage;
+//    double battery_voltage;
+//
+//    double power;
+//    double v_soc;
 
-    double angular_x;
-    double angular_y;
-    double angular_z;
+	float load_cell;
+	float apps;
 
-    double speed_x;
-    double speed_y;
+	float speed_x;
+	float speed_y;
+	float acceleration_z;
 
-    double steering_angle;
-    double apps;
-    double load_cell;
+	float steering_angle;
 
-    double motor_speed[4];
-    double current;
-    double vehicle_side_voltage;
-    double battery_voltage;
+	float motor_speed[4];
 
-    double power;
-    double v_soc;
+	float acceleration_y;
+	float acceleration_x;
+
+	// No usado en simulación
+	double angular_x;
+	double angular_y;
+	double angular_z;
+	double current;
+	double vehicle_side_voltage;
+	double battery_voltage;
+	double power;
+	double v_soc;
+
 } SensorData;
 
 typedef struct {

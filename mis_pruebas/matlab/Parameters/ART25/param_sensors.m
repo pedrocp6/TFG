@@ -34,6 +34,7 @@ ext.steering = 0;
 
 gss.vx = 0;
 gss.vy = 0;
+gss.r = 0;
 
 sensor_struct.IMU = imu;
 sensor_struct.encoder = encoder;
