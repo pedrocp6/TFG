@@ -244,6 +244,16 @@ int main() {
     traction_control.traction_control_init();
     power_limitation.power_limitation_init();
 
+    // Inicialización de los sensores que no se leen para un buen comportamiento del control
+    sensors.angular_x = 0.0;
+    sensors.angular_y = 0.0;
+    sensors.angular_z = 0.0;
+    sensors.current = 0.0;
+    sensors.battery_voltage = 500;
+    sensors.vehicle_side_voltage = 500;
+    sensors.power = 0;
+    sensors.v_soc = 500;
+
     while (true) {
         timer.waitNextTrigger();
 

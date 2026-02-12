@@ -29,12 +29,14 @@ void PowerLimitation::power_limitation_update(Parameters *params, SensorData *se
 
         if(pw_total > pw_max) {
             double pw_extra = (pw_total - pw_max) / pw_total;
-            for(int i = 2; i<4; i++) {
+            for(int i = 0; i<4; i++) {
                 torque_cmd[i] = torque_cmd[i] * (1 - pw_extra);
             }
         } else if (pw_total < pw_min) {
             if (sensors->v_soc > params->voltage_max){
-			    torque_cmd[2] = 0;
+            	torque_cmd[0] = 0;
+            	torque_cmd[1] = 0;
+            	torque_cmd[2] = 0;
 			    torque_cmd[3] = 0;
             } else {
                 double pw_extra = (pw_total - pw_min) / pw_total;

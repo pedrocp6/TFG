@@ -19,7 +19,7 @@ bool parameters_init(Parameters *params) {
         /* -------------------- VDC activation -------------------- */
         params->est_active = false; //cfg["vdc_activation"]["est_active"].as<bool>();
         params->tv_active  = false; //cfg["vdc_activation"]["tv_active"].as<bool>();
-        params->tc_active  = true; //cfg["vdc_activation"]["tc_active"].as<bool>();
+        params->tc_active  = false; //cfg["vdc_activation"]["tc_active"].as<bool>();
         params->pl_active  = true; //cfg["vdc_activation"]["pl_active"].as<bool>();
 
         /* -------------------- Mode -------------------- */
