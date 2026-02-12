@@ -28,9 +28,16 @@ enum class MessageType : uint8_t {
 // ============================================================================
 
 // --- ESTRUCTURA PRINCIPAL DE ENVÍO (FPGA -> Simulink) ---
-struct FxRequestData {
-    float fx_request;
-    FxRequestData() : fx_request(0.0f) {}
+struct TorqueCommandData {
+    float torque_FL;
+    float torque_FR;
+    float torque_RL;
+    float torque_RR;
+};
+
+union Send_cmd {
+	TorqueCommandData data;
+	uint8_t bytes[sizeof(TorqueCommandData)];
 };
 
 //struct ParameterStruct {
@@ -49,7 +56,7 @@ struct FxRequestData {
 // VARIABLES GLOBALES PARA TAMAÑOS DE MENSAJE
 // ============================================================================
 uint16_t SIZE_RX_SENSORS = sizeof(SensorData) - sizeof(double)*8;	// Se eliminan 8 doubles de las variables que no se emplean
-uint16_t SIZE_TX_FX      = sizeof(FxRequestData);
+uint16_t SIZE_TX_FX      = sizeof(Send_cmd);
 
 // ============================================================================
 // CLASE UART MODULAR
@@ -111,9 +118,12 @@ public:
         }
     }
 
-    void sendFxRequest(float fx_request) {
-        FxRequestData packet;
-        packet.fx_request = fx_request;
+    void sendData(double torque[4]) {
+        Send_cmd packet;
+        packet.data.torque_FL = (float) torque[0];
+        packet.data.torque_FR = (float) torque[1];
+        packet.data.torque_RL = (float) torque[2];
+        packet.data.torque_RR = (float) torque[3];
         // Simulink debe esperar recibir SIZE_TX_FX bytes de datos
         sendPacket(MessageType::FX_REQUEST, packet);
     }
@@ -222,30 +232,45 @@ float driver_request(const SensorData& sensors, const Parameters& parameters) {
 // ============================================================================
 int main() {
     init_platform();
+    XTime current_time;
 
     UARTComm uart(UART_BASEADDR);
     Timer timer(CUENTAS_POR_LOOP);
 
     // ParameterStruct parameters;
     parameters_init(&parameters);
-    float fx_request_value = 0.0f;
-//    estimation.estimation_init(&parameters);
-//    torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
-//    traction_control.traction_control_init();
-//    power_limitation.power_limitation_init();
+    // estimation.estimation_init(&parameters);
+    torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
+    traction_control.traction_control_init();
+    power_limitation.power_limitation_init();
 
     while (true) {
         timer.waitNextTrigger();
 
+        if(pid_tv.last_timestamp == 0) {
+        	XTime_GetTime(&current_time);
+            pid_tv.last_timestamp = current_time;
+        } else {
+        	XTime_GetTime(&current_time);
+            pid_tv.ts = (double)(current_time - pid_tv.last_timestamp)/COUNTS_PER_SECOND;
+            pid_tv.last_timestamp = current_time;
+        }
+
+        if (!pid_tv.init) {
+        	pid_tv.init = 1;
+        }
+
         if (uart.readSensorData(sensors)) {
             // Procesamiento
-            fx_request_value = driver_request(sensors, parameters);
-            // torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
-            // traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd);
-            // power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
-
+        	state[0] =	sensors.speed_x;
+        	state[1] =	sensors.speed_y;
+        	state[2] =	sensors.angular_z;
+            fx_request = driver_request(sensors, parameters);
+            torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
+            traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd);
+            power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Envío
-            uart.sendFxRequest(fx_request_value);
+            uart.sendData(torque_cmd);
         }
     }
 
