@@ -17,7 +17,7 @@ class PowerLimitation
 {
 public:
     void power_limitation_init();
-    void power_limitation_update(Parameters *params, SensorData *sensors, double *torque_cmd);
+    double power_limitation_update(Parameters *params, SensorData *sensors, double *torque_cmd);
 };
 
 #endif // POWER_LIMITATION_HPP

@@ -31,7 +31,7 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- Battery -------------------- */
         params->power_min   = -40000; //cfg["battery"]["min_power"].as<double>();
-        params->power_max   = 50000; //cfg["battery"]["max_power"].as<double>();
+        params->power_max   = 80000; //cfg["battery"]["max_power"].as<double>();
         params->voltage_min = 430; //cfg["battery"]["min_voltage"].as<double>();
         params->voltage_max = 575; //cfg["battery"]["max_voltage"].as<double>();
         params->r_battery   = 1.2; //cfg["battery"]["r_battery"].as<double>();

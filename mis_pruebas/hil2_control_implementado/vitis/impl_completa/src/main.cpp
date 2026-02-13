@@ -33,9 +33,7 @@ struct TorqueCommandData {
     float torque_FR;
     float torque_RL;
     float torque_RR;
-    float vx_debug;
-    float vy_debug;
-    float r_debug;
+    float pw_debug;
 };
 
 union Send_cmd {
@@ -109,15 +107,13 @@ public:
         }
     }
 
-    void sendData(double torque[4], double info[3]) {
+    void sendData(double torque[4], double pw_total) {
         Send_cmd packet;
         packet.data.torque_FL = (float) torque[0];
         packet.data.torque_FR = (float) torque[1];
         packet.data.torque_RL = (float) torque[2];
         packet.data.torque_RR = (float) torque[3];
-        packet.data.vx_debug = (float) info[0];
-        packet.data.vy_debug = (float) info[1];
-        packet.data.r_debug = (float) info[2];
+        packet.data.pw_debug = (float) pw_total;
         // Simulink debe esperar recibir SIZE_TX_FX bytes de datos
         sendPacket(MessageType::TORQUE_COMMAND, packet);
     }
@@ -230,9 +226,11 @@ int main() {
 
     UARTComm uart(UART_BASEADDR);
     Timer timer(CUENTAS_POR_LOOP);
+    bool ini=false;
 
-    // ParameterStruct parameters;
-    parameters_init(&parameters);
+    while(ini==false){
+    	ini = parameters_init(&parameters);
+    }
     // estimation.estimation_init(&parameters);
     torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
     traction_control.traction_control_init();
@@ -272,9 +270,9 @@ int main() {
             fx_request = driver_request(sensors, parameters);
             torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
             traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd);
-            power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
+            double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Envío
-            uart.sendData(torque_cmd,state);
+            uart.sendData(torque_cmd,pw_total);
         }
     }
 
