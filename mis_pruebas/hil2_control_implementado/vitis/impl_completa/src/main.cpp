@@ -19,8 +19,8 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 // ============================================================================
 enum class MessageType : uint8_t {
     SENSOR_DATA = 0x01,      // Datos de sensores (Simulink a Placa)
-    FX_REQUEST = 0x02,       // Fuerza longitudinal (Placa a Simulink)
-    // TORQUE_COMMAND = 0x03, // Futuro uso
+    TORQUE_COMMAND = 0x02,       // Fuerza longitudinal (Placa a Simulink)
+	DEBUG = 0X03,
 };
 
 // ============================================================================
@@ -33,24 +33,15 @@ struct TorqueCommandData {
     float torque_FR;
     float torque_RL;
     float torque_RR;
+    float vx_debug;
+    float vy_debug;
+    float r_debug;
 };
 
 union Send_cmd {
 	TorqueCommandData data;
 	uint8_t bytes[sizeof(TorqueCommandData)];
 };
-
-//struct ParameterStruct {
-//    bool mode_2wd;
-//    float torque_min;
-//    float torque_max;
-//    float gear_ratio;
-//    float rdyn;
-//
-//    ParameterStruct() :
-//        mode_2wd(false), torque_min(-21.0f), torque_max(21.0f),
-//        gear_ratio(12.48f), rdyn(0.225f) {}
-//};
 
 // ============================================================================
 // VARIABLES GLOBALES PARA TAMAÑOS DE MENSAJE
@@ -118,14 +109,17 @@ public:
         }
     }
 
-    void sendData(double torque[4]) {
+    void sendData(double torque[4], double info[3]) {
         Send_cmd packet;
         packet.data.torque_FL = (float) torque[0];
         packet.data.torque_FR = (float) torque[1];
         packet.data.torque_RL = (float) torque[2];
         packet.data.torque_RR = (float) torque[3];
+        packet.data.vx_debug = (float) info[0];
+        packet.data.vy_debug = (float) info[1];
+        packet.data.r_debug = (float) info[2];
         // Simulink debe esperar recibir SIZE_TX_FX bytes de datos
-        sendPacket(MessageType::FX_REQUEST, packet);
+        sendPacket(MessageType::TORQUE_COMMAND, packet);
     }
 
     int readPacket(void* output_buffer, uint16_t max_size) {
@@ -280,7 +274,7 @@ int main() {
             traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd);
             power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Envío
-            uart.sendData(torque_cmd);
+            uart.sendData(torque_cmd,state);
         }
     }
 

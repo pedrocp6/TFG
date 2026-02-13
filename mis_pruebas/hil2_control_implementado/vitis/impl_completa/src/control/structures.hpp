@@ -17,7 +17,7 @@ typedef struct {
 
 	float speed_x;
 	float speed_y;
-	float acceleration_z;
+	float angular_z;
 
 	float steering_angle;
 
@@ -29,7 +29,7 @@ typedef struct {
 	// No usado en simulación
 	double angular_x;
 	double angular_y;
-	double angular_z;
+	double acceleration_z;
 	double current;
 	double vehicle_side_voltage;
 	double battery_voltage;
