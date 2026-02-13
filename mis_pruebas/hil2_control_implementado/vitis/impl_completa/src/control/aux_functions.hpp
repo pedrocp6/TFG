@@ -14,14 +14,12 @@
 #include "structures.hpp"
 #include "parameters.hpp"
 
-// static double torque_smoothing[4] = {0.0, 0.0, 0.0, 0.0};	// Comentado porque no se usaba
-static double ema_prev[4] = {0.0, 0.0, 0.0, 0.0};
-static uint8_t allow_regen[4] = {0,0,0,0};
-double fx_request = 0.0;
-
-
-
 namespace AuxFunctions {
+
+// static double torque_smoothing[4] = {0.0, 0.0, 0.0, 0.0};	// Comentado porque no se usaba
+extern double ema_prev[4];
+extern uint8_t allow_regen[4];
+extern double fx_request;
 
 inline double get_tick() {
     static const auto start_time = std::chrono::steady_clock::now();
@@ -95,6 +93,34 @@ inline double driver_request(SensorData* sensors, Parameters* parameters) {
     }
     return fx_request;
 }
+
+extern float tire_loadtx[4];
+extern float tire_loadty[4];
+extern float tire_loadneg[4];
+extern float tire_loadneg2[4];
+extern float eps;
+
+typedef struct {
+    float kAlphaP;
+    float kLambdaP;
+    float Blat;
+    float Blon;
+    float Dlat;
+    float Clat;
+    float Dlon;
+    float Clon;
+} PAC;
+
+typedef struct{
+	float force_fy[4];
+	float force_fx[4];
+	float Mz;
+	float force_fx_rolling;
+	float tire_load[4];
+} TIRE;
+
+
+void Calculate_Tire_Forces(Tire *tire, const float slip_angle[4], const float slip_ratio[4]);
 
 } // namespace AuxFunctions
 

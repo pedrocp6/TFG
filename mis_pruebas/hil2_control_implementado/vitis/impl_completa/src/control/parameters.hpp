@@ -11,6 +11,23 @@
 #include <cmath>
 #include <chrono>
 
+#define D_LAT               -1.5323
+#define C_LAT               1.7230
+#define B_LAT               12.7
+#define E_LAT               0.4035
+
+#define D_LON               1.0976
+#define C_LON               1.9503
+#define B_LON               17.49
+#define E_LON               0.999
+
+#define G_X1               25000
+#define B_X                0.2367
+#define A                  93733
+#define C                  0.1689
+#define G_Y1               38.21
+#define B_Y                0.5365
+
 struct Parameters {
 
     /* --- VDC activation flags --- */
@@ -119,6 +136,8 @@ struct Parameters {
     double freq_apps_control;    // Hz
     double freq_invertes_enable; // Hz
     double freq_heartbeat;       // Hz
+
+    float fz_params[13];
 };
 
 /* Initialize from YAML */

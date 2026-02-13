@@ -14,12 +14,12 @@ void PowerLimitation::power_limitation_init(){
 }
 
 double PowerLimitation::power_limitation_update(Parameters *params, SensorData *sensors, double *torque_cmd){
-//    if(!params->pl_active) {
-//    	double pw_total = 0;
-//        return pw_total;
-//    } else {
-        double pw_total = torque_cmd[0] * sensors->motor_speed[0] * params->gear_ratio + torque_cmd[1]*sensors->motor_speed[1] * params->gear_ratio +
-			torque_cmd[2]*sensors->motor_speed[2] * params->gear_ratio + torque_cmd[3]* sensors->motor_speed[3] * params->gear_ratio;
+    if(!params->pl_active) {
+    	double pw_total = 0;
+    	return pw_total;
+    } else {
+        double pw_total = torque_cmd[0] * sensors->motor_speed[0] + torque_cmd[1]*sensors->motor_speed[1] +
+			torque_cmd[2]*sensors->motor_speed[2] + torque_cmd[3]* sensors->motor_speed[3];
         
 //        double pw_max_bms = sensors->v_soc*(sensors->v_soc - params->voltage_min) / params->r_battery;
 //	    double pw_min_bms = sensors->v_soc*(sensors->v_soc - params->voltage_max) / params->r_battery;
@@ -38,19 +38,19 @@ double PowerLimitation::power_limitation_update(Parameters *params, SensorData *
                 torque_cmd[i] = torque_cmd[i] * (1 - pw_extra);
             }
         }
-//            else if (pw_total < pw_min) {
-//            if (sensors->v_soc > params->voltage_max){
-//            	torque_cmd[0] = 0;
-//            	torque_cmd[1] = 0;
-//            	torque_cmd[2] = 0;
-//			    torque_cmd[3] = 0;
-//            } else {
-//                double pw_extra = (pw_total - pw_min) / pw_total;
-//                for(int i = 0; i<4; i++) {
-//                    torque_cmd[i] = torque_cmd[i] * (1 - pw_extra);
-//                }
-//            }
-//        }
+        else if (pw_total < pw_min) {
+        	//            if (sensors->v_soc > params->voltage_max){
+        	//            	torque_cmd[0] = 0;
+        	//            	torque_cmd[1] = 0;
+        	//            	torque_cmd[2] = 0;
+        	//			    torque_cmd[3] = 0;
+        	//            }	else {
+        	double pw_extra = (pw_total - pw_min) / pw_total;
+        	for(int i = 0; i<4; i++) {
+        		torque_cmd[i] = torque_cmd[i] * (1 - pw_extra);
+        	}
+        }
+        //        }
         return pw_total;
-//    }
+    }
 }

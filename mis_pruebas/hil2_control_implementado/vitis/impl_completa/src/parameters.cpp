@@ -10,8 +10,8 @@
 
 
 // Parameters functions
-// Se ha borrado el yaml para facilitar la implementación. Si se quiere modificar algún
-// parámetro se puede hacer sobre este archivo
+// Se ha borrado el yaml para facilitar la implementaciï¿½n. Si se quiere modificar algï¿½n
+// parï¿½metro se puede hacer sobre este archivo
 bool parameters_init(Parameters *params) {
     // try {
         // YAML::Node cfg = YAML::LoadFile(yaml_path);
@@ -19,7 +19,7 @@ bool parameters_init(Parameters *params) {
         /* -------------------- VDC activation -------------------- */
         params->est_active = false; //cfg["vdc_activation"]["est_active"].as<bool>();
         params->tv_active  = false; //cfg["vdc_activation"]["tv_active"].as<bool>();
-        params->tc_active  = false; //cfg["vdc_activation"]["tc_active"].as<bool>();
+        params->tc_active  = true; //cfg["vdc_activation"]["tc_active"].as<bool>();
         params->pl_active  = true; //cfg["vdc_activation"]["pl_active"].as<bool>();
 
         /* -------------------- Mode -------------------- */
@@ -94,7 +94,7 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- TC controller -------------------- */
         params->tc_kp    = 30; //cfg["tc"]["kp"].as<double>();
-        params->tc_ki    = 0.1; //cfg["tc"]["ki"].as<double>();
+        params->tc_ki    = 0; //cfg["tc"]["ki"].as<double>();
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>();
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>();
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>();

@@ -19,8 +19,8 @@
 class TractionControl
 {
 public:
-    void traction_control_init();
-    void traction_control_update(Parameters *params, SensorData *sensors, double x_out[3], double torque_cmd[4]);
+    void traction_control_init(Pid *pid_tc, Parameters *parameters);
+    void traction_control_update(Parameters *params, SensorData *sensors, double *state, double torque_cmd[4], Pid *pid_tc, Tire *tire, double *Tin, double *TC, double *SR, Dv *dv, double *T_obj);
 };
 
 #endif // TRACTION_CONTROL_HPP
