@@ -291,7 +291,7 @@ int main() {
             debug[1] = state[1];
             debug[2] = sensors.acceleration_x;
             debug[3] = sensors.acceleration_y;
-            uart.sendData(torque_cmd,pw_total, tire.tire_load);
+            uart.sendData(torque_cmd,pw_total, T_obj);
         }
     }
 

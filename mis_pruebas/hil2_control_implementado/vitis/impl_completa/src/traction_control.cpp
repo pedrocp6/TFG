@@ -179,6 +179,11 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 			TC[i] = parameters->torque_min;
 	}
 
+	torque_cmd[0] = TC[0];
+	torque_cmd[1] = TC[1];
+	torque_cmd[2] = TC[2];
+	torque_cmd[3] = TC[3];
+
 }
 
 
