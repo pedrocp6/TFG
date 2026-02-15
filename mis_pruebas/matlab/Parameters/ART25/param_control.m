@@ -10,10 +10,10 @@ param_vdc.lf = param_vdc.wheelbase*param_vdc.r_cdg;
 param_vdc.lr = param_vdc.wheelbase*(1-param_vdc.r_cdg);
 
 % Mass and inertia
-param_vdc.mass = 275;
+param_vdc.mass = 345;
 param_vdc.Iz = 190;
-param_vdc.nsm_f = 25;
-param_vdc.nsm_r = 25;
+param_vdc.nsm_f = 14.5;
+param_vdc.nsm_r = 12.0;
 param_vdc.sm = param_vdc.mass - param_vdc.nsm_f - param_vdc.nsm_r;
 param_vdc.sm_f = param_vdc.sm * param_vdc.r_cdg;
 param_vdc.sm_r = param_vdc.sm * (1-param_vdc.r_cdg);

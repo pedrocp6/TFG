@@ -38,6 +38,10 @@ struct TorqueCommandData {
     float sr_fr;
     float sr_rl;
     float sr_rr;
+    float T_obj_fl;
+    float T_obj_fr;
+    float T_obj_rl;
+    float T_obj_rr;
 };
 
 union Send_cmd {
@@ -111,7 +115,7 @@ public:
         }
     }
 
-    void sendData(double torque[4], double pw_total, double sr_debug[4]) {
+    void sendData(double torque[4], double pw_total, double sr_debug[4], double T_obj[4]) {
         Send_cmd packet;
         packet.data.torque_FL = (float) torque[0];
         packet.data.torque_FR = (float) torque[1];
@@ -122,6 +126,10 @@ public:
         packet.data.sr_fr = (float) sr_debug[1];
         packet.data.sr_rl = (float) sr_debug[2];
         packet.data.sr_rr = (float) sr_debug[3];
+        packet.data.T_obj_fl = (float) T_obj[0];
+        packet.data.T_obj_fr = (float) T_obj[1];
+        packet.data.T_obj_rl = (float) T_obj[2];
+        packet.data.T_obj_rr = (float) T_obj[3];
         // Simulink debe esperar recibir SIZE_TX_FX bytes de datos
         sendPacket(MessageType::TORQUE_COMMAND, packet);
     }
@@ -291,7 +299,7 @@ int main() {
             debug[1] = state[1];
             debug[2] = sensors.acceleration_x;
             debug[3] = sensors.acceleration_y;
-            uart.sendData(torque_cmd,pw_total, T_obj);
+            uart.sendData(torque_cmd,pw_total, SR, T_obj);
         }
     }
 

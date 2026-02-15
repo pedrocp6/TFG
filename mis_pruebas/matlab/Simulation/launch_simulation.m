@@ -6,18 +6,19 @@ time_ref = cumsum([diff(s); 0]./vx_target);
 Tini = time_ref(1);
 Tend = time_ref(end);
 
-Tend = min(Tend, 5.0);
+% Tend = min(Tend, 5.0);
 
 
 % Reference speed 
 % v_ref = vel;           %trackdrive
-v_ref = 1+20*time_ref;  %acceleration
+% v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
+v_ref = 1.5*vx_target-8;
 v_target = timeseries(v_ref,time_ref);
 
 % Reference trajectory
-% k_ref = k;             %trackdrive
-k_ref = k*0;            %acceleration
+k_ref = k;             %trackdrive
+% k_ref = k*0;            %acceleration
 % k_ref = k*0+1/9.125;   %skidpad
 k_target = timeseries(k_ref,time_ref);
 

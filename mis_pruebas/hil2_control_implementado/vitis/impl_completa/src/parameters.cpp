@@ -36,15 +36,15 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- Battery -------------------- */
         params->power_min   = -40000; //cfg["battery"]["min_power"].as<double>();
-        params->power_max   = 80000; //cfg["battery"]["max_power"].as<double>();
+        params->power_max   = 50000; //cfg["battery"]["max_power"].as<double>();
         params->voltage_min = 430; //cfg["battery"]["min_voltage"].as<double>();
         params->voltage_max = 575; //cfg["battery"]["max_voltage"].as<double>();
         params->r_battery   = 1.2; //cfg["battery"]["r_battery"].as<double>();
 
         /* -------------------- Car model -------------------- */
         params->mass        = 345; //cfg["car_model"]["mass"].as<double>();
-        params->nsm_f       = 10.5; //cfg["car_model"]["nsm_f"].as<double>();
-        params->nsm_r       = 8.0; //cfg["car_model"]["nsm_r"].as<double>();
+        params->nsm_f       = 14.5; //cfg["car_model"]["nsm_f"].as<double>();
+        params->nsm_r       = 12.5; //cfg["car_model"]["nsm_r"].as<double>();
         params->r_cdg       = 0.5; //cfg["car_model"]["r_cdg"].as<double>();
         params->h_cdg       = 0.273; //cfg["car_model"]["h_cdg"].as<double>();
         params->h_cdg_sm    = 0.3; //cfg["car_model"]["h_cdg_sm"].as<double>();
@@ -54,8 +54,8 @@ bool parameters_init(Parameters *params) {
         params->h_rc_r      = 0.097; //cfg["car_model"]["h_rc_r"].as<double>();
 
         params->wheelbase   = 1.535; //cfg["car_model"]["wheelbase"].as<double>();
-        params->lf = 0.5*0.535;
-        params->lr = (1-0.5)*1.535;
+        params->lf = 0.5*params->wheelbase;
+        params->lr = (1-0.5)*params->wheelbase;
         params->tf = 1.22; //cfg["car_model"]["track_width_front"].as<double>();
         params->tr = 1.22; //cfg["car_model"]["track_width_rear"].as<double>();
 
@@ -98,8 +98,8 @@ bool parameters_init(Parameters *params) {
         params->max_mz = 600; //cfg["tv"]["max_mz"].as<double>();
 
         /* -------------------- TC controller -------------------- */
-        params->tc_kp    = 30; //cfg["tc"]["kp"].as<double>();
-        params->tc_ki    = 0; //cfg["tc"]["ki"].as<double>();
+        params->tc_kp    = 20; //cfg["tc"]["kp"].as<double>();
+        params->tc_ki    = 1; //cfg["tc"]["ki"].as<double>();
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>();
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>();
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>();
