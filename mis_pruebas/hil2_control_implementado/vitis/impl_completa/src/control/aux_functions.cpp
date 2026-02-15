@@ -15,7 +15,7 @@ float eps = 0.01;
 
 // Function implementations
 
-void Calculate_Tire_Loads(SensorData *sensors, Parameters *parameters, float *state, Tire *tire) {
+void Calculate_Tire_Loads(SensorData *sensors, Parameters *parameters, double *state, Tire *tire) {
     float FL = parameters->fz_params[0] * state[0] * state[0];
     float FD = parameters->fz_params[1] * state[0] * state[0];
 

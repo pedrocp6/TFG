@@ -119,7 +119,7 @@ typedef struct{
 	float tire_load[4];
 } TIRE;
 
-
+void Calculate_Tire_Loads(SensorData *sensors, Parameters *parameters, double *state, Tire *tire);
 void Calculate_Tire_Forces(Tire *tire, const float slip_angle[4], const float slip_ratio[4]);
 
 } // namespace AuxFunctions

@@ -7,11 +7,16 @@
 // #include <yaml-cpp/yaml.h>
 #include <iostream>
 #include <chrono>
+#include <cmath>
 
 
 // Parameters functions
 // Se ha borrado el yaml para facilitar la implementaci�n. Si se quiere modificar alg�n
 // par�metro se puede hacer sobre este archivo
+// Constants
+#define pi 3.141592
+#define GRAVITY 9.81
+
 bool parameters_init(Parameters *params) {
     // try {
         // YAML::Node cfg = YAML::LoadFile(yaml_path);
@@ -137,6 +142,36 @@ bool parameters_init(Parameters *params) {
         params->freq_apps_control = 100; //cfg["frequencies"]["apps_control"].as<double>();
         params->freq_invertes_enable = 10; //cfg["frequencies"]["invertes_enable"].as<double>();
         params->freq_heartbeat = 1; //cfg["frequencies"]["heartbeat"].as<double>();
+
+        /* -------------------- Fz parameters -------------------- */
+        // Calculate derived variables for Fz parameters
+        float nsm_total = params->nsm_f + params->nsm_r;
+        float sm = params->mass - nsm_total;
+        float sm_f = sm * params->r_cdg;
+        float sm_r = sm * (1 - params->r_cdg);
+        float h_RA = params->h_rc_f + (params->h_rc_r - params->h_rc_f) * params->lf / params->wheelbase;
+
+        // Calculate roll stiffness components
+        float MR_ARB_f = params->mr_arb_f_dirk * 180 / pi * 1 / (params->r_arb_f * 1000 * cos(params->psi_arb_f));
+        float RS_f = 0.5f * params->tf * params->tf * tan(pi / 180) * (params->ks_f / (params->mr_s * params->mr_s) + params->karb_f / (MR_ARB_f * MR_ARB_f));
+        float MR_ARB_r = params->mr_arb_r_dirk * 180 / pi * 1 / (params->r_arb_r * 1000 * cos(params->psi_arb_r));
+        float RS_r = 0.5f * params->tr * params->tr * tan(pi / 180) * (params->ks_r / (params->mr_s * params->mr_s) + params->karb_r / (MR_ARB_r * MR_ARB_r));
+        float RS = RS_f + RS_r;
+
+        // Initialize Fz parameters
+        params->fz_params[0] = 0.5f * params->rho * params->cla;
+        params->fz_params[1] = 0.5f * params->rho * params->cda;
+        params->fz_params[2] = nsm_total * params->h_cdg_nsm / params->tf;
+        params->fz_params[3] = sm_f * params->h_rc_f / params->tf;
+        params->fz_params[4] = sm_r * params->h_rc_r / params->tf;
+        params->fz_params[5] = sm * (params->h_cdg_sm - h_RA) * RS_f / RS / params->tf;
+        params->fz_params[6] = sm * (params->h_cdg_sm - h_RA) * RS_r / RS / params->tr;
+        params->fz_params[7] = (nsm_total * params->h_cdg_nsm * 2) / params->wheelbase;
+        params->fz_params[8] = sm * params->h_cdg_sm / params->wheelbase;
+        params->fz_params[9] = 0.5 * params->mass * GRAVITY * params->lr / params->wheelbase;
+        params->fz_params[10] = 0.5 * params->r_cdp;
+        params->fz_params[11] = 0.5 * (params->h_cdp - params->h_cdg_sm);
+        params->fz_params[12] = 0.5 * params->mass * GRAVITY * params->lf / params->wheelbase;
 
         return true;
 

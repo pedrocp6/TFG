@@ -39,7 +39,7 @@ void TractionControl::traction_control_init(Pid *pid_tc, Parameters *parameters)
 	}
 }
 
-void TractionControl::traction_control_update(Parameters *parameters, SensorData *sensors, double *state, double torque_cmd[4], Pid *pid_tc, Tire *tire, double *Tin, double *TC, double *SR, Dv *dv, double *T_obj){
+void TractionControl::traction_control_update(Parameters *parameters, SensorData *sensors, double *state, double torque_cmd[4], Pid *pid_tc, Tire *tire, double *Tin, double *TC, double *SR, Dv *dv, double *T_obj, float slip_angle[4]){
 	//SYSTEM ACTIVATION CHECK
 	if (!parameters->tc_active || pid_tc->init != 1 || dv->inspection) {
 		for (int i = 0; i < 4; i++) {
@@ -110,13 +110,14 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 	//FEEDFORWARD TORQUE CALCULATION
 	float SR_t[4] = {0.1f, 0.1f, 0.1f, 0.1f};
-	float slip_angle[4];
+	// float slip_angle[4];
 
 	slip_angle[0] = atan2f(vy_wheel_tire[0], vx_wheel_tire[0]); // FL
 	slip_angle[1] = atan2f(vy_wheel_tire[1], vx_wheel_tire[1]); // FR
 	slip_angle[2] = atan2f(vy_wheel_tire[2], vx_wheel_tire[2]); // RL
 	slip_angle[3] = atan2f(vy_wheel_tire[3], vx_wheel_tire[3]); // RR
 
+	AuxFunctions::Calculate_Tire_Loads(sensors, parameters, state, tire);
 	AuxFunctions::Calculate_Tire_Forces(tire, slip_angle, SR_t);
 
 
@@ -177,6 +178,7 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 		if (TC[i] < parameters->torque_min)
 			TC[i] = parameters->torque_min;
 	}
+
 }
 
 

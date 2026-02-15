@@ -253,6 +253,7 @@ int main() {
     sensors.vehicle_side_voltage = 500;
     sensors.power = 0;
     sensors.v_soc = 500;
+    float slip_angle[4];
 
     while (true) {
         timer.waitNextTrigger();
@@ -281,11 +282,16 @@ int main() {
         	state[2] =	sensors.angular_z;
             double fx_request = driver_request(sensors, parameters);
             torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
-            traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, &pid_tc, &tire, torque_cmd, TC, SR, &dv, T_obj);
+            traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, &pid_tc, &tire, torque_cmd, TC, SR, &dv, T_obj, slip_angle);
 //            (Parameters *params, SensorData *sensors, double x_out[3], double torque_cmd[4], PID *pid, TIRE *tire, , float *Tin, float *TC, float *SR, DV *dv, float *T_obj, float *state);
             double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Env�o
-            uart.sendData(torque_cmd,pw_total, T_obj);
+            double debug[4];
+            debug[0] = state[0];
+            debug[1] = state[1];
+            debug[2] = sensors.acceleration_x;
+            debug[3] = sensors.acceleration_y;
+            uart.sendData(torque_cmd,pw_total, tire.tire_load);
         }
     }
 

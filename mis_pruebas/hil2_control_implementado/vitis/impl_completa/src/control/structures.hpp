@@ -26,7 +26,7 @@ typedef struct {
 	float acceleration_y;
 	float acceleration_x;
 
-	// No usado en simulación
+	// No usado en simulaciï¿½n
 	double angular_x;
 	double angular_y;
 	double acceleration_z;
