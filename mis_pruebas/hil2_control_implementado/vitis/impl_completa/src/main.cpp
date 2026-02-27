@@ -295,11 +295,11 @@ int main() {
             double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Env�o
             double debug[4];
-            debug[0] = state[0];
-            debug[1] = state[1];
-            debug[2] = sensors.acceleration_x;
-            debug[3] = sensors.acceleration_y;
-            uart.sendData(torque_cmd,pw_total, SR, T_obj);
+            debug[0] = tire.tire_load[0];
+            debug[1] = tire.tire_load[1];
+            debug[2] = tire.tire_load[2];
+            debug[3] = tire.tire_load[3];
+            uart.sendData(torque_cmd,pw_total, SR, debug);
         }
     }
 

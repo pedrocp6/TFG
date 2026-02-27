@@ -10,10 +10,10 @@ param.lf = param.wheelbase*param.r_cdg;
 param.lr = param.wheelbase*(1-param.r_cdg);
 
 % Mass and inertia
-param.mass = 290;
+param.mass = 345;
 param.Iz = 190;
-param.nsm_f = 25;
-param.nsm_r = 25;
+param.nsm_f = 14.5;
+param.nsm_r = 12.0;
 param.sm = param.mass - param.nsm_f - param.nsm_r;
 param.sm_f = param.sm * param.r_cdg;
 param.sm_r = param.sm * (1-param.r_cdg);
