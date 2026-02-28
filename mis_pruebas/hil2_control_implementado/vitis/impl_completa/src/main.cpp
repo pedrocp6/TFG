@@ -6,6 +6,7 @@
 #include "xparameters.h"
 #include "xtime_l.h"
 #include "control/main.hpp"
+#include "xuartps.h"
 
 // Direcciï¿½n base de la UART
 #define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
@@ -13,6 +14,36 @@
 // Frecuencia del temporizador
 constexpr uint32_t FRECUENCIA_HZ = 200;
 constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
+
+// Cambiar la frecuencia de la UART (base: 115200 baudios)
+XUartPs UartInst;
+
+void configurar_uart_rapida() {
+    int Status;
+    XUartPs_Config *Config;
+
+    // Buscar la configuración de hardware de la UART 0
+    Config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+    if (NULL == Config) {
+        xil_printf("Error: No se encuentra la UART\r\n");
+        return;
+    }
+
+    // Inicializar el driver
+    Status = XUartPs_CfgInitialize(&UartInst, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error: Fallo al inicializar UART\r\n");
+        return;
+    }
+
+    // FORZAR LA NUEVA VELOCIDAD (921600 baudios)
+    Status = XUartPs_SetBaudRate(&UartInst, 921600);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error: No se pudo cambiar la velocidad de la UART\r\n");
+    } else {
+        xil_printf("Exito: UART configurada a 921600 baudios\r\n");
+    }
+}
 
 // ============================================================================
 // DEFINICIï¿½N DE TIPOS DE MENSAJES
@@ -241,6 +272,7 @@ int main() {
     XTime current_time;
 
     UARTComm uart(UART_BASEADDR);
+    configurar_uart_rapida();
     Timer timer(CUENTAS_POR_LOOP);
     bool ini=false;
 

@@ -51,6 +51,7 @@
 #include "xuartps_hw.h" // ¡IMPORTANTE! Para acceder al hardware directo
 #include "xparameters.h"
 #include "sleep.h"
+#include "xuartps.h"
 
 // Definimos la dirección base de la UART (Suele ser UART0 o UART1)
 // En Zynq Ultrascale+ suele ser STDIN_BASEADDRESS si usas la del USB
@@ -75,6 +76,36 @@ typedef union {
 ReceiverUnion rx_buffer;
 
 void outbyte(char c);
+
+// Variable global para la UART
+XUartPs UartInst;
+
+void configurar_uart_rapida() {
+    int Status;
+    XUartPs_Config *Config;
+
+    // Buscar la configuración de hardware de la UART 0
+    Config = XUartPs_LookupConfig(XPAR_XUARTPS_0_DEVICE_ID);
+    if (NULL == Config) {
+        xil_printf("Error: No se encuentra la UART\r\n");
+        return;
+    }
+
+    // Inicializar el driver
+    Status = XUartPs_CfgInitialize(&UartInst, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error: Fallo al inicializar UART\r\n");
+        return;
+    }
+
+    // FORZAR LA NUEVA VELOCIDAD (921600 baudios)
+    Status = XUartPs_SetBaudRate(&UartInst, 921600);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error: No se pudo cambiar la velocidad de la UART\r\n");
+    } else {
+        xil_printf("Exito: UART configurada a 921600 baudios\r\n");
+    }
+}
 
 
 // --- FUNCIÓN DE LECTURA NO BLOQUEANTE ---
@@ -120,6 +151,7 @@ int leer_datos_coche() {
 int main() {
 	int cont = 0;
     init_platform();
+    configurar_uart_rapida();
 
     FloatConverter converter;
     converter.valor_float = 0.0;

@@ -22,12 +22,11 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil2_control_implementado/vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
-set bp_28_58_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_18_4_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_28_58_fsbl_bp
+bpremove $bp_18_4_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil2_control_implementado/vitis/impl_completa/Debug/impl_completa.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A53*#0"}
-con
+bpadd -addr &main

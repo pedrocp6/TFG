@@ -21,3 +21,4 @@ domain active {zynqmp_pmufw}
 domain active {standalone_psu_cortexa53_0}
 platform generate -quick
 platform generate
+platform generate

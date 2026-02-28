@@ -26,3 +26,12 @@ platform generate
 platform clean
 platform generate
 platform generate
+platform active {design_1_wrapper}
+bsp reload
+bsp reload
+bsp config stdin "psu_uart_0"
+bsp reload
+bsp config stdout "psu_uart_0"
+bsp reload
+bsp reload
+platform generate -domains 

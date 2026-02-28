@@ -36,7 +36,7 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- Battery -------------------- */
         params->power_min   = -40000; //cfg["battery"]["min_power"].as<double>();
-        params->power_max   = 50000; //cfg["battery"]["max_power"].as<double>();
+        params->power_max   = 60000; //cfg["battery"]["max_power"].as<double>();
         params->voltage_min = 430; //cfg["battery"]["min_voltage"].as<double>();
         params->voltage_max = 575; //cfg["battery"]["max_voltage"].as<double>();
         params->r_battery   = 1.2; //cfg["battery"]["r_battery"].as<double>();
@@ -98,8 +98,8 @@ bool parameters_init(Parameters *params) {
         params->max_mz = 800; //cfg["tv"]["max_mz"].as<double>();
 
         /* -------------------- TC controller -------------------- */
-        params->tc_kp    = 10; //cfg["tc"]["kp"].as<double>();
-        params->tc_ki    = 3; //cfg["tc"]["ki"].as<double>();
+        params->tc_kp    = 20; //cfg["tc"]["kp"].as<double>();
+        params->tc_ki    = 5; //cfg["tc"]["ki"].as<double>();
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>();
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>();
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>();
