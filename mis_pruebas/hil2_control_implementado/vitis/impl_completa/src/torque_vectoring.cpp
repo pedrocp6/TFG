@@ -16,7 +16,7 @@ void TorqueVectoring::torque_vectoring_init(Parameters *params, Pid *pid_tv){
 	pid_tv->n_filt = params->tv_n;
 }
 
-void TorqueVectoring::torque_vectoring_update(Parameters *params, SensorData *sensors, Pid *pid_tv, Tire *tire, Dv *dv, double fx_request, double *state, double *torque_cmd){
+double TorqueVectoring::torque_vectoring_update(Parameters *params, SensorData *sensors, Pid *pid_tv, Tire *tire, Dv *dv, double fx_request, double *state, double *torque_cmd){
     if(!params->tv_active) {	// IF TORQUE VECTORIZING IS DISABLED --> Static allocation
 		if(params->mode_2wd) {	// Static allocation for 2WD
 			torque_cmd[0]=0.;
@@ -78,6 +78,7 @@ void TorqueVectoring::torque_vectoring_update(Parameters *params, SensorData *se
 					torque_cmd[i] = params->torque_min;
 				}
 			}
+			return target_r;
 			}
 		}
 
@@ -90,11 +91,11 @@ void TorqueVectoring::torque_vectoring_update(Parameters *params, SensorData *se
 
 double TorqueVectoring::target_generation(Parameters *params, SensorData *sensors, Pid *pid_tv, Dv *dv, double *state){
     //Calculate Error
-	if (dv->autonomous){
-		target_r = dv->target_r;
-	} else {
+	//if (dv->autonomous){
+	//	target_r = dv->target_r;
+	//} else {
 		target_r = tan(sensors->steering_angle) * state[0] / params->wheelbase;
-	}
+	//}
 	double error = target_r - state[2];
 
 	//PID Init

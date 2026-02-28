@@ -13,7 +13,8 @@ Tend = time_ref(end);
 % v_ref = vel;           %trackdrive
 % v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
-v_ref = 1.5*vx_target-8;
+% v_ref = 1.5*vx_target-8;
+v_ref = vel;
 v_target = timeseries(v_ref,time_ref);
 
 % Reference trajectory
@@ -35,7 +36,7 @@ wRR0 = vx0/param_vdc.rdyn;
 cd(fileparts(mfilename('fullpath')))
 
 sim_TimeStep = 0.0001; % 10 kHz
-control_TimeStep = 0.01; % 100 Hz Momentaneo, luego se subirá y se dejarán los sensores a 100 Hz
+control_TimeStep = 0.005; % 100 Hz Momentaneo, luego se subirá y se dejarán los sensores a 100 Hz
 mdl = [ROOT_DIR '/ART25_full_car_old.slx'];
 out = sim(mdl,'StartTime',num2str(Tini),'StopTime',num2str(Tend));
 

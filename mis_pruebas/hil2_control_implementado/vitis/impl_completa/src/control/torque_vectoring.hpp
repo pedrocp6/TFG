@@ -15,7 +15,7 @@
 class TorqueVectoring {
 public:
     void torque_vectoring_init(Parameters *params, Pid *pid_tv);
-    void torque_vectoring_update(Parameters *params, SensorData *sensors, Pid *pid_tv, Tire *tire, Dv *dv, double fx_request, double *state, double *torque_cmd);
+    double torque_vectoring_update(Parameters *params, SensorData *sensors, Pid *pid_tv, Tire *tire, Dv *dv, double fx_request, double *state, double *torque_cmd);
     double target_generation(Parameters *params, SensorData *sensors, Pid *pid_tv, Dv *dv, double *state);
 private:
     double target_r;

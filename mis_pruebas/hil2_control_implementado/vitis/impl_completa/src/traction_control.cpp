@@ -122,11 +122,12 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 
 	float TC_calc[4];
-	float inertia_term = (1 + SR_t[0]) * sensors->acceleration_x / parameters->rdyn *
-			parameters->wheel_inertia / parameters->gear_ratio;
+	float inertia_term[4];
 
 	for (int i = 0; i < 4; i++) {
-		T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term;
+		inertia_term[i] = (1 + SR_t[i]) * sensors->acceleration_x / parameters->rdyn *
+			parameters->wheel_inertia / parameters->gear_ratio;
+		T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i];
 	}
 
 	//PID FEEDBACK CONTROL
@@ -152,7 +153,8 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 		TC[i] = fminf(TC_calc[i], fmaxf(Tin[i], -TC_calc[i]));
 
 		if(Tin[i] >= 0.0f && TC_calc[i] < 0.0f){
-			TC[i] = Tin[i];
+			TC[i] = 0.0;
+			int_SRep[i] = 0.0f;
 		}
 
 		//Anti-windup
@@ -167,8 +169,10 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 	if (vx < 3.0f) {
 		float T_limit = parameters->tc_v0 + parameters->tc_vgain * vx;
-		if (TC[0] > T_limit) TC[0] = T_limit;
-		if (TC[1] > T_limit) TC[1] = T_limit;
+		for (int i = 0; i < 4; i++) {
+			if (TC[i] > T_limit)
+				TC[i] = T_limit;
+		}
 	}
 
 	// Saturación final con los límites globales

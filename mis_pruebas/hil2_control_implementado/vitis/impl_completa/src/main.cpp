@@ -11,7 +11,7 @@
 #define UART_BASEADDR XPAR_XUARTPS_0_BASEADDR
 
 // Frecuencia del temporizador
-constexpr uint32_t FRECUENCIA_HZ = 100;
+constexpr uint32_t FRECUENCIA_HZ = 200;
 constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 
 // ============================================================================
@@ -279,6 +279,20 @@ int main() {
         	pid_tc.init = 1;
         }
 
+
+        if(pid_tv.last_timestamp == 0) {
+        	XTime_GetTime(&current_time);
+        	pid_tv.last_timestamp = current_time;
+        } else {
+        	XTime_GetTime(&current_time);
+        	pid_tv.ts = (double)(current_time - pid_tv.last_timestamp)/COUNTS_PER_SECOND;
+        	pid_tv.last_timestamp = current_time;
+        }
+
+        if (!pid_tv.init) {
+        	pid_tv.init = 1;
+        }
+
         static double TC[4] = {0,0,0,0};
         static double SR[4] = {0,0,0,0};
         static double T_obj[4] = {0,0,0,0};
@@ -289,17 +303,16 @@ int main() {
         	state[1] =	sensors.speed_y;
         	state[2] =	sensors.angular_z;
             double fx_request = driver_request(sensors, parameters);
-            torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
+            double target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors, &pid_tv, &tire, &dv, fx_request, state, torque_cmd);
+            double debug[4];
+            debug[0] = torque_cmd[0];
+            debug[1] = torque_cmd[1];
+            debug[2] = torque_cmd[2];
+            debug[3] = torque_cmd[3];
             traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, &pid_tc, &tire, torque_cmd, TC, SR, &dv, T_obj, slip_angle);
-//            (Parameters *params, SensorData *sensors, double x_out[3], double torque_cmd[4], PID *pid, TIRE *tire, , float *Tin, float *TC, float *SR, DV *dv, float *T_obj, float *state);
             double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Env�o
-            double debug[4];
-            debug[0] = tire.tire_load[0];
-            debug[1] = tire.tire_load[1];
-            debug[2] = tire.tire_load[2];
-            debug[3] = tire.tire_load[3];
-            uart.sendData(torque_cmd,pw_total, SR, debug);
+            uart.sendData(torque_cmd,target_r, T_obj, debug);
         }
     }
 

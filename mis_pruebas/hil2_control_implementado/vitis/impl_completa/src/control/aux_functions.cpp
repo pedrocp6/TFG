@@ -184,8 +184,8 @@ void Calculate_Tire_Forces(Tire *tire, const float slip_angle[4], const float sl
 
         float fy_pure = tire->tire_load[i] * D_LAT * sinf(C_LAT * atanf(B_LAT * slip_angle[i] - aux_fy));
         float fx_pure = tire->tire_load[i] * D_LON * sinf(C_LON * atanf(B_LON * slip_ratio[i] - aux_fx));
-        tire->force_fy[i] = 0.7 * fy_pure * lambda_star[i];
-        tire->force_fx[i] = 0.7 * fx_pure * alpha_star[i];
+        tire->force_fy[i] = 0.8 * fy_pure * lambda_star[i];
+        tire->force_fx[i] = 0.8 * fx_pure * alpha_star[i];
     }
 
 }

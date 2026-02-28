@@ -23,7 +23,7 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- VDC activation -------------------- */
         params->est_active = false; //cfg["vdc_activation"]["est_active"].as<bool>();
-        params->tv_active  = false; //cfg["vdc_activation"]["tv_active"].as<bool>();
+        params->tv_active  = true; //cfg["vdc_activation"]["tv_active"].as<bool>();
         params->tc_active  = true; //cfg["vdc_activation"]["tc_active"].as<bool>();
         params->pl_active  = true; //cfg["vdc_activation"]["pl_active"].as<bool>();
 
@@ -91,15 +91,15 @@ bool parameters_init(Parameters *params) {
         params->vx_threshold = 1.0; //cfg["estimation"]["vx_threshold"].as<double>();
 
         /* -------------------- TV controller -------------------- */
-        params->tv_kp  = 400; //cfg["tv"]["kp"].as<double>();
+        params->tv_kp  = 1000; //cfg["tv"]["kp"].as<double>();
         params->tv_ki  = 0; //cfg["tv"]["ki"].as<double>();
-        params->tv_kd  = 0; //cfg["tv"]["kd"].as<double>();
-        params->tv_n   = 0; //cfg["tv"]["n"].as<double>();
-        params->max_mz = 600; //cfg["tv"]["max_mz"].as<double>();
+        params->tv_kd  = 15; //cfg["tv"]["kd"].as<double>();
+        params->tv_n   = 20; //cfg["tv"]["n"].as<double>();
+        params->max_mz = 800; //cfg["tv"]["max_mz"].as<double>();
 
         /* -------------------- TC controller -------------------- */
-        params->tc_kp    = 20; //cfg["tc"]["kp"].as<double>();
-        params->tc_ki    = 1; //cfg["tc"]["ki"].as<double>();
+        params->tc_kp    = 10; //cfg["tc"]["kp"].as<double>();
+        params->tc_ki    = 3; //cfg["tc"]["ki"].as<double>();
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>();
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>();
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>();
