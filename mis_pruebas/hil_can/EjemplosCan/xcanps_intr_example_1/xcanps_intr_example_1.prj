@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xcanps_intr_example_1" location="C:/TFG_Vivado/mis_pruebas/hil_can/vitis/xcanps_intr_example_1" platform="C:/TFG_Vivado/mis_pruebas/hil_can/vitis/can_wrapper/export/can_wrapper/can_wrapper.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="xcanps_intr_example_1_system" sysConfig="can_wrapper" runtime="C/C++" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="f5d7451307a60e553f6797fded1321b2">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.203602728" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1970992518" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

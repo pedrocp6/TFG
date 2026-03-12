@@ -37,7 +37,7 @@ void configurar_uart_rapida() {
     }
 
     // FORZAR LA NUEVA VELOCIDAD (921600 baudios)
-    Status = XUartPs_SetBaudRate(&UartInst, 921600);
+    Status = XUartPs_SetBaudRate(&UartInst, 128000);
     if (Status != XST_SUCCESS) {
         xil_printf("Error: No se pudo cambiar la velocidad de la UART\r\n");
     } else {
@@ -296,7 +296,7 @@ int main() {
     float slip_angle[4];
 
     while (true) {
-        timer.waitNextTrigger();
+        // timer.waitNextTrigger();
 
         if(pid_tc.last_timestamp == 0) {
         	XTime_GetTime(&current_time);
@@ -340,7 +340,8 @@ int main() {
             debug[0] = torque_cmd[0];
             debug[1] = torque_cmd[1];
             debug[2] = torque_cmd[2];
-            debug[3] = torque_cmd[3];
+            XTime_GetTime(&current_time);
+            debug[3] = current_time*1000/COUNTS_PER_SECOND;
             traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, &pid_tc, &tire, torque_cmd, TC, SR, &dv, T_obj, slip_angle);
             double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
             // Env�o

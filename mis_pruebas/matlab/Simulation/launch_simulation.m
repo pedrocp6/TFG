@@ -36,11 +36,16 @@ wRR0 = vx0/param_vdc.rdyn;
 cd(fileparts(mfilename('fullpath')))
 
 sim_TimeStep = 0.0001; % 10 kHz
-control_TimeStep = 0.005; % 100 Hz Momentaneo, luego se subirá y se dejarán los sensores a 100 Hz
+control_TimeStep = vdc_TimeStep;
 mdl = [ROOT_DIR '/ART25_full_car_old.slx'];
+
+tic;
+
 out = sim(mdl,'StartTime',num2str(Tini),'StopTime',num2str(Tend));
 
-cd ..
+tiempo = toc;
+
+fprintf('Tiempo simulación: %.1f s\n', tiempo);
 
 %% Log data
 logdata
