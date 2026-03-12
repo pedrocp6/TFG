@@ -58,6 +58,7 @@
 #include "xcanps.h"
 #include "xparameters.h"
 #include "xil_printf.h"
+#include "sleep.h"
 
 /************************** Constant Definitions *****************************/
 
@@ -114,7 +115,7 @@
 /************************** Function Prototypes ******************************/
 
 int CanInitial(u16 DeviceId, XCanPs *CanPtr);
-static int SendFrame(XCanPs *InstancePtr);
+static int SendFrame(XCanPs *InstancePtr, u32 MessageId, u8 *MsgData, u8 DataLen);
 static int RecvFrame(XCanPs *InstancePtr);
 int CanLoopback(XCanPs *CanInstPtr0, XCanPs *CanInstPtr1) ;
 
@@ -130,7 +131,6 @@ static u32 RxFrame[XCANPS_MAX_FRAME_SIZE_IN_WORDS];
 
 /* Driver instance */
 static XCanPs Can0;
-static XCanPs Can1;
 
 /****************************************************************************/
 /**
@@ -164,49 +164,26 @@ int main()
 		return XST_FAILURE;
 	}
 	xil_printf("CAN 0 Initial Successful\r\n");
+	xil_printf("Iniciando transmisión infinita en CAN 0 a 100 Hz...\r\n");
 
-	Status = CanInitial(XPAR_XCANPS_1_DEVICE_ID, &Can1);
-	if (Status != XST_SUCCESS) {
-		xil_printf("CAN Initial Failed\r\n");
-		return XST_FAILURE;
-	}
-	xil_printf("CAN 1 Initial Successful\r\n");
-
-
-	// sleep(0.5);
-	// hola
+	/* Preparamos nuestro mensaje y nuestra ID en el main */
+	u32 my_can_id = 0x2A; // ID que tú quieras en hexadecimal (Ej: 0x2A = 42)
+	u8 my_payload[8] = {0xDE, 0xAD, 0xBE, 0xEF, 0x00, 0x00, 0x00, 0x00};
 
 	while (1) {
-
-		/* Enviar frame */
-		Status = SendFrame(&Can0);
+		/* Enviar frame solo por CAN 0 con nuestra ID y datos */
+		Status = SendFrame(&Can0, my_can_id, my_payload, 8);
 		if (Status != XST_SUCCESS) {
 			xil_printf("X 0 Error mandando frame\r\n");
 		}
 
-		/*Status = SendFrame(&Can1);
-		if (Status != XST_SUCCESS) {
-			xil_printf("X 1 Error mandando frame\r\n");
-		}*/
+		/* Truco extra: incrementamos el último byte para ver en PCAN-View
+			   que el mensaje está "vivo" y cambiando. */
+		my_payload[7]++;
 
-		/* Intentar recibir (no bloqueante) */
-		/*while (XCanPs_IsRxEmpty(&Can) == FALSE) {
-			Status = ReceiveFrame();
-			if (Status != XST_SUCCESS) {
-				xil_printf("X Error recibiendo frame\r\n");
-			}
-		}*/
-
+		/* Esperamos 10 milisegundos para conseguir exactamente 100 Hz */
+		usleep(10000);
 	}
-
-	/*Status = CanLoopback(&Can0, &Can1);
-	if (Status != XST_SUCCESS) {
-		xil_printf("CAN Loopback Failed\r\n");
-		return XST_FAILURE;
-	}
-
-	xil_printf("Successfully ran CAN Polled Mode Example Test\r\n");
-	return XST_SUCCESS;*/
 }
 #endif
 
@@ -316,40 +293,6 @@ int CanInitial(u16 DeviceId, XCanPs *CanPtr)
 	return Status;
 }
 
-int CanLoopback(XCanPs *CanInstPtr0, XCanPs *CanInstPtr1)
-{
-	int Status;
-	/*
-	 * Send a frame, receive the frame via the loop back and verify its
-	 * contents.
-	 */
-	Status = SendFrame(CanInstPtr0);
-	if (Status != XST_SUCCESS) {
-		return Status;
-	}
-
-	Status = RecvFrame(CanInstPtr1);
-
-	/*
-	 * Clear RxFrame buffer
-	 */
-	memset(RxFrame, 0, XCANPS_MAX_FRAME_SIZE) ;
-
-	/*
-	 * Send a frame, receive the frame via the loop back and verify its
-	 * contents.
-	 */
-	Status = SendFrame(CanInstPtr1);
-	if (Status != XST_SUCCESS) {
-		return Status;
-	}
-
-	Status = RecvFrame(CanInstPtr0);
-
-	return Status;
-
-}
-
 /*****************************************************************************/
 /**
  *
@@ -366,39 +309,30 @@ int CanLoopback(XCanPs *CanInstPtr0, XCanPs *CanInstPtr1)
  * correctly.
  *
  ******************************************************************************/
-static int SendFrame(XCanPs *InstancePtr)
+static int SendFrame(XCanPs *InstancePtr, u32 MessageId, u8 *MsgData, u8 DataLen)
 {
 	u8 *FramePtr;
 	int Index;
 	int Status;
 
 	/*
-	 * Create correct values for Identifier and Data Length Code Register.
+	 * Configurar el ID (estándar, 11 bits) y el DLC (longitud de datos)
 	 */
-	TxFrame[0] = (u32)XCanPs_CreateIdValue((u32)TEST_MESSAGE_ID, 0, 0, 0, 0);
-	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)FRAME_DATA_LENGTH);
+	TxFrame[0] = (u32)XCanPs_CreateIdValue(MessageId, 0, 0, 0, 0);
+	TxFrame[1] = (u32)XCanPs_CreateDlcValue((u32)DataLen);
 
 	/*
-	 * Now fill in the data field with known values so we can verify them
-	 * on receive.
+	 * Rellenar el array interno (TxFrame) con los datos que le hemos pasado
 	 */
 	FramePtr = (u8 *)(&TxFrame[2]);
-	for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) {
-		*FramePtr++ = (u8)Index;
+	for (Index = 0; Index < DataLen; Index++) {
+		*FramePtr++ = MsgData[Index];
 	}
 
-	/*
-	 * Wait until TX FIFO has room.
-	 */
+	/* Wait until TX FIFO has room. */
 	while (XCanPs_IsTxFifoFull(InstancePtr) == TRUE);
 
-	/*
-	 * Now send the frame.
-	 *
-	 * Another way to send a frame is keep calling XCanPs_Send() until it
-	 * returns XST_SUCCESS. No check on if TX FIFO is full is needed anymore
-	 * in that case.
-	 */
+	/* Send the frame */
 	Status = XCanPs_Send(InstancePtr, TxFrame);
 
 	return Status;
