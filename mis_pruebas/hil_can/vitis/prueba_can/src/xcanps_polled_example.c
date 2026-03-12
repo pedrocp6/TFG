@@ -95,9 +95,9 @@
  frequency
  * is 24 MHz.
  */
-#define TEST_BTR_SYNCJUMPWIDTH		1	// 3
-#define TEST_BTR_SECOND_TIMESEGMENT	2	// 2
-#define TEST_BTR_FIRST_TIMESEGMENT	15	// 15
+#define TEST_BTR_SYNCJUMPWIDTH		1	// 3	1
+#define TEST_BTR_SECOND_TIMESEGMENT	3	// 2	2
+#define TEST_BTR_FIRST_TIMESEGMENT	14	// 15	15
 
 /*
  * The Baud rate Prescalar value in the Baud Rate Prescaler Register (BRPR)
@@ -106,7 +106,7 @@
  * This value is for a 40 Kbps baudrate assuming the CAN input clock frequency
  * is 24 MHz.
  */
-#define TEST_BRPR_BAUD_PRESCALAR	9	// 29
+#define TEST_BRPR_BAUD_PRESCALAR	4	// 29	9
 
 /**************************** Type Definitions *******************************/
 
@@ -285,8 +285,6 @@ int CanInitial(u16 DeviceId, XCanPs *CanPtr)
 		xil_printf("Prescaler=%lu, TQ_per_bit=%lu\r\n", prescaler, tq_per_bit);
 		xil_printf("Baud Rate (assuming CAN_CLK):\r\n");
 		xil_printf("  100 MHz -> %lu kbps\r\n", 100000 / (prescaler * tq_per_bit));
-		xil_printf("   50 MHz -> %lu kbps\r\n", 50000 / (prescaler * tq_per_bit));
-		xil_printf("   24 MHz -> %lu kbps\r\n", 24000 / (prescaler * tq_per_bit));
 		xil_printf("========================================\r\n\r\n");
 	}
 
