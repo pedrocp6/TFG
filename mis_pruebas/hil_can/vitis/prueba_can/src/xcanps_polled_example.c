@@ -116,8 +116,7 @@
 
 int CanInitial(u16 DeviceId, XCanPs *CanPtr);
 static int SendFrame(XCanPs *InstancePtr, u32 MessageId, u8 *MsgData, u8 DataLen);
-static int RecvFrame(XCanPs *InstancePtr);
-int CanLoopback(XCanPs *CanInstPtr0, XCanPs *CanInstPtr1) ;
+static int RecvFrame(XCanPs *InstancePtr, u32 *RxId, u8 *RxData, u8 *RxLen);
 
 /************************** Variable Definitions *****************************/
 
@@ -164,24 +163,60 @@ int main()
 		return XST_FAILURE;
 	}
 	xil_printf("CAN 0 Initial Successful\r\n");
-	xil_printf("Iniciando transmisión infinita en CAN 0 a 100 Hz...\r\n");
+	xil_printf("Iniciando transmision y recepcion CAN...\r\n");
 
 	/* Preparamos nuestro mensaje y nuestra ID en el main */
-	u32 my_can_id = 0x2A; // ID que tú quieras en hexadecimal (Ej: 0x2A = 42)
+	u32 my_can_id = 0x2A;
 	u8 my_payload[8] = {0xDE, 0xAD, 0xBE, 0xEF, 0x00, 0x00, 0x00, 0x00};
 
+	u32 my_can_id2 = 0x1A;
+	u8 my_payload2[4] = {0x01, 0x02, 0x03, 0x04};
+
+	/* Variables para recepcion */
+	u32 rx_id = 0;
+	u8 rx_data[8];
+	u8 rx_len = 0;
+
+	u16 valor_16bit = 0;
+
 	while (1) {
-		/* Enviar frame solo por CAN 0 con nuestra ID y datos */
+		/* Enviar frames */
 		Status = SendFrame(&Can0, my_can_id, my_payload, 8);
+		Status = SendFrame(&Can0, my_can_id2, my_payload2, 4);
 		if (Status != XST_SUCCESS) {
 			xil_printf("X 0 Error mandando frame\r\n");
 		}
 
-		/* Truco extra: incrementamos el último byte para ver en PCAN-View
-			   que el mensaje está "vivo" y cambiando. */
-		my_payload[7]++;
+		/* Intentar recibir (no bloqueante) */
+		if (!XCanPs_IsRxEmpty(&Can0)) {
+			Status = RecvFrame(&Can0, &rx_id, rx_data, &rx_len);
+			if (Status == XST_SUCCESS) {
+				/* Interpretar mensaje de 3 bytes:
+				 * Bytes 0-1: número de 16 bits (little endian)
+				 * Byte 2: otro número de 8 bits
+				 */
+				if (rx_len >= 3) {
+					valor_16bit = (u16)(rx_data[0] | (rx_data[1] << 8));
+					u8 valor_8bit = rx_data[2];
 
-		/* Esperamos 10 milisegundos para conseguir exactamente 100 Hz */
+					xil_printf("RX: ID=0x%03X, Len=%d, Valor16=%u, Valor8=%u\r\n",
+							   rx_id, rx_len, valor_16bit, valor_8bit);
+				} else {
+					xil_printf("RX: ID=0x%03X, Len=%d (insuficiente para interpretar)\r\n",
+							   rx_id, rx_len);
+				}
+			}
+		}
+
+		/* Incrementar ultimo byte para ver cambios en PCAN */
+		my_payload2[0]++;
+
+		// Dividir en dos bytes (u8)
+		my_payload[6] = (u8)(valor_16bit & 0xFF);        // LSB (Least Significant Byte)
+		my_payload[7] = (u8)((valor_16bit >> 8) & 0xFF); // MSB (Most Significant Byte)
+		my_payload[6]++;
+
+		/* 100 Hz */
 		usleep(10000);
 	}
 }
@@ -270,13 +305,11 @@ int CanInitial(u16 DeviceId, XCanPs *CanPtr)
 		btr_reg = XCanPs_ReadReg(BaseAddr, XCANPS_BTR_OFFSET);
 
 		brpr_val = brpr_reg & 0xFF;
-		// ¡Shifts corregidos para el controlador Zynq CAN!
 		tseg2_val = (btr_reg >> 4) & 0x7;
 		tseg1_val = (btr_reg >> 0) & 0xF;
 		sjw_val   = (btr_reg >> 7) & 0x3;
 
 		prescaler = brpr_val + 1;
-		// Fórmula corregida: 1 (Sync) + (TSEG1 real) + (TSEG2 real)
 		tq_per_bit = 1 + (tseg1_val + 1) + (tseg2_val + 1);
 
 		xil_printf("\r\n=== CAN Config (read from registers) ===\r\n");
@@ -340,55 +373,42 @@ static int SendFrame(XCanPs *InstancePtr, u32 MessageId, u8 *MsgData, u8 DataLen
 /*****************************************************************************/
 /**
  *
- * This function receives a frame and verifies its contents.
+ * Recibe un mensaje CAN y lo guarda en las variables proporcionadas.
  *
- * @param	InstancePtr is a pointer to the driver instance.
+ * @param	InstancePtr puntero a la instancia del driver CAN
+ * @param	RxId puntero donde se guardara el ID recibido
+ * @param	RxData puntero al array donde se guardaran los datos
+ * @param	RxLen puntero donde se guardara la longitud de datos recibidos
  *
- * @return	XST_SUCCESS if successful, a driver-specific return code if not.
+ * @return	XST_SUCCESS si se recibio correctamente, XST_FAILURE si no
  *
- * @note
- *
- * This function waits until RX FIFO becomes not empty before reading a frame
- * from it. So this function may block if the hardware is not built
- * correctly.
+ * @note	Esta funcion NO es bloqueante. El usuario debe verificar primero
+ * 			que hay mensajes con XCanPs_IsRxEmpty() antes de llamarla.
  *
  ******************************************************************************/
-static int RecvFrame(XCanPs *InstancePtr)
+static int RecvFrame(XCanPs *InstancePtr, u32 *RxId, u8 *RxData, u8 *RxLen)
 {
-	u8 *FramePtr;
 	int Status;
 	int Index;
+	u8 *FramePtr;
 
-	/*
-	 * Wait until a frame is received.
-	 */
-	while (XCanPs_IsRxEmpty(InstancePtr) == TRUE);
-
-	/*
-	 * Receive a frame and verify its contents.
-	 */
+	/* Recibir el frame */
 	Status = XCanPs_Recv(InstancePtr, RxFrame);
-	if (Status == XST_SUCCESS) {
-		/*
-		 * Verify Identifier and Data Length Code.
-		 */
-		if (RxFrame[0] !=
-				(u32)XCanPs_CreateIdValue((u32)TEST_MESSAGE_ID, 0, 0, 0, 0))
-			return XST_LOOPBACK_ERROR;
-
-		if ((RxFrame[1] & ~XCANPS_DLCR_TIMESTAMP_MASK) != TxFrame[1])
-			return XST_LOOPBACK_ERROR;
-
-		/*
-		 * Verify Data field contents.
-		 */
-		FramePtr = (u8 *)(&RxFrame[2]);
-		for (Index = 0; Index < FRAME_DATA_LENGTH; Index++) {
-			if (*FramePtr++ != (u8)Index) {
-				return XST_LOOPBACK_ERROR;
-			}
-		}
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
 	}
 
-	return Status;
+	/* Extraer ID (shift right 21 bits para ID estandar de 11 bits) */
+	*RxId = RxFrame[0] >> 21;
+
+	/* Extraer longitud de datos (DLC esta en los bits 0-3 del segundo word) */
+	*RxLen = (u8)(RxFrame[1] & 0x0F);
+
+	/* Copiar datos recibidos al array proporcionado */
+	FramePtr = (u8 *)(&RxFrame[2]);
+	for (Index = 0; Index < *RxLen && Index < 8; Index++) {
+		RxData[Index] = *FramePtr++;
+	}
+
+	return XST_SUCCESS;
 }
