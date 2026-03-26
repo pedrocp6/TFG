@@ -12,7 +12,7 @@
 // #include "sleep.h"
 
 // Frecuencia del temporizador
-constexpr uint32_t FRECUENCIA_HZ = 1000;  // 100 Hz = 10 ms por ciclo
+constexpr uint32_t FRECUENCIA_HZ = 100;  // 100 Hz = 10 ms por ciclo
 constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 
 // ========== CAN DEFINITIONS ==========
@@ -162,10 +162,11 @@ static int RecvFrame(XCanPs *InstancePtr, u32 *RxId, u8 *RxData, u8 *RxLen)
 
 
 // ========== FUNCIÓN PARA LEER SENSORES POR CAN ==========
-void read_sensors_can(SensorData& sensors) {
+bool read_sensors_can(SensorData& sensors) {
 	u32 rx_id = 0;
 	u8 rx_data[8];
 	u8 rx_len = 0;
+	bool data_ready = false; // Bandera para avisar al main
 	
 	// Procesar todos los mensajes CAN disponibles
 	while (!XCanPs_IsRxEmpty(&Can0)) {
@@ -205,6 +206,7 @@ void read_sensors_can(SensorData& sensors) {
                     if (rx_len >= 8) {
                         memcpy(&sensors.motor_speed[2], &rx_data[0], 4);
                         memcpy(&sensors.motor_speed[3], &rx_data[4], 4);
+                        data_ready = true;
                     }
                     break;
                 default:
@@ -212,6 +214,7 @@ void read_sensors_can(SensorData& sensors) {
 			}
 		}
 	}
+	return data_ready;
 }
 
 // ============================================================================
@@ -302,12 +305,18 @@ int main() {
     xil_printf("V Control system initialized\r\n");
     xil_printf("Starting control loop @ %lu Hz...\r\n\r\n", FRECUENCIA_HZ);
 
+    double tiempo_ant = 0;
+
     // ========== LOOP PRINCIPAL ==========
     while (true) {
-        timer.waitNextTrigger();
+        // timer.waitNextTrigger();
 
         // ========== LEER SENSORES POR CAN (si hay mensajes disponibles) ==========
-        read_sensors_can(sensors);
+        // read_sensors_can(sensors);
+        bool step_ready = false;
+        while (!step_ready) {
+        	step_ready = read_sensors_can(sensors);
+        }
 
         // ========== ACTUALIZAR TIMESTAMPS ==========
         // Actualizar timestamps TC
@@ -382,29 +391,33 @@ int main() {
         SendFrame(&Can0, CAN_ID_TARGET_R, can_data, 4);
 
         // Mensaje 4: T_obj FL y FR
-        temp_f1 = (float)T_obj[0];
-        temp_f2 = (float)T_obj[1];
+        temp_f1 = (float)sensors.motor_speed[0]/parameters.gear_ratio;
+        temp_f2 = (float)sensors.motor_speed[1]/parameters.gear_ratio;
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
         SendFrame(&Can0, CAN_ID_T_OBJ_1, can_data, 8);
 
         // Mensaje 5: T_obj RL y RR
-        temp_f1 = (float)T_obj[2];
-        temp_f2 = (float)T_obj[3];
+        temp_f1 = (float)sensors.motor_speed[2]/parameters.gear_ratio;
+        temp_f2 = (float)sensors.motor_speed[3]/parameters.gear_ratio;
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
         SendFrame(&Can0, CAN_ID_T_OBJ_2, can_data, 8);
 
         // Mensaje 6: Torque TV FL y FR
-        temp_f1 = (float)torque_tv[0];
-        temp_f2 = (float)torque_tv[1];
+        temp_f1 = (float)SR[0];
+        temp_f2 = (float)SR[1];
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
         SendFrame(&Can0, CAN_ID_TORQUE_TV_1, can_data, 8);
 
+        XTime_GetTime(&current_time);
+        double tiempo = (double)(current_time - tiempo_ant) / COUNTS_PER_SECOND;
+        tiempo_ant = current_time;
+
         // Mensaje 7: Torque TV RL y RR
-        temp_f1 = (float)torque_tv[2];
-        temp_f2 = (float)torque_tv[3];
+        temp_f1 = (float)tiempo;
+        temp_f2 = (float)SR[3];
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
         SendFrame(&Can0, CAN_ID_TORQUE_TV_2, can_data, 8);

@@ -35,9 +35,13 @@ wRR0 = vx0/param_vdc.rdyn;
 %% Run simulation
 cd(fileparts(mfilename('fullpath')))
 
+% mdl = [ROOT_DIR '/ART25_full_car_old.slx'];
+mdl = 'ART25_full_car_old';
 sim_TimeStep = 0.0001; % 10 kHz
-control_TimeStep = vdc_TimeStep;
-mdl = [ROOT_DIR '/ART25_full_car_old.slx'];
+% set_param(mdl, 'SolverType', 'Fixed-step');
+% set_param(mdl, 'FixedStep', sim_TimeStep);
+set_param(mdl, 'EnablePacing', 'on');
+set_param(mdl, 'PacingRate', '1.0');
 
 tic;
 
