@@ -344,6 +344,8 @@ int main() {
         if (!pid_tv.init) {
         	pid_tv.init = 1;
         }
+        pid_tc.ts = 0.01;
+        pid_tv.ts = 0.01;
 
         // ========== PROCESAMIENTO DE CONTROL ==========
         state[0] = sensors.speed_x;

@@ -6,20 +6,20 @@ time_ref = cumsum([diff(s); 0]./vx_target);
 Tini = time_ref(1);
 Tend = time_ref(end);
 
-Tend = min(Tend, 5.0);
+% Tend = min(Tend, 5.0);
 
 
 % Reference speed 
 % v_ref = vel;           %trackdrive
-v_ref = 1+20*time_ref;  %acceleration
+% v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
-% v_ref = 1.5*vx_target-8;
+v_ref = 1.5*vx_target-8;
 % v_ref = vel;
 v_target = timeseries(v_ref,time_ref);
 
 % Reference trajectory
-% k_ref = k;             %trackdrive
-k_ref = k*0;            %acceleration
+k_ref = k;             %trackdrive
+% k_ref = k*0;            %acceleration
 % k_ref = k*0+1/9.125;   %skidpad
 k_target = timeseries(k_ref,time_ref);
 
@@ -54,4 +54,13 @@ fprintf('Tiempo simulación: %.1f s\n', tiempo);
 %% Log data
 logdata
 % log_estimation
+
+%% Gráficas 
+
+mean(out.t_tv.signals.values(:,3))
+figure;eje1 = subplot(2,1,1);plot(out.t_tv.signals.values(:,3),'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
+eje2 = subplot(2,1,2);plot(out.t_tv.time,out.t_tv.signals.values(:,3),'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
+ylim([0,0.2]);
+
+
 
