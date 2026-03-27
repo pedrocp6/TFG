@@ -12,7 +12,7 @@
 // #include "sleep.h"
 
 // Frecuencia del temporizador
-constexpr uint32_t FRECUENCIA_HZ = 100;  // 100 Hz = 10 ms por ciclo
+constexpr uint32_t FRECUENCIA_HZ = 200;  // 100 Hz = 10 ms por ciclo
 constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 
 // ========== CAN DEFINITIONS ==========
@@ -344,8 +344,8 @@ int main() {
         if (!pid_tv.init) {
         	pid_tv.init = 1;
         }
-        pid_tc.ts = 0.01;
-        pid_tv.ts = 0.01;
+        pid_tc.ts = 0.005;
+        pid_tv.ts = 0.005;
 
         // ========== PROCESAMIENTO DE CONTROL ==========
         state[0] = sensors.speed_x;
