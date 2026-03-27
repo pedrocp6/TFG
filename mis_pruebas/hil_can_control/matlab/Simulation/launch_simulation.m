@@ -58,11 +58,11 @@ logdata
 %% Gráficas 
 
 % Ponemos el 100 para evitar los primeros valores que son mentira
-tiempo = mean(out.t_tv.signals.values(100:end,3));
+tiempo = mean(out.t_sim.signals.values(10:end,1));
 fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
-figure;eje1 = subplot(2,1,1);plot(out.t_tv.signals.values(:,3),'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
-eje2 = subplot(2,1,2);plot(out.t_tv.time,out.t_tv.signals.values(:,3),'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
+figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
+eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
 ylim([0,0.08]);
 
 

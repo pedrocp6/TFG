@@ -20,13 +20,8 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 #define XCANPS_MAX_FRAME_SIZE_IN_WORDS (XCANPS_MAX_FRAME_SIZE / sizeof(u32))
 
 // ========== CAN IDs PARA TRANSMISIÓN (FPGA → Exterior) ==========
-#define CAN_ID_TORQUE_1       0x100
-#define CAN_ID_TORQUE_2       0x101
-#define CAN_ID_T_OBJ_1        0x102
-#define CAN_ID_T_OBJ_2        0x103
-#define CAN_ID_TORQUE_TV_1    0x104
-#define CAN_ID_TORQUE_TV_2    0x105
-#define CAN_ID_TARGET_R       0x106
+#define CAN_ID_TORQUE       0x100
+#define CAN_ID_TIEMPO       0x101
 
 // ========== CAN IDs PARA RECEPCIÓN (Exterior → FPGA) ==========
 #define CAN_ID_SENSOR_VEL      0x010  // speed_x, speed_y (2 floats)
@@ -259,6 +254,8 @@ float driver_request(const SensorData& sensors, const Parameters& parameters) {
 int main() {
     init_platform();
     XTime current_time;
+    XTime tiempo_ant;
+    XTime_GetTime(&tiempo_ant); // Inicialízalo con la hora actual antes de entrar al bucle
     
     xil_printf("\r\n========================================\r\n");
     xil_printf("  Vehicle Control System - CAN\r\n");
@@ -304,8 +301,6 @@ int main() {
 
     xil_printf("V Control system initialized\r\n");
     xil_printf("Starting control loop @ %lu Hz...\r\n\r\n", FRECUENCIA_HZ);
-
-    double tiempo_ant = 0;
 
     // ========== LOOP PRINCIPAL ==========
     while (true) {
@@ -371,10 +366,34 @@ int main() {
 
         // ========== ENV�O CAN - TOTALMENTE MODULAR ==========
         u8 can_data[8];  // Buffer temporal para datos CAN
-        float temp_f1, temp_f2;
+        int16_t m1, m2, m3, m4;
 
         // Mensaje 1: Torque FL y FR
-        temp_f1 = (float)torque_cmd[0];
+        m1 = (int16_t)(torque_cmd[0] * 100);
+        m2 = (int16_t)(torque_cmd[1] * 100);
+        m3 = (int16_t)(torque_cmd[2] * 100);
+        m4 = (int16_t)(torque_cmd[3] * 100);
+        can_data[0] = (u8)(m1 & 0xFF);
+        can_data[1] = (u8)((m1 >> 8) & 0xFF);
+        can_data[2] = (u8)(m2 & 0xFF);
+        can_data[3] = (u8)((m2 >> 8) & 0xFF);
+        can_data[4] = (u8)(m3 & 0xFF);
+        can_data[5] = (u8)((m3 >> 8) & 0xFF);
+        can_data[6] = (u8)(m4 & 0xFF);
+        can_data[7] = (u8)((m4 >> 8) & 0xFF);
+        SendFrame(&Can0, CAN_ID_TORQUE, can_data, 8);
+
+        XTime_GetTime(&current_time);
+		// Calculamos el tiempo transcurrido en SEGUNDOS (double)
+        double tiempo_segundos = (double)(current_time - tiempo_ant) / COUNTS_PER_SECOND;
+        tiempo_ant = current_time;
+
+        m1 = (int16_t)(tiempo_segundos * 10000.0);
+        can_data[0] = (u8)(m1 & 0xFF);
+        can_data[1] = (u8)((m1 >> 8) & 0xFF);
+        SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);
+
+/*      temp_f1 = (float)torque_cmd[0];
         temp_f2 = (float)torque_cmd[1];
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
@@ -385,10 +404,10 @@ int main() {
         temp_f2 = (float)torque_cmd[3];
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_2, can_data, 8);
+        SendFrame(&Can0, CAN_ID_TORQUE_2, can_data, 8);*/
 
         // Mensaje 3: Target R
-        temp_f1 = (float)target_r;
+        /*temp_f1 = (float)target_r;
         memcpy(&can_data[0], &temp_f1, 4);
         SendFrame(&Can0, CAN_ID_TARGET_R, can_data, 4);
 
@@ -422,7 +441,7 @@ int main() {
         temp_f2 = (float)SR[3];
         memcpy(&can_data[0], &temp_f1, 4);
         memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_TV_2, can_data, 8);
+        SendFrame(&Can0, CAN_ID_TORQUE_TV_2, can_data, 8);*/
     }
 
     cleanup_platform();
