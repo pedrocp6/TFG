@@ -13,16 +13,16 @@ Tend = time_ref(end);
 % v_ref = vel;           %trackdrive
 % v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
-v_ref = 1.5*vx_target-8;  % mi AutoX
-% v_ref = linspace(1,16,length(time_ref));    % mi skidpad
+% v_ref = 1.5*vx_target-8;  % mi AutoX
+v_ref = linspace(1,16,length(time_ref));    % mi skidpad
 
 % v_ref = vel;
 v_target = timeseries(v_ref,time_ref);
 
 % Reference trajectory
-k_ref = k;             %trackdrive
+% k_ref = k;             %trackdrive
 % k_ref = k*0;            %acceleration
-% k_ref = k*0+1/9.125;   %skidpad
+k_ref = k*0+1/9.125;   %skidpad
 k_target = timeseries(k_ref,time_ref);
 
 % Initial values
@@ -49,9 +49,9 @@ tic;
 
 out = sim(mdl,'StartTime',num2str(Tini),'StopTime',num2str(Tend));
 
-tiempo = toc;
+tiempo_sim = toc;
 
-fprintf('Tiempo simulación: %.1f s\n', tiempo);
+fprintf('Tiempo simulación: %.1f s\n', tiempo_sim);
 
 %% Log data
 logdata
@@ -59,7 +59,7 @@ logdata
 
 %% Gráficas 
 
-% Ponemos el 100 para evitar los primeros valores que son mentira
+% Ponemos el 10 para evitar los primeros valores que son mentira
 tiempo = mean(out.t_sim.signals.values(10:end,1));
 fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
