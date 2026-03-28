@@ -22,6 +22,7 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 // ========== CAN IDs PARA TRANSMISIÓN (FPGA → Exterior) ==========
 #define CAN_ID_TORQUE       0x100
 #define CAN_ID_TIEMPO       0x101
+#define CAN_ID_DEBUG_1       0x102
 
 // ========== CAN IDs PARA RECEPCIÓN (Exterior → FPGA) ==========
 #define CAN_ID_SENSOR_VEL      0x010  // speed_x, speed_y (2 floats)
@@ -393,55 +394,11 @@ int main() {
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);
 
-/*      temp_f1 = (float)torque_cmd[0];
-        temp_f2 = (float)torque_cmd[1];
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_1, can_data, 8);
+        m1 = (int16_t)(target_r*100);
+        can_data[0] = (u8)(m1 & 0xFF);
+        can_data[1] = (u8)((m1 >> 8) & 0xFF);
+        SendFrame(&Can0, CAN_ID_DEBUG_1, can_data, 2);
 
-        // Mensaje 2: Torque RL y RR
-        temp_f1 = (float)torque_cmd[2];
-        temp_f2 = (float)torque_cmd[3];
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_2, can_data, 8);*/
-
-        // Mensaje 3: Target R
-        /*temp_f1 = (float)target_r;
-        memcpy(&can_data[0], &temp_f1, 4);
-        SendFrame(&Can0, CAN_ID_TARGET_R, can_data, 4);
-
-        // Mensaje 4: T_obj FL y FR
-        temp_f1 = (float)sensors.motor_speed[0]/parameters.gear_ratio;
-        temp_f2 = (float)sensors.motor_speed[1]/parameters.gear_ratio;
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_T_OBJ_1, can_data, 8);
-
-        // Mensaje 5: T_obj RL y RR
-        temp_f1 = (float)sensors.motor_speed[2]/parameters.gear_ratio;
-        temp_f2 = (float)sensors.motor_speed[3]/parameters.gear_ratio;
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_T_OBJ_2, can_data, 8);
-
-        // Mensaje 6: Torque TV FL y FR
-        temp_f1 = (float)SR[0];
-        temp_f2 = (float)SR[1];
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_TV_1, can_data, 8);
-
-        XTime_GetTime(&current_time);
-        double tiempo = (double)(current_time - tiempo_ant) / COUNTS_PER_SECOND;
-        tiempo_ant = current_time;
-
-        // Mensaje 7: Torque TV RL y RR
-        temp_f1 = (float)tiempo;
-        temp_f2 = (float)SR[3];
-        memcpy(&can_data[0], &temp_f1, 4);
-        memcpy(&can_data[4], &temp_f2, 4);
-        SendFrame(&Can0, CAN_ID_TORQUE_TV_2, can_data, 8);*/
     }
 
     cleanup_platform();

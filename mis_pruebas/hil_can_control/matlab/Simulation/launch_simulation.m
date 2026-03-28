@@ -13,7 +13,9 @@ Tend = time_ref(end);
 % v_ref = vel;           %trackdrive
 % v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
-v_ref = 1.5*vx_target-8;
+v_ref = 1.5*vx_target-8;  % mi AutoX
+% v_ref = linspace(1,16,length(time_ref));    % mi skidpad
+
 % v_ref = vel;
 v_target = timeseries(v_ref,time_ref);
 
@@ -61,9 +63,9 @@ logdata
 tiempo = mean(out.t_sim.signals.values(10:end,1));
 fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
-figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
-eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
-ylim([0,0.08]);
+% figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
+% eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
+% ylim([0,0.08]);
 
 
 
