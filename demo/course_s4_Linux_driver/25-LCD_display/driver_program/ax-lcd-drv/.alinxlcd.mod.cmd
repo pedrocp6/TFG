@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/new_course4/3eg/25-LCD_display/driver_program/ax-lcd-drv/alinxlcd.mod := { echo  /home/alinx/Downloads/new_course4/3eg/25-LCD_display/driver_program/ax-lcd-drv/alinxlcd.o; echo; } > /home/alinx/Downloads/new_course4/3eg/25-LCD_display/driver_program/ax-lcd-drv/alinxlcd.mod

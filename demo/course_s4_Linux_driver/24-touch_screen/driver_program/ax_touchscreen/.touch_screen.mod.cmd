@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/linux_drvs/ax_touchscreen/touch_screen.mod := { echo  /home/alinx/Downloads/linux_drvs/ax_touchscreen/touch_screen.o; echo; } > /home/alinx/Downloads/linux_drvs/ax_touchscreen/touch_screen.mod

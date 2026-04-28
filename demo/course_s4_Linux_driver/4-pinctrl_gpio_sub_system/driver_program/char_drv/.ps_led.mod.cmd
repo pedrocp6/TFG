@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/new_course4/3eg/1-字符设备/driver_program/char_drv/ps_led.mod := { echo  /home/alinx/Downloads/new_course4/3eg/1-字符设备/driver_program/char_drv/ps_led.o; echo; } > /home/alinx/Downloads/new_course4/3eg/1-字符设备/driver_program/char_drv/ps_led.mod

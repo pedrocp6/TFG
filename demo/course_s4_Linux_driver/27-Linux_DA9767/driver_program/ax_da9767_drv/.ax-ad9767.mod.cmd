@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/linux_drvs/ax_dac/ax_dac_drv/ax-ad9767.mod := { echo  /home/alinx/Downloads/linux_drvs/ax_dac/ax_dac_drv/ax-ad9767.o; echo; } > /home/alinx/Downloads/linux_drvs/ax_dac/ax_dac_drv/ax-ad9767.mod

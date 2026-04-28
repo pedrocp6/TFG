@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/new_course4/3eg/23-dma_loop/driver_program/dma-loop/ax-axidma.mod := { echo  /home/alinx/Downloads/new_course4/3eg/23-dma_loop/driver_program/dma-loop/ax-axidma.o; echo; } > /home/alinx/Downloads/new_course4/3eg/23-dma_loop/driver_program/dma-loop/ax-axidma.mod

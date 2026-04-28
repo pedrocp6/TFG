@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/3EG/driver/ax-dynclk-drv/ax-dynclk-drv.mod := { echo  /home/alinx/Downloads/3EG/driver/ax-dynclk-drv/ax-dynclk-drv.o; echo; } > /home/alinx/Downloads/3EG/driver/ax-dynclk-drv/ax-dynclk-drv.mod

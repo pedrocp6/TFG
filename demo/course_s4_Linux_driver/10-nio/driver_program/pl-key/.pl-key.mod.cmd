@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/new_course4/3eg/10-nio/driver_program/pl-key/pl-key.mod := { echo  /home/alinx/Downloads/new_course4/3eg/10-nio/driver_program/pl-key/pl-key.o; echo; } > /home/alinx/Downloads/new_course4/3eg/10-nio/driver_program/pl-key/pl-key.mod

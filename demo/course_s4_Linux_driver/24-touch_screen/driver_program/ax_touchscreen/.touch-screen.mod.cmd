@@ -1,1 +1,0 @@
-cmd_/home/alinx/Downloads/new_course4/3eg/24-touch_screen/driver_program/ax_touchscreen/touch-screen.mod := { echo  /home/alinx/Downloads/new_course4/3eg/24-touch_screen/driver_program/ax_touchscreen/touch-screen.o; echo; } > /home/alinx/Downloads/new_course4/3eg/24-touch_screen/driver_program/ax_touchscreen/touch-screen.mod
