@@ -1,0 +1,66 @@
+function dx = f_dynamics(x, wheel_torque, sensors, param_vdc, pac)
+
+% Nonlinear vehicle model
+%   Input: u = [wheel_torque]
+%   State: 3x1  x
+%       x(1) = vx [m/s]
+%       x(2) = vy [m/s]
+%       x(3) = yaw_rate [rad/s]
+
+dx = zeros(3,1);
+
+%% Initial state
+vx = x(1);
+vy = x(2);
+yaw_rate = x(3);
+
+wheel_speed = sensors(1:4);
+delta_cmd = sensors(5);
+
+beta = atan(vy/(vx + eps));
+dvx = sensors(6);
+dvy = sensors(7);
+d_beta = 0*1/(1+(vy/(vx+eps))^2) * (dvx*vx - dvy*vy)/ (vx^2+eps);
+
+ax = dvx - vy * (yaw_rate + d_beta);
+ay = dvy + vx * (yaw_rate + d_beta);
+
+%% Tire calculations
+
+delta = calculate_steering(delta_cmd, param_vdc);
+
+vx_wheel = vx * ones(4,1) + yaw_rate / 2 * [-param_vdc.trackwidthF; param_vdc.trackwidthF; -param_vdc.trackwidthR; param_vdc.trackwidthR];
+vy_wheel = vy * ones(4,1) + yaw_rate * [param_vdc.lf; param_vdc.lf; -param_vdc.lr; -param_vdc.lr];
+
+vx_wheel_tire = vx_wheel .* cos(delta) + vy_wheel .* sin(delta);
+
+slip_angle = atan2(vy_wheel, vx_wheel) - delta;
+slip_ratio = param_vdc.rdyn * wheel_speed ./ (vx_wheel_tire + eps) - 1;
+
+tire_load = calculate_tire_loads(ax,ay,vx,param_vdc);
+[force_fy_tires, ~] = calculate_tire_forces(tire_load,slip_angle, slip_ratio,pac);
+
+% inertia_term = (1+slip_ratio) .* dvx/param_vdc.rdyn * param_vdc.wheel_inertia/param_vdc.gear_ratio;
+% force_fx_tires = (wheel_torque - inertia_term) .* param_vdc.gear_ratio ./ param_vdc.rdyn;
+
+force_fx = force_fx_tires .* cos(delta) - force_fy_tires .* sin(delta);
+force_fy = force_fx_tires .* sin(delta) + force_fy_tires .* cos(delta);
+
+fx_total = sum(force_fx) - 0.5*param_vdc.rho*param_vdc.CDA*vx^2;
+yaw_moment = (force_fy(1) + force_fy(2)) * param_vdc.lf ...
+            - (force_fy(3) + force_fy(4)) * param_vdc.lr ...
+            + (force_fx(2) - force_fx(1))* param_vdc.trackwidthF / 2 ...
+            + (force_fx(4) - force_fx(3))* param_vdc.trackwidthR / 2;
+
+%% ODE definition
+
+dx(1) = fx_total / param_vdc.mass + yaw_rate * vy;
+dx(2) = sum(force_fy) / param_vdc.mass - yaw_rate * vx;
+dx(3) = yaw_moment / param_vdc.Iz;
+
+% dx(4) = (wheel_torque(1) - param_vdc.rdyn*force_fx_tires(1)) / param_vdc.wheel_inertia;
+% dx(5) = (wheel_torque(2) - param_vdc.rdyn*force_fx_tires(2)) / param_vdc.wheel_inertia;
+% dx(6) = (wheel_torque(3) - param_vdc.rdyn*force_fx_tires(3)) / param_vdc.wheel_inertia;
+% dx(7) = (wheel_torque(4) - param_vdc.rdyn*force_fx_tires(4)) / param_vdc.wheel_inertia;
+
+
