@@ -41,6 +41,12 @@ slip_ratio = param_vdc.rdyn * wheel_speed ./ (vx_wheel_tire + eps) - 1;
 tire_load = calculate_tire_loads(ax,ay,vx,param_vdc);
 [force_fy_tires, ~] = calculate_tire_forces(tire_load,slip_angle, slip_ratio,pac);
 
+% tire_load = calculate_tire_loads_vdc(sensors.IMU.ax, sensors.IMU.ay, vx, param);
+%     
+% slip_angle = atan2(vy_wheel_tire, vx_wheel_tire);
+%     
+% [~, force_fx, ~, ~] = calculate_tire_forces_vdc(tire_load, slip_angle, SR_t);
+
 % inertia_term = zeros(4,1);
 inertia_term = (1+slip_ratio) .* dvx/param_vdc.rdyn * param_vdc.wheel_inertia/param_vdc.gear_ratio;
 force_fx_tires = (wheel_torque - inertia_term) .* param_vdc.gear_ratio ./ param_vdc.rdyn;
@@ -65,4 +71,4 @@ dx(3) = yaw_moment / param_vdc.Iz;
 % dx(6) = (wheel_torque(3) - param_vdc.rdyn*force_fx_tires(3)) / param_vdc.wheel_inertia;
 % dx(7) = (wheel_torque(4) - param_vdc.rdyn*force_fx_tires(4)) / param_vdc.wheel_inertia;
 
-
+end

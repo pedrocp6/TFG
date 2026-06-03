@@ -42,8 +42,10 @@ mdl = 'ART25_full_car_old';
 sim_TimeStep = 0.0001; % 10 kHz
 % set_param(mdl, 'SolverType', 'Fixed-step');
 % set_param(mdl, 'FixedStep', sim_TimeStep);
-set_param(mdl, 'EnablePacing', 'on');
-set_param(mdl, 'PacingRate', '1.0');
+
+
+% set_param(mdl, 'EnablePacing', 'on');
+% set_param(mdl, 'PacingRate', '1.0');
 
 tic;
 
@@ -60,8 +62,9 @@ logdata
 %% Gráficas 
 
 % Ponemos el 10 para evitar los primeros valores que son mentira
-tiempo = mean(out.t_sim.signals.values(10:end,1));
-fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
+
+% tiempo = mean(out.t_sim.signals.values(10:end,1));
+% fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
 % figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
 % eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
