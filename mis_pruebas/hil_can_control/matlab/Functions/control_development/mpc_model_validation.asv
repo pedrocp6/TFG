@@ -1,0 +1,85 @@
+%% Script de Validación de Jacobianas LTV-MPC en Lazo Abierto
+
+% 1. Definir un punto de operación estable (ejemplo: curva suave a 10 m/s)
+vx = 10.0;          % m/s
+vy = 0.48;           % m/s (ligera deriva)
+yaw_rate = 1.10;     % rad/s (girando a izquierda)
+
+x_k = [vx; vy; yaw_rate];
+
+% Par base de 10 Nm para mantener la velocidad
+u_k = [1.20; 1.20; 1.20; 1.20]; 
+
+% Sensores medidos (Asumimos ruedas rodando perfectas, w = v/R)
+wheel_speed = [42.2; 48.0; 41.9; 47.6];
+delta_cmd = 0.163;
+% dvx_imu = -0.53;
+% dvy_imu = 11;
+dvx_imu = -0.53;
+dvy_imu = ;
+
+sensors_in = [wheel_speed; delta_cmd; dvx_imu; dvy_imu];
+
+% Ampliación de estados para el simulador
+
+x_sim = [vx; vy; yaw_rate; wheel_speed];
+dv_vec_sim = [0;0;0];
+
+%% 2. Calcular los Jacobianos usando tu función
+[Ac, Bc] = mpc_continuous_dynamics(x,delta_cmd,u_k,param_vdc,pac,sensors_in);
+
+%% 3. TEST DE VALIDACIÓN: Aplicar una perturbación en la entrada (Delta U)
+% Vamos a pedirle +10 Nm a las ruedas exteriores (Derechas) para forzar guiñada
+delta_u = [0; 5; 0; 5]; 
+u_perturbado = u_k + delta_u;
+
+% Evaluamos la aceleración base (sin perturbar)
+dx_base = simulator_dynamics(dv_vec_sim, x_sim, delta_cmd, u_k, param, pac);
+
+% A. Aceleración REAL no lineal con el nuevo par
+dx_real_no_lineal = simulator_dynamics(dv_vec_sim, x_sim, delta_cmd, u_perturbado, param, pac);
+
+% B. Aceleración PREDICHA por nuestras matrices LTV
+dx_predicha_ltv = dx_base(1:3) + Bc * delta_u;
+
+%% 4. Comparar resultados
+disp('--- TEST DE MATRIZ Bc (Perturbación de Entradas) ---');
+disp('Derivada REAL (No Lineal):');
+disp(dx_real_no_lineal(1:3));
+
+disp('Derivada PREDICHA (LTV Bc * du):');
+disp(dx_predicha_ltv);
+
+error_porcentual = abs(dx_real_no_lineal(1:3) - dx_predicha_ltv) ./ abs(dx_real_no_lineal(1:3)) * 100;
+disp('Error Porcentual (%):');
+disp(error_porcentual);
+
+
+%% 5. TEST DE VALIDACIÓN: Aplicar una perturbación en el estado (Delta X)
+% Supongamos que la racha de viento nos sube el Yaw Rate en +0.1 rad/s
+delta_x = [0; 0; 0.1];
+x_perturbado = x_k + delta_x;
+
+x_sim_pert = [vx+delta_x(1); vy+delta_x(2); yaw_rate+delta_x(3); wheel_speed];
+
+dx_real_no_lineal_x = simulator_dynamics(dv_vec_sim, x_sim_pert, delta_cmd, u_k, param, pac);
+dx_predicha_ltv_x = dx_base(1:3) + Ac * delta_x;
+
+disp('--- TEST DE MATRIZ Ac (Perturbación de Estados) ---');
+disp('Derivada REAL (No Lineal):');
+disp(dx_real_no_lineal_x(1:3));
+
+disp('Derivada PREDICHA (LTV Ac * dx):');
+disp(dx_predicha_ltv_x);
+
+error_porcentual_x = abs(dx_real_no_lineal_x(1:3) - dx_predicha_ltv_x) ./ abs(dx_real_no_lineal_x(1:3)) * 100;
+disp('Error Porcentual (%):');
+disp(error_porcentual_x);
+
+
+
+
+
+
+
+
