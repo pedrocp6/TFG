@@ -1,133 +1,139 @@
-function u_out = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
-% MPC_CONTROLLER  LTV-MPC de torque vectoring (formulación paper Mikuláš 2018)
-%
-%   u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
-%
-%   Estados:   x = [vx; vy; r]
-%   Entradas:  u = [T_FL; T_FR; T_RL; T_RR]  (pares en cada rueda, Nm)
+function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
+% MPC_CONTROLLER  LTV-MPC de torque vectoring (Mikuláš et al. 2018, ec. 15)
 
-    %% --- Parámetros del MPC ---
-    Np  = 20;       % Horizonte de predicción
-    Ts  = 0.005;    % Tiempo de muestreo [s] — UN SOLO valor, consistente con 200Hz
+    %% Parámetros MPC
+    Np  = 20;
+    Ts  = 0.005;
     nx  = 3;
     nu  = 4;
-    Kus = 0;        % Coeficiente de subviraje (0 = neutro, paper ec. 14)
+    Kus = 0;
 
-    %% --- Estado actual ---
+    %% Estado actual
     vx = x.vx;
     vy = x.vy;
-    r  = x.r;     % yaw_rate — nombre consistente en todo el código
-
-    x_k = [vx;vy;r];
+    r  = x.r;
+    x_k = [vx; vy; r];
 
     ax        = sensors.IMU.ax;
     ay        = sensors.IMU.ay;
     delta_cmd = sensors.ext.steering;
+    delta     = calculate_steering(delta_cmd, param_vdc);
+    delta_mean = mean(delta(1:2));
 
-    delta = calculate_steering(delta_cmd, param_vdc);
-
-    %% --- 1. Cálculo de referencias (ec. 10-14 del paper) ---
-
-    % Radio de curvatura cinemático
-    delta_mean = mean([delta(1); delta(2)]);   % ángulo medio ruedas delanteras
-    Rss_ref    = param_vdc.wheelbase / (tan(delta_mean) + eps);
-
-    % Fuerza lateral máxima (Fy_max): evalúa Pacejka sin deslizamiento longitudinal
-    vx_wheel = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF; ...
-                                       param_vdc.trackwidthF; ...
-                                      -param_vdc.trackwidthR; ...
-                                       param_vdc.trackwidthR];
-    vy_wheel = vy*ones(4,1) + r * [param_vdc.lf;  param_vdc.lf; ...
-                                   -param_vdc.lr; -param_vdc.lr];
-    slip_angle = atan2(vy_wheel, vx_wheel) - delta;
-    tire_load  = calculate_tire_loads(ax, ay, vx, param_vdc);
-
-    % slip_ratio = 0 para obtener la capacidad lateral máxima (ec. 11)
-    [fy_tire, fx_tire] = calculate_tire_forces(tire_load, slip_angle, zeros(4,1), pac);
-    force_fy_body = fx_tire .* sin(delta) + fy_tire .* cos(delta);
-    Fy_max = sum(force_fy_body);   % fuerza lateral total disponible [N]
-
-    % Velocidad máxima admisible (ec. 11): v²_max = Rss * Fy_max / m
-    v2_max = Rss_ref * Fy_max / param_vdc.mass;
-    v_max  = sqrt(max(v2_max, 0));
-
-    % Velocidad longitudinal de referencia (ec. 12)
-    % Incremento por par solicitado por el piloto a lo largo del horizonte
-    v_actual   = sqrt(vx^2 + vy^2);
-    % Aceleración media estimada del par total (aproximación lineal)
-    a_driver   = fx_request / param_vdc.mass;
-    v_predicted = v_actual + a_driver * Np * Ts;
-
-    % Límite por capacidad lateral: sqrt(v²_max - vy²)
-    vy_lat_limit = sqrt(max(v2_max - vy^2, 0));
-
-    vx_ref = min(v_predicted, vy_lat_limit);
-    vx_ref = max(vx_ref, 0);   % no negativo
-
-    % Velocidad lateral de referencia (ec. 13): saturada por beta_max
-    % Se usa beta_max del fabricante; aquí aproximamos con la elipse de fricción
-    beta_max = atan2(Fy_max, abs(fx_request) + eps);
-    vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
-
-    % Referencia de yaw rate (ec. 14)
-    r_ref = vx * tan(delta_mean) / (param_vdc.wheelbase + Kus * vx^2);
-
-    % Vector de referencia para todo el horizonte
-    X_ref = repmat([vx_ref; vy_ref; r_ref], Np, 1);   % (Np*nx x 1)
-
-    %% --- 2. Linealización LTV en el punto de operación actual ---
-    [Ak, Bk] = mpc_linealization(x_k, u_prev, param_vdc, pac, sensors);
-
-    %% --- 4. Matrices de predicción ---
-    [Phi, Gamma] = build_mpc_qp_matrices(Ak, Bk, Np);
-
-    %% --- 5. Función de coste QP (ec. 15a del paper) ---
-    % min_U  (1/2) U' H U + f' U
-    % con  H = 2*(Gamma'*Q_bar*Gamma + R_bar)
-    %       f = 2*Gamma'*Q_bar*(Phi*x_k - X_ref)
-
-    Q_weight = diag([0, 0, 10]);                      % pesos estado
-    R_weight = diag([0.002, 0.002, 0.002, 0.002]);       % pesos esfuerzo control
-
-    Q_bar = kron(eye(Np), Q_weight);   % (Np*nx x Np*nx)
-    R_bar = kron(eye(Np), R_weight);   % (Np*nu x Np*nu)
-
-    H = 2 * (Gamma' * Q_bar * Gamma + R_bar);
-    f = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref);
-
-    %% --- 6. Restricciones (ec. 15d del paper) ---
-    % Límites de par por motor y por capacidad de agarre
-    T_max = param_vdc.torque_limit_positive(1) * ones(Np*nu, 1);
-    T_min = param_vdc.torque_limit_negative(1) * ones(Np*nu, 1);   % puede ser negativo (recuperación)
-
-    % Restricción de suma: sum(u) <= T_driver (par total pedido por piloto)
-    % A_eq * U <= b_eq  → una fila por paso del horizonte
-    A_sum = kron(eye(Np), ones(1, nu));       % (Np x Np*nu)
-    T_driver_total = sum(u_prev);             % par total actual como referencia
-    b_sum_upper =  T_driver_total * ones(Np, 1);
-    b_sum_lower = -T_driver_total * ones(Np, 1);
-
-    A_ineq = [ A_sum; -A_sum];
-    b_ineq = [b_sum_upper; -b_sum_lower];
-
-    %% --- 7. Warm start: inicializa con la solución desplazada del paso anterior ---
-    % Desplaza la secuencia óptima anterior un paso y rellena el último con u_prev
-    U0 = repmat(u_prev, Np, 1);
-
-    %% --- 8. Solver QP ---
-    options = optimoptions('quadprog', 'Display', 'off', ...
-                           'Algorithm', 'active-set', ...
-                           'MaxIterations', 200, ...
-                           'OptimalityTolerance', 1e-6);
-
-    U_opt = quadprog(H, f, A_ineq, b_ineq, [], [], T_min, T_max, U0, options);
-
-    if isempty(U_opt)
-        % Si el QP falla, mantén la actuación anterior (safe fallback)
-        u_out = u_prev;
-%         warning('MPC QP infactible — manteniendo u_prev');
-    else
-        u_out = U_opt(1:nu);   % Solo la primera actuación (receding horizon)
+    %% Guardia de velocidad mínima
+    % Por debajo de esta velocidad el MPC no tiene sentido físico:
+    % los neumáticos no generan fuerzas laterales relevantes y el
+    % problema está mal condicionado. Se devuelve reparto igual.
+    V_MIN_MPC = 3.0;   % [m/s] — ajusta según tu vehículo
+    if vx < V_MIN_MPC
+        u_out    = (fx_request * param_vdc.rdyn / param_vdc.gear_ratio / 4) * ones(4,1);
+        qp_error = 0;
+        vx_ref   = vx;
+        vy_ref   = vy;
+        r_ref    = r;
+        return;
     end
 
+    %% 1. Referencias
+
+    % Radio cinemático
+    if abs(delta_mean) < 1e-4
+        Rss_ref = 1e6;
+    else
+        Rss_ref = param_vdc.wheelbase / tan(delta_mean);
+    end
+
+    % Fy_max: capacidad lateral pura (slip_ratio = 0)
+    vx_w = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF;  param_vdc.trackwidthF; ...
+                                   -param_vdc.trackwidthR;  param_vdc.trackwidthR];
+    vy_w = vy*ones(4,1) + r   * [ param_vdc.lf;  param_vdc.lf; ...
+                                  -param_vdc.lr; -param_vdc.lr];
+    slip_angle_ref = atan2(vy_w, vx_w) - delta;
+    tire_load_ref  = calculate_tire_loads(ax, ay, vx, param_vdc);
+    [fy_pure, ~]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
+    Fy_max  = max(sum(fy_pure .* cos(delta)), 100);
+    Fz_total = sum(tire_load_ref);
+
+    % v2_max (ec. 11)
+    v2_max = max(abs(Rss_ref) * Fy_max / param_vdc.mass, 0);
+
+    % vx_ref (ec. 12)
+    V_now       = sqrt(vx^2 + vy^2);
+    a_driver    = fx_request / param_vdc.mass;
+    V_predicted = V_now + a_driver * Np * Ts;
+    V_max_lat   = sqrt(v2_max);
+    V_target    = min(max(V_predicted, 0), V_max_lat);
+    vx_ref      = sqrt(max(V_target^2 - vy^2, 0));
+
+    % vy_ref (ec. 13)
+    % beta_max basado en la relación Fy_max/Fz — independiente de fx_request
+    beta_max = atan(0.85 * Fy_max / (Fz_total + eps));
+    vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
+
+    % r_ref (ec. 14) — para círculo de radio fijo: vx/R
+    r_ref = vx * tan(delta_mean) / (param_vdc.wheelbase + Kus * vx^2);
+
+    X_ref = repmat([vx_ref; vy_ref; r_ref], Np, 1);
+
+    %% 2. Linealización + discretización
+    [Ak, Bk] = mpc_linealization(x_k, u_prev, param_vdc, pac, sensors);
+
+    %% 3. Matrices de predicción
+    [Phi, Gamma] = build_mpc_qp_matrices(Ak, Bk, Np);
+
+    %% 4. Pesos
+    % Q: pesos relativos entre estados
+    % R: aumentar R reduce chattering pero hace el control menos agresivo
+    Q_weight = diag([100, 10, 10]);
+    R_weight = diag([0.5, 0.5, 0.5, 0.5]);   % subido de 0.002 → más suavizado
+
+    Q_bar = kron(eye(Np), Q_weight);
+    R_bar = kron(eye(Np), R_weight);
+
+    %% 5. Coste QP
+    H     = 2 * (Gamma' * Q_bar * Gamma + R_bar);
+    H     = (H + H') / 2;
+    f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref);
+
+    %% 6. Restricciones
+
+    % 6a. Límites por motor
+    T_max_vec = param_vdc.torque_limit_positive(1) * ones(Np*nu, 1);
+    T_min_vec = param_vdc.torque_limit_negative(1) * ones(Np*nu, 1);
+
+    % 6b. Restricción de suma de par
+    % T_driver: par total en ruedas que pide el piloto
+    T_driver = fx_request * param_vdc.rdyn / param_vdc.gear_ratio;
+
+    % Tolerancia adaptativa: más holgada a baja velocidad donde el
+    % condicionamiento es peor, más estricta a alta velocidad
+    vx_norm  = min(vx / 10.0, 1.0);          % 0 en parado, 1 a 10m/s
+    tol_frac = 0.3 - 0.2 * vx_norm;          % 30% a baja v, 10% a alta v
+    tol_sum  = tol_frac * abs(T_driver) + 2; % mínimo 2Nm siempre
+
+    A_sum  = kron(eye(Np), ones(1, nu));
+    A_ineq = [ A_sum; -A_sum];
+    b_ineq = [(T_driver + tol_sum) * ones(Np, 1); ...
+              (-T_driver + tol_sum) * ones(Np, 1)];
+
+    %% 7. Warm start
+    U0 = repmat(u_prev, Np, 1);
+
+    %% 8. Solver
+    opts = optimoptions('quadprog', ...
+        'Display',             'off', ...
+        'Algorithm',           'active-set', ...
+        'MaxIterations',       300, ...
+        'OptimalityTolerance', 1e-6, ...
+        'ConstraintTolerance', 1e-6);
+
+    U_opt = quadprog(H, f_vec, A_ineq, b_ineq, [], [], T_min_vec, T_max_vec, U0, opts);
+
+    if isempty(U_opt)
+        u_out    = u_prev;
+        qp_error = 1;
+    else
+        u_out    = U_opt(1:nu);
+        qp_error = 0;
+    end
 end
