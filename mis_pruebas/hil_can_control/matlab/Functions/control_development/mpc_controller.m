@@ -1,4 +1,4 @@
-function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
+function u_out = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
 % MPC_CONTROLLER  LTV-MPC de torque vectoring (formulación paper Mikuláš 2018)
 %
 %   u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
@@ -55,8 +55,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
     % Incremento por par solicitado por el piloto a lo largo del horizonte
     v_actual   = sqrt(vx^2 + vy^2);
     % Aceleración media estimada del par total (aproximación lineal)
-    Fx_driver  = sum(u_prev) * param_vdc.gear_ratio / param_vdc.rdyn;
-    a_driver   = Fx_driver / param_vdc.mass;
+    a_driver   = fx_request / param_vdc.mass;
     v_predicted = v_actual + a_driver * Np * Ts;
 
     % Límite por capacidad lateral: sqrt(v²_max - vy²)
@@ -67,7 +66,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
 
     % Velocidad lateral de referencia (ec. 13): saturada por beta_max
     % Se usa beta_max del fabricante; aquí aproximamos con la elipse de fricción
-    beta_max = atan2(Fy_max, abs(Fx_driver) + eps);
+    beta_max = atan2(Fy_max, abs(fx_request) + eps);
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
     % Referencia de yaw rate (ec. 14)
@@ -77,7 +76,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
     X_ref = repmat([vx_ref; vy_ref; r_ref], Np, 1);   % (Np*nx x 1)
 
     %% --- 2. Linealización LTV en el punto de operación actual ---
-    [~, ~, ~, Ak, Bk, ~, ~] = mpc_dynamics_validation(x_k, u_prev, param_vdc, pac, sensors);
+    [Ak, Bk] = mpc_linealization(x_k, u_prev, param_vdc, pac, sensors);
 
     %% --- 4. Matrices de predicción ---
     [Phi, Gamma] = build_mpc_qp_matrices(Ak, Bk, Np);
@@ -87,7 +86,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
     % con  H = 2*(Gamma'*Q_bar*Gamma + R_bar)
     %       f = 2*Gamma'*Q_bar*(Phi*x_k - X_ref)
 
-    Q_weight = diag([100, 10, 10]);                      % pesos estado
+    Q_weight = diag([0, 0, 10]);                      % pesos estado
     R_weight = diag([0.002, 0.002, 0.002, 0.002]);       % pesos esfuerzo control
 
     Q_bar = kron(eye(Np), Q_weight);   % (Np*nx x Np*nx)
@@ -99,7 +98,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
     %% --- 6. Restricciones (ec. 15d del paper) ---
     % Límites de par por motor y por capacidad de agarre
     T_max = param_vdc.torque_limit_positive(1) * ones(Np*nu, 1);
-    T_min = param_vdc.torque_limit_positive(1) * ones(Np*nu, 1);   % puede ser negativo (recuperación)
+    T_min = param_vdc.torque_limit_negative(1) * ones(Np*nu, 1);   % puede ser negativo (recuperación)
 
     % Restricción de suma: sum(u) <= T_driver (par total pedido por piloto)
     % A_eq * U <= b_eq  → una fila por paso del horizonte
@@ -117,6 +116,7 @@ function u_out = mpc_controller(x, u_prev, sensors, param_vdc, pac)
 
     %% --- 8. Solver QP ---
     options = optimoptions('quadprog', 'Display', 'off', ...
+                           'Algorithm', 'active-set', ...
                            'MaxIterations', 200, ...
                            'OptimalityTolerance', 1e-6);
 
