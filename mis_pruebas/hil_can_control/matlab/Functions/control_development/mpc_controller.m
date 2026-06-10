@@ -93,7 +93,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
     Q_weight = diag([0, 10, 100]);
-    R_weight = diag([0.002, 0.002, 0.002, 0.002]);
+    R_weight = diag([0.02, 0.02, 0.02, 0.02]);
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);

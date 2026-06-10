@@ -2,28 +2,28 @@
 FSGDV_track
 ggv_simulator_loops
 
-time_ref = cumsum([diff(s); 0]./vx_target);
-% time_ref = linspace(1,10,1000);
+% time_ref = cumsum([diff(s); 0]./vx_target);
+time_ref = linspace(1,10,1000);
 Tini = time_ref(1);
 Tend = time_ref(end);
 
 % Tend = min(Tend, 5.0);
 
-    
+
 % Reference speed 
-v_ref = 0.8*vel;           %trackdrive
+% v_ref = 0.9*vel;           %trackdrive
 % v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
 % v_ref = 1.5*vx_target-8;  % mi AutoX
-% v_ref = linspace(8,16,length(time_ref));    % mi skidpad
+v_ref = linspace(8,13,length(time_ref));    % mi skidpad
 
 % v_ref = vel;
 v_target = timeseries(v_ref,time_ref);
 
 % Reference trajectory
-k_ref = k;             %trackdrive
+% k_ref = k;             %trackdrive
 % k_ref = k*0;            %acceleration
-% k_ref = k*0+1/9.125;   %skidpad
+k_ref = k*0+1/9.125;   %skidpad
 k_target = timeseries(k_ref,time_ref);
 
 % Initial values
