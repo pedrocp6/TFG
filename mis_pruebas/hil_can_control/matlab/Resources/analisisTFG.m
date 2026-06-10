@@ -19,7 +19,7 @@ ylim([0,0.08]);
 % ay_limit = interp1(time,ay,time_limit);
 % time_skidpad = 2*pi*9.625/v_limit;
 
-v_ini = 6.0;
+v_ini = 10.0;
 indices_validos = find(v > v_ini);
 v_analisis = v(indices_validos);
 k_analisis = k_calc(indices_validos);

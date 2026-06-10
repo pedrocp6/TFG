@@ -80,7 +80,7 @@ param_vdc.gss_active = true;
 param_vdc.vx_threshold = 1;
 
 % Torque vectoring
-param_vdc.TV_active = false;
+param_vdc.TV_active = true;
 param_vdc.TV_use_fz = true;
 param_vdc.TV_Kp = 1000;
 param_vdc.TV_Ki = 0;

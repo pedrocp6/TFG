@@ -138,6 +138,16 @@ struct Parameters {
     double freq_heartbeat;       // Hz
 
     float fz_params[13];
+
+
+    /* --- MPC parameters --- */
+    double mpc_nx;
+    double mpc_nu;
+    double mpc_np;
+    double mpc_delta;
+    double mpc_ts;
+
+    
 };
 
 /* Initialize from YAML */

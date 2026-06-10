@@ -173,6 +173,13 @@ bool parameters_init(Parameters *params) {
         params->fz_params[11] = 0.5 * (params->h_cdp - params->h_cdg_sm);
         params->fz_params[12] = 0.5 * params->mass * GRAVITY * params->lf / params->wheelbase;
 
+        // Initialize MPC parameters
+        params->mpc_nx = 3;
+        params->mpc_nu = 4;
+        params->mpc_np = 20;
+        params->mpc_delta = 0.00001;
+        params->mpc_ts = 0.005;
+
         return true;
 
     // }

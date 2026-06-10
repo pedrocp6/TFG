@@ -62,12 +62,18 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     a_driver    = fx_request / param_vdc.mass;
     V_predicted = V_now + a_driver * Np * Ts;
     V_max_lat   = sqrt(v2_max);
-    V_target    = min(max(V_predicted, 0), V_max_lat);
-    vx_ref      = sqrt(max(V_target^2 - vy^2, 0));
+    
+    vx_ref = min(V_predicted, sqrt(abs(v2_max-vy)));
+
+%     V_target    = min(max(V_predicted, 0), V_max_lat);
+%     vx_ref      = sqrt(max(V_target^2 - vy^2, 0));
 
     % vy_ref (ec. 13)
     % beta_max basado en la relación Fy_max/Fz — independiente de fx_request
-    beta_max = atan(0.85 * Fy_max / (Fz_total + eps));
+%     beta_max = atan(0.85 * Fy_max / (Fz_total + eps));
+%     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
+
+    beta_max = atan2(Fy_max, abs(fx_request) + eps);
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
     % r_ref (ec. 14) — para círculo de radio fijo: vx/R
@@ -84,8 +90,8 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     %% 4. Pesos
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
-    Q_weight = diag([100, 10, 10]);
-    R_weight = diag([0.5, 0.5, 0.5, 0.5]);   % subido de 0.002 → más suavizado
+    Q_weight = diag([0, 10, 1000]);
+    R_weight = diag([0.5, 0.5, 0.5, 0.5]);
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);
