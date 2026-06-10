@@ -44,15 +44,14 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     end
 
     % Fy_max: capacidad lateral pura (slip_ratio = 0)
-    vx_w = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF;  param_vdc.trackwidthF; ...
+    vx_wheel = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF;  param_vdc.trackwidthF; ...
                                    -param_vdc.trackwidthR;  param_vdc.trackwidthR];
-    vy_w = vy*ones(4,1) + r   * [ param_vdc.lf;  param_vdc.lf; ...
+    vy_wheel = vy*ones(4,1) + r   * [ param_vdc.lf;  param_vdc.lf; ...
                                   -param_vdc.lr; -param_vdc.lr];
-    slip_angle_ref = atan2(vy_w, vx_w) - delta;
+    slip_angle_ref = atan2(vy_wheel, vx_wheel) - delta;
     tire_load_ref  = calculate_tire_loads(ax, ay, vx, param_vdc);
-    [fy_pure, ~]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
-%     Fy_max  = max(sum(fy_pure .* cos(delta)), 100);
-    Fy_max  = sum(fy_pure);         % No hay que multiplicar por delta
+    [fy_pure, fx_pure]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
+    Fy_max  = max(sum(fy_pure .* cos(delta)) + sum(fx_pure .* sin(delta)), 100);
     Fz_total = sum(tire_load_ref);
 
     % v2_max (ec. 11)
@@ -64,7 +63,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     V_predicted = V_now + a_driver * Np * Ts;
     V_max_lat   = sqrt(v2_max);
     
-    vx_ref = min(V_predicted, sqrt(abs(v2_max-vy)));
+    vx_ref = min(V_predicted, sqrt(abs(v2_max-vy^2)));
 
 %     V_target    = min(max(V_predicted, 0), V_max_lat);
 %     vx_ref      = sqrt(max(V_target^2 - vy^2, 0));
@@ -76,6 +75,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
 
     % Probar quitando ese abs
     beta_max = atan2(Fy_max, abs(fx_request) + eps);
+%     beta_max = atan2(Fy_max, fx_request + sign(fx_request)*eps);
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
     % r_ref (ec. 14) — para círculo de radio fijo: vx/R
@@ -92,8 +92,8 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     %% 4. Pesos
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
-    Q_weight = diag([0, 10, 1000]);
-    R_weight = diag([0.5, 0.5, 0.5, 0.5]);
+    Q_weight = diag([0, 10, 100]);
+    R_weight = diag([0.002, 0.002, 0.002, 0.002]);
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);
@@ -111,13 +111,29 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
 
     % 6b. Restricción de suma de par
     % T_driver: par total en ruedas que pide el piloto
-    T_driver = fx_request * param_vdc.rdyn / param_vdc.gear_ratio;
+    cos_steer = cos(delta_cmd);
+    sin_steer = sin(delta_cmd);
+
+    wr = [sensors.encoder.wFL;
+          sensors.encoder.wFR;
+          sensors.encoder.wRL;
+          sensors.encoder.wRR];
+    
+    vx_wheel_tire = [vx_wheel(1) * cos_steer + vy_wheel(1) * sin_steer;
+                     vx_wheel(2) * cos_steer + vy_wheel(2) * sin_steer;
+                     vx_wheel(3);
+                     vx_wheel(4)];
+
+    SR = param_vdc.rdyn * wr ./ (vx_wheel_tire + eps) - 1;
+
+    inertia_term = (ones(4,1) + SR) .* sensors.IMU.ax / param_vdc.rdyn * param_vdc.wheel_inertia / param_vdc.gear_ratio;
+    T_driver = fx_request * param_vdc.rdyn / param_vdc.gear_ratio + sum(inertia_term);
 
     % Tolerancia adaptativa: más holgada a baja velocidad donde el
     % condicionamiento es peor, más estricta a alta velocidad
     vx_norm  = min(vx / 10.0, 1.0);          % 0 en parado, 1 a 10m/s
-    tol_frac = 0.3 - 0.2 * vx_norm;          % 30% a baja v, 10% a alta v
-    tol_sum  = tol_frac * abs(T_driver) + 2; % mínimo 2Nm siempre
+    tol_frac = 0.15 - 0.05 * vx_norm;          % 30% a baja v, 10% a alta v
+    tol_sum  = tol_frac * abs(T_driver) + 0.5; % mínimo 2Nm siempre
 
     A_sum  = kron(eye(Np), ones(1, nu));
     A_ineq = [ A_sum; -A_sum];

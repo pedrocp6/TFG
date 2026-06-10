@@ -11,7 +11,7 @@ Tend = time_ref(end);
 
     
 % Reference speed 
-v_ref = vel;           %trackdrive
+v_ref = 0.8*vel;           %trackdrive
 % v_ref = 1+20*time_ref;  %acceleration
 % v_ref = 10 +0*time_ref;   %skidpad
 % v_ref = 1.5*vx_target-8;  % mi AutoX
