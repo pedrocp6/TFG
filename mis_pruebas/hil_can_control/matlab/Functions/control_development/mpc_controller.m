@@ -51,7 +51,8 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     slip_angle_ref = atan2(vy_w, vx_w) - delta;
     tire_load_ref  = calculate_tire_loads(ax, ay, vx, param_vdc);
     [fy_pure, ~]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
-    Fy_max  = max(sum(fy_pure .* cos(delta)), 100);
+%     Fy_max  = max(sum(fy_pure .* cos(delta)), 100);
+    Fy_max  = sum(fy_pure);         % No hay que multiplicar por delta
     Fz_total = sum(tire_load_ref);
 
     % v2_max (ec. 11)
@@ -73,6 +74,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
 %     beta_max = atan(0.85 * Fy_max / (Fz_total + eps));
 %     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
+    % Probar quitando ese abs
     beta_max = atan2(Fy_max, abs(fx_request) + eps);
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 

@@ -146,6 +146,11 @@ struct Parameters {
     double mpc_np;
     double mpc_delta;
     double mpc_ts;
+    double mpc_vmin;
+    double mpc_Q1;
+    double mpc_Q2;
+    double mpc_Q3;
+    double mpc_R;
 
     
 };

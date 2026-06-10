@@ -179,6 +179,11 @@ bool parameters_init(Parameters *params) {
         params->mpc_np = 20;
         params->mpc_delta = 0.00001;
         params->mpc_ts = 0.005;
+        params->mpc_vmin = 3;
+        params->mpc_Q1 = 0.0;
+        params->mpc_Q2 = 10.0;
+        params->mpc_Q3 = 100.0;
+        params->mpc_R  = 0.5;
 
         return true;
 

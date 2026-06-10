@@ -12,11 +12,11 @@
 #include "structures.hpp"
 #include "parameters.hpp"
 
-class TorqueVectoring {
+class mpcTorqueVectoring {
 public:
     double torque_vectoring_mpc(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
-    double build_qp_matrices(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
-    double model_linealization(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
+    void build_qp_matrices(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
+    void model_linealization(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
     double model_dynamics(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
 
 private:
