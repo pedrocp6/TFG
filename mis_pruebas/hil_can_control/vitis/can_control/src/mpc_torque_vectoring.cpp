@@ -359,14 +359,16 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         return 0.0; // No se realiza torque vectoring dinámico
     } else{
 
-        // Se crean las referencias del controlador MPC
+        // ****** Cálculo de las referencias ****** //
+
+        // vx_ref
         double delta = sensors->steering_angle;
 
         double Rss_ref = 0.0;
         if (std::abs(delta) < 0.0001) {
             Rss_ref = 1000000.0;
         } else {
-            Rss_ref = vx / std::tan(delta);
+            Rss_ref = parameters->wheelbase / std::tan(delta);
         }
 
         // Fy_max: capacidad lateral pura (slip_ratio = 0)
@@ -398,21 +400,19 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
 
         const double Fy_max = std::max(fy_pure_sum, 100.0);
 
-        // v2_max (ec. 11)
         double v2_max = std::max(std::abs(Rss_ref) * Fy_max / parameters->mass, 0.0);
 
-        // vx_ref (ec. 12)
         double V_now = std::sqrt(vx * vx + vy * vy);
         double a_driver = fx_request / parameters->mass;
         double V_predicted = V_now + a_driver * Np * parameters->mpc_ts;
-        double vx_ref = std::min(V_predicted, std::sqrt(std::abs(v2_max - vy)));
+        double vx_ref = std::min(V_predicted, std::sqrt(std::abs(v2_max - vy*vy)));
 
-        // vy_ref (ec. 13)
+        // vy_ref
         double beta_max = std::atan2(Fy_max, std::abs(fx_request) + AuxFunctions::eps);
         const double sign_vy = (vy >= 0.0) ? 1.0 : -1.0;
         double vy_ref = sign_vy * std::min(std::abs(vy), std::tan(beta_max) * vx);
 
-        // r_ref (ec. 14)
+        // r_ref
         double r_ref = vx * std::tan(delta) / (parameters->wheelbase + 0.0 * vx * vx);
 
         double X_ref[Np][3];
@@ -422,8 +422,12 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             X_ref[i][2] = r_ref;
         }
 
+        // ****** Linealización del modelo en torno al punto de operación ****** //
         this->model_linealization(parameters, sensors, tire, fx_request, state, torque_cmd);
+
+        // ****** Construcción de las matrices del QP ****** //
         this->build_qp_matrices(parameters, sensors, tire, fx_request, state, torque_cmd);
+
 
         // Q_weight y R_weight
         const double Q_weight[3][3] = {
@@ -457,8 +461,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // Resolver el QP
         // ------------------------------------------------------------------
         // Aplanar matrices 2D a Arrays 1D (Row-Major) para qpOASES
-        // (NOTA: Es mucho más eficiente si calculas H y A directamente en 1D 
-        // en tus funciones previas, pero este bucle de copiado sirve para empezar)
+        // (NOTA: calcular H y A directamente en 1D)
         // ------------------------------------------------------------------
 
         double inertia_term[4];
@@ -528,8 +531,8 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         }
 
 
-        // H     = 2 * (Gamma' * Q_bar * Gamma + R_bar);
-        // H     = (H + H') / 2;
+        // H     = 2 * (Gamma' * Q_bar * Gamma + R_bar); // 
+        // H     = (H + H') / 2;                         // 
 
         auto transpose = [](const std::vector<std::vector<double>>& M) {
             std::vector<std::vector<double>> Mt(M[0].size(), std::vector<double>(M.size(), 0.0));
@@ -556,9 +559,12 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             return C;
         };
 
-        const auto H_GammaT = transpose(Gamma);
-        const auto H_GammaT_Q = mat_mul(H_GammaT, Q_bar);
-        const auto H_GammaT_Q_Gamma = mat_mul(H_GammaT_Q, Gamma);
+        // Gamma' * Q_bar se usa dos veces
+        const auto GammaT = transpose(Gamma);
+        const auto GammaT_Q = mat_mul(GammaT, Q_bar);
+
+
+        const auto H_GammaT_Q_Gamma = mat_mul(GammaT_Q, Gamma);
 
         for (int i = 0; i < parameters->mpc_nV; ++i) {
             for (int j = 0; j < parameters->mpc_nV; ++j) {
@@ -575,7 +581,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         }
 
 
-        // f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref);
+        // f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref); // 
 
         std::vector<std::vector<double>> Phi_xk(Np, std::vector<double>(nx, 0.0));
         for (int i = 0; i < Np; ++i) {
@@ -600,9 +606,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             error_col[i][0] = error_vec[i];
         }
 
-        const auto f_GammaT = transpose(Gamma);
-        const auto f_GammaT_Q = mat_mul(f_GammaT, Q_bar);
-        const auto f_GammaT_Q_error = mat_mul(f_GammaT_Q, error_col);
+        const auto f_GammaT_Q_error = mat_mul(GammaT_Q, error_col);
 
         std::fill(f_vec.begin(), f_vec.end(), 0.0);
         for (int i = 0; i < parameters->mpc_nV; ++i) {
