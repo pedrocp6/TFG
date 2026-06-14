@@ -455,14 +455,6 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // (NOTA: Es mucho más eficiente si calculas H y A directamente en 1D 
         // en tus funciones previas, pero este bucle de copiado sirve para empezar)
         // ------------------------------------------------------------------
-        for (int i = 0; i < parameters->mpc_nV; ++i) {
-            g_flat[i] = 0.0;    // f_vec[i]
-            lb_flat[i] = static_cast<real_t>(parameters->torque_min);
-            ub_flat[i] = static_cast<real_t>(parameters->torque_max);
-            for (int j = 0; j < parameters->mpc_nV; ++j) {
-                H_flat[i * parameters->mpc_nV + j] = H[i][j]; // Mapeo 2D a 1D
-            }
-        }
 
         double inertia_term[4];
         float SR[4];
@@ -527,6 +519,62 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
                 int columna = (i * parameters->mpc_nu) + j;
                 
                 A_flat[fila * parameters->mpc_nV + columna] = 1.0;
+            }
+        }
+
+
+        // H     = 2 * (Gamma' * Q_bar * Gamma + R_bar);
+        // H     = (H + H') / 2;
+        
+        auto transpose = [](const std::vector<std::vector<double>>& M) {
+            std::vector<std::vector<double>> Mt(M[0].size(), std::vector<double>(M.size(), 0.0));
+            for (size_t i = 0; i < M.size(); ++i) {
+                for (size_t j = 0; j < M[0].size(); ++j) {
+                    Mt[j][i] = M[i][j];
+                }
+            }
+            return Mt;
+        };
+
+        auto mat_mul = [](const std::vector<std::vector<double>>& A,
+                          const std::vector<std::vector<double>>& B) {
+            std::vector<std::vector<double>> C(A.size(), std::vector<double>(B[0].size(), 0.0));
+            for (size_t i = 0; i < A.size(); ++i) {
+                for (size_t j = 0; j < B[0].size(); ++j) {
+                    double sum = 0.0;
+                    for (size_t k = 0; k < B.size(); ++k) {
+                        sum += A[i][k] * B[k][j];
+                    }
+                    C[i][j] = sum;
+                }
+            }
+            return C;
+        };
+
+        const auto GammaT = transpose(Gamma);
+        const auto GammaT_Q = mat_mul(GammaT, Q_bar);
+        const auto GammaT_Q_Gamma = mat_mul(GammaT_Q, Gamma);
+
+        for (int i = 0; i < parameters->mpc_nV; ++i) {
+            for (int j = 0; j < parameters->mpc_nV; ++j) {
+                H[i][j] = 2.0 * (GammaT_Q_Gamma[i][j] + R_bar[i][j]);
+            }
+        }
+
+        for (int i = 0; i < parameters->mpc_nV; ++i) {
+            for (int j = i + 1; j < parameters->mpc_nV; ++j) {
+                const double avg = 0.5 * (H[i][j] + H[j][i]);
+                H[i][j] = avg;
+                H[j][i] = avg;
+            }
+        }
+
+        for (int i = 0; i < parameters->mpc_nV; ++i) {
+            g_flat[i] = 0.0;    // f_vec[i]
+            lb_flat[i] = static_cast<real_t>(parameters->torque_min);
+            ub_flat[i] = static_cast<real_t>(parameters->torque_max);
+            for (int j = 0; j < parameters->mpc_nV; ++j) {
+                H_flat[i * parameters->mpc_nV + j] = H[i][j]; // Mapeo 2D a 1D
             }
         }
 
