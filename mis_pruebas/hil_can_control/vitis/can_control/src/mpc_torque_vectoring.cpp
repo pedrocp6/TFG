@@ -341,6 +341,11 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
     double vy = state[1];
     double yaw_rate = state[2];
 
+    double x_k[3];
+    x_k[0] = vx;
+    x_k[1] = vy;
+    x_k[2] = yaw_rate;
+
     if (vx < parameters->mpc_vmin) {
         // Si la velocidad es menor que el umbral, se asigna una distribución de torque estática
         for (int i = 0; i < 4; ++i) {
@@ -525,7 +530,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
 
         // H     = 2 * (Gamma' * Q_bar * Gamma + R_bar);
         // H     = (H + H') / 2;
-        
+
         auto transpose = [](const std::vector<std::vector<double>>& M) {
             std::vector<std::vector<double>> Mt(M[0].size(), std::vector<double>(M.size(), 0.0));
             for (size_t i = 0; i < M.size(); ++i) {
@@ -551,13 +556,13 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             return C;
         };
 
-        const auto GammaT = transpose(Gamma);
-        const auto GammaT_Q = mat_mul(GammaT, Q_bar);
-        const auto GammaT_Q_Gamma = mat_mul(GammaT_Q, Gamma);
+        const auto H_GammaT = transpose(Gamma);
+        const auto H_GammaT_Q = mat_mul(H_GammaT, Q_bar);
+        const auto H_GammaT_Q_Gamma = mat_mul(H_GammaT_Q, Gamma);
 
         for (int i = 0; i < parameters->mpc_nV; ++i) {
             for (int j = 0; j < parameters->mpc_nV; ++j) {
-                H[i][j] = 2.0 * (GammaT_Q_Gamma[i][j] + R_bar[i][j]);
+                H[i][j] = 2.0 * (H_GammaT_Q_Gamma[i][j] + R_bar[i][j]);
             }
         }
 
@@ -569,14 +574,54 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             }
         }
 
+
+        // f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref);
+
+        std::vector<std::vector<double>> Phi_xk(Np, std::vector<double>(nx, 0.0));
+        for (int i = 0; i < Np; ++i) {
+            for (int r = 0; r < nx; ++r) {
+                double sum = 0.0;
+                for (int c = 0; c < nx; ++c) {
+                    sum += this->Phi[i * nx + r][c] * x_k[c];
+                }
+                Phi_xk[i][r] = sum;
+            }
+        }
+
+        std::vector<double> error_vec(Np * nx, 0.0);
+        for (int i = 0; i < Np; ++i) {
+            for (int r = 0; r < nx; ++r) {
+                error_vec[i * nx + r] = Phi_xk[i][r] - X_ref[i][r];
+            }
+        }
+
+        std::vector<std::vector<double>> error_col(Np * nx, std::vector<double>(1, 0.0));
+        for (int i = 0; i < Np * nx; ++i) {
+            error_col[i][0] = error_vec[i];
+        }
+
+        const auto f_GammaT = transpose(Gamma);
+        const auto f_GammaT_Q = mat_mul(f_GammaT, Q_bar);
+        const auto f_GammaT_Q_error = mat_mul(f_GammaT_Q, error_col);
+
+        std::fill(f_vec.begin(), f_vec.end(), 0.0);
         for (int i = 0; i < parameters->mpc_nV; ++i) {
-            g_flat[i] = 0.0;    // f_vec[i]
+            f_vec[i] = 2.0 * f_GammaT_Q_error[i][0];
+        }
+
+
+        for (int i = 0; i < parameters->mpc_nV; ++i) {
+            g_flat[i] = f_vec[i];    // f_vec[i]
             lb_flat[i] = static_cast<real_t>(parameters->torque_min);
             ub_flat[i] = static_cast<real_t>(parameters->torque_max);
             for (int j = 0; j < parameters->mpc_nV; ++j) {
                 H_flat[i * parameters->mpc_nV + j] = H[i][j]; // Mapeo 2D a 1D
             }
         }
+
+
+
+
 
         // ------------------------------------------------------------------
         // Llamada a qpOASES
@@ -587,11 +632,11 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         returnValue status;
 
         if (first_step) {
-            status = mpc_solver.init(H_flat.data(), g_flat.data(), A_flat.data(),
+            status = mpc_solver.init(H_flat.data(), f_vec.data(), A_flat.data(),
                                      lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
             first_step = false;
         } else {
-            status = mpc_solver.hotstart(H_flat.data(), g_flat.data(), A_flat.data(),
+            status = mpc_solver.hotstart(H_flat.data(), f_vec.data(), A_flat.data(),
                                         lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
         }
 
