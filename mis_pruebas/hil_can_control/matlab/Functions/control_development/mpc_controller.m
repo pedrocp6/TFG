@@ -1,6 +1,9 @@
 function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
 % MPC_CONTROLLER  LTV-MPC de torque vectoring (Mikuláš et al. 2018, ec. 15)
 
+    coder.extrinsic('qpOASES_options');
+    coder.extrinsic('qpOASES');
+
     %% Parámetros MPC
     Np  = 20;
     Ts  = 0.005;
@@ -93,7 +96,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
     Q_weight = diag([0, 10, 100]);
-    R_weight = diag([0.02, 0.02, 0.02, 0.02]);
+    R_weight = diag([0.002, 0.002, 0.002, 0.002]);
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);
@@ -135,29 +138,62 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     tol_frac = 0.15 - 0.05 * vx_norm;          % 30% a baja v, 10% a alta v
     tol_sum  = tol_frac * abs(T_driver) + 0.5; % mínimo 2Nm siempre
 
-    A_sum  = kron(eye(Np), ones(1, nu));
-    A_ineq = [ A_sum; -A_sum];
-    b_ineq = [(T_driver + tol_sum) * ones(Np, 1); ...
-              (-T_driver + tol_sum) * ones(Np, 1)];
-
     %% 7. Warm start
     U0 = repmat(u_prev, Np, 1);
 
-    %% 8. Solver
-    opts = optimoptions('quadprog', ...
-        'Display',             'off', ...
-        'Algorithm',           'active-set', ...
-        'MaxIterations',       300, ...
-        'OptimalityTolerance', 1e-6, ...
-        'ConstraintTolerance', 1e-6);
+    %% 8. QP propio de matlab
+%     A_sum  = kron(eye(Np), ones(1, nu));
+%     A_ineq = [ A_sum; -A_sum];
+%     b_ineq = [(T_driver + tol_sum) * ones(Np, 1); ...
+%               (-T_driver + tol_sum) * ones(Np, 1)];
 
-    U_opt = quadprog(H, f_vec, A_ineq, b_ineq, [], [], T_min_vec, T_max_vec, U0, opts);
 
-    if isempty(U_opt)
+%     opts = optimoptions('quadprog', ...
+%         'Display',             'off', ...
+%         'Algorithm',           'active-set', ...
+%         'MaxIterations',       300, ...
+%         'OptimalityTolerance', 1e-6, ...
+%         'ConstraintTolerance', 1e-6);
+% 
+%     U_opt = quadprog(H, f_vec, A_ineq, b_ineq, [], [], T_min_vec, T_max_vec, U0, opts);
+% 
+%     if isempty(U_opt)
+%         u_out    = u_prev;
+%         qp_error = 1;
+%     else
+%         u_out    = U_opt(1:nu);
+%         qp_error = 0;
+%     end
+
+    %% qpOASES
+    A = kron(eye(Np), ones(1, nu));
+    ub = T_max_vec;
+    lb = T_min_vec;
+    lbA = (T_driver - tol_sum) * ones(Np, 1);
+    ubA = (T_driver + tol_sum) * ones(Np, 1);
+
+    % Opciones de qpOASES
+    options = qpOASES_options('MPC'); % Carga un preset optimizado para MPC
+%     options.printLevel = 0;           % Silenciar salida por consola
+
+    U_opt = zeros(Np*nu, 1);
+    fval  = 0;
+    exitflag = 0;
+    iter  = 0;
+    
+    % Llamada directa a qpOASES 
+    % Sintaxis: [x, fval, exitflag, iter, lambda] = qpOASES(H, g, A, lb, ub, lbA, ubA, options)
+    [U_opt, ~, exitflag, ~] = qpOASES(H, f_vec, A, lb, ub, lbA, ubA, options);
+
+    % Comprobación de estado (exitflag == 0 significa SUCCESS)
+    if exitflag ~= 0 || isempty(U_opt)
         u_out    = u_prev;
         qp_error = 1;
     else
         u_out    = U_opt(1:nu);
         qp_error = 0;
     end
+
+
+
 end

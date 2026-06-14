@@ -9,6 +9,7 @@ addpath(fullfile(ROOT_DIR, 'Simulation'));
 addpath(fullfile(ROOT_DIR, 'Resources'));
 addpath(genpath(fullfile(ROOT_DIR, 'Models')));
 addpath(genpath(fullfile(ROOT_DIR, 'Functions')));
+addpath("C:\TFG_Vivado\qpOASES\interfaces\matlab");
 
 addpath(fullfile(ROOT_DIR,'..','DIN-DataAcquisition')); % Load path to data acquisition functions
 % addpath(genpath(fullfile(ROOT_DIR,'..','can_logs'))); % CHANGE PATH TO YOUR LOG DIRECTORY
