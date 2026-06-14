@@ -10,9 +10,12 @@
 #define MPC_TORQUE_VECTORING_HPP
 
 #include <vector>
+#include <qpOASES.hpp>
 
 #include "structures.hpp"
 #include "parameters.hpp"
+
+USING_NAMESPACE_QPOASES
 
 class MpcTorqueVectoring {
 public:
@@ -41,6 +44,19 @@ private:
     std::vector<std::vector<double>> H_T;
     std::vector<std::vector<double>> E;
     std::vector<double> f_vec;
+
+    // Variables de librería qpOASES
+    SQProblem mpc_solver;
+    bool first_step;
+    std::vector<real_t> H_flat;
+    std::vector<real_t> g_flat;
+    std::vector<real_t> A_flat;
+    std::vector<real_t> lb_flat;
+    std::vector<real_t> ub_flat;
+    std::vector<real_t> lbA_flat;
+    std::vector<real_t> ubA_flat;
+
+    
 };
 
 #endif // MPC_TORQUE_VECTORING_HPP

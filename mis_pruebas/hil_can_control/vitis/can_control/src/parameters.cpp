@@ -184,6 +184,9 @@ bool parameters_init(Parameters *params) {
         params->mpc_Q2 = 10.0;
         params->mpc_Q3 = 100.0;
         params->mpc_R  = 0.5;
+        params->mpc_nV = params->mpc_np*params->mpc_nu;
+        params->mpc_nc = params->mpc_np;
+        params->mpc_max_iter = 200;
 
         params->tv_mpc_active = 1;
 

@@ -14,11 +14,30 @@
 #include <cmath>
 #include <vector>
 
-namespace {
-constexpr int kWheelCount = 4;
-}
 
 void MpcTorqueVectoring::mpc_init(Parameters *parameters){
+
+    H_flat.assign(static_cast<size_t>(parameters->mpc_nV) * static_cast<size_t>(parameters->mpc_nV), 0.0);
+    g_flat.assign(static_cast<size_t>(parameters->mpc_nV), 0.0);
+    A_flat.assign(static_cast<size_t>(parameters->mpc_nc) * static_cast<size_t>(parameters->mpc_nV), 0.0);
+    lb_flat.assign(static_cast<size_t>(parameters->mpc_nV), 0.0);
+    ub_flat.assign(static_cast<size_t>(parameters->mpc_nV), 0.0);
+    lbA_flat.assign(static_cast<size_t>(parameters->mpc_nc), 0.0);
+    ubA_flat.assign(static_cast<size_t>(parameters->mpc_nc), 0.0);
+
+    // 1. Instanciar el solver con: (Número de Variables, Número de Restricciones)
+    mpc_solver = SQProblem(parameters->mpc_nV, parameters->mpc_nc);
+
+    // 2. Cargar opciones para Control Predictivo (MPC)
+    Options options;
+    options.setToMPC(); // Ajusta tolerancias internamente para MPC rápido
+    options.printLevel = PL_NONE; // Apagar los 'printf' para que no sature el puerto serie en la FPGA
+    mpc_solver.setOptions(options);
+
+    // 3. Indicar que el próximo ciclo será el primero
+    first_step = true;
+    
+    
     // Initialization of mpc tv matrix
 
     Ac.assign(parameters->mpc_nx, std::vector<double>(parameters->mpc_nx, 0.0));
@@ -49,21 +68,21 @@ std::vector<double> MpcTorqueVectoring::model_dynamics(const double *state, Para
     const double yaw_rate = state[2];
     const double delta = sensors->steering_angle;
 
-    float vx_wheel[kWheelCount];
+    float vx_wheel[4];
 	vx_wheel[0] = vx + yaw_rate * 0.5f * (-parameters->tf);  // FL
 	vx_wheel[1] = vx + yaw_rate * 0.5f * parameters->tf;      // FR
 	vx_wheel[2] = vx + yaw_rate * 0.5f * (-parameters->tr);   // RL
 	vx_wheel[3] = vx + yaw_rate * 0.5f * parameters->tr;      // RR
 
-	float vy_wheel[kWheelCount];
+	float vy_wheel[4];
 	vy_wheel[0] = vy + yaw_rate * parameters->lf;     // FL
 	vy_wheel[1] = vy + yaw_rate * parameters->lf;     // FR
 	vy_wheel[2] = vy + yaw_rate * (-parameters->lr);  // RL
 	vy_wheel[3] = vy + yaw_rate * (-parameters->lr);  // RR
 
 
-	float vx_wheel_tire[kWheelCount];
-	float vy_wheel_tire[kWheelCount];
+	float vx_wheel_tire[4];
+	float vy_wheel_tire[4];
 	const float cos_steer = static_cast<float>(std::cos(delta));
 	const float sin_steer = static_cast<float>(std::sin(delta));
 
@@ -77,19 +96,19 @@ std::vector<double> MpcTorqueVectoring::model_dynamics(const double *state, Para
 	vy_wheel_tire[2] = vy_wheel[2];                                        // RL
 	vy_wheel_tire[3] = vy_wheel[3];                                        // RR
 
-	float wr[kWheelCount];
+	float wr[4];
 	wr[0] = sensors->motor_speed[0]/parameters->gear_ratio;
 	wr[1] = sensors->motor_speed[1]/parameters->gear_ratio;
 	wr[2] = sensors->motor_speed[2]/parameters->gear_ratio;
 	wr[3] = sensors->motor_speed[3]/parameters->gear_ratio;
 
-    float slip_angle[kWheelCount];
+    float slip_angle[4];
     slip_angle[0] = atan2f(vy_wheel_tire[0], vx_wheel_tire[0]); // FL
 	slip_angle[1] = atan2f(vy_wheel_tire[1], vx_wheel_tire[1]); // FR
 	slip_angle[2] = atan2f(vy_wheel_tire[2], vx_wheel_tire[2]); // RL
 	slip_angle[3] = atan2f(vy_wheel_tire[3], vx_wheel_tire[3]); // RR
 
-    float SR[kWheelCount];
+    float SR[4];
 
     if (vx < 1.0f) {
 		for (int i = 0; i < 4; i++) {
@@ -431,7 +450,117 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         }
 
         // Resolver el QP
+        // ------------------------------------------------------------------
+        // Aplanar matrices 2D a Arrays 1D (Row-Major) para qpOASES
+        // (NOTA: Es mucho más eficiente si calculas H y A directamente en 1D 
+        // en tus funciones previas, pero este bucle de copiado sirve para empezar)
+        // ------------------------------------------------------------------
+        for (int i = 0; i < parameters->mpc_nV; ++i) {
+            g_flat[i] = 0.0;    // f_vec[i]
+            lb_flat[i] = static_cast<real_t>(parameters->torque_min);
+            ub_flat[i] = static_cast<real_t>(parameters->torque_max);
+            for (int j = 0; j < parameters->mpc_nV; ++j) {
+                H_flat[i * parameters->mpc_nV + j] = H[i][j]; // Mapeo 2D a 1D
+            }
+        }
 
+        double inertia_term[4];
+        float SR[4];
+        float wr[4];
+	    wr[0] = sensors->motor_speed[0]/parameters->gear_ratio;
+	    wr[1] = sensors->motor_speed[1]/parameters->gear_ratio;
+	    wr[2] = sensors->motor_speed[2]/parameters->gear_ratio;
+	    wr[3] = sensors->motor_speed[3]/parameters->gear_ratio;
+
+        float vx_wheel[4];
+        vx_wheel[0] = vx + yaw_rate * 0.5f * (-parameters->tf);  // FL
+        vx_wheel[1] = vx + yaw_rate * 0.5f * parameters->tf;      // FR
+        vx_wheel[2] = vx + yaw_rate * 0.5f * (-parameters->tr);   // RL
+        vx_wheel[3] = vx + yaw_rate * 0.5f * parameters->tr;      // RR
+
+        float vy_wheel[4];
+        vy_wheel[0] = vy + yaw_rate * parameters->lf;     // FL
+        vy_wheel[1] = vy + yaw_rate * parameters->lf;     // FR
+        vy_wheel[2] = vy + yaw_rate * (-parameters->lr);  // RL
+        vy_wheel[3] = vy + yaw_rate * (-parameters->lr);  // RR
+
+
+        float vx_wheel_tire[4];
+        const float cos_steer = static_cast<float>(std::cos(delta));
+        const float sin_steer = static_cast<float>(std::sin(delta));
+
+        vx_wheel_tire[0] = vx_wheel[0] * cos_steer + vy_wheel[0] * sin_steer;  // FL
+        vx_wheel_tire[1] = vx_wheel[1] * cos_steer + vy_wheel[1] * sin_steer;  // FR
+        vx_wheel_tire[2] = vx_wheel[2];                                         // RL
+        vx_wheel_tire[3] = vx_wheel[3];                                         // RR
+
+        for (int i = 0; i < 4; i++) {
+            SR[i] = parameters->rdyn * wr[i] / (vx_wheel_tire[i] + AuxFunctions::eps) - 1.0f;
+            // SR[i] = 0.1*tc_state.SR_prev[i] + 0.9*SR[i];
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+		inertia_term[i] = (1.0f + SR[i]) * sensors->acceleration_x / parameters->rdyn *
+			parameters->wheel_inertia / parameters->gear_ratio;
+	    }
+
+        double T_driver = parameters->rdyn * fx_request / parameters->gear_ratio + inertia_term[0] + inertia_term[1] + inertia_term[2] + inertia_term[3];
+
+        double tol_frac = 0.15 - 0.05 * std::min(vx / 10.0, 1.0); // 15% a baja v, 5% a alta v
+        double tol_sum = tol_frac * std::abs(T_driver) + 0.5; // mínimo 0.5Nm siempre
+
+
+        for (int i = 0; i < parameters->mpc_nc; ++i) {
+            lbA_flat[i] = T_driver - tol_sum;
+            ubA_flat[i] = T_driver + tol_sum;
+        }
+        
+        for (int i = 0; i < parameters->mpc_nc * parameters->mpc_nV; ++i) {
+            A_flat[i] = 0.0;
+        }
+        
+        for (int i = 0; i < parameters->mpc_np; ++i) {
+            for (int j = 0; j < parameters->mpc_nu; ++j) {
+                // Indice = (Fila_actual * Total_columnas) + Columna_actual
+                int fila = i;
+                int columna = (i * parameters->mpc_nu) + j;
+                
+                A_flat[fila * parameters->mpc_nV + columna] = 1.0;
+            }
+        }
+
+        // ------------------------------------------------------------------
+        // Llamada a qpOASES
+        // ------------------------------------------------------------------
+        
+        // nWSR = Número máximo de iteraciones (Working Set Recalculations)
+        int_t nWSR = parameters->mpc_max_iter;
+        returnValue status;
+
+        if (first_step) {
+            status = mpc_solver.init(H_flat.data(), g_flat.data(), A_flat.data(),
+                                     lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
+            first_step = false;
+        } else {
+            status = mpc_solver.hotstart(H_flat.data(), g_flat.data(), A_flat.data(),
+                                        lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
+        }
+
+        // ------------------------------------------------------------------
+        // Extraer Resultados
+        // ------------------------------------------------------------------
+        if (status == SUCCESSFUL_RETURN) {
+            std::vector<real_t> U_opt(static_cast<size_t>(parameters->mpc_nV), 0.0);
+            mpc_solver.getPrimalSolution(U_opt.data());
+
+            for (int i = 0; i < 4 && i < parameters->mpc_nV; ++i) {
+                torque_cmd[i] = static_cast<double>(U_opt[i]);
+            }
+        } else {
+            // Si el solver no converge (Infeasible), mantenemos el par anterior
+            // (En C++ asumo que torque_cmd no se toca o puedes forzar cero por seguridad)
+        }
         return 0.0;
 
     }

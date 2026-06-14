@@ -176,7 +176,7 @@ void Calculate_Tire_Forces(Tire *tire, const float slip_angle[4], const float sl
 
     //Combined slip
     for (int i = 0; i < 4; i++) {
-        alpha_star[i] = (1 - B_X) * expf(-G_X1 * expf(-powf(fabsf(A * slip_ratio[i]), C)) * slip_angle[i] * slip_angle[i]) + B_X;
+        alpha_star[i] = (1 - B_X) * expf(-G_X1 * expf(-powf(fabsf(PAC_A * slip_ratio[i]), PAC_C)) * slip_angle[i] * slip_angle[i]) + B_X;
         lambda_star[i] = B_Y + (1 - B_Y) * expf(-G_Y1 * slip_ratio[i] * slip_ratio[i]);
 
         double aux_fy = E_LAT * (B_LAT * slip_angle[i] - atanf(B_LAT * slip_angle[i]));

@@ -23,8 +23,8 @@
 
 #define G_X1               25000
 #define B_X                0.2367
-#define A                  93733
-#define C                  0.1689
+#define PAC_A              93733
+#define PAC_C              0.1689
 #define G_Y1               38.21
 #define B_Y                0.5365
 
@@ -151,6 +151,9 @@ struct Parameters {
     double mpc_Q2;
     double mpc_Q3;
     double mpc_R;
+    double mpc_nV;
+    double mpc_nc;
+    int mpc_max_iter;
 
     double tv_mpc_active;
 
