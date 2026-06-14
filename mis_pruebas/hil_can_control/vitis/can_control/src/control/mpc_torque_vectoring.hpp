@@ -9,22 +9,38 @@
 #ifndef MPC_TORQUE_VECTORING_HPP
 #define MPC_TORQUE_VECTORING_HPP
 
+#include <vector>
+
 #include "structures.hpp"
 #include "parameters.hpp"
 
-class mpcTorqueVectoring {
+class MpcTorqueVectoring {
 public:
-    double torque_vectoring_mpc(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
-    void build_qp_matrices(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
-    void model_linealization(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
-    double model_dynamics(Parameters *params, SensorData *sensors, Tire *tire, double fx_request, double *state, double *torque_cmd);
+    void mpc_init(Parameters *params);
+    double torque_vectoring_mpc(Parameters *params, SensorData *sensors, Tire *tire,
+                                double fx_request, double *state, double *torque_cmd);
+    void build_qp_matrices(Parameters *params, SensorData *sensors, Tire *tire,
+                           double fx_request, double *state, double *torque_cmd);
+    void model_linealization(Parameters *params, SensorData *sensors, Tire *tire,
+                             double fx_request, double *state, double *torque_cmd);
+    std::vector<double> model_dynamics(const double *state, Parameters *params,
+                                       SensorData *sensors, Tire *tire,
+                                       double fx_request, const double *torque_cmd);
 
 private:
     double target_r;
-    double Phi[parameters->mpc_nx*parameters->mpc_np][parameters->mpc_nx]; // Matriz de estado para MPC
-    double Gamma[parameters->mpc_nx*parameters->mpc_np][parameters->mpc_nu*parameters->mpc_np]; // Matriz de control para MPC
-    double Ad[parameters->mpc_nx][parameters->mpc_nx]; // Matriz de estado discretizada
-    double Bd[parameters->mpc_nx][parameters->mpc_nu]; // Matriz de control discretizada
+    std::vector<std::vector<double>> Ac;
+    std::vector<std::vector<double>> Bc;
+    std::vector<std::vector<double>> Ad;
+    std::vector<std::vector<double>> Bd;
+    std::vector<std::vector<double>> Phi;
+    std::vector<std::vector<double>> Gamma;
+    std::vector<std::vector<double>> Q_bar;
+    std::vector<std::vector<double>> R_bar;
+    std::vector<std::vector<double>> H;
+    std::vector<std::vector<double>> H_T;
+    std::vector<std::vector<double>> E;
+    std::vector<double> f_vec;
 };
 
 #endif // MPC_TORQUE_VECTORING_HPP

@@ -280,6 +280,7 @@ int main() {
     torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
     traction_control.traction_control_init(&pid_tc, &parameters);
     power_limitation.power_limitation_init();
+    mpcTorqueVectoring.mpc_init(&parameters);
 
     // Inicialización de sensores (valores por defecto)
     sensors.speed_x = 0.0;
@@ -349,9 +350,16 @@ int main() {
         state[2] = sensors.angular_z;
         
         double fx_request = driver_request(sensors, parameters);
-        double target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors, 
+        double target_r;
+        
+        if (parameters.tv_mpc_active) {
+            target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
+        } else {
+            target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 
                                                                      fx_request, state, torque_cmd);
+        }
+        
         
         double torque_tv[4];
         torque_tv[0] = torque_cmd[0];

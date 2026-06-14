@@ -185,6 +185,8 @@ bool parameters_init(Parameters *params) {
         params->mpc_Q3 = 100.0;
         params->mpc_R  = 0.5;
 
+        params->tv_mpc_active = 1;
+
         return true;
 
     // }

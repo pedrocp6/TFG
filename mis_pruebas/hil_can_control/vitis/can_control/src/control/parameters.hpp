@@ -152,6 +152,8 @@ struct Parameters {
     double mpc_Q3;
     double mpc_R;
 
+    double tv_mpc_active;
+
     
 };
 
