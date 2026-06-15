@@ -18,7 +18,7 @@
 #include "traction_control.hpp"
 #include "power_limitation.hpp"
 #include "aux_functions.hpp"
-#include "mpc_torque_vectoring.hpp"
+// #include "mpc_torque_vectoring.hpp"
 #include <cerrno>
 #include <iostream>
 #include <thread>
@@ -94,7 +94,7 @@ Tire tire;
 TorqueVectoring torque_vectoring;
 TractionControl traction_control;
 PowerLimitation power_limitation;
-MpcTorqueVectoring mpcTorqueVectoring;
+// MpcTorqueVectoring mpcTorqueVectoring;
 // CAN functions
 /**
  * @brief Sends a CAN frame through the specified socket

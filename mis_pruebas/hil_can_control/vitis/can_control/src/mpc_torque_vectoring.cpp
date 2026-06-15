@@ -654,9 +654,11 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             for (int i = 0; i < 4 && i < parameters->mpc_nV; ++i) {
                 torque_cmd[i] = static_cast<double>(U_opt[i]);
             }
+            return 1.0;
         } else {
             // Si el solver no converge (Infeasible), mantenemos el par anterior
             // (En C++ asumo que torque_cmd no se toca o puedes forzar cero por seguridad)
+        	return 0.0;
         }
         return 0.0;
 

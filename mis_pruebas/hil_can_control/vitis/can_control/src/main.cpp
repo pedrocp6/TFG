@@ -22,7 +22,7 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 // ========== CAN IDs PARA TRANSMISIÓN (FPGA → Exterior) ==========
 #define CAN_ID_TORQUE       0x100
 #define CAN_ID_TIEMPO       0x101
-#define CAN_ID_DEBUG_1       0x102
+#define CAN_ID_DEBUG_1      0x102
 
 // ========== CAN IDs PARA RECEPCIÓN (Exterior → FPGA) ==========
 #define CAN_ID_SENSOR_VEL      0x010  // speed_x, speed_y (2 floats)
@@ -159,58 +159,83 @@ static int RecvFrame(XCanPs *InstancePtr, u32 *RxId, u8 *RxData, u8 *RxLen)
 
 // ========== FUNCIÓN PARA LEER SENSORES POR CAN ==========
 bool read_sensors_can(SensorData& sensors) {
-	u32 rx_id = 0;
-	u8 rx_data[8];
-	u8 rx_len = 0;
-	bool data_ready = false; // Bandera para avisar al main
-	
-	// Procesar todos los mensajes CAN disponibles
-	while (!XCanPs_IsRxEmpty(&Can0)) {
-		if (RecvFrame(&Can0, &rx_id, rx_data, &rx_len) == XST_SUCCESS) {
-			switch(rx_id) {
+    u32 rx_id = 0;
+    u8 rx_data[8];
+    u8 rx_len = 0;
+
+    // Flags individuales por mensaje
+    static bool got_vel    = false;
+    static bool got_yaw    = false;
+    static bool got_pedals = false;
+    static bool got_accel  = false;
+    static bool got_mot1   = false;
+    static bool got_mot2   = false;
+
+    while (!XCanPs_IsRxEmpty(&Can0)) {
+        if (RecvFrame(&Can0, &rx_id, rx_data, &rx_len) == XST_SUCCESS) {
+            switch(rx_id) {
                 case CAN_ID_SENSOR_VEL:
                     if (rx_len >= 8) {
-                        memcpy(&sensors.speed_x, &rx_data[0], 4);
-                        memcpy(&sensors.speed_y, &rx_data[4], 4);
+                        memcpy(&sensors.speed_x,  &rx_data[0], 4);
+                        memcpy(&sensors.speed_y,  &rx_data[4], 4);
+                        got_vel = true;
                     }
                     break;
                 case CAN_ID_SENSOR_YAW:
                     if (rx_len >= 8) {
-                        memcpy(&sensors.angular_z, &rx_data[0], 4);
+                        memcpy(&sensors.angular_z,      &rx_data[0], 4);
                         memcpy(&sensors.steering_angle, &rx_data[4], 4);
+                        got_yaw = true;
                     }
                     break;
                 case CAN_ID_SENSOR_PEDALS:
                     if (rx_len >= 8) {
                         memcpy(&sensors.load_cell, &rx_data[0], 4);
-                        memcpy(&sensors.apps, &rx_data[4], 4);
+                        memcpy(&sensors.apps,      &rx_data[4], 4);
+                        got_pedals = true;
                     }
                     break;
                 case CAN_ID_SENSOR_ACCEL:
                     if (rx_len >= 8) {
                         memcpy(&sensors.acceleration_y, &rx_data[0], 4);
                         memcpy(&sensors.acceleration_x, &rx_data[4], 4);
+                        got_accel = true;
                     }
                     break;
                 case CAN_ID_SENSOR_MOT_1:
                     if (rx_len >= 8) {
                         memcpy(&sensors.motor_speed[0], &rx_data[0], 4);
                         memcpy(&sensors.motor_speed[1], &rx_data[4], 4);
+                        got_mot1 = true;
                     }
                     break;
                 case CAN_ID_SENSOR_MOT_2:
                     if (rx_len >= 8) {
                         memcpy(&sensors.motor_speed[2], &rx_data[0], 4);
                         memcpy(&sensors.motor_speed[3], &rx_data[4], 4);
-                        data_ready = true;
+                        got_mot2 = true;
                     }
                     break;
                 default:
                     break;
-			}
-		}
-	}
-	return data_ready;
+            }
+
+            // Solo retornar true cuando han llegado TODOS los mensajes
+                bool all_ready = got_vel && got_yaw && got_pedals &&
+                                 got_accel && got_mot1 && got_mot2;
+
+                if (all_ready) {
+                    // Resetear flags para el siguiente ciclo
+                    got_vel = got_yaw = got_pedals = false;
+                    got_accel = got_mot1 = got_mot2 = false;
+                }
+
+                return true;
+
+        }
+    }
+
+    return false;
 }
 
 // ============================================================================
@@ -280,7 +305,7 @@ int main() {
     torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
     traction_control.traction_control_init(&pid_tc, &parameters);
     power_limitation.power_limitation_init();
-    mpcTorqueVectoring.mpc_init(&parameters);
+    // mpcTorqueVectoring.mpc_init(&parameters);
 
     // Inicialización de sensores (valores por defecto)
     sensors.speed_x = 0.0;
@@ -353,7 +378,7 @@ int main() {
         double target_r;
         
         if (parameters.tv_mpc_active) {
-            target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
+            // target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
         } else {
             target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 
@@ -397,7 +422,7 @@ int main() {
         double tiempo_segundos = (double)(current_time - tiempo_ant) / COUNTS_PER_SECOND;
         tiempo_ant = current_time;
 
-        m1 = (int16_t)(tiempo_segundos * 10000.0);
+        m1 = (int16_t)(tiempo_segundos * 100000.0);
         can_data[0] = (u8)(m1 & 0xFF);
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);

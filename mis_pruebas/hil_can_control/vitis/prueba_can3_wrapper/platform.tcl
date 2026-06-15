@@ -22,3 +22,6 @@ domain active {standalone_psu_cortexa53_0}
 platform generate -quick
 platform generate
 platform generate
+platform active {prueba_can3_wrapper}
+platform generate -domains 
+platform generate -domains 
