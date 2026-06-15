@@ -49,6 +49,7 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 				TC[i] = parameters->torque_max;
 			if (TC[i] < parameters->torque_min)
 				TC[i] = parameters->torque_min;
+			torque_cmd[i] = TC[i];
 		}
 		return;
 	}

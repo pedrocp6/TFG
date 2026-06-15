@@ -395,7 +395,7 @@ int main() {
         traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, 
                                                    &pid_tc, &tire, torque_cmd, TC, SR, 
                                                    &dv, T_obj, slip_angle);
-        
+
         double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
 
         // ========== ENV�O CAN - TOTALMENTE MODULAR ==========
@@ -427,9 +427,10 @@ int main() {
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);
 
-        m1 = (int16_t)(target_r*100);
+        m1 = (int32_t)(target_r * 1000.0);
         can_data[0] = (u8)(m1 & 0xFF);
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
+        // memcpy(can_data, &sensors.steering_angle, 4);
         SendFrame(&Can0, CAN_ID_DEBUG_1, can_data, 2);
 
     }

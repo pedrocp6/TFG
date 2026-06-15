@@ -9,6 +9,8 @@
 
 #include "control/torque_vectoring.hpp"
 
+#include "control/aux_functions.hpp"
+
 void TorqueVectoring::torque_vectoring_init(Parameters *params, Pid *pid_tv){
 	pid_tv->kp = params->tv_kp;
 	pid_tv->ki = params->tv_ki;
@@ -56,6 +58,7 @@ double TorqueVectoring::torque_vectoring_update(Parameters *params, SensorData *
 				}
 			}
         } else {				// Dynamic allocation for 4WD
+			AuxFunctions::Calculate_Tire_Loads(sensors, params, state, tire);
 			double fz_front_mean = 0.5 * (tire->tire_load[0] + tire->tire_load[1]);
 			double fz_rear_mean = 0.5 * (tire->tire_load[2] + tire->tire_load[3]);
 
