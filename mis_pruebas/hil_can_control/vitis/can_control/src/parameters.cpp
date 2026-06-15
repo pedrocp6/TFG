@@ -91,9 +91,9 @@ bool parameters_init(Parameters *params) {
         params->vx_threshold = 1.0; //cfg["estimation"]["vx_threshold"].as<double>();
 
         /* -------------------- TV controller -------------------- */
-        params->tv_kp  = 400; //cfg["tv"]["kp"].as<double>(); 400
+        params->tv_kp  = 800; //cfg["tv"]["kp"].as<double>(); 400
         params->tv_ki  = 0; //cfg["tv"]["ki"].as<double>(); 0
-        params->tv_kd  = 0; //cfg["tv"]["kd"].as<double>(); 15
+        params->tv_kd  = 50; //cfg["tv"]["kd"].as<double>(); 15
         params->tv_n   = 20; //cfg["tv"]["n"].as<double>(); 20
         params->max_mz = 800; //cfg["tv"]["max_mz"].as<double>(); 800
 

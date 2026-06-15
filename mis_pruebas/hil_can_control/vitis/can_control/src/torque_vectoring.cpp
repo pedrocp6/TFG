@@ -112,7 +112,8 @@ double TorqueVectoring::target_generation(Parameters *params, SensorData *sensor
 	//PID
     pid_tv->integral += error * pid_tv->ts;
     double deriv = (error - pid_tv->err_prev) / pid_tv->ts;
-	pid_tv->deriv_filt = (pid_tv->n_filt * deriv + pid_tv->deriv_filt) / (1 + pid_tv->n_filt * pid_tv->ts);
+	// double deriv = (error - pid_tv->err_prev);
+	pid_tv->deriv_filt = (pid_tv->n_filt * deriv * pid_tv->ts + pid_tv->deriv_filt) / (1 + pid_tv->n_filt * pid_tv->ts);
 	double mz_request = pid_tv->kp * error + pid_tv->ki * pid_tv->integral + pid_tv->kd * pid_tv->deriv_filt;
 	pid_tv->err_prev = error;
 	
