@@ -62,6 +62,8 @@ private:
     std::vector<double> error_vec;
     std::vector<std::vector<double>> error_col;
 
+    std::vector<std::vector<std::vector<double>>> Ad_powers;
+
     // Variables de librería qpOASES
     SQProblem mpc_solver;
     bool first_step;

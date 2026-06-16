@@ -91,7 +91,7 @@ set_param(mdl, 'FixedStep', num2str(sim_TimeStep));
 
 % Como siempre
 set_param(mdl, 'EnablePacing', 'on');
-set_param(mdl, 'PacingRate', '0.2');        % 0.5
+set_param(mdl, 'PacingRate', '0.15');        % 0.5
 
 % set_param(mdl, 'SystemTargetFile', 'grt.tlc');
 set_param(mdl, 'SimulationMode', 'normal');

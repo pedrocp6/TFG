@@ -394,12 +394,12 @@ int main() {
         
         double fx_request = driver_request(sensors, parameters);
         double target_r;
-        double mpc_sol;
+        double mpc_sol= 3.0;
         
         if (parameters.tv_mpc_active) {
-            target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
+            mpc_sol = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
         } else {
-            mpc_sol = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
+            target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 
                                                                      fx_request, state, torque_cmd);
         }
