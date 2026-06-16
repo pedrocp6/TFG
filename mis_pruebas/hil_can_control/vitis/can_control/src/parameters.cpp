@@ -188,7 +188,7 @@ bool parameters_init(Parameters *params) {
         params->mpc_nc = params->mpc_np;
         params->mpc_max_iter = 200;
 
-        params->tv_mpc_active = 0;
+        params->tv_mpc_active = false;
 
         return true;
 

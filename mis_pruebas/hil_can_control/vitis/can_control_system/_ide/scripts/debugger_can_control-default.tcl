@@ -22,12 +22,11 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil_can_control/vitis/prueba_can3_wrapper/export/prueba_can3_wrapper/sw/prueba_can3_wrapper/boot/fsbl.elf
-set bp_19_37_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_18_36_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_19_37_fsbl_bp
+bpremove $bp_18_36_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/TFG_Vivado/mis_pruebas/hil_can_control/vitis/can_control/Debug/can_control.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A53*#0"}
-con
+bpadd -addr &main

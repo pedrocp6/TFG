@@ -240,12 +240,13 @@ bool read_sensors_can(SensorData& sensors) {
 
             // Solo retornar true cuando han llegado TODOS los mensajes
                 bool all_ready = got_vel && got_yaw && got_pedals &&
-                                 got_accel && got_mot1 && got_mot2;
+                                 got_accel && got_mot1 && got_mot2 && got_br1 && got_br2;
 
                 if (all_ready) {
                     // Resetear flags para el siguiente ciclo
                     got_vel = got_yaw = got_pedals = false;
                     got_accel = got_mot1 = got_mot2 = false;
+                    got_br1 = got_br2 = false;
                 }
 
                 return true;
@@ -300,10 +301,6 @@ int main() {
     XTime current_time;
     XTime tiempo_ant;
     XTime_GetTime(&tiempo_ant); // Inicialízalo con la hora actual antes de entrar al bucle
-    
-    xil_printf("\r\n========================================\r\n");
-    xil_printf("  Vehicle Control System - CAN\r\n");
-    xil_printf("========================================\r\n");
 
     Timer timer(CUENTAS_POR_LOOP);
     bool ini = false;
@@ -323,7 +320,7 @@ int main() {
     torque_vectoring.torque_vectoring_init(&parameters, &pid_tv);
     traction_control.traction_control_init(&pid_tc, &parameters);
     power_limitation.power_limitation_init();
-    // mpcTorqueVectoring.mpc_init(&parameters);
+    mpcTorqueVectoring.mpc_init(&parameters);
 
     // Inicialización de sensores (valores por defecto)
     sensors.speed_x = 0.0;
@@ -360,27 +357,27 @@ int main() {
 
         // ========== ACTUALIZAR TIMESTAMPS ==========
         // Actualizar timestamps TC
-        if(pid_tc.last_timestamp == 0) {
+        /*if(pid_tc.last_timestamp == 0) {
         	XTime_GetTime(&current_time);
             pid_tc.last_timestamp = current_time;
         } else {
         	XTime_GetTime(&current_time);
             pid_tc.ts = (double)(current_time - pid_tc.last_timestamp) / COUNTS_PER_SECOND;
             pid_tc.last_timestamp = current_time;
-        }
+        }*/
         if (!pid_tc.init) {
         	pid_tc.init = 1;
         }
 
         // Actualizar timestamps TV
-        if(pid_tv.last_timestamp == 0) {
+        /*if(pid_tv.last_timestamp == 0) {
         	XTime_GetTime(&current_time);
         	pid_tv.last_timestamp = current_time;
         } else {
         	XTime_GetTime(&current_time);
         	pid_tv.ts = (double)(current_time - pid_tv.last_timestamp) / COUNTS_PER_SECOND;
         	pid_tv.last_timestamp = current_time;
-        }
+        }*/
         if (!pid_tv.init) {
         	pid_tv.init = 1;
         }
@@ -396,7 +393,7 @@ int main() {
         double target_r;
         
         if (parameters.tv_mpc_active) {
-            // target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
+            target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
         } else {
             target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 

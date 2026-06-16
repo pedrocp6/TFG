@@ -157,15 +157,8 @@ struct Parameters {
 
     double tv_mpc_active;
 
-    double brake_bias;
-    double A_piston;
-    double n_piston_r;
-    double mu_pastilla;
-    double r_efect;
-    double omega_tol;
+    
 };
-
-typedef Parameters CarParams;
 
 /* Initialize from YAML */
 bool parameters_init(Parameters *params);
