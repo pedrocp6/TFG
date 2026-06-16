@@ -63,7 +63,7 @@
                             							
                             <tool id="xilinx.gnu.arm.a53.cxx.toolchain.compiler.debug.589064789" name="ARM v8 g++ compiler" superClass="xilinx.gnu.arm.a53.cxx.toolchain.compiler.debug">
                                 								
-                                <option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.438712707" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                <option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.438712707" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.c.optimization.level.most" valueType="enumerated"/>
                                 								
                                 <option id="xilinx.gnu.compiler.option.debugging.level.1119037298" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
@@ -73,11 +73,13 @@
                                     								
                                 </option>
                                 								
-                                <option id="xilinx.gnu.compiler.dircategory.includes.1620760557" superClass="xilinx.gnu.compiler.dircategory.includes" useByScannerDiscovery="false" valueType="includePath">
+                                <option id="xilinx.gnu.compiler.dircategory.includes.1620760557" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" useByScannerDiscovery="false" valueType="includePath">
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src/qpOASES/include}&quot;"/>
                                     								
                                 </option>
+                                								
+                                <option id="xilinx.gnu.compiler.option.optimization.flags.818355828" superClass="xilinx.gnu.compiler.option.optimization.flags" useByScannerDiscovery="false" value="-ffast-math" valueType="string"/>
                                 								
                                 <inputType id="xilinx.gnu.arm.a53.cxx.compiler.input.377396998" name="C++ source files" superClass="xilinx.gnu.arm.a53.cxx.compiler.input"/>
                                 							

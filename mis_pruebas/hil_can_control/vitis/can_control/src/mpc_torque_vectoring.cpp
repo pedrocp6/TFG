@@ -55,6 +55,46 @@ void MpcTorqueVectoring::mpc_init(Parameters *parameters){
     E.assign(parameters->mpc_np * parameters->mpc_nx, std::vector<double>(1, 0.0));
     f_vec.assign(parameters->mpc_np * parameters->mpc_nu, 0.0);
 
+
+    // Inicialización de las matrices dinámicas del QP
+    GammaT.assign(parameters->mpc_nV, std::vector<double>(parameters->mpc_np * parameters->mpc_nx, 0.0));
+    GammaT_Q.assign(parameters->mpc_nV, std::vector<double>(parameters->mpc_np * parameters->mpc_nx, 0.0));
+    H_GammaT_Q_Gamma.assign(parameters->mpc_nV, std::vector<double>(parameters->mpc_nV, 0.0));
+    f_GammaT_Q_error.assign(parameters->mpc_nV, std::vector<double>(1, 0.0));
+    Phi_xk.assign(parameters->mpc_np, std::vector<double>(parameters->mpc_nx, 0.0));
+
+
+    // Q_weight y R_weight
+    const double Q_weight[3][3] = {
+        {parameters->mpc_Q1, 0.0, 0.0},
+        {0.0, parameters->mpc_Q2, 0.0},
+        {0.0, 0.0, parameters->mpc_Q3}
+    };
+    const double R_weight[4][4] = {
+        {parameters->mpc_R, 0.0, 0.0, 0.0},
+        {0.0, parameters->mpc_R, 0.0, 0.0},
+        {0.0, 0.0, parameters->mpc_R, 0.0},
+        {0.0, 0.0, 0.0, parameters->mpc_R}
+    };
+
+    for (int i = 0; i < parameters->mpc_np; ++i) {
+        for (int r = 0; r < parameters->mpc_nx; ++r) {
+            for (int c = 0; c < parameters->mpc_nx; ++c) {
+                Q_bar[i * parameters->mpc_nx + r][i * parameters->mpc_nx + c] = Q_weight[r][c];
+            }
+        }
+        for (int r = 0; r < parameters->mpc_nu; ++r) {
+            for (int c = 0; c < parameters->mpc_nu; ++c) {
+                R_bar[i * parameters->mpc_nu + r][i * parameters->mpc_nu + c] = R_weight[r][c];
+            }
+        }
+    }
+
+
+    error_vec.assign(parameters->mpc_np * parameters->mpc_nx, 0.0);
+    error_col.assign(parameters->mpc_np * parameters->mpc_nx, std::vector<double>(1, 0.0));
+
+
 }
 
 std::vector<double> MpcTorqueVectoring::model_dynamics(const double *state, Parameters *parameters,
@@ -271,14 +311,14 @@ void MpcTorqueVectoring::build_qp_matrices(Parameters *params, SensorData *senso
     // std::vector<std::vector<double>> Bd_mat(nx, std::vector<double>(nu, 0.0));
 
     // Poner a cero la memoria pre-asignada
-    for (auto& row : Phi) std::fill(row.begin(), row.end(), 0.0);
+    /*for (auto& row : Phi) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : Gamma) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : Q_bar) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : R_bar) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : H) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : H_T) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : E) std::fill(row.begin(), row.end(), 0.0);
-    std::fill(f_vec.begin(), f_vec.end(), 0.0);
+    std::fill(f_vec.begin(), f_vec.end(), 0.0);*/
 
 
     // Precalcular las potencias de Ad: Ad_powers[k] = Ad^k
@@ -415,6 +455,15 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // r_ref
         double r_ref = vx * std::tan(delta) / (parameters->wheelbase + 0.0 * vx * vx);
 
+
+
+        this->debug.vx_ref = vx_ref;
+        this->debug.vy_ref = vy_ref;
+        this->debug.r_ref  = r_ref;
+        this->debug.a_driver = a_driver;
+
+        
+
         double X_ref[Np][3];
         for (int i = 0; i < Np; ++i) {
             X_ref[i][0] = vx_ref;
@@ -428,35 +477,6 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // ****** Construcción de las matrices del QP ****** //
         this->build_qp_matrices(parameters, sensors, tire, fx_request, state, torque_cmd);
 
-
-        // Q_weight y R_weight
-        const double Q_weight[3][3] = {
-            {parameters->mpc_Q1, 0.0, 0.0},
-            {0.0, parameters->mpc_Q2, 0.0},
-            {0.0, 0.0, parameters->mpc_Q3}
-        };
-        const double R_weight[4][4] = {
-            {parameters->mpc_R, 0.0, 0.0, 0.0},
-            {0.0, parameters->mpc_R, 0.0, 0.0},
-            {0.0, 0.0, parameters->mpc_R, 0.0},
-            {0.0, 0.0, 0.0, parameters->mpc_R}
-        };
-
-        std::vector<std::vector<double>> Q_bar(Np * nx, std::vector<double>(Np * nx, 0.0));
-        std::vector<std::vector<double>> R_bar(Np * nu, std::vector<double>(Np * nu, 0.0));
-
-        for (int i = 0; i < Np; ++i) {
-            for (int r = 0; r < nx; ++r) {
-                for (int c = 0; c < nx; ++c) {
-                    Q_bar[i * nx + r][i * nx + c] = Q_weight[r][c];
-                }
-            }
-            for (int r = 0; r < nu; ++r) {
-                for (int c = 0; c < nu; ++c) {
-                    R_bar[i * nu + r][i * nu + c] = R_weight[r][c];
-                }
-            }
-        }
 
         // Resolver el QP
         // ------------------------------------------------------------------
@@ -507,6 +527,10 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
 
         double T_driver = parameters->rdyn * fx_request / parameters->gear_ratio + inertia_term[0] + inertia_term[1] + inertia_term[2] + inertia_term[3];
 
+        double max_pos_sum = 4.0 * parameters->torque_max;
+        double min_pos_sum = 4.0 * parameters->torque_min;
+        T_driver = std::max(min_pos_sum, std::min(max_pos_sum, T_driver));
+
         double tol_frac = 0.15 - 0.05 * std::min(vx / 10.0, 1.0); // 15% a baja v, 5% a alta v
         double tol_sum = tol_frac * std::abs(T_driver) + 0.5; // mínimo 0.5Nm siempre
 
@@ -534,19 +558,19 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // H     = 2 * (Gamma' * Q_bar * Gamma + R_bar); // 
         // H     = (H + H') / 2;                         // 
 
-        auto transpose = [](const std::vector<std::vector<double>>& M) {
-            std::vector<std::vector<double>> Mt(M[0].size(), std::vector<double>(M.size(), 0.0));
+
+        auto transpose_inplace = [](const std::vector<std::vector<double>>& M,
+                                    std::vector<std::vector<double>>& Mt) {
             for (size_t i = 0; i < M.size(); ++i) {
                 for (size_t j = 0; j < M[0].size(); ++j) {
                     Mt[j][i] = M[i][j];
                 }
             }
-            return Mt;
         };
 
-        auto mat_mul = [](const std::vector<std::vector<double>>& A,
-                          const std::vector<std::vector<double>>& B) {
-            std::vector<std::vector<double>> C(A.size(), std::vector<double>(B[0].size(), 0.0));
+        auto mat_mul_inplace = [](const std::vector<std::vector<double>>& A,
+                                  const std::vector<std::vector<double>>& B,
+                                  std::vector<std::vector<double>>& C) {
             for (size_t i = 0; i < A.size(); ++i) {
                 for (size_t j = 0; j < B[0].size(); ++j) {
                     double sum = 0.0;
@@ -556,15 +580,12 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
                     C[i][j] = sum;
                 }
             }
-            return C;
         };
 
         // Gamma' * Q_bar se usa dos veces
-        const auto GammaT = transpose(Gamma);
-        const auto GammaT_Q = mat_mul(GammaT, Q_bar);
-
-
-        const auto H_GammaT_Q_Gamma = mat_mul(GammaT_Q, Gamma);
+        transpose_inplace(Gamma, GammaT);
+        mat_mul_inplace(GammaT, Q_bar, GammaT_Q);
+        mat_mul_inplace(GammaT_Q, Gamma, H_GammaT_Q_Gamma);
 
         for (int i = 0; i < parameters->mpc_nV; ++i) {
             for (int j = 0; j < parameters->mpc_nV; ++j) {
@@ -583,7 +604,6 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
 
         // f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref); // 
 
-        std::vector<std::vector<double>> Phi_xk(Np, std::vector<double>(nx, 0.0));
         for (int i = 0; i < Np; ++i) {
             for (int r = 0; r < nx; ++r) {
                 double sum = 0.0;
@@ -594,19 +614,19 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             }
         }
 
-        std::vector<double> error_vec(Np * nx, 0.0);
+
         for (int i = 0; i < Np; ++i) {
             for (int r = 0; r < nx; ++r) {
                 error_vec[i * nx + r] = Phi_xk[i][r] - X_ref[i][r];
             }
         }
 
-        std::vector<std::vector<double>> error_col(Np * nx, std::vector<double>(1, 0.0));
+
         for (int i = 0; i < Np * nx; ++i) {
             error_col[i][0] = error_vec[i];
         }
 
-        const auto f_GammaT_Q_error = mat_mul(GammaT_Q, error_col);
+        mat_mul_inplace(GammaT_Q, error_col, f_GammaT_Q_error);
 
         std::fill(f_vec.begin(), f_vec.end(), 0.0);
         for (int i = 0; i < parameters->mpc_nV; ++i) {
@@ -638,11 +658,21 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         if (first_step) {
             status = mpc_solver.init(H_flat.data(), f_vec.data(), A_flat.data(),
                                      lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
-            first_step = false;
+            if (status == SUCCESSFUL_RETURN) {
+                first_step = false; // Solo avanzamos si ha tenido éxito real
+            }
         } else {
             status = mpc_solver.hotstart(H_flat.data(), f_vec.data(), A_flat.data(),
                                         lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
+            if (status != SUCCESSFUL_RETURN) {
+                // Si el hotstart se pierde, reiniciamos el solver de cero en este mismo paso
+                nWSR = parameters->mpc_max_iter;
+                status = mpc_solver.init(H_flat.data(), f_vec.data(), A_flat.data(),
+                                         lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
+            }
         }
+
+        this->debug.solver_status = status;
 
         // ------------------------------------------------------------------
         // Extraer Resultados

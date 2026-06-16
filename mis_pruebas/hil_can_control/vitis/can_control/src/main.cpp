@@ -23,6 +23,9 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 #define CAN_ID_TORQUE       0x100
 #define CAN_ID_TIEMPO       0x101
 #define CAN_ID_DEBUG_1      0x102
+#define CAN_ID_DEBUG_2      0x103
+#define CAN_ID_DEBUG_3      0x104
+#define CAN_ID_DEBUG_4      0x105
 
 // ========== CAN IDs PARA RECEPCIÓN (Exterior → FPGA) ==========
 #define CAN_ID_SENSOR_VEL      0x010  // speed_x, speed_y (2 floats)
@@ -391,11 +394,12 @@ int main() {
         
         double fx_request = driver_request(sensors, parameters);
         double target_r;
+        double mpc_sol;
         
         if (parameters.tv_mpc_active) {
             target_r = mpcTorqueVectoring.torque_vectoring_mpc(&parameters, &sensors, &tire, fx_request, state, torque_cmd);
         } else {
-            target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
+            mpc_sol = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 
                                                                      fx_request, state, torque_cmd);
         }
@@ -442,11 +446,28 @@ int main() {
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);
 
-        m1 = (int32_t)(target_r * 1000.0);
+        m1 = (int32_t)(mpc_sol * 1000.0);
         can_data[0] = (u8)(m1 & 0xFF);
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         // memcpy(can_data, &sensors.steering_angle, 4);
         SendFrame(&Can0, CAN_ID_DEBUG_1, can_data, 2);
+
+
+        int16_t dbg_vx = (int16_t)(mpcTorqueVectoring.debug.vx_ref * 1000.0);
+        int16_t dbg_vy  = (int16_t)(mpcTorqueVectoring.debug.vy_ref * 1000.0);
+        int16_t dbg_r  = (int16_t)(mpcTorqueVectoring.debug.r_ref * 10000.0);
+        int16_t dbg_solver_status = (int16_t)(mpcTorqueVectoring.debug.solver_status);
+
+        can_data[0] = (u8)(dbg_vx & 0xFF);
+        can_data[1] = (u8)((dbg_vx >> 8) & 0xFF);
+        can_data[2] = (u8)(dbg_vy & 0xFF);
+        can_data[3] = (u8)((dbg_vy >> 8) & 0xFF);
+        can_data[4] = (u8)(dbg_r & 0xFF);
+        can_data[5] = (u8)((dbg_r >> 8) & 0xFF);
+        can_data[6] = (u8)(dbg_solver_status & 0xFF);
+        can_data[7] = (u8)((dbg_solver_status >> 8) & 0xFF);
+
+        SendFrame(&Can0, CAN_ID_DEBUG_2, can_data, 8);
 
     }
 

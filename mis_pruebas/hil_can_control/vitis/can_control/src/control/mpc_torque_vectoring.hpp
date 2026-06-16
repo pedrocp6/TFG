@@ -30,6 +30,14 @@ public:
                                        SensorData *sensors, Tire *tire,
                                        double fx_request, const double *torque_cmd);
 
+    struct DebugData {
+        double vx_ref;
+        double vy_ref;
+        double r_ref;
+        double solver_status;
+        double a_driver; // Cualquier cálculo intermedio que dudes
+    } debug; // 2. Instanciamos la variable 'debug'
+
 private:
     double target_r;
     std::vector<std::vector<double>> Ac;
@@ -44,6 +52,15 @@ private:
     std::vector<std::vector<double>> H_T;
     std::vector<std::vector<double>> E;
     std::vector<double> f_vec;
+
+    std::vector<std::vector<double>> GammaT;
+    std::vector<std::vector<double>> GammaT_Q;
+    std::vector<std::vector<double>> H_GammaT_Q_Gamma;
+    std::vector<std::vector<double>> f_GammaT_Q_error;
+    std::vector<std::vector<double>> Phi_xk;
+
+    std::vector<double> error_vec;
+    std::vector<std::vector<double>> error_col;
 
     // Variables de librería qpOASES
     SQProblem mpc_solver;
