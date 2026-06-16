@@ -24,7 +24,7 @@ bool parameters_init(Parameters *params) {
         /* -------------------- VDC activation -------------------- */
         params->est_active = false; //cfg["vdc_activation"]["est_active"].as<bool>();
         params->tv_active  = true; //cfg["vdc_activation"]["tv_active"].as<bool>();
-        params->tc_active  = false; //cfg["vdc_activation"]["tc_active"].as<bool>();
+        params->tc_active  = true; //cfg["vdc_activation"]["tc_active"].as<bool>();
         params->pl_active  = true; //cfg["vdc_activation"]["pl_active"].as<bool>();
 
         /* -------------------- Mode -------------------- */
@@ -178,12 +178,12 @@ bool parameters_init(Parameters *params) {
         params->mpc_nu = 4;
         params->mpc_np = 10;            // 20
         params->mpc_delta = 0.00001;
-        params->mpc_ts = 0.005;
+        params->mpc_ts = 0.01;         // 0.005
         params->mpc_vmin = 3;
         params->mpc_Q1 = 0.0;
         params->mpc_Q2 = 10.0;
         params->mpc_Q3 = 100.0;
-        params->mpc_R  = 2;           // 0.5
+        params->mpc_R  = 0.5;           // 0.5
         params->mpc_nV = params->mpc_np*params->mpc_nu;
         params->mpc_nc = params->mpc_np;
         params->mpc_max_iter = 200;

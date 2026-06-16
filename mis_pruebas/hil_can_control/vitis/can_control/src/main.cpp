@@ -358,29 +358,14 @@ int main() {
         	step_ready = read_sensors_can(sensors);
         }
 
-        // ========== ACTUALIZAR TIMESTAMPS ==========
-        // Actualizar timestamps TC
-        /*if(pid_tc.last_timestamp == 0) {
-        	XTime_GetTime(&current_time);
-            pid_tc.last_timestamp = current_time;
-        } else {
-        	XTime_GetTime(&current_time);
-            pid_tc.ts = (double)(current_time - pid_tc.last_timestamp) / COUNTS_PER_SECOND;
-            pid_tc.last_timestamp = current_time;
-        }*/
+        // XTime_GetTime(&current_time);
+        // tiempo_ant = current_time;
+
+        
         if (!pid_tc.init) {
         	pid_tc.init = 1;
         }
 
-        // Actualizar timestamps TV
-        /*if(pid_tv.last_timestamp == 0) {
-        	XTime_GetTime(&current_time);
-        	pid_tv.last_timestamp = current_time;
-        } else {
-        	XTime_GetTime(&current_time);
-        	pid_tv.ts = (double)(current_time - pid_tv.last_timestamp) / COUNTS_PER_SECOND;
-        	pid_tv.last_timestamp = current_time;
-        }*/
         if (!pid_tv.init) {
         	pid_tv.init = 1;
         }

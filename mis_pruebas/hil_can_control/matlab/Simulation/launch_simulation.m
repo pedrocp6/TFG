@@ -91,7 +91,7 @@ set_param(mdl, 'FixedStep', num2str(sim_TimeStep));
 
 % Como siempre
 set_param(mdl, 'EnablePacing', 'on');
-set_param(mdl, 'PacingRate', '0.15');        % 0.5
+set_param(mdl, 'PacingRate', '0.25');        % 0.5
 
 % set_param(mdl, 'SystemTargetFile', 'grt.tlc');
 set_param(mdl, 'SimulationMode', 'normal');
@@ -121,7 +121,7 @@ fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
 figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
 eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
-% ylim([0,0.01]);
+ylim([0,0.01]);
 
 
 % figure;plot(out.torque_cmd.time,out.torque_cmd.signals.values(:,1),'.'); grid on;

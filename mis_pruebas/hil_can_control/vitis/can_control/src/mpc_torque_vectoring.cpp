@@ -211,11 +211,6 @@ void MpcTorqueVectoring::model_linealization(Parameters *parameters, SensorData 
     const int nx = static_cast<int>(parameters->mpc_nx);
     const int nu = static_cast<int>(parameters->mpc_nu);
 
-    // std::vector<std::vector<double>> Ac(nx, std::vector<double>(nx, 0.0));
-    // std::vector<std::vector<double>> Bc(nx, std::vector<double>(nu, 0.0));
-    // this->Ad.assign(nx, std::vector<double>(nx, 0.0));
-    // this->Bd.assign(nx, std::vector<double>(nu, 0.0));
-
     // Poner a cero la memoria pre-asignada
     for (auto& row : Ac) std::fill(row.begin(), row.end(), 0.0);
     for (auto& row : Bc) std::fill(row.begin(), row.end(), 0.0);
@@ -310,22 +305,8 @@ void MpcTorqueVectoring::build_qp_matrices(Parameters *params, SensorData *senso
         }
     };
 
-    // std::vector<std::vector<double>> Ad_mat(nx, std::vector<double>(nx, 0.0));
-    // std::vector<std::vector<double>> Bd_mat(nx, std::vector<double>(nu, 0.0));
-
-    // Poner a cero la memoria pre-asignada
-    /*for (auto& row : Phi) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : Gamma) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : Q_bar) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : R_bar) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : H) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : H_T) std::fill(row.begin(), row.end(), 0.0);
-    for (auto& row : E) std::fill(row.begin(), row.end(), 0.0);
-    std::fill(f_vec.begin(), f_vec.end(), 0.0);*/
-
 
     // Precalcular las potencias de Ad: Ad_powers[k] = Ad^k
-    // std::vector<std::vector<std::vector<double>>> Ad_powers(Np + 1, std::vector<std::vector<double>>(nx, std::vector<double>(nx, 0.0)));
     Ad_powers[0] = identity(nx);
     for (int k = 1; k <= Np; ++k) {
         mat_mul_inplace(Ad_powers[k - 1], Ad, Ad_powers[k]);
@@ -680,9 +661,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         // Extraer Resultados
         // ------------------------------------------------------------------
         if (status == SUCCESSFUL_RETURN) {
-            // std::vector<real_t> U_opt(static_cast<size_t>(parameters->mpc_nV), 0.0);
             real_t U_opt[80] = {0.0};
-            // mpc_solver.getPrimalSolution(U_opt.data());
             mpc_solver.getPrimalSolution(U_opt);
 
             for (int i = 0; i < 4 && i < parameters->mpc_nV; ++i) {
