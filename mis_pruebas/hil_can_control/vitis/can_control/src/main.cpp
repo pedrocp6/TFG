@@ -31,6 +31,8 @@ constexpr uint32_t CUENTAS_POR_LOOP = (COUNTS_PER_SECOND / FRECUENCIA_HZ);
 #define CAN_ID_SENSOR_ACCEL    0x013  // accel_x, accel_y (2 floats)
 #define CAN_ID_SENSOR_MOT_1    0x014  // motor_speed[0], motor_speed[1] (2 floats)
 #define CAN_ID_SENSOR_MOT_2    0x015  // motor_speed[2], motor_speed[3] (2 floats)
+#define CAN_ID_BR_TORQUE_1     0x016  // brake_torque[0], brake_torque[1] (2 floats)
+#define CAN_ID_BR_TORQUE_2     0x017  // brake_torque[2], brake_torque[3] (2 floats)
 
 // CAN Configuration
 #define TEST_BTR_SYNCJUMPWIDTH		1
@@ -170,6 +172,8 @@ bool read_sensors_can(SensorData& sensors) {
     static bool got_accel  = false;
     static bool got_mot1   = false;
     static bool got_mot2   = false;
+    static bool got_br1    = false;
+    static bool got_br2    = false;
 
     while (!XCanPs_IsRxEmpty(&Can0)) {
         if (RecvFrame(&Can0, &rx_id, rx_data, &rx_len) == XST_SUCCESS) {
@@ -216,6 +220,20 @@ bool read_sensors_can(SensorData& sensors) {
                         got_mot2 = true;
                     }
                     break;
+                case CAN_ID_BR_TORQUE_1:
+					if (rx_len >= 8) {
+						memcpy(&sensors.br_torque[0], &rx_data[0], 4);
+						memcpy(&sensors.br_torque[1], &rx_data[4], 4);
+						got_br1 = true;
+					}
+					break;
+                case CAN_ID_BR_TORQUE_2:
+					if (rx_len >= 8) {
+						memcpy(&sensors.br_torque[2], &rx_data[0], 4);
+						memcpy(&sensors.br_torque[3], &rx_data[4], 4);
+						got_br2 = true;
+					}
+					break;
                 default:
                     break;
             }

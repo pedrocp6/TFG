@@ -26,6 +26,8 @@ typedef struct {
 	float acceleration_y;
 	float acceleration_x;
 
+	float br_torque[4];
+
 	// No usado en simulaci�n
 	double angular_x;
 	double angular_y;

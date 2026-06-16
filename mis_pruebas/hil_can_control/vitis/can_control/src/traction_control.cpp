@@ -128,7 +128,11 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 	for (int i = 0; i < 4; i++) {
 		inertia_term[i] = (1 + SR_t[i]) * sensors->acceleration_x / parameters->rdyn *
 			parameters->wheel_inertia / parameters->gear_ratio;
-		T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i];
+		if (sensors->motor_speed[i] <= 0)
+		 	T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i] + sensors->br_torque[i] / parameters->gear_ratio;
+		else
+			T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i] - sensors->br_torque[i] / parameters->gear_ratio;
+		// T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i];
 	}
 
 	//PID FEEDBACK CONTROL
@@ -151,16 +155,28 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 						+ pid_tc->ki * int_SRep[i]
 						- pid_tc->kd * (SR_e[i] - tc_state.SR_e1[i]);
 		TC_calc[i] = T_obj[i] + pid_calc;
-		TC[i] = fminf(TC_calc[i], fmaxf(Tin[i], -TC_calc[i]));
+		// TC[i] = fminf(TC_calc[i], fmaxf(Tin[i], -TC_calc[i]));
 
-		if(Tin[i] >= 0.0f && TC_calc[i] < 0.0f){
+		/*if(Tin[i] >= 0.0f && TC_calc[i] < 0.0f){
 			TC[i] = 0.0;
 			int_SRep[i] = 0.0f;
+		}*/
+
+		if (Tin[i] >= 0.0f) {
+			// MODO TRACCIÓN (Acelerando)
+			TC_calc[i] = T_obj[i] + pid_calc;
+			TC[i] = fminf(Tin[i], TC_calc[i]); // El TC no puede dar MaS par del que pide el piloto
+			TC[i] = fmaxf(0.0f, TC[i]);        // El TC no puede frenar el coche
+		} else {
+			// MODO REGEN / ABS (Frenando)
+			TC_calc[i] = T_obj[i] - pid_calc;  // iINVERTIMOS LA ACCoN DEL PID!
+			TC[i] = fmaxf(Tin[i], TC_calc[i]); // El ABS no puede frenar MaS de lo que pide el piloto
+			TC[i] = fminf(0.0f, TC[i]);        // El ABS no puede acelerar el coche
 		}
 
 		//Anti-windup
-		if (TC_calc[i] > TC[i]) {
-			int_SRep[i] = 0.0f;
+		if (fabsf(TC_calc[i]) > fabsf(TC[i])) {
+			int_SRep[i] =  tc_state.int_SRe[i] ;
 		}
 
 		// Memoria
@@ -190,6 +206,4 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 	torque_cmd[3] = TC[3];
 
 }
-
-
 

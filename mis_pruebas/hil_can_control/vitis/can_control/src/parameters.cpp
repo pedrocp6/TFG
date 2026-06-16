@@ -93,13 +93,13 @@ bool parameters_init(Parameters *params) {
         /* -------------------- TV controller -------------------- */
         params->tv_kp  = 800; //cfg["tv"]["kp"].as<double>(); 400
         params->tv_ki  = 0; //cfg["tv"]["ki"].as<double>(); 0
-        params->tv_kd  = 50; //cfg["tv"]["kd"].as<double>(); 15
+        params->tv_kd  = 15; //cfg["tv"]["kd"].as<double>(); 15
         params->tv_n   = 20; //cfg["tv"]["n"].as<double>(); 20
         params->max_mz = 800; //cfg["tv"]["max_mz"].as<double>(); 800
 
         /* -------------------- TC controller -------------------- */
         params->tc_kp    = 20; //cfg["tc"]["kp"].as<double>(); 20
-        params->tc_ki    = 2; //cfg["tc"]["ki"].as<double>(); 5
+        params->tc_ki    = 5; //cfg["tc"]["ki"].as<double>(); 5
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>(); 0
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>(); 5
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>(); 3
