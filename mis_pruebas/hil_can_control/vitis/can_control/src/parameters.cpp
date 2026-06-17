@@ -99,7 +99,7 @@ bool parameters_init(Parameters *params) {
 
         /* -------------------- TC controller -------------------- */
         params->tc_kp    = 20; //cfg["tc"]["kp"].as<double>(); 20
-        params->tc_ki    = 5; //cfg["tc"]["ki"].as<double>(); 5
+        params->tc_ki    = 200; //cfg["tc"]["ki"].as<double>(); 5
         params->tc_kd    = 0; //cfg["tc"]["kd"].as<double>(); 0
         params->tc_v0    = 5; //cfg["tc"]["v0"].as<double>(); 5
         params->tc_vgain = 3; //cfg["tc"]["vgain"].as<double>(); 3

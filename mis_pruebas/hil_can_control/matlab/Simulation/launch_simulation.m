@@ -37,7 +37,7 @@ time_maneuver = cumsum([diff(s); 0]./vx_target)';
 % 2. Generar las referencias base de la maniobra (como ya las tenías)
 % v_maneuver = linspace(8, 13, length(time_maneuver));    % mi skidpad
 % v_maneuver = 100*ones(1,length(time_maneuver));
-v_maneuver = 0.7*vel';           %trackdrive
+v_maneuver = 0.9*vel';           %trackdrive
 
 % k_maneuver = v_maneuver*0 + 1/9.125;                               % skidpad
 k_maneuver = k';             %trackdrive
@@ -119,9 +119,9 @@ logdata
 tiempo = mean(out.t_sim.signals.values(10:end,1));
 fprintf('Tiempo medio entre iteraciones: %.3f s\n', tiempo);
 
-figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
-eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
-ylim([0,0.01]);
+% figure;eje1 = subplot(2,1,1);plot(out.t_sim.signals.values,'.');grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
+% eje2 = subplot(2,1,2);plot(out.t_sim.time,out.t_sim.signals.values,'.');grid on;xlabel("Tiempo de simulación [s]");linkaxes([eje1,eje2],'y');
+% ylim([0,0.01]);
 
 
 % figure;plot(out.torque_cmd.time,out.torque_cmd.signals.values(:,1),'.'); grid on;

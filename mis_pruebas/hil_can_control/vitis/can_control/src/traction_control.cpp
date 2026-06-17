@@ -131,12 +131,9 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 		sign_T[i] = Tin[i] < 0.0 ? -1.0 : 1.0;
 		SR_t[i] = SR_t[i] * sign_T[i];
 
-		inertia_term[i] = (1 + SR_t[i]) * sensors->acceleration_x / parameters->rdyn *
-			parameters->wheel_inertia / parameters->gear_ratio;
-		if (sensors->motor_speed[i] <= 0)
-		 	T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i] - sensors->br_torque[i] / parameters->gear_ratio;
-		else
-			T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i] + sensors->br_torque[i] / parameters->gear_ratio;
+		inertia_term[i] = (1 + SR_t[i]) * sensors->acceleration_x / parameters->rdyn * parameters->wheel_inertia / parameters->gear_ratio;
+
+		T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i] - sensors->br_torque[i] / parameters->gear_ratio;
 
 		// T_obj[i] = tire->force_fx[i] * parameters->rdyn / parameters->gear_ratio + inertia_term[i];
 	}
@@ -157,7 +154,7 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 		// SR_e[i] = SR_t[i] - fabsf(SR[i]);
 		SR_e[i] = SR_t[i] - SR[i];
 
-		int_SRep[i] = tc_state.int_SRe[i] + SR_e[i];
+		int_SRep[i] = tc_state.int_SRe[i] + SR_e[i] * parameters->dt;
 
 		float pid_calc = pid_tc->kp * SR_e[i]
 						+ pid_tc->ki * int_SRep[i]
@@ -165,35 +162,25 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 		TC_calc[i] = T_obj[i] + pid_calc;
 
-		// TC[i] = fminf(TC_calc[i], fmaxf(Tin[i], -TC_calc[i]));
 
-		TC[i] = fabs(TC_calc[i]) < fabs(Tin[i]) ? TC_calc[i] : Tin[i];
 
-		/*if(Tin[i] >= 0.0f && TC_calc[i] < 0.0f){
-			TC[i] = 0.0;
-			int_SRep[i] = tc_state.int_SRe[i];
-		}*/
-
-		 if(Tin[i] * TC_calc[i] < 0.0){
-            TC[i] = 0.;
-        }
-
-		/*if (Tin[i] >= 0.0f) {
-			// MODO TRACCIÓN (Acelerando)
-			TC_calc[i] = T_obj[i] + pid_calc;
-			TC[i] = fminf(Tin[i], TC_calc[i]); // El TC no puede dar MaS par del que pide el piloto
-			TC[i] = fmaxf(0.0f, TC[i]);        // El TC no puede frenar el coche
+		// Actuación como ABS
+		if (sensors->br_torque[i] < -10.0f) {
+			if (TC_calc[i] < Tin[i]) {
+				TC[i] = Tin[i];
+			} else {
+				TC[i] = TC_calc[i]; // Libertad para dar par positivo
+			}
 		} else {
-			// MODO REGEN / ABS (Frenando)
-			TC_calc[i] = T_obj[i] - pid_calc;  // iINVERTIMOS LA ACCoN DEL PID!
-			TC[i] = fmaxf(Tin[i], TC_calc[i]); // El ABS no puede frenar MaS de lo que pide el piloto
-			TC[i] = fminf(0.0f, TC[i]);        // El ABS no puede acelerar el coche
-		}*/
+			TC[i] = fabs(TC_calc[i]) < fabs(Tin[i]) ? TC_calc[i] : Tin[i];
+		}
 
-		//Anti-windup
-		/*if (fabsf(TC_calc[i]) > fabsf(TC[i])) {
-			int_SRep[i] =  tc_state.int_SRe[i] ;
-		}*/
+
+		// Para que no pueda dar par positivo frenando
+		/*if(Tin[i] * TC_calc[i] < 0.0){
+            TC[i] = 0.;
+        }*/
+
 
 		int saturado     = fabs(TC_calc[i]) > fabs(Tin[i]);
         int mismo_signo  = (TC_calc[i] * SR_e[i]) > 0.0;

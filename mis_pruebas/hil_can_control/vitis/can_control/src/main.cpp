@@ -454,6 +454,22 @@ int main() {
 
         SendFrame(&Can0, CAN_ID_DEBUG_2, can_data, 8);
 
+
+        // Mensaje 1: Torque FL y FR
+		m1 = (int16_t)(T_obj[0] * 100);
+		m2 = (int16_t)(T_obj[1] * 100);
+		m3 = (int16_t)(T_obj[2] * 100);
+		m4 = (int16_t)(T_obj[3] * 100);
+		can_data[0] = (u8)(m1 & 0xFF);
+		can_data[1] = (u8)((m1 >> 8) & 0xFF);
+		can_data[2] = (u8)(m2 & 0xFF);
+		can_data[3] = (u8)((m2 >> 8) & 0xFF);
+		can_data[4] = (u8)(m3 & 0xFF);
+		can_data[5] = (u8)((m3 >> 8) & 0xFF);
+		can_data[6] = (u8)(m4 & 0xFF);
+		can_data[7] = (u8)((m4 >> 8) & 0xFF);
+		SendFrame(&Can0, CAN_ID_DEBUG_3, can_data, 8);
+
     }
 
     cleanup_platform();
