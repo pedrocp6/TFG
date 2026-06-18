@@ -39,7 +39,7 @@ void TractionControl::traction_control_init(Pid *pid_tc, Parameters *parameters)
 	}
 }
 
-void TractionControl::traction_control_update(Parameters *parameters, SensorData *sensors, double *state, double torque_cmd[4], Pid *pid_tc, Tire *tire, double *Tin, double *TC, double *SR, Dv *dv, double *T_obj, float slip_angle[4]){
+void TractionControl::traction_control_update(Parameters *parameters, SensorData *sensors, double *state, double torque_cmd[4], Pid *pid_tc, Tire *tire, double *Tin, double *TC, double *SR, Dv *dv, double *T_obj, float slip_angle[4], double fx_request){
 	//SYSTEM ACTIVATION CHECK
 	if (!parameters->tc_active || pid_tc->init != 1 || dv->inspection) {
 		for (int i = 0; i < 4; i++) {
@@ -128,6 +128,8 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 	for (int i = 0; i < 4; i++) {
 
+		// sensors->br_torque[i] < -10.0f ? sign_T[i] = -1.0 : sign_T[i] = 1.0;
+		// sign_T[i] = fx_request < 0.0 ? -1.0 : 1.0;
 		sign_T[i] = Tin[i] < 0.0 ? -1.0 : 1.0;
 		SR_t[i] = SR_t[i] * sign_T[i];
 
@@ -166,6 +168,7 @@ void TractionControl::traction_control_update(Parameters *parameters, SensorData
 
 		// Actuación como ABS
 		if (sensors->br_torque[i] < -10.0f) {
+			// TC[i] = TC_calc[i] < Tin[i] ? Tin[i] : TC_calc[i]; ó incluso TC[i] = std::max(TC_calc[i], Tin[i]);
 			if (TC_calc[i] < Tin[i]) {
 				TC[i] = Tin[i];
 			} else {

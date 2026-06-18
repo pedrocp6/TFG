@@ -1,0 +1,77 @@
+%% 
+
+run_data = struct();
+
+%% Guardar datos de estado
+
+run_data.time = time;
+run_data.vx = vx;
+run_data.vy = vy;
+run_data.v = v; 
+
+run_data.yaw_rate = yaw_rate;
+run_data.ax = ax;
+run_data.ay = ay;
+
+run_data.beta = beta;
+run_data.steer = steer;
+run_data.k_calc = k_calc; 
+
+run_data.wFL = wFL;
+run_data.wFR = wFR;
+run_data.wRL = wRL;
+run_data.wRR = wRR;
+
+run_data.FY = FY;
+run_data.FX = FX;
+run_data.FZ = FZ;
+run_data.slip_angle = slip_angle;
+run_data.slip_ratio = slip_ratio;
+
+run
+
+%%
+x_pos = out.pos.signals.values(:,1);
+y_pos = out.pos.signals.values(:,2);
+
+outsensor = struct();
+
+outsensor.ax = squeeze(out.sensor_out.IMU.ax.Data);
+outsensor.ay = squeeze(out.sensor_out.IMU.ay.Data);
+outsensor.r = squeeze(out.sensor_out.IMU.yaw_rate.Data);
+timeIMU = out.sensor_out.IMU.ax.Time;
+
+outsensor.wFL = squeeze(out.sensor_out.encoder.wFL.Data);
+outsensor.wFR = squeeze(out.sensor_out.encoder.wFR.Data);
+outsensor.wRL = squeeze(out.sensor_out.encoder.wRL.Data);
+outsensor.wRR = squeeze(out.sensor_out.encoder.wRR.Data);
+timeEncoder = out.sensor_out.encoder.wFL.Time;
+
+outsensor.steer = squeeze(out.sensor_out.ext.steering.Data);
+timeExt = out.sensor_out.ext.steering.Time;
+
+outsensor.vx_gss = squeeze(out.sensor_out.gss.vx.Data);
+outsensor.vy_gss = squeeze(out.sensor_out.gss.vy.Data);
+timeGSS = out.sensor_out.gss.vx.Time;
+
+
+%% Guardar variables de control
+
+run_data.config.tipo_control = 'MPC'; % o 'PD'
+run_data.config.prueba = 'Skidpad';
+run_data.config.Q_weights = [0, 10, 100]; 
+run_data.config.R_weights = 0.02;
+
+
+
+
+
+
+%% Guardar
+
+filename = 'resultados_mpc_skidpad_R002.mat';
+save(filename, 'run_data');
+
+
+
+

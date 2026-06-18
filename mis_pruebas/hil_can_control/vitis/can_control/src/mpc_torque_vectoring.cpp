@@ -504,8 +504,8 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
 
 
         for (int i = 0; i < 4; i++) {
-		inertia_term[i] = (1.0f + SR[i]) * sensors->acceleration_x / parameters->rdyn *
-			parameters->wheel_inertia / parameters->gear_ratio;
+            inertia_term[i] = (1.0f + SR[i]) * sensors->acceleration_x / parameters->rdyn *
+                parameters->wheel_inertia / parameters->gear_ratio;
 	    }
 
         double T_driver = parameters->rdyn * fx_request / parameters->gear_ratio + inertia_term[0] + inertia_term[1] + inertia_term[2] + inertia_term[3];

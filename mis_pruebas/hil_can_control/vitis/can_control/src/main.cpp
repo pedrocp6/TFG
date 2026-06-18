@@ -352,7 +352,7 @@ int main() {
         // timer.waitNextTrigger();
 
         // ========== LEER SENSORES POR CAN (si hay mensajes disponibles) ==========
-        // read_sensors_can(sensors);
+        
         bool step_ready = false;
         while (!step_ready) {
         	step_ready = read_sensors_can(sensors);
@@ -398,7 +398,7 @@ int main() {
         
         traction_control.traction_control_update(&parameters, &sensors, state, torque_cmd, 
                                                    &pid_tc, &tire, torque_cmd, TC, SR, 
-                                                   &dv, T_obj, slip_angle);
+                                                   &dv, T_obj, slip_angle, fx_request);
 
         double pw_total = power_limitation.power_limitation_update(&parameters, &sensors, torque_cmd);
 
