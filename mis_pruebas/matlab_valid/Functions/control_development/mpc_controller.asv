@@ -1,0 +1,204 @@
+function [u_out, qp_error, vx_ref, vy_ref, r_ref, v2_max, V_predicted, Fy_max, beta_max] = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
+% MPC_CONTROLLER  LTV-MPC de torque vectoring (Mikuláš et al. 2018, ec. 15)
+
+    coder.extrinsic('qpOASES_options');
+    coder.extrinsic('qpOASES');
+
+    %% Parámetros MPC
+    Np  = 10;
+    Ts  = 0.005;
+    nx  = 3;
+    nu  = 4;
+    Kus = 0;
+
+    %% Estado actual
+    vx = x.vx;
+    vy = x.vy;
+    r  = x.r;
+    x_k = [vx; vy; r];
+
+    ax        = sensors.IMU.ax;
+    ay        = sensors.IMU.ay;
+    delta_cmd = sensors.ext.steering;
+    delta     = calculate_steering(delta_cmd, param_vdc);
+    delta_mean = mean(delta(1:2));
+    wheel_speed = [sensors.encoder.wFL; sensors.encoder.wFR; sensors.encoder.wRL; sensors.encoder.wRR];
+
+    %% Guardia de velocidad mínima
+    % Por debajo de esta velocidad el MPC no tiene sentido físico:
+    % los neumáticos no generan fuerzas laterales relevantes y el
+    % problema está mal condicionado. Se devuelve reparto igual.
+    V_MIN_MPC = 3.0;   % [m/s] — ajusta según tu vehículo
+    if vx < V_MIN_MPC
+        u_out    = (fx_request * param_vdc.rdyn / param_vdc.gear_ratio / 4) * ones(4,1);
+        qp_error = 0;
+        vx_ref   = vx;
+        vy_ref   = vy;
+        r_ref    = r;
+        v2_max= 0;
+        V_predicted = 0;
+        Fy_max = 0;
+        beta_max = 0;
+        return;
+    end
+
+    %% 1. Referencias
+
+    % Radio cinemático
+    if abs(delta_mean) < 1e-4
+        Rss_ref = 1e6;
+    else
+        Rss_ref = param_vdc.wheelbase / tan(delta_mean);
+    end
+
+    % Fy_max: capacidad lateral pura (slip_ratio = 0)
+    vx_wheel = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF;  param_vdc.trackwidthF; ...
+                                   -param_vdc.trackwidthR;  param_vdc.trackwidthR];
+    vy_wheel = vy*ones(4,1) + r   * [ param_vdc.lf;  param_vdc.lf; ...
+                                  -param_vdc.lr; -param_vdc.lr];
+%     slip_angle_ref = atan2(vy_wheel, vx_wheel) - delta;
+%     vx_wheel_tire = vx_wheel .* cos(delta) + vy_wheel .* sin(delta);
+%     slip_ratio = param_vdc.rdyn * wheel_speed ./ (vx_wheel_tire + eps) - 1;
+    tire_load_ref  = calculate_tire_loads(ax, ay, vx, param_vdc);
+%     [fy_pure, ~]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
+%     [~, fx_pure]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, slip_ratio, pac);
+%     Fy_max  = max(abs(sum(fy_pure .* cos(delta)) + sum(fx_pure .* sin(delta))), 100);
+
+    Fy_max = max(abs(pac.Dlat) * sum(tire_load_ref),100);
+
+    % v2_max (ec. 11)
+    v2_max = max(abs(Rss_ref) * Fy_max / param_vdc.mass, 0);
+
+    % vx_ref (ec. 12)
+    V_now       = sqrt(vx^2 + vy^2);
+    a_driver    = max(fx_request,0) / param_vdc.mass;
+    V_predicted = V_now + a_driver * Np * Ts;
+    
+    vx_ref = min(V_predicted, sqrt(max(v2_max-vy^2,0)));
+
+
+    % vy_ref (ec. 13)
+    % Probar quitando ese abs
+    beta_max = atan2(Fy_max, abs(fx_request) + eps);
+%     beta_max = atan2(Fy_max, fx_request + sign(fx_request)*eps);
+v
+    vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
+
+    % r_ref (ec. 14) — para círculo de radio fijo: vx/R
+    r_ref = vx * tan(delta_mean) / (param_vdc.wheelbase + Kus * vx^2);
+
+    X_ref = repmat([vx_ref; vy_ref; r_ref], Np, 1);
+
+    %% 2. Linealización + discretización
+    [Ak, Bk] = mpc_linealization(x_k, u_prev, param_vdc, pac, sensors);
+
+    %% 3. Matrices de predicción
+    [Phi, Gamma] = build_mpc_qp_matrices(Ak, Bk, Np);
+
+    %% 4. Pesos
+    % Q: pesos relativos entre estados
+    % R: aumentar R reduce chattering pero hace el control menos agresivo
+%     Q_weight = diag([0, 10, 1000]);
+%     R_weight = diag([0.08, 0.08, 0.08, 0.08]);
+    Q_weight = diag([0, 10, 100]);
+    R_weight = diag([0.02, 0.02, 0.02, 0.02]);
+
+    Q_bar = kron(eye(Np), Q_weight);
+    R_bar = kron(eye(Np), R_weight);
+
+    %% 5. Coste QP
+    H     = 2 * (Gamma' * Q_bar * Gamma + R_bar);
+    H     = (H + H') / 2;
+    f_vec = 2 * Gamma' * Q_bar * (Phi * x_k - X_ref);
+
+    %% 6. Restricciones
+
+    % 6a. Límites por motor
+    T_max_vec = param_vdc.torque_limit_positive(1) * ones(Np*nu, 1);
+    T_min_vec = param_vdc.torque_limit_negative(1) * ones(Np*nu, 1);
+
+    % 6b. Restricción de suma de par
+    % T_driver: par total en ruedas que pide el piloto
+    cos_steer = cos(delta_cmd);
+    sin_steer = sin(delta_cmd);
+
+    wr = [sensors.encoder.wFL;
+          sensors.encoder.wFR;
+          sensors.encoder.wRL;
+          sensors.encoder.wRR];
+    
+    vx_wheel_tire = [vx_wheel(1) * cos_steer + vy_wheel(1) * sin_steer;
+                     vx_wheel(2) * cos_steer + vy_wheel(2) * sin_steer;
+                     vx_wheel(3);
+                     vx_wheel(4)];
+
+    SR = param_vdc.rdyn * wr ./ (vx_wheel_tire + eps) - 1;
+
+    inertia_term = (ones(4,1) + SR) .* sensors.IMU.ax / param_vdc.rdyn * param_vdc.wheel_inertia / param_vdc.gear_ratio;
+    T_driver = fx_request * param_vdc.rdyn / param_vdc.gear_ratio + sum(inertia_term);
+
+    % Tolerancia adaptativa: más holgada a baja velocidad donde el
+    % condicionamiento es peor, más estricta a alta velocidad
+    vx_norm  = min(vx / 10.0, 1.0);          % 0 en parado, 1 a 10m/s
+    tol_frac = 0.15 - 0.05 * vx_norm;          % 30% a baja v, 10% a alta v
+    tol_sum  = tol_frac * abs(T_driver) + 0.5; % mínimo 2Nm siempre
+
+    %% 7. Warm start
+    U0 = repmat(u_prev, Np, 1);
+
+    %% 8. QP propio de matlab
+%     A_sum  = kron(eye(Np), ones(1, nu));
+%     A_ineq = [ A_sum; -A_sum];
+%     b_ineq = [(T_driver + tol_sum) * ones(Np, 1); ...
+%               (-T_driver + tol_sum) * ones(Np, 1)];
+
+
+%     opts = optimoptions('quadprog', ...
+%         'Display',             'off', ...
+%         'Algorithm',           'active-set', ...
+%         'MaxIterations',       300, ...
+%         'OptimalityTolerance', 1e-6, ...
+%         'ConstraintTolerance', 1e-6);
+% 
+%     U_opt = quadprog(H, f_vec, A_ineq, b_ineq, [], [], T_min_vec, T_max_vec, U0, opts);
+% 
+%     if isempty(U_opt)
+%         u_out    = u_prev;
+%         qp_error = 1;
+%     else
+%         u_out    = U_opt(1:nu);
+%         qp_error = 0;
+%     end
+
+    %% qpOASES
+    A = kron(eye(Np), ones(1, nu));
+    ub = T_max_vec;
+    lb = T_min_vec;
+    lbA = (T_driver - tol_sum) * ones(Np, 1);
+    ubA = (T_driver + tol_sum) * ones(Np, 1);
+
+    % Opciones de qpOASES
+    options = qpOASES_options('MPC'); % Carga un preset optimizado para MPC
+%     options.printLevel = 0;           % Silenciar salida por consola
+
+    U_opt = zeros(Np*nu, 1);
+    fval  = 0;
+    exitflag = 0;
+    iter  = 0;
+    
+    % Llamada directa a qpOASES 
+    % Sintaxis: [x, fval, exitflag, iter, lambda] = qpOASES(H, g, A, lb, ub, lbA, ubA, options)
+    [U_opt, ~, exitflag, ~] = qpOASES(H, f_vec, A, lb, ub, lbA, ubA, options);
+
+    % Comprobación de estado (exitflag == 0 significa SUCCESS)
+    if exitflag ~= 0 || isempty(U_opt)
+        u_out    = u_prev;
+        qp_error = 1;
+    else
+        u_out    = U_opt(1:nu);
+        qp_error = 0;
+    end
+
+
+
+end

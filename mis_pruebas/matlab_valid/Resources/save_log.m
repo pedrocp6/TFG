@@ -28,9 +28,13 @@ run_data.FZ = FZ;
 run_data.slip_angle = slip_angle;
 run_data.slip_ratio = slip_ratio;
 
+run_data.x = x_pos;
+run_data.y = y_pos;
+
 %% Guardar variables de control
 
 run_data.torque_cmd = squeeze(out.torque_cmd.signals.values);
+run_data.tv_out = squeeze(out.TVout.signals.values);
 run_data.time_control = out.torque_cmd.time;
 
 run_data.vx_ref = squeeze(out.mpc_ref.signals.values(:,2));
@@ -47,8 +51,8 @@ run_data.torque_tv = squeeze(out.TVout.signals.values);
 
 %% Guardar
 
-control = '_pd'; % og
-prueba = '_skidpad'; % autox
+control = '_mpc'; % _mpc o _pd
+prueba = '_slalom'; % _autox o _skidpad o _slalom
 
 filename = ['C:\TFG_Vivado\mis_pruebas\matlab_valid\Simulation\data\','resultados',control,prueba,'.mat'];
 save(filename, 'run_data');

@@ -166,7 +166,7 @@ y0=50;
 width=1000;
 height=600;
 set(gcf,'position',[x0,y0,width,height])
-exportgraphics(gcf, 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\validacion_modelo_mpc.png', 'Resolution', 300)
+% exportgraphics(gcf, 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\validacion_modelo_mpc.png', 'Resolution', 300)
 
 
 %% Cargar los datos de simulaciones de skidpad
@@ -174,10 +174,21 @@ exportgraphics(gcf, 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\validacion_m
 datos_mpc = load('resultados_mpc_skidpad.mat');
 datos_pd  = load('resultados_pd_skidpad.mat');
 
+fprintf("Cargados datos skidpad\n")
+
 %% Cargar los datos de simulaciones de AutoX
 
 datos_mpc = load('resultados_mpc_autox.mat');
 datos_pd  = load('resultados_pd_autox.mat');
+
+fprintf("Cargados datos AutoX\n")
+
+%% Cargar los datos de simulaciones de slalom
+
+datos_mpc = load('resultados_mpc_slalom.mat');
+datos_pd  = load('resultados_pd_slalom.mat');
+
+fprintf("Cargados datos slalom\n")
 
 %% Análisis de seguimiento de curvatura de referencia
 
@@ -244,6 +255,10 @@ subplot(1,4,1:3)
 plot(datos_pd.run_data.time, datos_pd.run_data.k_calc, 'r', 'linewidth', 2.5, 'DisplayName', 'Curvatura Real (PD)'); hold on;
 plot(datos_mpc.run_data.time, datos_mpc.run_data.k_calc, 'b', 'linewidth', 2.5, 'DisplayName', 'Curvatura Real (MPC)'); 
 plot(k_target, 'k--', 'linewidth', 2, 'DisplayName', 'Curvatura de referencia');
+% plot(datos_pd.run_data.time,datos_pd.run_data.time*0+1/9.125,'--k','DisplayName','Centro del skidpad')
+% plot(datos_pd.run_data.time,datos_pd.run_data.time*0+1/(8.625+1.2/2),'-.b','DisplayName','Límite del skidpad')
+% plot(datos_pd.run_data.time,datos_pd.run_data.time*0+1/(9.625-1.2/2),'-.b','DisplayName','Límite del skidpad')
+% ylim([1/9.625,1/8.625]);
 grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
@@ -262,23 +277,20 @@ title(['RMSE: PD=',num2str(rmse_error_k_pd,2),' MPC=',num2str(rmse_error_k_mpc,2
 
 sgtitle('Seguimiento de referencia de curvatura', 'FontSize', 14, 'FontWeight', 'bold');
 
-ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura_autox_sim.png';
-exportgraphics(gcf, ruta_guardado)
-
-
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura_skidpad_sim.png';
+% exportgraphics(gcf, ruta_guardado)
 
 
 %% Seguimiento de referencia de yaw rate
 
 
-r_resampled = interp1(time, datos_pd.run_data.yaw_rate, datos_pd.run_data.time_control, 'pchip');
+r_resampled = interp1(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, datos_pd.run_data.time_control, 'pchip');
 r_error_pd = abs(r_resampled - datos_pd.run_data.r_ref);
 rmse_error_r_pd = sqrt(mean(r_error_pd.^2, 'omitnan'));
 
-r_resampled = interp1(time, datos_mpc.run_data.yaw_rate, datos_mpc.run_data.time_control, 'pchip');
+r_resampled = interp1(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, datos_mpc.run_data.time_control, 'pchip');
 r_error_mpc = abs(r_resampled - datos_mpc.run_data.r_ref);
 rmse_error_r_mpc = sqrt(mean(r_error_mpc.^2, 'omitnan'));
-
 
 
 
@@ -335,19 +347,213 @@ title(['RMSE: MPC=',num2str(rmse_error_r_mpc,2)])
 
 sgtitle('Seguimiento de referencia de yaw rate', 'FontSize', 14, 'FontWeight', 'bold');
 
-ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_yaw_rate_autox_sim.png';
-exportgraphics(gcf, ruta_guardado)
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_yaw_rate_skidpad_sim.png';
+% exportgraphics(gcf, ruta_guardado)
 
 
+%% Análisis de slalom 
+
+% Parámetros geométricos del slalom
+D_cone  = 9.0;
+W_track = 3.0;
+W_car   = 1.22;
+A_path  = (W_track - W_car) / 2; % 0.8 m
+w       = pi / D_cone;
+k_limit = A_path * w^2;
+
+A_max         = (W_track - W_car) / 2; % ~0.89 m
+k_limit_outer = A_max * w^2;
+
+A_min         = W_car / 2;             % 0.61 m
+k_limit_inner = A_min * w^2;
+
+% Generación de la referencia ideal basada en la distancia recorrida (X)
+x_ideal = linspace(0, max(datos_mpc.run_data.x), 1000);
+y_ideal = A_path * sin(w * x_ideal);
+dy_dx   = A_path * w * cos(w * x_ideal);
+d2y_dx2 = -A_path * w^2 * sin(w * x_ideal);
+k_ideal = d2y_dx2 ./ (1 + dy_dx.^2).^(3/2);
+
+x_pd_reesc = interp1(time, datos_pd.run_data.x, datos_pd.run_data.time_control, 'pchip');
+x_mpc_reesc = interp1(time, datos_mpc.run_data.x, datos_mpc.run_data.time_control, 'pchip');
+
+% Configuración de la figura
+figure;
+x0 = 0; 
+y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3));
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
+
+eje1 = subplot(2, 1, 1);
+plot(datos_pd.run_data.time, datos_pd.run_data.k_calc, 'r', 'linewidth', 2.5, 'DisplayName', 'Curvatura Real (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.k_calc, 'b', 'linewidth', 2.5, 'DisplayName', 'Curvatura Real (MPC)'); 
+plot(k_target, 'k--', 'linewidth', 2, 'DisplayName', 'Curvatura de referencia');
+
+% Límite cinemático
+plot([0, max(k_target.Time)], [k_limit_outer, k_limit_outer], '-.r', 'linewidth', 1.5, 'DisplayName', 'Límite Exterior (Pista)');
+plot([0, max(k_target.Time)], [-k_limit_outer, -k_limit_outer], '-.r', 'linewidth', 1.5, 'HandleVisibility', 'off');
+
+plot([0, max(k_target.Time)], [k_limit_inner, k_limit_inner], ':k', 'linewidth', 1.5, 'DisplayName', 'Límite Interior (Cono)');
+plot([0, max(k_target.Time)], [-k_limit_inner, -k_limit_inner], ':k', 'linewidth', 1.5, 'HandleVisibility', 'off');
+
+grid on
+legend('show', 'Location', 'northwest')
+xlabel('Tiempo [s]')
+ylabel('Curvatura [1/m]')
+set(gca, 'FontSize', 11)
+
+
+eje2 = subplot(2, 1, 2);
+plot(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, 'r', 'linewidth', 2.5, 'DisplayName', 'Real PD'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, 'b', 'linewidth', 2.5, 'DisplayName', 'Real MPC');
+plot(datos_pd.run_data.time_control, datos_pd.run_data.r_ref_og, 'g--', 'linewidth', 2.5, 'DisplayName', 'Referencia PD');
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.r_ref, 'k--', 'linewidth', 2.5, 'DisplayName', 'Referencia MPC');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Yaw rate [rad/s]')
+set(gca, 'FontSize', 11)
+linkaxes([eje1,eje2],'x')
+
+sgtitle('Comparación de Slalom en Aceleración', 'FontSize', 14, 'FontWeight', 'bold');
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_slalom_sim.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+%% Gráfica de los pares de cada rueda
+
+figure;
+x0 = 0; 
+y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3));
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
+
+
+eje1 = subplot(2,1,1);
+plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,1), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
+plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,2), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
+plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,3), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
+plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,4), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Par [N/m]')
+set(gca, 'FontSize', 11)
+title('Controlador PD')
+
+eje2 = subplot(2,1,2);
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(1,:), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(2,:), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(3,:), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(4,:), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Par [N/m]')
+set(gca, 'FontSize', 11)
+title('Controlador LTV-MPC')
+
+linkaxes([eje1,eje2],'x')
+
+sgtitle('Comparación de par comandado', 'FontSize', 14, 'FontWeight', 'bold');
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_slalom_par_sim.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+%% Análisis del Límite de Adherencia: Diagrama G-G-V
+
+% 1. Extracción y conversión de aceleraciones a fuerzas G
+ax_pd_g = datos_pd.run_data.ax;
+ay_pd_g = datos_pd.run_data.ay;
+v_pd    = datos_pd.run_data.vx;
+
+ax_mpc_g = datos_mpc.run_data.ax;
+ay_mpc_g = datos_mpc.run_data.ay;
+v_mpc    = datos_mpc.run_data.vx;
+
+% Configuración de la figura
+figure;
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3));
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
+
+
+subplot(1, 2, 1)
+% Trazadas (Dibujamos PD primero para que el MPC quede por encima si se solapan)
+plot(ay_pd_g, ax_pd_g, 'r.', 'linewidth', 1.5, 'DisplayName', 'Real (PD)'); hold on;
+plot(ay_mpc_g, ax_mpc_g, 'b.', 'linewidth', 1.5, 'DisplayName', 'Real (MPC)');
+
+grid on; axis equal;
+xlabel('Aceleración Lateral a_y [g]')
+ylabel('Aceleración Longitudinal a_x [g]')
+title('Diagrama G-G (Proyección 2D)')
+legend('show', 'Location', 'best')
+set(gca, 'FontSize', 11)
+
+
+subplot(1, 2, 2)
+
+plot3(ay_pd_g, ax_pd_g, v_pd, 'r.', 'linewidth', 1.5, 'DisplayName', 'Evolución PD'); hold on;
+plot3(ay_mpc_g, ax_mpc_g, v_mpc, 'b.', 'linewidth', 1.5, 'DisplayName', 'Evolución MPC');
+
+grid on;
+xlabel('Aceleración Lateral a_y [g]')
+ylabel('Aceleración Longitudinal a_x [g]')
+zlabel('Velocidad v_x [m/s]')
+title('Diagrama G-G-V 3D')
+legend('show', 'Location', 'best')
+set(gca, 'FontSize', 11)
+
+% Ajuste de cámara inicial (puedes rotarla con el ratón luego en MATLAB)
+view(-45, 25); 
+
+sgtitle('Diagrama G-G-V', 'FontSize', 14, 'FontWeight', 'bold');
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_ggv_sim.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+%% Análisis de Comportamiento: Ángulo de Dirección vs Aceleración Lateral
+
+ay_pd_g = datos_pd.run_data.ay;
+steer_pd_deg = datos_pd.run_data.steer * (180 / pi); 
+
+ay_mpc_g = datos_mpc.run_data.ay;
+steer_mpc_deg = datos_mpc.run_data.steer * (180 / pi);
+
+
+figure;
+x0 = 100; y0 = 100; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3) * 0.6); % Un poco más estrecha para mantener la proporción
+height = round(screen(4) * 0.7);
+set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
+
+
+hold on; grid on;
+
+scatter(ay_pd_g, steer_pd_deg, 15, 'r', 'filled', 'DisplayName', 'Evolución PD');
+scatter(ay_mpc_g, steer_mpc_deg, 15, 'b', 'filled', 'DisplayName', 'Evolución MPC');
+plot(ay_pd_g,ay_pd_g, 'k','linewidth', 1.5, 'HandleVisibility', 'off')
+
+xlabel('Aceleración Lateral a_y [g]')
+ylabel('Ángulo de Dirección \delta [deg]')
+legend('show', 'Location', 'northwest')
+set(gca, 'FontSize', 11)
+
+sgtitle('Understeer Gradient', 'FontSize', 14, 'FontWeight', 'bold');
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_subviraje.png';
+% exportgraphics(gcf, ruta_guardado)
 
 %% 
-
-
-
-
-
-
-
 
 
 

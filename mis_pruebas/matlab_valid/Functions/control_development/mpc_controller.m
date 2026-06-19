@@ -1,11 +1,11 @@
-function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
+function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_max, k_ref] = mpc_controller(fx_request, x, u_prev, sensors, param_vdc, pac)
 % MPC_CONTROLLER  LTV-MPC de torque vectoring (Mikuláš et al. 2018, ec. 15)
 
     coder.extrinsic('qpOASES_options');
     coder.extrinsic('qpOASES');
 
     %% Parámetros MPC
-    Np  = 20;
+    Np  = 10;
     Ts  = 0.005;
     nx  = 3;
     nu  = 4;
@@ -22,6 +22,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     delta_cmd = sensors.ext.steering;
     delta     = calculate_steering(delta_cmd, param_vdc);
     delta_mean = mean(delta(1:2));
+    wheel_speed = [sensors.encoder.wFL; sensors.encoder.wFR; sensors.encoder.wRL; sensors.encoder.wRR];
 
     %% Guardia de velocidad mínima
     % Por debajo de esta velocidad el MPC no tiene sentido físico:
@@ -34,55 +35,63 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
         vx_ref   = vx;
         vy_ref   = vy;
         r_ref    = r;
+        v_max= 0;
+        vy_max = 0;
+        Fy_max = 0;
+        beta_max = 0;
+        k_ref = 0;
         return;
     end
 
     %% 1. Referencias
 
     % Radio cinemático
-    if abs(delta_mean) < 1e-4
+    if abs(delta_cmd) < 1e-4
         Rss_ref = 1e6;
     else
-        Rss_ref = param_vdc.wheelbase / tan(delta_mean);
+        Rss_ref = param_vdc.wheelbase / tan(delta_cmd);
     end
+
+    k_ref = 1/Rss_ref;
 
     % Fy_max: capacidad lateral pura (slip_ratio = 0)
     vx_wheel = vx*ones(4,1) + r/2 * [-param_vdc.trackwidthF;  param_vdc.trackwidthF; ...
                                    -param_vdc.trackwidthR;  param_vdc.trackwidthR];
     vy_wheel = vy*ones(4,1) + r   * [ param_vdc.lf;  param_vdc.lf; ...
                                   -param_vdc.lr; -param_vdc.lr];
-    slip_angle_ref = atan2(vy_wheel, vx_wheel) - delta;
+%     slip_angle_ref = atan2(vy_wheel, vx_wheel) - delta;
+%     vx_wheel_tire = vx_wheel .* cos(delta) + vy_wheel .* sin(delta);
+%     slip_ratio = param_vdc.rdyn * wheel_speed ./ (vx_wheel_tire + eps) - 1;
     tire_load_ref  = calculate_tire_loads(ax, ay, vx, param_vdc);
-    [fy_pure, fx_pure]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
-    Fy_max  = max(sum(fy_pure .* cos(delta)) + sum(fx_pure .* sin(delta)), 100);
-    Fz_total = sum(tire_load_ref);
+%     [fy_pure, ~]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, zeros(4,1), pac);
+%     [~, fx_pure]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, slip_ratio, pac);
+%     Fy_max  = max(abs(sum(fy_pure .* cos(delta)) + sum(fx_pure .* sin(delta))), 100);
+
+    Fy_max = max(abs(pac.Dlat) * sum(tire_load_ref),100);
 
     % v2_max (ec. 11)
     v2_max = max(abs(Rss_ref) * Fy_max / param_vdc.mass, 0);
 
     % vx_ref (ec. 12)
     V_now       = sqrt(vx^2 + vy^2);
-    a_driver    = fx_request / param_vdc.mass;
+    a_driver    = max(fx_request,0) / param_vdc.mass;
     V_predicted = V_now + a_driver * Np * Ts;
-    V_max_lat   = sqrt(v2_max);
-    
-    vx_ref = min(V_predicted, sqrt(abs(v2_max-vy^2)));
 
-%     V_target    = min(max(V_predicted, 0), V_max_lat);
-%     vx_ref      = sqrt(max(V_target^2 - vy^2, 0));
+    v_max = max(v2_max-vy^2,0);
+
+    vx_ref = min(V_predicted, sqrt(max(v2_max-vy^2,0)));
+
 
     % vy_ref (ec. 13)
-    % beta_max basado en la relación Fy_max/Fz — independiente de fx_request
-%     beta_max = atan(0.85 * Fy_max / (Fz_total + eps));
-%     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
-
     % Probar quitando ese abs
-    beta_max = atan2(Fy_max, abs(fx_request) + eps);
+%     beta_max = atan2(Fy_max, abs(fx_request) + eps);
+    beta_max = 6*pi/180;
 %     beta_max = atan2(Fy_max, fx_request + sign(fx_request)*eps);
+    vy_max = tan(beta_max) * vx;
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
     % r_ref (ec. 14) — para círculo de radio fijo: vx/R
-    r_ref = vx * tan(delta_mean) / (param_vdc.wheelbase + Kus * vx^2);
+    r_ref = vx * tan(delta_cmd) / (param_vdc.wheelbase + (Kus * vx^2));
 
     X_ref = repmat([vx_ref; vy_ref; r_ref], Np, 1);
 
@@ -95,8 +104,21 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref] = mpc_controller(fx_request, x
     %% 4. Pesos
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
-    Q_weight = diag([0, 10, 100]);
-    R_weight = diag([0.002, 0.002, 0.002, 0.002]);
+    Q_weight = diag([0, 10, 1000]);
+    R_weight = diag([0.1, 0.1, 0.1, 0.1]);
+
+    % AutoX
+%     Q_weight = diag([100, 10, 10]);
+%     R_weight = diag([0.002, 0.002, 0.002, 0.002]);
+
+    % Skidpad
+%     Q_weight = diag([0, 10, 1000]);
+%     R_weight = diag([0.005, 0.005, 0.005, 0.005]);
+
+%     params->mpc_Q1 = 0.0;
+%     params->mpc_Q2 = 10.0;
+%     params->mpc_Q3 = 100.0;
+%     params->mpc_R  = 0.5;           // 0.5
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);
