@@ -1,3 +1,25 @@
+%% Cargar los datos de simulaciones de skidpad
+
+datos_mpc = load('resultados_mpc_skidpad.mat');
+datos_pd  = load('resultados_pd_skidpad.mat');
+
+fprintf("Cargados datos skidpad\n")
+
+%% Cargar los datos de simulaciones de AutoX
+
+datos_mpc = load('resultados_mpc_autox.mat');
+datos_pd  = load('resultados_pd_autox.mat');
+
+fprintf("Cargados datos AutoX\n")
+
+%% Cargar los datos de simulaciones de slalom
+
+datos_mpc = load('resultados_mpc_slalom.mat');
+datos_pd  = load('resultados_pd_slalom.mat');
+
+fprintf("Cargados datos slalom\n")
+
+
 
 %% Tiempo entre comunicaciones
 
@@ -169,27 +191,6 @@ set(gcf,'position',[x0,y0,width,height])
 % exportgraphics(gcf, 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\validacion_modelo_mpc.png', 'Resolution', 300)
 
 
-%% Cargar los datos de simulaciones de skidpad
-
-datos_mpc = load('resultados_mpc_skidpad.mat');
-datos_pd  = load('resultados_pd_skidpad.mat');
-
-fprintf("Cargados datos skidpad\n")
-
-%% Cargar los datos de simulaciones de AutoX
-
-datos_mpc = load('resultados_mpc_autox.mat');
-datos_pd  = load('resultados_pd_autox.mat');
-
-fprintf("Cargados datos AutoX\n")
-
-%% Cargar los datos de simulaciones de slalom
-
-datos_mpc = load('resultados_mpc_slalom.mat');
-datos_pd  = load('resultados_pd_slalom.mat');
-
-fprintf("Cargados datos slalom\n")
-
 %% Análisis de seguimiento de curvatura de referencia
 
 L = 1.535;
@@ -242,13 +243,23 @@ datos_target_raw = squeeze(k_target.Data);
 [t_target, unique_idx] = unique(t_target_raw);
 datos_target = datos_target_raw(unique_idx);
 
-k_resampled = interp1(t_target, datos_target, time, 'pchip');
+k_resampled = interp1(t_target, datos_target, datos_pd.run_data.time, 'pchip');
 
-k_error_pd = abs(k_resampled - datos_pd.run_data.k_calc);
-rmse_error_k_pd = sqrt(mean(k_error_pd.^2, 'omitnan'));
+% k_error_pd = abs(k_resampled - datos_pd.run_data.k_calc);
+% rmse_error_k_pd = sqrt(mean(k_error_pd.^2, 'omitnan'));
+% 
+% k_error_mpc = abs(k_resampled - datos_mpc.run_data.k_calc);
+% rmse_error_k_mpc = sqrt(mean(k_error_mpc.^2, 'omitnan'));
 
+% 1. Crear máscaras lógicas para los primeros 23 segundos
+idx_pd_23s  = datos_pd.run_data.time <= 23;
+idx_mpc_23s = datos_mpc.run_data.time <= 23;
+
+k_error_pd  = abs(k_resampled - datos_pd.run_data.k_calc);
 k_error_mpc = abs(k_resampled - datos_mpc.run_data.k_calc);
-rmse_error_k_mpc = sqrt(mean(k_error_mpc.^2, 'omitnan'));
+
+rmse_error_k_pd  = sqrt(mean(k_error_pd(idx_pd_23s).^2, 'omitnan'));
+rmse_error_k_mpc = sqrt(mean(k_error_mpc(idx_mpc_23s).^2, 'omitnan'));
 
 
 subplot(1,4,1:3)
@@ -274,11 +285,14 @@ xlabel('Tiempo [s]')
 ylabel('Error curvatura \kappa [1/m]')
 set(gca, 'FontSize', 11)
 title(['RMSE: PD=',num2str(rmse_error_k_pd,2),' MPC=',num2str(rmse_error_k_mpc,2)])
+% ylim([0,0.3]);
+xlim([0,23]);
 
 sgtitle('Seguimiento de referencia de curvatura', 'FontSize', 14, 'FontWeight', 'bold');
 
 % ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura_skidpad_sim.png';
 % exportgraphics(gcf, ruta_guardado)
+
 
 
 %% Seguimiento de referencia de yaw rate
@@ -374,8 +388,8 @@ dy_dx   = A_path * w * cos(w * x_ideal);
 d2y_dx2 = -A_path * w^2 * sin(w * x_ideal);
 k_ideal = d2y_dx2 ./ (1 + dy_dx.^2).^(3/2);
 
-x_pd_reesc = interp1(time, datos_pd.run_data.x, datos_pd.run_data.time_control, 'pchip');
-x_mpc_reesc = interp1(time, datos_mpc.run_data.x, datos_mpc.run_data.time_control, 'pchip');
+x_pd_reesc = interp1(datos_pd.run_data.time, datos_pd.run_data.x, datos_pd.run_data.time_control, 'pchip');
+x_mpc_reesc = interp1(datos_pd.run_data.time, datos_mpc.run_data.x, datos_mpc.run_data.time_control, 'pchip');
 
 % Configuración de la figura
 figure;
@@ -521,39 +535,665 @@ sgtitle('Diagrama G-G-V', 'FontSize', 14, 'FontWeight', 'bold');
 % exportgraphics(gcf, ruta_guardado)
 
 
-%% Análisis de Comportamiento: Ángulo de Dirección vs Aceleración Lateral
-
-ay_pd_g = datos_pd.run_data.ay;
+%% Análisis del Gradiente de Subviraje (Handling Diagram)
+% Extraemos los datos (dejamos la variable como ay_pd para reflejar que está en m/s^2)
+ay_pd = datos_pd.run_data.ay;
 steer_pd_deg = datos_pd.run_data.steer * (180 / pi); 
 
-ay_mpc_g = datos_mpc.run_data.ay;
+ay_mpc = datos_mpc.run_data.ay;
 steer_mpc_deg = datos_mpc.run_data.steer * (180 / pi);
+
+% Definimos el límite de la zona lineal (aprox 0.4 g = 4 m/s^2)
+ay_lim_linear = 5.0;
+
+% Filtramos los índices donde la aceleración está dentro del límite
+idx_lin_pd  = abs(ay_pd) <= ay_lim_linear;
+idx_lin_mpc = abs(ay_mpc) <= ay_lim_linear;
+
+% Calculamos la recta de ajuste (polinomio de grado 1: y = m*x + b)
+% p(1) es la pendiente (K_us), p(2) es el corte con el eje Y
+p_pd  = polyfit(ay_pd(idx_lin_pd), steer_pd_deg(idx_lin_pd), 1);
+p_mpc = polyfit(ay_mpc(idx_lin_mpc), steer_mpc_deg(idx_lin_mpc), 1);
+
+Kus_pd  = p_pd(1);
+Kus_mpc = p_mpc(1);
+
+% Generamos los puntos para dibujar las rectas de mejor ajuste
+ay_fit = linspace(-ay_lim_linear, ay_lim_linear, 100);
+steer_fit_pd  = polyval(p_pd, ay_fit);
+steer_fit_mpc = polyval(p_mpc, ay_fit);
 
 
 figure;
-x0 = 100; y0 = 100; 
+x0 = 0; y0 = 0;
 screen = get(0,'ScreenSize');
-width  = round(screen(3) * 0.6); % Un poco más estrecha para mantener la proporción
-height = round(screen(4) * 0.7);
+width  = round(screen(3)); 
+height = round(screen(4));
 set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
-
-
 hold on; grid on;
 
-scatter(ay_pd_g, steer_pd_deg, 15, 'r', 'filled', 'DisplayName', 'Evolución PD');
-scatter(ay_mpc_g, steer_mpc_deg, 15, 'b', 'filled', 'DisplayName', 'Evolución MPC');
-plot(ay_pd_g,ay_pd_g, 'k','linewidth', 1.5, 'HandleVisibility', 'off')
+% Nubes de puntos (usamos MarkerFaceAlpha para darles transparencia si tu versión de MATLAB lo permite)
+scatter(ay_pd, steer_pd_deg, 15, 'r', 'filled', 'MarkerFaceAlpha', 0.3, 'DisplayName', 'Datos PD');
+scatter(ay_mpc, steer_mpc_deg, 15, 'b', 'filled', 'MarkerFaceAlpha', 0.3, 'DisplayName', 'Datos MPC');
 
-xlabel('Aceleración Lateral a_y [g]')
+% Líneas de regresión (K_us)
+plot(ay_fit, steer_fit_pd, 'k', 'linewidth', 2.5, 'DisplayName', ['Ajuste PD (K_{us} = ', num2str(Kus_pd, '%.2f'), ' deg/(m/s^2))']);
+plot(ay_fit, steer_fit_mpc, 'y', 'linewidth', 2.5, 'DisplayName', ['Ajuste MPC (K_{us} = ', num2str(Kus_mpc, '%.2f'), ' deg/(m/s^2))']);
+
+% Ajuste de etiquetas teniendo en cuenta la unidad real
+xlabel('Aceleración Lateral a_y [m/s^2]')
 ylabel('Ángulo de Dirección \delta [deg]')
 legend('show', 'Location', 'northwest')
 set(gca, 'FontSize', 11)
 
-sgtitle('Understeer Gradient', 'FontSize', 14, 'FontWeight', 'bold');
-% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_subviraje.png';
+sgtitle('Evaluación del Gradiente de Subviraje', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_subviraje_ajuste.png';
 % exportgraphics(gcf, ruta_guardado)
 
+
+
+%% Análisis de acelerador y freno
+
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3)); 
+height = round(screen(4));
+
+% Conversión del ángulo de volante de radianes a grados para mayor claridad
+steer_pd_deg = datos_pd.run_data.steer * (180 / pi);
+steer_mpc_deg = datos_mpc.run_data.steer * (180 / pi);
+
+figure('Name', 'Acciones del Piloto (Acel, Freno, Volante)', 'Position', [x0, y0, width, height], 'Color', 'w');
+
+% --- Subplot 1: Acelerador ---
+subplot(3, 1, 1)
+plot(datos_pd.run_data.time, datos_pd.run_data.accel, 'r', 'linewidth', 2.5, 'DisplayName', 'Acelerador (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.accel, 'b', 'linewidth', 2.5, 'DisplayName', 'Acelerador (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Acelerador [% o Señal]')
+title('Uso del pedal del Acelerador')
+set(gca, 'FontSize', 11)
+
+% --- Subplot 2: Freno ---
+subplot(3, 1, 2)
+plot(datos_pd.run_data.time, datos_pd.run_data.brake, 'r', 'linewidth', 2.5, 'DisplayName', 'Freno (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.brake, 'b', 'linewidth', 2.5, 'DisplayName', 'Freno (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Freno [% o Señal]')
+title('Uso del pedal de Freno')
+set(gca, 'FontSize', 11)
+
+% --- Subplot 3: Volante ---
+subplot(3, 1, 3)
+plot(datos_pd.run_data.time, steer_pd_deg, 'r', 'linewidth', 2.5, 'DisplayName', 'Volante (PD)'); hold on;
+plot(datos_mpc.run_data.time, steer_mpc_deg, 'b', 'linewidth', 2.5, 'DisplayName', 'Volante (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Ángulo de Dirección \delta [deg]')
+title('Uso del Volante')
+set(gca, 'FontSize', 11)
+
+sgtitle('Acciones de Control Longitudinal y Lateral del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\pedales_y_volante.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+figure('Name', 'Dinámica de Frenado, Aceleración y Dirección', 'Position', [x0, y0, width, height], 'Color', 'w');
+
+% --- Subplot 1: Acelerador ---
+subplot(3, 1, 1)
+plot(datos_pd.run_data.time, datos_pd.run_data.accel, 'r', 'linewidth', 2.5, 'DisplayName', 'Acelerador (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.accel, 'b', 'linewidth', 2.5, 'DisplayName', 'Acelerador (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Acelerador [% o Señal]')
+title('Uso del pedal del Acelerador')
+set(gca, 'FontSize', 11)
+
+% --- Subplot 2: Freno Hidráulico y Célula de Carga ---
+subplot(3, 1, 2)
+% Frenos hidráulicos (Líneas continuas)
+plot(datos_pd.run_data.time, datos_pd.run_data.hyd_brake, 'r', 'linewidth', 2.5, 'DisplayName', 'Presión Hidráulica (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.hyd_brake, 'b', 'linewidth', 2.5, 'DisplayName', 'Presión Hidráulica (MPC)'); 
+
+% Células de carga (Líneas punteadas)
+plot(datos_pd.run_data.time, datos_pd.run_data.load_cell, '--r', 'linewidth', 1.5, 'DisplayName', 'Célula de Carga (PD)'); 
+plot(datos_mpc.run_data.time, datos_mpc.run_data.load_cell, '--b', 'linewidth', 1.5, 'DisplayName', 'Célula de Carga (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best', 'NumColumns', 2)
+xlabel('Tiempo [s]')
+ylabel('Presión [bar] / Fuerza [N]')
+title('Distribución del Sistema de Frenado (Hidráulico vs Load Cell)')
+set(gca, 'FontSize', 11)
+
+% --- Subplot 3: Volante ---
+subplot(3, 1, 3)
+plot(datos_pd.run_data.time, steer_pd_deg, 'r', 'linewidth', 2.5, 'DisplayName', 'Volante (PD)'); hold on;
+plot(datos_mpc.run_data.time, steer_mpc_deg, 'b', 'linewidth', 2.5, 'DisplayName', 'Volante (MPC)'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Ángulo de Dirección \delta [deg]')
+title('Uso del Volante')
+set(gca, 'FontSize', 11)
+
+sgtitle('Análisis Completo de las Entradas del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\pedales_hyd_volante.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+%% Análisis de seguimiento de velocidad de referencia
+figure;
+x0 = 0; 
+y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3));
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
+
+% Extracción de la referencia de velocidad (v_target)
+t_target_raw = v_target.Time;
+datos_target_raw = squeeze(v_target.Data);
+[t_target, unique_idx] = unique(t_target_raw);
+datos_target = datos_target_raw(unique_idx);
+
+% Interpolación de la referencia a la base de tiempos real
+v_resampled = interp1(t_target, datos_target, datos_pd.run_data.time, 'pchip');
+
+% 1. Crear máscaras lógicas para los primeros 23 segundos
+idx_pd_23s  = datos_pd.run_data.time >= 1.3;
+idx_mpc_23s = datos_mpc.run_data.time >= 1.3;
+
+% Cálculo de errores absolutos de velocidad
+v_error_pd  = abs(v_resampled - datos_pd.run_data.vx);
+v_error_mpc = abs(v_resampled - datos_mpc.run_data.vx);
+
+% Cálculo de RMSE solo en la ventana de 0 a 23 segundos
+rmse_error_v_pd  = sqrt(mean(v_error_pd(idx_pd_23s).^2, 'omitnan'));
+rmse_error_v_mpc = sqrt(mean(v_error_mpc(idx_mpc_23s).^2, 'omitnan'));
+
+% --- SUBPLOT 1: Evolución de la Velocidad ---
+subplot(1,4,1:3)
+plot(datos_pd.run_data.time, datos_pd.run_data.vx, 'r', 'linewidth', 2.5, 'DisplayName', 'Velocidad Real (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.vx, 'b', 'linewidth', 2.5, 'DisplayName', 'Velocidad Real (MPC)'); 
+plot(v_target, 'k--', 'linewidth', 2, 'DisplayName', 'Velocidad de Referencia');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Velocidad v_x [m/s]')
+set(gca, 'FontSize', 11)
+
+% --- SUBPLOT 2: Error de Velocidad ---
+subplot(1,4,4)
+plot(datos_pd.run_data.time, v_error_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD'); hold on;
+plot(datos_mpc.run_data.time, v_error_mpc, 'b', 'linewidth', 2.5, 'DisplayName', 'MPC'); 
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Error absoluto v_x [m/s]')
+set(gca, 'FontSize', 11)
+title(['RMSE: PD=', num2str(rmse_error_v_pd,2), '  MPC=', num2str(rmse_error_v_mpc,2)])
+xlim([1.3,23]);
+
+sgtitle('Seguimiento de referencia de velocidad longitudinal', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_velocidad_sim.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+
+%% Velocidad lateral y slip angle
+
+% Conversión del ángulo de deriva de radianes a grados para mayor claridad
+beta_pd_deg  = datos_pd.run_data.beta * (180 / pi);
+beta_mpc_deg = datos_mpc.run_data.beta * (180 / pi);
+
+% Configuración de la figura
+figure('Name', 'Estabilidad Lateral', 'Color', 'w');
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3)); 
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height])
+
+% =========================================================================
+% SUBPLOT 1: Velocidad Lateral (v_y)
+% =========================================================================
+subplot(2, 1, 1)
+plot(datos_pd.run_data.time, datos_pd.run_data.vy, 'r', 'linewidth', 2.5, 'DisplayName', 'v_y Real (PD)'); hold on;
+plot(datos_mpc.run_data.time, datos_mpc.run_data.vy, 'b', 'linewidth', 2.5, 'DisplayName', 'v_y Real (MPC)'); 
+
+% La referencia del MPC usa la base de tiempos del control
+plot(datos_mpc.run_data.time_control, datos_mpc.run_data.vy_ref, 'k--', 'linewidth', 2, 'DisplayName', 'Referencia (MPC)');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Velocidad Lateral v_y [m/s]')
+title('Evolución de la Velocidad Lateral')
+set(gca, 'FontSize', 11)
+
+% =========================================================================
+% SUBPLOT 2: Ángulo de Deriva del Chasis (Side Slip Angle - beta)
+% =========================================================================
+subplot(2, 1, 2)
+plot(datos_pd.run_data.time, beta_pd_deg, 'r', 'linewidth', 2.5, 'DisplayName', '\beta Real (PD)'); hold on;
+plot(datos_mpc.run_data.time, beta_mpc_deg, 'b', 'linewidth', 2.5, 'DisplayName', '\beta Real (MPC)'); 
+
+% Opcional: Si configuraste un límite de beta_max (ej. 6 grados), puedes descomentar 
+% estas líneas para dibujarlo y ver cómo el MPC respeta esa frontera
+% beta_max_lim = 6.0;
+% plot([0, max(datos_mpc.run_data.time)], [beta_max_lim, beta_max_lim], 'k-.', 'linewidth', 1.5, 'DisplayName', 'Límite Físico');
+% plot([0, max(datos_mpc.run_data.time)], [-beta_max_lim, -beta_max_lim], 'k-.', 'linewidth', 1.5, 'HandleVisibility', 'off');
+
+grid on
+legend('show', 'Location', 'best')
+xlabel('Tiempo [s]')
+ylabel('Ángulo de Deriva \beta [deg]')
+title('Evolución del Ángulo de Deriva del Chasis (Side Slip Angle)')
+set(gca, 'FontSize', 11)
+
+sgtitle('Análisis de Estabilidad Lateral', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_estabilidad_lateral.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+
+%% Círculo de fricción
+
+% Nomenclatura de ruedas: 1=FL, 2=FR, 3=RL, 4=RR
+nombres_ruedas = {'Delantera Izquierda (FL)', 'Delantera Derecha (FR)', ...
+                  'Trasera Izquierda (RL)', 'Trasera Derecha (RR)'};
+
+% Límite de adherencia teórico aproximado (basado en tu Pacejka Dlat = 1.53)
+muy_max = 1.5323;
+mux_max = 1.0976;
+theta = linspace(0, 2*pi, 100);
+circle_y = muy_max * sin(theta); % Eje X: Lateral
+circle_x = mux_max * cos(theta); % Eje Y: Longitudinal
+
+% Configuración de la figura
+figure('Name', 'Círculos de Fricción Normalizados', 'Color', 'w');
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3)); 
+height = round(screen(4));
+set(gcf, 'position', [x0, y0, width, height])
+
+for i = 1:4
+    % 1. Cálculo de fuerzas normalizadas (mu = F / Fz)
+    % Añadimos '+ eps' en el denominador para evitar errores de división por 0 
+    % si en algún momento una rueda se levanta completamente del aire.
+    muy_pd = datos_pd.run_data.FY(:, i) ./ (datos_pd.run_data.FZ(:, i) + eps);
+    mux_pd = datos_pd.run_data.FX(:, i) ./ (datos_pd.run_data.FZ(:, i) + eps);
+    
+    muy_mpc = datos_mpc.run_data.FY(:, i) ./ (datos_mpc.run_data.FZ(:, i) + eps);
+    mux_mpc = datos_mpc.run_data.FX(:, i) ./ (datos_mpc.run_data.FZ(:, i) + eps);
+
+    % 2. Creación del subplot
+    subplot(2, 2, i)
+    hold on; grid on; axis equal;
+    
+    % Dibujamos el círculo teórico de adherencia
+    plot(circle_y, circle_x, 'k--', 'linewidth', 1.5, 'DisplayName', ['Límite Teórico (\mu_y \approx ', num2str(muy_max), ', \mu_x \approx', num2str(mux_max),')']);
+    
+    % Dibujamos las trayectorias de utilización (Eje X = Fy/Fz, Eje Y = Fx/Fz)
+%     plot(muy_pd, mux_pd, 'r', 'linewidth', 1.5, 'DisplayName', 'Evolución PD');
+%     plot(muy_mpc, mux_mpc, 'b', 'linewidth', 1.5, 'DisplayName', 'Evolución MPC');
+    scatter(muy_pd(1:20:end), mux_pd(1:20:end), 5, 'r', 'filled', 'MarkerFaceAlpha', 0.2, 'DisplayName', 'Evolución PD');
+    scatter(muy_mpc(1:20:end), mux_mpc(1:20:end), 5, 'b', 'filled', 'MarkerFaceAlpha', 0.2, 'DisplayName', 'Evolución MPC');
+    
+    % Formateo de cada gráfica
+    title(nombres_ruedas{i})
+    xlabel('F_y / F_z (Normalizada Lateral)')
+    ylabel('F_x / F_z (Normalizada Longitudinal)')
+    set(gca, 'FontSize', 11)
+    
+    % Forzamos los límites para que el círculo mantenga la proporción y se vea entero
+%     xlim([-2, 2]);
+%     ylim([-2, 2]);
+    
+    % Leyenda solo en el primero
+%     if i == 1
+%         legend('show', 'Location', 'best')
+%     end
+end
+
+lgd = legend('show');
+
+set(lgd, 'NumColumns', 3); % Ajusta este número según cuántos elementos tengas
+lgd.Units = 'normalized';
+centro_x = 0.5 - (lgd.Position(3) / 2);
+centro_y = 0.48 - (lgd.Position(4) / 2); % Cambia 0.5 por 0.02 si la prefieres abajo del todo
+lgd.Position = [centro_x, centro_y, lgd.Position(3), lgd.Position(4)];
+
+sgtitle('Utilización de la Adherencia Rueda a Rueda (Círculo de Fricción)', 'FontSize', 14, 'FontWeight', 'bold');
+
+% ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\friction_circle_ruedas.png';
+% exportgraphics(gcf, ruta_guardado)
+
+
+%% Evolución 3D del Tubo de Adherencia (Fuerza Real vs Límite Teórico)
+% Nomenclatura de ruedas
+nombres_ruedas = {'Delantera Izquierda (FL)', 'Delantera Derecha (FR)', ...
+                  'Trasera Izquierda (RL)', 'Trasera Derecha (RR)'};
+
+% Coeficientes de fricción pico basados en tus parámetros de Pacejka
+mu_y_max = abs(pac.Dlat); % ~1.53
+mu_x_max = abs(pac.Dlon); % ~1.09
+
+% Resolución geométrica para el tubo (50 puntos de circunferencia)
+theta = linspace(0, 2*pi, 50);
+
+% Configuración general de pantalla
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3) * 0.6); 
+height = round(screen(4) * 0.85);
+paso = 50;
+
+% Inicializar variables para imprimir un resumen en consola
+resumen_pd = zeros(1,4);
+resumen_mpc = zeros(1,4);
+
+for i = 1:4
+    % Creamos una figura independiente por cada rueda
+    figure('Name', ['Tubo de Adherencia - ', nombres_ruedas{i}], 'Position', [x0, y0, width, height], 'Color', 'w');
+    
+    
+    % SUBPLOT 1: Controlador PD
+    % ====================================================================
+    ax1 = subplot(2, 1, 1);
+    hold on; grid on;
+    
+    % 1. Extraer datos del PD
+    t_pd  = datos_pd.run_data.time(:)'; 
+    Fz_pd = datos_pd.run_data.FZ(:, i)';
+    Fx_pd = datos_pd.run_data.FX(:, i)';
+    Fy_pd = datos_pd.run_data.FY(:, i)';
+    
+    % --- CÁLCULO DE LA MÉTRICA DE UTILIZACIÓN (PD) ---
+    % Calculamos rho en cada instante t (añadimos eps para evitar división por 0)
+    rho_pd = sqrt( (Fx_pd ./ (mu_x_max .* Fz_pd + eps)).^2 + (Fy_pd ./ (mu_y_max .* Fz_pd + eps)).^2 );
+    metrica_util_pd = mean(rho_pd, 'omitnan') * 100; % Convertimos a porcentaje
+    resumen_pd(i) = metrica_util_pd;
+    
+    % 2. Generar mallas para el tubo 3D
+    [T_mesh_pd, Th_mesh] = meshgrid(t_pd, theta);
+    Fz_mesh_pd = repmat(Fz_pd, length(theta), 1);
+    
+    % 3. Calcular los límites instantáneos (Elipse de fricción dinámica)
+    Fx_lim_pd = mu_x_max .* Fz_mesh_pd .* cos(Th_mesh);
+    Fy_lim_pd = mu_y_max .* Fz_mesh_pd .* sin(Th_mesh);
+    
+    % 4. Dibujar el Tubo Límite
+    surf(T_mesh_pd(:,1:paso:end), Fx_lim_pd(:,1:paso:end), Fy_lim_pd(:,1:paso:end), 'FaceColor', 'r', 'FaceAlpha', 0.15, 'EdgeColor', 'none', 'DisplayName', 'Límite Teórico');
+    
+    % 5. Dibujar la Fuerza Real
+    plot3(t_pd(1:paso:end), Fx_pd(:,1:paso:end), Fy_pd(:,1:paso:end), 'k', 'LineWidth', 2.5, 'DisplayName', 'Fuerza Real');
+    
+    % Formateo
+    title(sprintf('PD - %s | Uso medio de adherencia: %.1f%%', nombres_ruedas{i}, metrica_util_pd));
+    xlabel('Tiempo [s]')
+    ylabel('F_x (Longitudinal) [N]')
+    zlabel('F_y (Lateral) [N]')
+    set(gca, 'FontSize', 11)
+    view(-35, 30); 
+    legend('show', 'Location', 'best')
+    
+    
+    % SUBPLOT 2: Controlador MPC
+    % ====================================================================
+    ax2 = subplot(2, 1, 2);
+    hold on; grid on;
+    
+    % 1. Extraer datos del MPC
+    t_mpc  = datos_mpc.run_data.time(:)';
+    Fz_mpc = datos_mpc.run_data.FZ(:, i)';
+    Fx_mpc = datos_mpc.run_data.FX(:, i)';
+    Fy_mpc = datos_mpc.run_data.FY(:, i)';
+    
+    % --- CÁLCULO DE LA MÉTRICA DE UTILIZACIÓN (MPC) ---
+    rho_mpc = sqrt( (Fx_mpc ./ (mu_x_max .* Fz_mpc + eps)).^2 + (Fy_mpc ./ (mu_y_max .* Fz_mpc + eps)).^2 );
+    metrica_util_mpc = mean(rho_mpc, 'omitnan') * 100;
+    resumen_mpc(i) = metrica_util_mpc;
+    
+    % 2. Generar mallas para el tubo 3D
+    [T_mesh_mpc, Th_mesh_mpc] = meshgrid(t_mpc, theta);
+    Fz_mesh_mpc = repmat(Fz_mpc, length(theta), 1);
+    
+    % 3. Calcular los límites instantáneos
+    Fx_lim_mpc = mu_x_max .* Fz_mesh_mpc .* cos(Th_mesh_mpc);
+    Fy_lim_mpc = mu_y_max .* Fz_mesh_mpc .* sin(Th_mesh_mpc);
+    
+    % 4. Dibujar el Tubo Límite
+    surf(T_mesh_mpc(:,1:paso:end), Fx_lim_mpc(:,1:paso:end), Fy_lim_mpc(:,1:paso:end), 'FaceColor', 'b', 'FaceAlpha', 0.15, 'EdgeColor', 'none', 'DisplayName', 'Límite Teórico');
+    
+    % 5. Dibujar la Fuerza Real
+    plot3(t_mpc(1:paso:end), Fx_mpc(:,1:paso:end), Fy_mpc(:,1:paso:end), 'k', 'LineWidth', 2.5, 'DisplayName', 'Fuerza Real');
+    
+    % Formateo
+    title(sprintf('MPC - %s | Uso medio de adherencia: %.1f%%', nombres_ruedas{i}, metrica_util_mpc));
+    xlabel('Tiempo [s]')
+    ylabel('F_x (Longitudinal) [N]')
+    zlabel('F_y (Lateral) [N]')
+    set(gca, 'FontSize', 11)
+    view(-35, 30);
+    legend('show', 'Location', 'best')
+    
+    % Vincular rotación de cámaras
+    Link = linkprop([ax1, ax2], {'CameraPosition', 'CameraUpVector'});
+    setappdata(gcf, 'StoreTheLink', Link);
+    
+    sgtitle(['Utilización Dinámica de la Adherencia 3D - ', nombres_ruedas{i}], 'FontSize', 14, 'FontWeight', 'bold');
+end
+
 %% 
+fprintf('\n=== RESUMEN DE UTILIZACIÓN DE NEUMÁTICOS ===\n');
+fprintf('%-10s | %-10s | %-10s\n', 'Rueda', 'PD (%)', 'MPC (%)');
+fprintf('--------------------------------------\n');
+for i=1:4
+    fprintf('%-10s | %-10.1f | %-10.1f\n', nombres_ruedas{i}(1:2), resumen_pd(i), resumen_mpc(i));
+end
+fprintf('--------------------------------------\n');
+fprintf('%-10s | %-10.1f | %-10.1f\n', 'GLOBAL', mean(resumen_pd), mean(resumen_mpc));
+fprintf('======================================\n');
+
+
+
+%% Yaw Moment Diagram
+
+% 1. Extracción de aceleración lateral (Eje X)
+ay_pd  = datos_pd.run_data.ay;
+ay_mpc = datos_mpc.run_data.ay;
+
+% 2. Extracción de la velocidad de guiñada (yaw rate) y cálculo de su derivada
+% Nota: Cambia '.r' por el nombre de tu variable de yaw rate si es diferente.
+t_pd = datos_pd.run_data.time;
+r_pd = datos_pd.run_data.yaw_rate; 
+r_dot_pd = [0; diff(r_pd) ./ diff(t_pd)]; % Añadimos un 0 al inicio para mantener el tamaño
+
+t_mpc = datos_mpc.run_data.time;
+r_mpc = datos_mpc.run_data.yaw_rate;
+r_dot_mpc = [0; diff(r_mpc) ./ diff(t_mpc)]; 
+
+% 3. Configuración de la figura
+figure('Name', 'Diagrama de Momento de Guiñada', 'Color', 'w');
+x0 = 100; y0 = 100; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3) * 0.6); 
+height = round(screen(4) * 0.7);
+set(gcf, 'position', [x0, y0, width, height])
+
+hold on; grid on;
+
+% 4. Nubes de dispersión (Scatter plot)
+% Usamos transparencia para ver la densidad de los puntos
+scatter(ay_pd, r_dot_pd, 15, 'r', 'filled', 'MarkerFaceAlpha', 0.3, 'DisplayName', 'Límites PD');
+scatter(ay_mpc, r_dot_mpc, 15, 'b', 'filled', 'MarkerFaceAlpha', 0.3, 'DisplayName', 'Límites MPC (Torque Vectoring)');
+
+% Ejes de referencia centrados
+plot(xlim, [0 0], 'k-', 'LineWidth', 1, 'HandleVisibility', 'off');
+plot([0 0], ylim, 'k-', 'LineWidth', 1, 'HandleVisibility', 'off');
+
+% 5. Formateo
+xlabel('Aceleración Lateral a_y [m/s^2]')
+ylabel('Aceleración de Guiñada \partial r / \partial t [rad/s^2]')
+title('Diagrama de Momento de Guiñada Empírico (Yaw Authority)')
+legend('show', 'Location', 'best')
+set(gca, 'FontSize', 11)
+
+sgtitle('Evaluación de la Autoridad Rotacional del Chasis', 'FontSize', 14, 'FontWeight', 'bold');
+
+
+
+%% Análisis de Eficiencia: Esfuerzo de Control (Control Effort)
+
+% 1. Extracción de los pares de los motores
+% Nota: Cambia '.Trq' por tu matriz de pares [4 ruedas] o suma tus 4 variables individuales.
+% Ejemplo si están separadas: Trq_pd = [datos.T_FL, datos.T_FR, datos.T_RL, datos.T_RR];
+Trq_pd  = datos_pd.run_data.torque_cmd';  
+Trq_mpc = datos_mpc.run_data.torque_cmd'; 
+
+t_pd  = datos_pd.run_data.time_control;
+t_mpc = datos_mpc.run_data.time_control;
+
+% 2. Cálculo del esfuerzo instantáneo (Suma de los cuadrados de los pares en cada instante)
+% Elevamos al cuadrado para penalizar pares grandes y sumamos las 4 ruedas
+esfuerzo_inst_pd  = sum(Trq_pd.^2, 2); 
+esfuerzo_inst_mpc = sum(Trq_mpc.^2, 2);
+% esfuerzo_inst_pd  = sum(max(Trq_pd,0), 2); 
+% esfuerzo_inst_mpc = sum(max(Trq_mpc,0), 2);
+% esfuerzo_inst_pd  = sum(Trq_pd, 2); 
+% esfuerzo_inst_mpc = sum(Trq_mpc, 2);
+
+% 3. Cálculo del esfuerzo acumulado (Integral en el tiempo)
+esfuerzo_acum_pd  = cumtrapz(t_pd, esfuerzo_inst_pd);
+esfuerzo_acum_mpc = cumtrapz(t_mpc, esfuerzo_inst_mpc);
+
+% Valores totales finales para el gráfico de barras
+total_pd  = esfuerzo_acum_pd(end);
+total_mpc = esfuerzo_acum_mpc(end);
+
+mejora_pct = ((total_pd - total_mpc) / total_pd) * 100;
+
+% 4. Configuración de la figura
+figure('Name', 'Esfuerzo de Control', 'Color', 'w');
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3) * 0.6); 
+height = round(screen(4) * 0.8);
+set(gcf, 'position', [x0, y0, width, height])
+
+% =========================================================================
+% SUBPLOT 1: Esfuerzo acumulado en el tiempo
+% =========================================================================
+hold on; grid on;
+
+plot(t_pd, esfuerzo_acum_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD');
+plot(t_mpc, esfuerzo_acum_mpc, 'b', 'linewidth', 2.5, 'DisplayName', ['MPC: -',num2str(mejora_pct,2),'% de esfuerzo']);
+
+xlabel('Tiempo [s]')
+ylabel('Esfuerzo Acumulado')
+title('Evolución del Gasto Energético de Control')
+legend('show', 'Location', 'northwest')
+set(gca, 'FontSize', 11)
+
+
+
+%% Análisis de la Acción del Torque Vectoring (Diferencia de Par)
+% Asumimos el orden estándar de las columnas: 1=FL, 2=FR, 3=RL, 4=RR
+% Si en tu caso es distinto, simplemente cambia los índices aquí abajo.
+
+% 1. Cálculo de la diferencia de par transversal (Izquierda - Derecha)
+% Para el PD
+delta_T_front_pd = datos_pd.run_data.torque_cmd(1, :) - datos_pd.run_data.torque_cmd(2, :);
+delta_T_rear_pd  = datos_pd.run_data.torque_cmd(1, :) - datos_pd.run_data.torque_cmd(4, :);
+t_pd = datos_pd.run_data.time_control;
+
+% Para el MPC
+delta_T_front_mpc = datos_mpc.run_data.torque_cmd(1, :) - datos_mpc.run_data.torque_cmd(2, :);
+delta_T_rear_mpc  = datos_mpc.run_data.torque_cmd(3, :) - datos_mpc.run_data.torque_cmd(4, :);
+t_mpc = datos_mpc.run_data.time_control;
+
+% 2. Configuración de la figura
+figure('Name', 'Acción del Torque Vectoring', 'Color', 'w');
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+width  = round(screen(3) * 0.6); 
+height = round(screen(4) * 0.75);
+set(gcf, 'position', [x0, y0, width, height])
+
+% SUBPLOT 1: Eje Delantero
+% =========================================================================
+subplot(2, 1, 1)
+hold on; grid on;
+
+% Línea de referencia en cero (Simetría / Sin TV)
+plot([0, max(max(t_pd), max(t_mpc))], [0, 0], 'k-', 'LineWidth', 1, 'HandleVisibility', 'off');
+
+% Trazadas
+plot(t_mpc, delta_T_front_mpc, 'b', 'linewidth', 2.5, 'DisplayName', 'MPC');
+plot(t_pd, delta_T_front_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD');
+
+xlabel('Tiempo [s]')
+ylabel('\Delta T_{Front} (T_{FL} - T_{FR}) [N\cdot m]')
+title('Diferencia de Par en el Eje Delantero')
+legend('show', 'Location', 'best')
+set(gca, 'FontSize', 11)
+
+% SUBPLOT 2: Eje Trasero
+% =========================================================================
+subplot(2, 1, 2)
+hold on; grid on;
+
+% Línea de referencia en cero
+plot([0, max(max(t_pd), max(t_mpc))], [0, 0], 'k-', 'LineWidth', 1, 'HandleVisibility', 'off');
+
+% Trazadas
+plot(t_mpc, delta_T_rear_mpc, 'b', 'linewidth', 2.5, 'DisplayName', 'MPC');
+plot(t_pd, delta_T_rear_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD');
+
+xlabel('Tiempo [s]')
+ylabel('\Delta T_{Rear} (T_{RL} - T_{RR}) [N\cdot m]')
+title('Diferencia de Par en el Eje Trasero')
+legend('show', 'Location', 'best')
+set(gca, 'FontSize', 11)
+
+sgtitle('Cuantificación del Reparto Transversal de Par (Torque Vectoring)', 'FontSize', 14, 'FontWeight', 'bold');
+
+% Opcional: ajustar límites de X si solo quieres ver un tramo del slalom
+% xlim([0, 23]);
+
+
+
+%% 
+
+
+
+
+
+
+
+
 
 
 

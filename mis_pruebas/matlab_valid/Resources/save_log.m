@@ -45,14 +45,18 @@ run_data.r_ref_og = squeeze(out.mpc_ref.signals.values(:,5));
 
 run_data.torque_tv = squeeze(out.TVout.signals.values);
 
+run_data.accel = accelerator;
+run_data.brake = brake;
 
+run_data.hyd_brake = hyd_brake;
+run_data.load_cell = load_cell;
 
 
 
 %% Guardar
 
 control = '_mpc'; % _mpc o _pd
-prueba = '_slalom'; % _autox o _skidpad o _slalom
+prueba = '_autox'; % _autox o _skidpad o _slalom
 
 filename = ['C:\TFG_Vivado\mis_pruebas\matlab_valid\Simulation\data\','resultados',control,prueba,'.mat'];
 save(filename, 'run_data');

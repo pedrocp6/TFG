@@ -85,8 +85,8 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_ma
     % vy_ref (ec. 13)
     % Probar quitando ese abs
 %     beta_max = atan2(Fy_max, abs(fx_request) + eps);
-    beta_max = 6*pi/180;
-%     beta_max = atan2(Fy_max, fx_request + sign(fx_request)*eps);
+    beta_max = 5*pi/180;
+%     beta_max = 0.08;
     vy_max = tan(beta_max) * vx;
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
 
@@ -104,12 +104,12 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_ma
     %% 4. Pesos
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
-    Q_weight = diag([0, 10, 1000]);
-    R_weight = diag([0.1, 0.1, 0.1, 0.1]);
-
-    % AutoX
-%     Q_weight = diag([100, 10, 10]);
+%     Q_weight = diag([100, 10, 50]);
 %     R_weight = diag([0.002, 0.002, 0.002, 0.002]);
+
+    % AutoX y slalom
+    Q_weight = diag([100, 10, 10]);
+    R_weight = diag([0.002, 0.002, 0.002, 0.002]);
 
     % Skidpad
 %     Q_weight = diag([0, 10, 1000]);
