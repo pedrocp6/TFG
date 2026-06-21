@@ -2,49 +2,47 @@
 FSGDV_track
 ggv_simulator_loops
 
-% time_ref = cumsum([diff(s); 0]./vx_target);
-% time_ref = linspace(0,10,1000);
-% Tini = time_ref(1);
-% Tend = time_ref(end);
+%% Referencias
 
-% Tend = min(Tend, 5.0);
+% % % % % AutoX % % % % %
 
-
-% Reference speed 
-% v_ref = 0.9*vel;           %trackdrive
-% v_ref = 1+20*time_ref;  %acceleration
-% v_ref = 10 +0*time_ref;   %skidpad
-% v_ref = 1.5*vx_target-8;  % mi AutoX
-% v_ref = linspace(8,13,length(time_ref));    % mi skidpad a tope
-% v_ref = linspace(2,10,length(time_ref));    % mi skidpad
-
-% v_ref = vel;
-% v_target = timeseries(v_ref,time_ref);
-
-% Reference trajectory
-% k_ref = k;             %trackdrive
-% k_ref = k*0;            %acceleration
-% k_ref = k*0+1/9.125;   %skidpad
-% k_target = timeseries(k_ref,time_ref);
-
-
-
-%% 
-% 1. Definir el tiempo de la maniobra real (ej. de 0 a 10s)
-% time_maneuver = linspace(0, 10, 1000); 
 time_maneuver = cumsum([diff(s); 0]./vx_target)';
-
-% 2. Generar las referencias base de la maniobra (como ya las tenías)
-% v_maneuver = linspace(8, 13, length(time_maneuver));    % mi skidpad
-% v_maneuver = 100*ones(1,length(time_maneuver));
 v_maneuver = 0.9*vel';           %trackdrive
-
-% k_maneuver = v_maneuver*0 + 1/9.125;                               % skidpad
 k_maneuver = k';             %trackdrive
 
-% ========================================================
-% 3. INYECCIÓN DE LA FASE DE CALENTAMIENTO (WARM-UP)
-% ========================================================
+
+% % % % % Skidpad % % % % %
+
+% time_maneuver = linspace(0.00001, 20, 1000);
+% v_maneuver = linspace(8, 13, length(time_maneuver));
+% k_maneuver = v_maneuver*0 + 1/9.125;
+
+
+% % % % % Slalom % % % % %
+
+% D_cone  = 9.0;
+% W_track = 3.0;
+% W_car   = 1.22;
+% A_path  = (W_track - W_car) / 2; % 0.8 m
+% w = pi / D_cone;
+% v_maneuver = linspace(8, 20, length(time_maneuver));
+% x_ref = cumtrapz(time_maneuver, v_maneuver); 
+% y_ref = A_path * (1 - cos(w * x_ref));
+% dy_dx = A_path * w * sin(w * x_ref);
+% d2y_dx2 = A_path * w^2 * cos(w * x_ref) .* min(x_ref / (2 * D_cone), 1);
+% k_maneuver = d2y_dx2 ./ (1 + dy_dx.^2).^(3/2);
+
+
+% % % % % Acceleration % % % % %
+
+% time_maneuver = linspace(0.00001, 5, 1000);
+% v_maneuver = 100*ones(1,length(time_maneuver));
+% v_maneuver(1) = 0;
+% k_maneuver = v_maneuver*0 + 1/9.125;
+
+
+
+% Fase de estabilización de la comunicación
 T_warmup = 2.0; % Segundos de espera para estabilizar el USB
 
 % Creamos un vector de tiempo muerto (desde 0 hasta T_warmup)

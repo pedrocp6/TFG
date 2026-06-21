@@ -154,6 +154,7 @@ struct Parameters {
     double mpc_nV;
     double mpc_nc;
     int mpc_max_iter;
+    double beta_max;
 
     double tv_mpc_active;
 

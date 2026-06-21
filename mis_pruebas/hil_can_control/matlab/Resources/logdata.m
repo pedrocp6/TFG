@@ -27,6 +27,12 @@ slip_ratio = out.tire_bus.signals.values(:,5:8);
 x_pos = out.pos.signals.values(:,1);
 y_pos = out.pos.signals.values(:,2);
 
+accelerator = out.pedals.signals.values(:,1);
+brake = out.pedals.signals.values(:,2);
+
+hyd_brake = out.brake.signals.values(:,1);
+load_cell = out.brake.signals.values(:,2);
+
 % time_vdc = out.logsout{21}.Values.Time;
 % torque_out = squeeze(out.logsout{21}.Values.Data)';
 

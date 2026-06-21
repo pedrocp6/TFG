@@ -387,6 +387,10 @@ int main() {
             target_r = torque_vectoring.torque_vectoring_update(&parameters, &sensors,
                                                                      &pid_tv, &tire, &dv, 
                                                                      fx_request, state, torque_cmd);
+            mpcTorqueVectoring.debug.r_ref = target_r;
+            mpcTorqueVectoring.debug.vx_ref = 0;
+            mpcTorqueVectoring.debug.vy_ref = 0;
+            mpcTorqueVectoring.debug.solver_status = 0;
         }
         
         
@@ -456,10 +460,10 @@ int main() {
 
 
         // Mensaje 1: Torque FL y FR
-		m1 = (int16_t)(T_obj[0] * 100);
-		m2 = (int16_t)(T_obj[1] * 100);
-		m3 = (int16_t)(T_obj[2] * 100);
-		m4 = (int16_t)(T_obj[3] * 100);
+		m1 = (int16_t)(torque_tv[0] * 100);
+		m2 = (int16_t)(torque_tv[1] * 100);
+		m3 = (int16_t)(torque_tv[2] * 100);
+		m4 = (int16_t)(torque_tv[3] * 100);
 		can_data[0] = (u8)(m1 & 0xFF);
 		can_data[1] = (u8)((m1 >> 8) & 0xFF);
 		can_data[2] = (u8)(m2 & 0xFF);

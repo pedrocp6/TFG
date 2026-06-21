@@ -14,6 +14,8 @@
 #include <cmath>
 #include <vector>
 
+#define pi 3.141592
+
 
 void MpcTorqueVectoring::mpc_init(Parameters *parameters){
 
@@ -394,34 +396,14 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             Rss_ref = parameters->wheelbase / std::tan(delta);
         }
 
-        // Fy_max: capacidad lateral pura (slip_ratio = 0)
-        double vx_w[4];
-        double vy_w[4];
-        for (int i = 0; i < 4; ++i) {
-            vx_w[i] = vx + yaw_rate * 0.5 * ((i < 2) ? -parameters->tf : parameters->tf);
-            vy_w[i] = vy + yaw_rate * ((i < 2) ? parameters->lf : -parameters->lr);
-        }
-
-        float slip_angle_ref[4];
-        double delta_cmd[4];
-        delta_cmd[0] = delta; // FL
-        delta_cmd[1] = delta; // FR
-        delta_cmd[2] = 0.0;   // RL
-        delta_cmd[3] = 0.0;   // RR
-        for (int i = 0; i < 4; ++i) {
-            slip_angle_ref[i] = std::atan2(vy_w[i], vx_w[i]) - delta_cmd[i];
-        }
-
         AuxFunctions::Calculate_Tire_Loads(sensors, parameters, state, tire);
-        float slip_ratio_zero[4] = {0.0f, 0.0f, 0.0f, 0.0f};
-        AuxFunctions::Calculate_Tire_Forces(tire, slip_angle_ref, slip_ratio_zero);
 
-        double fy_pure_sum = 0.0;
+        double fz_total = 0.0;
         for (int i = 0; i < 4; ++i) {
-            fy_pure_sum += tire->force_fy[i];
+            fz_total += tire->tire_load[i];
         }
 
-        const double Fy_max = std::max(fy_pure_sum, 100.0);
+        double Fy_max = std::max(std::abs(D_LAT) * fz_total, 100.0);
 
         double v2_max = std::max(std::abs(Rss_ref) * Fy_max / parameters->mass, 0.0);
 
@@ -431,21 +413,18 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
         double vx_ref = std::min(V_predicted, std::sqrt(std::abs(v2_max - vy*vy)));
 
         // vy_ref
-        double beta_max = std::atan2(Fy_max, std::abs(fx_request) + AuxFunctions::eps);
+        // double beta_max = std::atan2(Fy_max, std::abs(fx_request) + AuxFunctions::eps);
+        double beta_max = parameters->beta_max * pi / 180.0;
         const double sign_vy = (vy >= 0.0) ? 1.0 : -1.0;
         double vy_ref = sign_vy * std::min(std::abs(vy), std::tan(beta_max) * vx);
 
         // r_ref
         double r_ref = vx * std::tan(delta) / (parameters->wheelbase + 0.0 * vx * vx);
 
-
-
         this->debug.vx_ref = vx_ref;
         this->debug.vy_ref = vy_ref;
         this->debug.r_ref  = r_ref;
         this->debug.a_driver = a_driver;
-
-        
 
         double X_ref[Np][3];
         for (int i = 0; i < Np; ++i) {

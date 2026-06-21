@@ -6,6 +6,7 @@ ROOT_DIR = fileparts(mfilename('fullpath'));
 addpath(fullfile(ROOT_DIR, 'Parameters'));
 addpath(fullfile(ROOT_DIR, 'Parameters/ART25')); % Load ART24 or ART25 data
 addpath(fullfile(ROOT_DIR, 'Simulation'));
+addpath(fullfile(ROOT_DIR, 'Simulation/data'));
 addpath(fullfile(ROOT_DIR, 'Resources'));
 addpath(genpath(fullfile(ROOT_DIR, 'Models')));
 addpath(genpath(fullfile(ROOT_DIR, 'Functions')));

@@ -67,15 +67,24 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_ma
 %     [~, fx_pure]   = calculate_tire_forces(tire_load_ref, slip_angle_ref, slip_ratio, pac);
 %     Fy_max  = max(abs(sum(fy_pure .* cos(delta)) + sum(fx_pure .* sin(delta))), 100);
 
-    Fy_max = max(abs(pac.Dlat) * sum(tire_load_ref),100);
+
+    Fz_front = tire_load_ref(1) + tire_load_ref(2);
+    Fz_rear  = tire_load_ref(3) + tire_load_ref(4);
+    Fy_max_front_tire = abs(pac.Dlat) * Fz_front;
+    Fy_max_rear_tire  = abs(pac.Dlat) * Fz_rear;
+    Fy_max = max((Fy_max_front_tire * cos(delta_cmd)) + Fy_max_rear_tire, 100);
+
+%     Fy_max = max(abs(pac.Dlat) * sum(tire_load_ref),100);
 
     % v2_max (ec. 11)
     v2_max = max(abs(Rss_ref) * Fy_max / param_vdc.mass, 0);
 
     % vx_ref (ec. 12)
     V_now       = sqrt(vx^2 + vy^2);
-    a_driver    = max(fx_request,0) / param_vdc.mass;
+%     a_driver    = max(fx_request,0) / param_vdc.mass;
+    a_driver    = fx_request / param_vdc.mass;
     V_predicted = V_now + a_driver * Np * Ts;
+%     V_predicted = V_now + a_driver * Ts;
 
     v_max = max(v2_max-vy^2,0);
 
@@ -104,21 +113,18 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_ma
     %% 4. Pesos
     % Q: pesos relativos entre estados
     % R: aumentar R reduce chattering pero hace el control menos agresivo
-%     Q_weight = diag([100, 10, 50]);
+
+    % Slalom
+%     Q_weight = diag([100, 10, 10]);
 %     R_weight = diag([0.002, 0.002, 0.002, 0.002]);
 
-    % AutoX y slalom
-    Q_weight = diag([100, 10, 10]);
+    % AutoX
+    Q_weight = diag([100, 10, 50]);
     R_weight = diag([0.002, 0.002, 0.002, 0.002]);
 
     % Skidpad
 %     Q_weight = diag([0, 10, 1000]);
 %     R_weight = diag([0.005, 0.005, 0.005, 0.005]);
-
-%     params->mpc_Q1 = 0.0;
-%     params->mpc_Q2 = 10.0;
-%     params->mpc_Q3 = 100.0;
-%     params->mpc_R  = 0.5;           // 0.5
 
     Q_bar = kron(eye(Np), Q_weight);
     R_bar = kron(eye(Np), R_weight);
