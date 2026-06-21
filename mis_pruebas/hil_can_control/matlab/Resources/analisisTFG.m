@@ -347,11 +347,11 @@ end
 %%
 %% Seguimiento de referencia de yaw rate
 
-r_resampled = interp1(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, datos_pd.run_data.time_control, 'pchip');
+r_resampled = interp1(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, datos_pd.run_data.time_debug, 'pchip');
 r_error_pd = abs(r_resampled - datos_pd.run_data.r_ref);
 rmse_error_r_pd = sqrt(mean(r_error_pd.^2, 'omitnan'));
 
-r_resampled = interp1(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, datos_mpc.run_data.time_control, 'pchip');
+r_resampled = interp1(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, datos_mpc.run_data.time_debug, 'pchip');
 r_error_mpc = abs(r_resampled - datos_mpc.run_data.r_ref);
 rmse_error_r_mpc = sqrt(mean(r_error_mpc.^2, 'omitnan'));
 
@@ -367,7 +367,7 @@ set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
 
 
 eje1 = subplot(2, 4, 1:3);
-plot(datos_pd.run_data.time_control, datos_pd.run_data.r_ref, 'r--', 'linewidth', 2, 'DisplayName', 'Yaw rate objetivo (PD)'); hold on;
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.r_ref, 'r--', 'linewidth', 2, 'DisplayName', 'Yaw rate objetivo (PD)'); hold on;
 plot(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, 'b', 'linewidth', 2.5, 'DisplayName', 'Yaw rate Real'); 
 
 grid on
@@ -379,7 +379,7 @@ set(gca, 'FontSize', 15)
 
 
 eje2 = subplot(2, 4, 5:7);
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.r_ref, 'r--', 'linewidth', 2, 'DisplayName', 'Yaw rate Objetivo (MPC)'); hold on;
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.r_ref, 'r--', 'linewidth', 2, 'DisplayName', 'Yaw rate Objetivo (MPC)'); hold on;
 plot(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, 'b', 'linewidth', 2.5, 'DisplayName', 'Yaw rate Real'); 
 
 grid on
@@ -391,22 +391,22 @@ set(gca, 'FontSize', 15)
 linkaxes([eje1,eje2],'xy');
 
 subplot(2,4,4)
-plot(datos_pd.run_data.time_control, r_error_pd, 'b', 'linewidth', 2.5, 'DisplayName', 'PD');
+plot(datos_pd.run_data.time_debug, r_error_pd, 'b', 'linewidth', 2.5, 'DisplayName', 'PD');
 grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error yaw rate [rad/s]')
 set(gca, 'FontSize', 15)
-title(['RMSE: PD=',num2str(rmse_error_r_pd,2)])
+title(['RMSE: PD=',num2str(rmse_error_r_pd,3)])
 
 subplot(2,4,8)
-plot(datos_mpc.run_data.time_control, r_error_mpc, 'b', 'linewidth', 2.5, 'DisplayName', 'MPC');
+plot(datos_mpc.run_data.time_debug, r_error_mpc, 'b', 'linewidth', 2.5, 'DisplayName', 'MPC');
 grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error yaw rate [rad/s]')
 set(gca, 'FontSize', 15)
-title(['RMSE: MPC=',num2str(rmse_error_r_mpc,2)])
+title(['RMSE: MPC=',num2str(rmse_error_r_mpc,3)])
 
 % sgtitle('Seguimiento de referencia de yaw rate', 'FontSize', 14, 'FontWeight', 'bold');
 
@@ -495,8 +495,8 @@ set(gca, 'FontSize', 15)
 eje2 = subplot(2, 1, 2);
 plot(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, 'r', 'linewidth', 2.5, 'DisplayName', 'Real PD'); hold on;
 plot(datos_mpc.run_data.time, datos_mpc.run_data.yaw_rate, 'b', 'linewidth', 2.5, 'DisplayName', 'Real MPC');
-plot(datos_pd.run_data.time_control, datos_pd.run_data.r_ref_og, 'g--', 'linewidth', 2.5, 'DisplayName', 'Referencia PD');
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.r_ref, 'k--', 'linewidth', 2.5, 'DisplayName', 'Referencia MPC');
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.r_ref, 'g--', 'linewidth', 2.5, 'DisplayName', 'Referencia PD');
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.r_ref, 'k--', 'linewidth', 2.5, 'DisplayName', 'Referencia MPC');
 
 grid on
 legend('show', 'Location', 'best')
@@ -529,10 +529,10 @@ set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
 
 
 eje1 = subplot(2,1,1);
-plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,1), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
-plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,2), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
-plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,3), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
-plot(datos_pd.run_data.time_control, datos_pd.run_data.tv_out(:,4), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.tv_out(:,1), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.tv_out(:,2), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.tv_out(:,3), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
+plot(datos_pd.run_data.time_debug, datos_pd.run_data.tv_out(:,4), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
 
 grid on
 legend('show', 'Location', 'best')
@@ -542,10 +542,10 @@ set(gca, 'FontSize', 15)
 title('Controlador PD')
 
 eje2 = subplot(2,1,2);
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(1,:), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(2,:), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(3,:), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.tv_out(4,:), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.tv_out(:,1), 'Color','#e41a1c', 'linewidth', 2.5, 'DisplayName', 'FL'); hold on;
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.tv_out(:,2), 'Color','#377eb8', 'linewidth', 2.5, 'DisplayName', 'FR');
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.tv_out(:,3), 'Color','#4daf4a', 'linewidth', 2.5, 'DisplayName', 'RL');
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.tv_out(:,4), 'Color','#984ea3', 'linewidth', 2.5, 'DisplayName', 'RR');
 
 grid on
 legend('show', 'Location', 'best')
@@ -715,7 +715,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Acelerador [% o Señal]')
 % title('Uso del pedal del Acelerador')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % --- Subplot 2: Freno ---
 subplot(3, 1, 2)
@@ -727,7 +727,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Freno [% o Señal]')
 % title('Uso del pedal de Freno')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % --- Subplot 3: Volante ---
 subplot(3, 1, 3)
@@ -739,7 +739,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Ángulo de Dirección \delta [deg]')
 % title('Uso del Volante')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % sgtitle('Acciones de Control Longitudinal y Lateral del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
 
@@ -762,7 +762,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Acelerador [% o Señal]')
 % title('Uso del pedal del Acelerador')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % --- Subplot 2: Freno Hidráulico y Célula de Carga ---
 subplot(3, 1, 2)
@@ -779,7 +779,7 @@ legend('show', 'Location', 'best', 'NumColumns', 2)
 xlabel('Tiempo [s]')
 ylabel('Presión [bar] / Fuerza [N]')
 % title('Distribución del Sistema de Frenado (Hidráulico vs Load Cell)')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % --- Subplot 3: Volante ---
 subplot(3, 1, 3)
@@ -791,7 +791,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Ángulo de Dirección \delta [deg]')
 % title('Uso del Volante')
-set(gca, 'FontSize', 15)
+set(gca, 'FontSize', 12)
 
 % sgtitle('Análisis Completo de las Entradas del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
 
@@ -858,7 +858,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error absoluto v_x [m/s]')
 set(gca, 'FontSize', 15)
-title(['RMSE: PD=', num2str(rmse_error_v_pd,2), '  MPC=', num2str(rmse_error_v_mpc,2)])
+title(['RMSE: PD=', num2str(rmse_error_v_pd,3), '  MPC=', num2str(rmse_error_v_mpc,3)])
 xlim([1.3,23]);
 
 % sgtitle('Seguimiento de referencia de velocidad longitudinal', 'FontSize', 14, 'FontWeight', 'bold');
@@ -894,7 +894,7 @@ plot(datos_pd.run_data.time, datos_pd.run_data.vy, 'r', 'linewidth', 2.5, 'Displ
 plot(datos_mpc.run_data.time, datos_mpc.run_data.vy, 'b', 'linewidth', 2.5, 'DisplayName', 'v_y Real (MPC)'); 
 
 % La referencia del MPC usa la base de tiempos del control
-plot(datos_mpc.run_data.time_control, datos_mpc.run_data.vy_ref, 'k--', 'linewidth', 2, 'DisplayName', 'Referencia (MPC)');
+plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.vy_ref, 'k--', 'linewidth', 2, 'DisplayName', 'Referencia (MPC)');
 
 grid on
 legend('show', 'Location', 'best')
@@ -983,7 +983,7 @@ for i = 1:4
     title(nombres_ruedas{i})
     xlabel('F_y / F_z (Normalizada Lateral)')
     ylabel('F_x / F_z (Normalizada Longitudinal)')
-    set(gca, 'FontSize', 15)
+    set(gca, 'FontSize', 11)
     
     % Forzamos los límites para que el círculo mantenga la proporción y se vea entero
 %     xlim([-2, 2]);
@@ -1000,7 +1000,7 @@ lgd = legend('show');
 set(lgd, 'NumColumns', 3); % Ajusta este número según cuántos elementos tengas
 lgd.Units = 'normalized';
 centro_x = 0.5 - (lgd.Position(3) / 2);
-centro_y = 0.48 - (lgd.Position(4) / 2); % Cambia 0.5 por 0.02 si la prefieres abajo del todo
+centro_y = 0.5 - (lgd.Position(4) / 2); % Cambia 0.5 por 0.02 si la prefieres abajo del todo
 lgd.Position = [centro_x, centro_y, lgd.Position(3), lgd.Position(4)];
 
 % sgtitle('Utilización de la Adherencia Rueda a Rueda (Círculo de Fricción)', 'FontSize', 14, 'FontWeight', 'bold');
@@ -1162,10 +1162,10 @@ r_dot_mpc = [0; diff(r_mpc) ./ diff(t_mpc)];
 
 % 3. Configuración de la figura
 figure('Name', 'Diagrama de Momento de Guiñada', 'Color', 'w');
-x0 = 100; y0 = 100; 
+x0 = 0; y0 = 0; 
 screen = get(0,'ScreenSize');
-width  = round(screen(3) * 0.6); 
-height = round(screen(4) * 0.7);
+width  = round(screen(3)); 
+height = round(screen(4));
 set(gcf, 'position', [x0, y0, width, height])
 
 hold on; grid on;
@@ -1203,10 +1203,10 @@ end
 % Nota: Cambia '.Trq' por tu matriz de pares [4 ruedas] o suma tus 4 variables individuales.
 % Ejemplo si están separadas: Trq_pd = [datos.T_FL, datos.T_FR, datos.T_RL, datos.T_RR];
 Trq_pd  = datos_pd.run_data.tv_out;  
-Trq_mpc = datos_mpc.run_data.tv_out'; 
+Trq_mpc = datos_mpc.run_data.tv_out; 
 
-t_pd  = datos_pd.run_data.time_control;
-t_mpc = datos_mpc.run_data.time_control;
+t_pd  = datos_pd.run_data.time_debug;
+t_mpc = datos_mpc.run_data.time_debug;
 
 % 2. Cálculo del esfuerzo instantáneo (Suma de los cuadrados de los pares en cada instante)
 % Elevamos al cuadrado para penalizar pares grandes y sumamos las 4 ruedas
@@ -1231,8 +1231,8 @@ mejora_pct = ((total_mpc - total_pd) / total_pd) * 100;
 figure('Name', 'Esfuerzo de Control', 'Color', 'w');
 x0 = 0; y0 = 0; 
 screen = get(0,'ScreenSize');
-width  = round(screen(3) * 0.6); 
-height = round(screen(4) * 0.8);
+width  = round(screen(3)); 
+height = round(screen(4));
 set(gcf, 'position', [x0, y0, width, height])
 
 % =========================================================================
@@ -1244,7 +1244,7 @@ plot(t_pd, esfuerzo_acum_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD');
 plot(t_mpc, esfuerzo_acum_mpc, 'b', 'linewidth', 2.5, 'DisplayName', ['MPC: ',num2str(mejora_pct,2),'% de esfuerzo']);
 
 xlabel('Tiempo [s]')
-ylabel('Esfuerzo Acumulado')
+ylabel('Esfuerzo Acumulado [N^2 m^2 s]')
 % title('Evolución del Gasto Energético de Control')
 legend('show', 'Location', 'northwest')
 set(gca, 'FontSize', 15)
@@ -1266,15 +1266,25 @@ end
 % Si en tu caso es distinto, simplemente cambia los índices aquí abajo.
 
 % 1. Cálculo de la diferencia de par transversal (Izquierda - Derecha)
-% Para el PD
-delta_T_front_pd = datos_pd.run_data.torque_cmd(1, :) - datos_pd.run_data.torque_cmd(2, :);
-delta_T_rear_pd  = datos_pd.run_data.torque_cmd(1, :) - datos_pd.run_data.torque_cmd(4, :);
-t_pd = datos_pd.run_data.time_control;
+% % Para el PD
+% delta_T_front_pd = datos_pd.run_data.torque_cmd(:, 1) - datos_pd.run_data.torque_cmd(:, 2);
+% delta_T_rear_pd  = datos_pd.run_data.torque_cmd(:, 3) - datos_pd.run_data.torque_cmd(:, 4);
+% t_pd = datos_pd.run_data.time_control;
+% 
+% % Para el MPC
+% delta_T_front_mpc = datos_mpc.run_data.torque_cmd(:, 1) - datos_mpc.run_data.torque_cmd(:, 2);
+% delta_T_rear_mpc  = datos_mpc.run_data.torque_cmd(:, 3) - datos_mpc.run_data.torque_cmd(:, 4);
+% t_mpc = datos_mpc.run_data.time_control;
+
+% % Para el PD
+delta_T_front_pd = datos_pd.run_data.tv_out(:, 1) - datos_pd.run_data.tv_out(:, 2);
+delta_T_rear_pd  = datos_pd.run_data.tv_out(:, 3) - datos_pd.run_data.tv_out(:, 4);
+t_pd = datos_pd.run_data.time_debug;
 
 % Para el MPC
-delta_T_front_mpc = datos_mpc.run_data.torque_cmd(1, :) - datos_mpc.run_data.torque_cmd(2, :);
-delta_T_rear_mpc  = datos_mpc.run_data.torque_cmd(3, :) - datos_mpc.run_data.torque_cmd(4, :);
-t_mpc = datos_mpc.run_data.time_control;
+delta_T_front_mpc = datos_mpc.run_data.tv_out(:, 1) - datos_mpc.run_data.tv_out(:, 2);
+delta_T_rear_mpc  = datos_mpc.run_data.tv_out(:, 3) - datos_mpc.run_data.tv_out(:, 4);
+t_mpc = datos_mpc.run_data.time_debug;
 
 % 2. Configuración de la figura
 figure('Name', 'Acción del Torque Vectoring', 'Color', 'w');

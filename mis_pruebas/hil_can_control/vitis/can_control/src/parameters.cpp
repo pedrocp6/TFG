@@ -186,22 +186,22 @@ bool parameters_init(Parameters *params) {
         params->mpc_Q3 = 500.0;
         params->mpc_R  = 0.1;*/
         // // // AutoX
-        params->mpc_Q1 = 100.0;
-        params->mpc_Q2 = 10.0;
-        params->mpc_Q3 = 50.0;
-        params->mpc_R  = 0.002;
-        // // // Slalom
         /*params->mpc_Q1 = 100.0;
         params->mpc_Q2 = 10.0;
+        params->mpc_Q3 = 50.0;
+        params->mpc_R  = 0.02;*/
+        // // // Slalom
+        params->mpc_Q1 = 100.0;
+        params->mpc_Q2 = 10.0;
         params->mpc_Q3 = 10.0;
-        params->mpc_R  = 0.002;*/
+        params->mpc_R  = 0.002;
         
         params->mpc_nV = params->mpc_np*params->mpc_nu;
         params->mpc_nc = params->mpc_np;
         params->mpc_max_iter = 200;
         params->beta_max = 6.0;
 
-        params->tv_mpc_active = false;
+        params->tv_mpc_active = true;
 
         return true;
 

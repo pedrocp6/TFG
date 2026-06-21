@@ -43,6 +43,8 @@ run_data.tv_out = [tv_fl,tv_fr,tv_rl,tv_rr];
 
 run_data.time_control = out.torque_cmd.time;
 
+run_data.time_debug = out.debug.time;
+
 run_data.vx_ref = squeeze(out.debug.signals.values(:,2));
 run_data.vy_ref = squeeze(out.debug.signals.values(:,3));
 run_data.r_ref = squeeze(out.debug.signals.values(:,4));
@@ -59,7 +61,7 @@ run_data.mpc_sol = squeeze(out.debug.signals(1).values);
 
 %% Guardar
 
-control = '_pd'; % _mpc o _pd
+control = '_mpc'; % _mpc o _pd
 prueba = '_autox'; % _autox o _skidpad o _slalom
 
 filename = ['C:\TFG_Vivado\mis_pruebas\hil_can_control\matlab\Simulation\Data\','resultados',control,prueba,'.mat'];
