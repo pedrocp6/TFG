@@ -19,12 +19,14 @@ datos_pd  = load('resultados_pd_slalom.mat');
 
 fprintf("Cargados datos slalom\n")
 
+
 %% 
 
 guardar = 0;
 
+%% 
 
-
+guardar = 1;
 
 
 %% Tiempo entre comunicaciones
@@ -46,18 +48,25 @@ height = round(screen(4));
 
 set(gcf, 'position', [x0, y0, width, height], 'Color', 'w')
 
-eje1 = subplot(2,1,1);
-plot(out.t_sim.signals.values,'b.','MarkerSize',10);
-grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");
-eje2 = subplot(2,1,2);
-plot(out.t_sim.time,out.t_sim.signals.values,'b.','MarkerSize',10);
-grid on;xlabel("Tiempo de simulación [s]");
-linkaxes([eje1,eje2],'y');
-ylim([0,0.08]);
+% eje1 = subplot(2,1,1);
+% plot(out.t_sim.signals.values*1000,'b.','MarkerSize',5);
+% grid on;xlabel("Número de puntos");title("Tiempo entre iteraciones");ylabel('Tiempo entre iteraciones [ms]')
+% set(gca, 'FontSize', 11)
+% ylim([0,0.006*1000]);
+% xlim([0,16e4])
+
+% eje2 = subplot(2,1,2);
+plot(out.t_sim.time,out.t_sim.signals.values*1000,'b.','MarkerSize',5);
+grid on;xlabel("Tiempo de simulación [s]");ylabel('Tiempo entre iteraciones [ms]')
+set(gca, 'FontSize', 15)
+% linkaxes([eje1,eje2],'y');
+% ylim([0,10]);
+% xlim([0,20])
 
 if guardar == 1
     ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\analisis_tiempo_ejecucion.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -79,10 +88,10 @@ ay_analisis = ay(indices_validos);
 time_analisis = time(indices_validos);
 
 % Los límites no son exactamente los del skidpad porque hay que tener en
-% cuenta el ancho del coche. 9.125+-1.5-+1.2
+% cuenta el ancho del coche. 9.125+-1.5-+1.2/2
 
-% indice_salida = find(k_analisis > 1/8.625 | k_analisis < 1/9.625, 1, 'first');
-indice_salida = find(k_analisis > 1/8.825 | k_analisis < 1/9.425, 1, 'first');
+indice_salida = find(k_analisis > 1/8.235 | k_analisis < 1/10.015, 1, 'first');
+% indice_salida = find(k_analisis > 1/8.825 | k_analisis < 1/9.425, 1, 'first');
 
 if ~isempty(indice_salida)
     % Guardamos el valor en tu variable
@@ -99,27 +108,27 @@ end
 
 % Visualization
 
-figure('Name','Skidpad trajectory')
-hold on
-axis equal
-plot(9.125*cos(time)-0.7,9.125*sin(time)+9.125,'--k')
-plot(7.625*cos(time)-0.7,7.625*sin(time)+9.125,'k')
-plot(10.625*cos(time)-0.7,10.625*sin(time)+9.125,'k')
-% plot(out.logsout{10}.Values.Data,out.logsout{11}.Values.Data,'r')
-plot(x_pos,y_pos,'r')
-plot(9.625*cos(time)-0.7,9.625*sin(time)+9.125,'-.b')
-plot(8.625*cos(time)-0.7,8.625*sin(time)+9.125,'-.b')
-grid on;
+% figure('Name','Skidpad trajectory')
+% hold on
+% axis equal
+% plot(9.125*cos(time)-0.7,9.125*sin(time)+9.125,'--k')
+% plot(7.625*cos(time)-0.7,7.625*sin(time)+9.125,'k')
+% plot(10.625*cos(time)-0.7,10.625*sin(time)+9.125,'k')
+% % plot(out.logsout{10}.Values.Data,out.logsout{11}.Values.Data,'r')
+% plot(x_pos,y_pos,'r')
+% plot(9.625*cos(time)-0.7,9.625*sin(time)+9.125,'-.b')
+% plot(8.625*cos(time)-0.7,8.625*sin(time)+9.125,'-.b')
+% grid on;
 
 figure('Name','Skidpad k limits')
 hold on
 plot(v,v*0+1/9.125,'--k')
-plot(v,v*0+1/8.625,'-.b')
-plot(v,v*0+1/9.625,'-.b')
+plot(v,v*0+1/8.235,'-.b')
+plot(v,v*0+1/10.015,'-.b')
 plot(v,k_calc,'r')
 grid on;
 xline(v_limit, 'k--', 'LineWidth', 1.5);
-ylim([0.1,0.12]);xlabel("Speed [m/s]");ylabel("Curvature [1/m]");
+ylim([1/10.015-0.005,1/8.235+0.005]);xlabel("Speed [m/s]");ylabel("Curvature [1/m]");
 
 figure('Name','Inputs')
 hold on
@@ -215,7 +224,7 @@ grid on;
 title(['Media: ',num2str(mean_error_vy,2),' rad/s, RMSE: ', num2str(rmse_error_vy,2), ' rad/s']);
 
 
-sgtitle('Validación del modelo MPC vs modelo no lineal');
+% sgtitle('Validación del modelo MPC vs modelo no lineal');
 x0=200;
 y0=50;
 width=1000;
@@ -310,7 +319,7 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Curvatura \kappa [1/m]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 subplot(1,4,4)
 plot(datos_pd.run_data.time, k_error_pd, 'r', 'linewidth', 2.5, 'DisplayName', 'PD'); hold on;
@@ -319,16 +328,17 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error curvatura \kappa [1/m]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title(['RMSE: PD=',num2str(rmse_error_k_pd,2),' MPC=',num2str(rmse_error_k_mpc,2)])
 % ylim([0,0.3]);
 xlim([0,23]);
 
-sgtitle('Seguimiento de referencia de curvatura', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Seguimiento de referencia de curvatura', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -365,7 +375,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Yaw rate [rad/s]')
 title('Controlador PD')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 
 eje2 = subplot(2, 4, 5:7);
@@ -377,7 +387,7 @@ legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Yaw rate [rad/s]')
 title('Controlador LTV-MPC')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 linkaxes([eje1,eje2],'xy');
 
 subplot(2,4,4)
@@ -386,7 +396,7 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error yaw rate [rad/s]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title(['RMSE: PD=',num2str(rmse_error_r_pd,2)])
 
 subplot(2,4,8)
@@ -395,14 +405,15 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error yaw rate [rad/s]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title(['RMSE: MPC=',num2str(rmse_error_r_mpc,2)])
 
-sgtitle('Seguimiento de referencia de yaw rate', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Seguimiento de referencia de yaw rate', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_yaw_rate_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_yaw_rate.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -478,7 +489,7 @@ grid on
 legend('show', 'Location', 'northwest')
 xlabel('Tiempo [s]')
 ylabel('Curvatura [1/m]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 
 eje2 = subplot(2, 1, 2);
@@ -491,14 +502,15 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Yaw rate [rad/s]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 linkaxes([eje1,eje2],'x')
 
-sgtitle('Comparación de Slalom en Aceleración', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Comparación de Slalom en Aceleración', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_slalom_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_slalom.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -526,7 +538,7 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Par [N/m]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title('Controlador PD')
 
 eje2 = subplot(2,1,2);
@@ -539,16 +551,17 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Par [N/m]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title('Controlador LTV-MPC')
 
 linkaxes([eje1,eje2],'x')
 
-sgtitle('Comparación de par comandado', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Comparación de par comandado', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_par_rueda_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_par_rueda.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -583,9 +596,9 @@ plot(ay_mpc_g, ax_mpc_g, 'b.', 'linewidth', 1.5, 'DisplayName', 'Real (MPC)');
 grid on; axis equal;
 xlabel('Aceleración Lateral a_y [g]')
 ylabel('Aceleración Longitudinal a_x [g]')
-title('Diagrama G-G (Proyección 2D)')
+% title('Diagrama G-G (Proyección 2D)')
 legend('show', 'Location', 'best')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 
 subplot(1, 2, 2)
@@ -597,18 +610,19 @@ grid on;
 xlabel('Aceleración Lateral a_y [g]')
 ylabel('Aceleración Longitudinal a_x [g]')
 zlabel('Velocidad v_x [m/s]')
-title('Diagrama G-G-V 3D')
+% title('Diagrama G-G-V 3D')
 legend('show', 'Location', 'best')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 % Ajuste de cámara inicial (puedes rotarla con el ratón luego en MATLAB)
 view(-45, 25); 
 
-sgtitle('Diagrama G-G-V', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Diagrama G-G-V', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_ggv_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_ggv.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -665,13 +679,14 @@ plot(ay_fit, steer_fit_mpc, 'y', 'linewidth', 2.5, 'DisplayName', ['Ajuste MPC (
 xlabel('Aceleración Lateral a_y [m/s^2]')
 ylabel('Ángulo de Dirección \delta [deg]')
 legend('show', 'Location', 'northwest')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
-sgtitle('Evaluación del Gradiente de Subviraje', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Evaluación del Gradiente de Subviraje', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\understeer_gradient_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\understeer_gradient.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -699,8 +714,8 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Acelerador [% o Señal]')
-title('Uso del pedal del Acelerador')
-set(gca, 'FontSize', 11)
+% title('Uso del pedal del Acelerador')
+set(gca, 'FontSize', 15)
 
 % --- Subplot 2: Freno ---
 subplot(3, 1, 2)
@@ -711,8 +726,8 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Freno [% o Señal]')
-title('Uso del pedal de Freno')
-set(gca, 'FontSize', 11)
+% title('Uso del pedal de Freno')
+set(gca, 'FontSize', 15)
 
 % --- Subplot 3: Volante ---
 subplot(3, 1, 3)
@@ -723,14 +738,14 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Ángulo de Dirección \delta [deg]')
-title('Uso del Volante')
-set(gca, 'FontSize', 11)
+% title('Uso del Volante')
+set(gca, 'FontSize', 15)
 
-sgtitle('Acciones de Control Longitudinal y Lateral del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Acciones de Control Longitudinal y Lateral del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
 
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\pedales_volante_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\pedales_volante.png';
     exportgraphics(gcf, ruta_guardado)
 end
 
@@ -746,8 +761,8 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Acelerador [% o Señal]')
-title('Uso del pedal del Acelerador')
-set(gca, 'FontSize', 11)
+% title('Uso del pedal del Acelerador')
+set(gca, 'FontSize', 15)
 
 % --- Subplot 2: Freno Hidráulico y Célula de Carga ---
 subplot(3, 1, 2)
@@ -763,8 +778,8 @@ grid on
 legend('show', 'Location', 'best', 'NumColumns', 2)
 xlabel('Tiempo [s]')
 ylabel('Presión [bar] / Fuerza [N]')
-title('Distribución del Sistema de Frenado (Hidráulico vs Load Cell)')
-set(gca, 'FontSize', 11)
+% title('Distribución del Sistema de Frenado (Hidráulico vs Load Cell)')
+set(gca, 'FontSize', 15)
 
 % --- Subplot 3: Volante ---
 subplot(3, 1, 3)
@@ -775,14 +790,15 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Ángulo de Dirección \delta [deg]')
-title('Uso del Volante')
-set(gca, 'FontSize', 11)
+% title('Uso del Volante')
+set(gca, 'FontSize', 15)
 
-sgtitle('Análisis Completo de las Entradas del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Análisis Completo de las Entradas del Piloto', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\freno_volante_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\freno_volante.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -830,7 +846,7 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Velocidad v_x [m/s]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 % --- SUBPLOT 2: Error de Velocidad ---
 subplot(1,4,4)
@@ -841,15 +857,16 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Error absoluto v_x [m/s]')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 title(['RMSE: PD=', num2str(rmse_error_v_pd,2), '  MPC=', num2str(rmse_error_v_mpc,2)])
 xlim([1.3,23]);
 
-sgtitle('Seguimiento de referencia de velocidad longitudinal', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Seguimiento de referencia de velocidad longitudinal', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_velocidad_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_velocidad.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -883,8 +900,8 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Velocidad Lateral v_y [m/s]')
-title('Evolución de la Velocidad Lateral')
-set(gca, 'FontSize', 11)
+% title('Evolución de la Velocidad Lateral')
+set(gca, 'FontSize', 15)
 
 % =========================================================================
 % SUBPLOT 2: Ángulo de Deriva del Chasis (Side Slip Angle - beta)
@@ -903,14 +920,15 @@ grid on
 legend('show', 'Location', 'best')
 xlabel('Tiempo [s]')
 ylabel('Ángulo de Deriva \beta [deg]')
-title('Evolución del Ángulo de Deriva del Chasis (Side Slip Angle)')
-set(gca, 'FontSize', 11)
+% title('Evolución del Ángulo de Deriva del Chasis (Side Slip Angle)')
+set(gca, 'FontSize', 15)
 
-sgtitle('Análisis de Estabilidad Lateral', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Análisis de Estabilidad Lateral', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
     ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_estabilidad_lateral.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -965,7 +983,7 @@ for i = 1:4
     title(nombres_ruedas{i})
     xlabel('F_y / F_z (Normalizada Lateral)')
     ylabel('F_x / F_z (Normalizada Longitudinal)')
-    set(gca, 'FontSize', 11)
+    set(gca, 'FontSize', 15)
     
     % Forzamos los límites para que el círculo mantenga la proporción y se vea entero
 %     xlim([-2, 2]);
@@ -985,11 +1003,12 @@ centro_x = 0.5 - (lgd.Position(3) / 2);
 centro_y = 0.48 - (lgd.Position(4) / 2); % Cambia 0.5 por 0.02 si la prefieres abajo del todo
 lgd.Position = [centro_x, centro_y, lgd.Position(3), lgd.Position(4)];
 
-sgtitle('Utilización de la Adherencia Rueda a Rueda (Círculo de Fricción)', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Utilización de la Adherencia Rueda a Rueda (Círculo de Fricción)', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
     ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\friction_circle_ruedas.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -1060,7 +1079,7 @@ for i = 1:4
     xlabel('Tiempo [s]')
     ylabel('F_x (Longitudinal) [N]')
     zlabel('F_y (Lateral) [N]')
-    set(gca, 'FontSize', 11)
+    set(gca, 'FontSize', 15)
     view(-35, 30); 
     legend('show', 'Location', 'best')
     
@@ -1100,7 +1119,7 @@ for i = 1:4
     xlabel('Tiempo [s]')
     ylabel('F_x (Longitudinal) [N]')
     zlabel('F_y (Lateral) [N]')
-    set(gca, 'FontSize', 11)
+    set(gca, 'FontSize', 15)
     view(-35, 30);
     legend('show', 'Location', 'best')
     
@@ -1108,7 +1127,7 @@ for i = 1:4
     Link = linkprop([ax1, ax2], {'CameraPosition', 'CameraUpVector'});
     setappdata(gcf, 'StoreTheLink', Link);
     
-    sgtitle(['Utilización Dinámica de la Adherencia 3D - ', nombres_ruedas{i}], 'FontSize', 14, 'FontWeight', 'bold');
+%     sgtitle(['Utilización Dinámica de la Adherencia 3D - ', nombres_ruedas{i}], 'FontSize', 14, 'FontWeight', 'bold');
 end
 
 
@@ -1163,15 +1182,16 @@ plot([0 0], ylim, 'k-', 'LineWidth', 1, 'HandleVisibility', 'off');
 % 5. Formateo
 xlabel('Aceleración Lateral a_y [m/s^2]')
 ylabel('Aceleración de Guiñada \partial r / \partial t [rad/s^2]')
-title('Diagrama de Momento de Guiñada Empírico (Yaw Authority)')
+% title('Diagrama de Momento de Guiñada Empírico (Yaw Authority)')
 legend('show', 'Location', 'best')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
-sgtitle('Evaluación de la Autoridad Rotacional del Chasis', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Evaluación de la Autoridad Rotacional del Chasis', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\yaw_moment_diagram_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\yaw_moment_diagram.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -1225,14 +1245,15 @@ plot(t_mpc, esfuerzo_acum_mpc, 'b', 'linewidth', 2.5, 'DisplayName', ['MPC: ',nu
 
 xlabel('Tiempo [s]')
 ylabel('Esfuerzo Acumulado')
-title('Evolución del Gasto Energético de Control')
+% title('Evolución del Gasto Energético de Control')
 legend('show', 'Location', 'northwest')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 
 if guardar == 1
-    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\esfuerzo_control_sim.png';
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\esfuerzo_control.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
@@ -1259,8 +1280,8 @@ t_mpc = datos_mpc.run_data.time_control;
 figure('Name', 'Acción del Torque Vectoring', 'Color', 'w');
 x0 = 0; y0 = 0; 
 screen = get(0,'ScreenSize');
-width  = round(screen(3) * 0.6); 
-height = round(screen(4) * 0.75);
+width  = round(screen(3)); 
+height = round(screen(4));
 set(gcf, 'position', [x0, y0, width, height])
 
 % SUBPLOT 1: Eje Delantero
@@ -1279,7 +1300,7 @@ xlabel('Tiempo [s]')
 ylabel('\Delta T_{Front} (T_{FL} - T_{FR}) [N\cdot m]')
 title('Diferencia de Par en el Eje Delantero')
 legend('show', 'Location', 'best')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
 % SUBPLOT 2: Eje Trasero
 % =========================================================================
@@ -1297,20 +1318,136 @@ xlabel('Tiempo [s]')
 ylabel('\Delta T_{Rear} (T_{RL} - T_{RR}) [N\cdot m]')
 title('Diferencia de Par en el Eje Trasero')
 legend('show', 'Location', 'best')
-set(gca, 'FontSize', 11)
+set(gca, 'FontSize', 15)
 
-sgtitle('Cuantificación del Reparto Transversal de Par (Torque Vectoring)', 'FontSize', 14, 'FontWeight', 'bold');
+% sgtitle('Cuantificación del Reparto Transversal de Par (Torque Vectoring)', 'FontSize', 14, 'FontWeight', 'bold');
 
 if guardar == 1
     ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\diff_par.png';
     exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
 end
 
 
 %% 
+%%
+%% Seguimiento de curvatura en skidpad
+% Parámetros comunes
+v_ini = 10.0;
+L = 1.535;
+
+% Geometría de los límites del Skidpad (Formula Student)
+R_center = 9.125;              % Radio de la línea central [m]
+track_width_half = 1.5;        % Mitad del ancho de la pista [m]
+car_width_half = 1.22 / 2;     % Mitad del ancho del vehículo [m]
+
+% Radios límite para el Centro de Gravedad (CG)
+R_max = R_center + track_width_half - car_width_half; % 10.015 m
+R_min = R_center - track_width_half + car_width_half; % 8.235 m
+
+% Curvaturas límite correspondientes
+k_min = 1 / R_max; % Límite exterior (aprox 0.0998 1/m)
+k_max = 1 / R_min; % Límite interior (aprox 0.1214 1/m)
+
+% --- Cálculo para PD ---
+t_pd  = datos_pd.run_data.time;
+v_pd  = datos_pd.run_data.v;      
+ay_pd = datos_pd.run_data.ay;
+k_pd  = datos_pd.run_data.k_calc;
+
+idx_val_pd = find(v_pd > v_ini);
+idx_salida_pd = find(k_pd(idx_val_pd) > k_max | k_pd(idx_val_pd) < k_min, 1, 'first');
+
+if ~isempty(idx_salida_pd)
+    v_lim_pd  = v_pd(idx_val_pd(idx_salida_pd));
+    ay_lim_pd = ay_pd(idx_val_pd(idx_salida_pd));
+    t_sk_pd   = 2 * pi * R_center / v_lim_pd;
+else
+    v_lim_pd = NaN; ay_lim_pd = NaN; t_sk_pd = NaN;
+end
+
+% --- Cálculo para MPC ---
+t_mpc  = datos_mpc.run_data.time;
+v_mpc  = datos_mpc.run_data.v;    
+ay_mpc = datos_mpc.run_data.ay;
+k_mpc  = datos_mpc.run_data.k_calc;
+
+idx_val_mpc = find(v_mpc > v_ini);
+idx_salida_mpc = find(k_mpc(idx_val_mpc) > k_max | k_mpc(idx_val_mpc) < k_min, 1, 'first');
+
+if ~isempty(idx_salida_mpc)
+    v_lim_mpc  = v_mpc(idx_val_mpc(idx_salida_mpc));
+    ay_lim_mpc = ay_mpc(idx_val_mpc(idx_salida_mpc));
+    t_sk_mpc   = 2 * pi * R_center / v_lim_mpc;
+else
+    v_lim_mpc = NaN; ay_lim_mpc = NaN; t_sk_mpc = NaN;
+end
+
+% Imprimir resumen en consola
+fprintf('--- RESULTADOS SKIDPAD ---\n');
+fprintf('Limites físicos reales -> R_min: %.3fm | R_max: %.3fm\n', R_min, R_max);
+fprintf('PD  -> V_lim: %.2f m/s | A_y_lim: %.2f m/s^2 | Tiempo: %.3f s\n', v_lim_pd, ay_lim_pd, t_sk_pd);
+fprintf('MPC -> V_lim: %.2f m/s | A_y_lim: %.2f m/s^2 | Tiempo: %.3f s\n\n', v_lim_mpc, ay_lim_mpc, t_sk_mpc);
 
 
+figure('Name', 'Seguimiento de Curvatura', 'Color', 'w');
+x0 = 0; y0 = 0; 
+screen = get(0,'ScreenSize');
+set(gcf, 'position', [x0, y0, round(screen(3)), round(screen(4))])
+hold on; grid on;
 
+% Señal de referencia
+t_target_raw = k_target.Time;
+datos_target_raw = squeeze(k_target.Data);
+[t_target, unique_idx] = unique(t_target_raw);
+datos_target = datos_target_raw(unique_idx);
+
+plot(t_target, datos_target, 'k--', 'linewidth', 2, 'DisplayName', 'Curvatura de Referencia');
+
+% Señales reales
+plot(t_pd, k_pd, 'r', 'linewidth', 2, 'DisplayName', 'Curvatura Real (PD)'); 
+plot(t_mpc, k_mpc, 'b', 'linewidth', 2, 'DisplayName', 'Curvatura Real (MPC)'); 
+
+% Límites de la pista exactos calculados por ti
+plot(t_pd, t_pd*0 + 1/R_center, '--k', 'HandleVisibility', 'off');
+plot(t_pd, t_pd*0 + k_max, '-.b', 'DisplayName', 'Límite Interior (R_{min})');
+plot(t_pd, t_pd*0 + k_min, '-.b', 'DisplayName', 'Límite Exterior (R_{max})');
+
+% Marcamos el momento exacto en el que cada uno se sale
+if ~isnan(v_lim_pd)
+    xline(t_pd(idx_val_pd(idx_salida_pd)), 'r:', 'LineWidth', 1.5, 'HandleVisibility', 'off');
+end
+if ~isnan(v_lim_mpc)
+    xline(t_mpc(idx_val_mpc(idx_salida_mpc)), 'b:', 'LineWidth', 1.5, 'HandleVisibility', 'off');
+end
+
+% Ajustamos los límites de Y dinámicamente para que se vean bien las líneas azules
+ylim([k_min - 0.005, k_max + 0.005]);
+
+legend('show', 'Location', 'north')
+xlabel('Tiempo [s]')
+ylabel('Curvatura \kappa [1/m]')
+set(gca, 'FontSize', 15)
+% title('Seguimiento de Referencia de Curvatura', 'FontSize', 14, 'FontWeight', 'bold');
+
+% --- SOLUCIÓN DEL TEXTO ---
+% Creamos el texto
+texto_resultados = sprintf('RENDIMIENTO SKIDPAD\n\nControlador PD:\nTiempo: %.3f s\nVel. Límite: %.2f m/s\n\nControlador MPC:\nTiempo: %.3f s\nVel. Límite: %.2f m/s', ...
+                            t_sk_pd, v_lim_pd, t_sk_mpc, v_lim_mpc);
+
+% Annotation funciona con posiciones relativas a la ventana (de 0 a 1).
+% [x_pos, y_pos, ancho, alto]. Lo ponemos en una esquina libre.
+annotation('textbox', [0.4, 0.15, 0.2, 0.25], 'String', texto_resultados, ...
+    'FitBoxToText', 'on', 'BackgroundColor', [0.95 0.95 0.95], ...
+    'EdgeColor', 'k', 'Margin', 8, 'FontSize', 10, 'FontWeight', 'bold');
+
+if guardar == 1
+    ruta_guardado = 'C:\Users\Usuario\Pedro\Universidad\TFG\Figuras\comparativa_curvatura_skidpad.png';
+    exportgraphics(gcf, ruta_guardado)
+    fprintf("Gráfica guardada\n")
+end
+
+%%
 
 
 

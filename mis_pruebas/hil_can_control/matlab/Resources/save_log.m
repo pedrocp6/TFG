@@ -35,17 +35,17 @@ run_data.y = y_pos;
 
 run_data.torque_cmd = squeeze(out.torque_cmd.signals.values);
 
-tv_fl = squeeze(out.debug.signals(6).values);
-tv_fr = squeeze(out.debug.signals(7).values);
-tv_rl = squeeze(out.debug.signals(8).values);
-tv_rr = squeeze(out.debug.signals(9).values);
+tv_fl = squeeze(out.debug.signals.values(:,6));
+tv_fr = squeeze(out.debug.signals.values(:,7));
+tv_rl = squeeze(out.debug.signals.values(:,8));
+tv_rr = squeeze(out.debug.signals.values(:,9));
 run_data.tv_out = [tv_fl,tv_fr,tv_rl,tv_rr];
 
 run_data.time_control = out.torque_cmd.time;
 
-run_data.vx_ref = squeeze(out.debug.signals(2).values);
-run_data.vy_ref = squeeze(out.debug.signals(3).values);
-run_data.r_ref = squeeze(out.debug.signals(4).values);
+run_data.vx_ref = squeeze(out.debug.signals.values(:,2));
+run_data.vy_ref = squeeze(out.debug.signals.values(:,3));
+run_data.r_ref = squeeze(out.debug.signals.values(:,4));
 
 run_data.accel = accelerator;
 run_data.brake = brake;
@@ -60,10 +60,11 @@ run_data.mpc_sol = squeeze(out.debug.signals(1).values);
 %% Guardar
 
 control = '_pd'; % _mpc o _pd
-prueba = '_skidpad'; % _autox o _skidpad o _slalom
+prueba = '_autox'; % _autox o _skidpad o _slalom
 
 filename = ['C:\TFG_Vivado\mis_pruebas\hil_can_control\matlab\Simulation\Data\','resultados',control,prueba,'.mat'];
 save(filename, 'run_data');
+fprintf("Datos guardados\n")
 
 
 

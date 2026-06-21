@@ -41,8 +41,7 @@ psu_init_gpl.h
 slprj/
 *.slxc
 *.mldatx
-mis_pruebas/matlab_valid/Simulation/data/*.mat
-mis_pruebas/hil_can_control/matlab/Simulation/Data/*.mat
+mis_pruebas/matlab_valid/Simulation/data/a/*.mat
 
 # VS Code y IDE
 .vscode/

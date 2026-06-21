@@ -355,11 +355,11 @@ int main() {
         
         bool step_ready = false;
         while (!step_ready) {
+            /*XTime_GetTime(&current_time);
+            tiempo_ant = current_time;*/
         	step_ready = read_sensors_can(sensors);
         }
 
-        // XTime_GetTime(&current_time);
-        // tiempo_ant = current_time;
 
         
         if (!pid_tc.init) {
@@ -430,7 +430,7 @@ int main() {
         double tiempo_segundos = (double)(current_time - tiempo_ant) / COUNTS_PER_SECOND;
         tiempo_ant = current_time;
 
-        m1 = (int16_t)(tiempo_segundos * 100000.0);
+        m1 = (int16_t)(tiempo_segundos * 1000000.0);
         can_data[0] = (u8)(m1 & 0xFF);
         can_data[1] = (u8)((m1 >> 8) & 0xFF);
         SendFrame(&Can0, CAN_ID_TIEMPO, can_data, 2);

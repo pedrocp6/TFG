@@ -1,4 +1,4 @@
-vdc_TimeStep = 0.005; % 100 Hz
+vdc_TimeStep = 0.005; % 100 Hz   0.005
 
 %% Car data
 % Distances

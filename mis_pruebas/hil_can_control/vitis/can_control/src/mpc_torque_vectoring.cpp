@@ -629,7 +629,7 @@ double MpcTorqueVectoring::torque_vectoring_mpc(Parameters *parameters, SensorDa
             if (status != SUCCESSFUL_RETURN) {
                 // Si el hotstart se pierde, reiniciamos el solver de cero en este mismo paso
                 nWSR = parameters->mpc_max_iter;
-                status = mpc_solver.init(H_flat.data(), f_vec.data(), A_flat.data(),
+                mpc_solver.init(H_flat.data(), f_vec.data(), A_flat.data(),
                                          lb_flat.data(), ub_flat.data(), lbA_flat.data(), ubA_flat.data(), nWSR);
             }
         }
