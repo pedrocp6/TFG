@@ -6,20 +6,21 @@ ggv_simulator_loops
 
 % % % % % AutoX % % % % %
 
-time_maneuver = cumsum([diff(s); 0]./vx_target)';
-v_maneuver = 0.9*vel';           %trackdrive
-k_maneuver = k';             %trackdrive
+% time_maneuver = cumsum([diff(s); 0]./vx_target)';
+% v_maneuver = 0.9*vel';           %trackdrive
+% k_maneuver = k';             %trackdrive
 
 
 % % % % % Skidpad % % % % %
 
-% time_maneuver = linspace(0.00001, 20, 1000);
-% v_maneuver = linspace(8, 13, length(time_maneuver));
-% k_maneuver = v_maneuver*0 + 1/9.125;
+time_maneuver = linspace(0.00001, 20, 1000);
+v_maneuver = linspace(8, 13, length(time_maneuver));
+k_maneuver = v_maneuver*0 + 1/9.125;
 
 
 % % % % % Slalom % % % % %
 
+% time_maneuver = linspace(0.00001, 20, 1000);
 % D_cone  = 9.0;
 % W_track = 3.0;
 % W_car   = 1.22;
@@ -89,7 +90,7 @@ set_param(mdl, 'FixedStep', num2str(sim_TimeStep));
 
 % Como siempre
 set_param(mdl, 'EnablePacing', 'on');
-set_param(mdl, 'PacingRate', '0.2');        % 0.25 o 0.2
+set_param(mdl, 'PacingRate', '0.1');        % 0.25 o 0.2
 
 % set_param(mdl, 'SystemTargetFile', 'grt.tlc');
 set_param(mdl, 'SimulationMode', 'normal');

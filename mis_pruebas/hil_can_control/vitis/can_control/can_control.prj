@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="can_control" location="C:/TFG_Vivado/mis_pruebas/hil_can_control/vitis/can_control" platform="C:/TFG_Vivado/mis_pruebas/hil_can_control/vitis/prueba_can3_wrapper/export/prueba_can3_wrapper/prueba_can3_wrapper.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="can_control_system" sysConfig="prueba_can3_wrapper" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" language="CPP" mssSignature="4ba32ab4e55bfbd6389b1b0030287cbe">
-  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1098216718">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1098216718" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
-  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.314305297" dirty="true">
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.314305297">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <template appTemplateName="empty_application"/>
 </sdkproject:SdkProject>

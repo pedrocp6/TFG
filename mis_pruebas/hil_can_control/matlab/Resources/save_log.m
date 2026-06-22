@@ -61,8 +61,8 @@ run_data.mpc_sol = squeeze(out.debug.signals(1).values);
 
 %% Guardar
 
-control = '_mpc'; % _mpc o _pd
-prueba = '_autox'; % _autox o _skidpad o _slalom
+control = 'a'; % _mpc o _pd
+prueba = 'b'; % _autox o _skidpad o _slalom
 
 filename = ['C:\TFG_Vivado\mis_pruebas\hil_can_control\matlab\Simulation\Data\','resultados',control,prueba,'.mat'];
 save(filename, 'run_data');

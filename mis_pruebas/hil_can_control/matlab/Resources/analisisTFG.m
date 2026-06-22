@@ -436,7 +436,7 @@ dy_dx = A_path * w * sin(w * x_ref);
 d2y_dx2 = A_path * w^2 * cos(w * x_ref) .* min(x_ref / (2 * D_cone), 1);
 k_maneuver = d2y_dx2 ./ (1 + dy_dx.^2).^(3/2);
 
-T_warmup = 3.0;
+T_warmup = 2.0;
 time_warmup = linspace(0, T_warmup, 200); 
 v_warmup = v_maneuver(1)+zeros(1, length(time_warmup));
 k_warmup = zeros(1, length(time_warmup));
@@ -491,6 +491,9 @@ xlabel('Tiempo [s]')
 ylabel('Curvatura [1/m]')
 set(gca, 'FontSize', 15)
 
+ylim([-0.10844-0.015,0.10844+0.015])
+% xlim([0,19.5]);
+
 
 eje2 = subplot(2, 1, 2);
 plot(datos_pd.run_data.time, datos_pd.run_data.yaw_rate, 'r', 'linewidth', 2.5, 'DisplayName', 'Real PD'); hold on;
@@ -499,11 +502,12 @@ plot(datos_pd.run_data.time_debug, datos_pd.run_data.r_ref, 'g--', 'linewidth', 
 plot(datos_mpc.run_data.time_debug, datos_mpc.run_data.r_ref, 'k--', 'linewidth', 2.5, 'DisplayName', 'Referencia MPC');
 
 grid on
-legend('show', 'Location', 'best')
+legend('show', 'Location', 'southwest')
 xlabel('Tiempo [s]')
 ylabel('Yaw rate [rad/s]')
 set(gca, 'FontSize', 15)
 linkaxes([eje1,eje2],'x')
+% xlim([0,19.5]);
 
 % sgtitle('Comparación de Slalom en Aceleración', 'FontSize', 14, 'FontWeight', 'bold');
 
@@ -822,15 +826,16 @@ datos_target_raw = squeeze(v_target.Data);
 datos_target = datos_target_raw(unique_idx);
 
 % Interpolación de la referencia a la base de tiempos real
-v_resampled = interp1(t_target, datos_target, datos_pd.run_data.time, 'pchip');
+v_resampled_pd = interp1(t_target, datos_target, datos_pd.run_data.time, 'pchip');
+v_resampled_mpc = interp1(t_target, datos_target, datos_mpc.run_data.time, 'pchip');
 
 % 1. Crear máscaras lógicas para los primeros 23 segundos
 idx_pd_23s  = datos_pd.run_data.time >= 1.3;
 idx_mpc_23s = datos_mpc.run_data.time >= 1.3;
 
 % Cálculo de errores absolutos de velocidad
-v_error_pd  = abs(v_resampled - datos_pd.run_data.vx);
-v_error_mpc = abs(v_resampled - datos_mpc.run_data.vx);
+v_error_pd  = abs(v_resampled_pd - datos_pd.run_data.vx);
+v_error_mpc = abs(v_resampled_mpc - datos_mpc.run_data.vx);
 
 % Cálculo de RMSE solo en la ventana de 0 a 23 segundos
 rmse_error_v_pd  = sqrt(mean(v_error_pd(idx_pd_23s).^2, 'omitnan'));
@@ -902,6 +907,7 @@ xlabel('Tiempo [s]')
 ylabel('Velocidad Lateral v_y [m/s]')
 % title('Evolución de la Velocidad Lateral')
 set(gca, 'FontSize', 15)
+xlim([0,19.5]);
 
 % =========================================================================
 % SUBPLOT 2: Ángulo de Deriva del Chasis (Side Slip Angle - beta)
@@ -922,6 +928,7 @@ xlabel('Tiempo [s]')
 ylabel('Ángulo de Deriva \beta [deg]')
 % title('Evolución del Ángulo de Deriva del Chasis (Side Slip Angle)')
 set(gca, 'FontSize', 15)
+xlim([0,19.5]);
 
 % sgtitle('Análisis de Estabilidad Lateral', 'FontSize', 14, 'FontWeight', 'bold');
 
