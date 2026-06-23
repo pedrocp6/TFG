@@ -19,10 +19,10 @@ datos_pd  = load('resultados_pd_slalom.mat');
 
 fprintf("Cargados datos slalom\n")
 
-
 %% 
 
 guardar = 0;
+
 
 %% 
 

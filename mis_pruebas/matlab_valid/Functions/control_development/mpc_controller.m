@@ -94,7 +94,7 @@ function [u_out, qp_error, vx_ref, vy_ref, r_ref, v_max, vy_max, Fy_max, beta_ma
     % vy_ref (ec. 13)
     % Probar quitando ese abs
 %     beta_max = atan2(Fy_max, abs(fx_request) + eps);
-    beta_max = 5*pi/180;
+    beta_max = 6*pi/180;
 %     beta_max = 0.08;
     vy_max = tan(beta_max) * vx;
     vy_ref   = sign(vy) * min(abs(vy), tan(beta_max) * vx);
